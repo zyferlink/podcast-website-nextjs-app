@@ -15,7 +15,15 @@ type NavLink = {
 
 const navLinks: NavLink[] = [
   { label: "Home", href: "/" },
-  { label: "Other", href: "/" },
+  {
+    label: "Episodes",
+    href: "/pages/episodes",
+    dropdown: [
+      { label: "Latest Episodes", href: "/pages/episodes/latest-episodes" },
+      { label: "Favorite Episodes", href: "/pages/episodes/favorite-episodes" },
+      { label: "Episodes Details", href: "/pages/episodes/2" },
+    ],
+  },
 ];
 
 export default function Navbar() {
@@ -75,24 +83,26 @@ export default function Navbar() {
                       />
                     </Link>
 
-                    <div className="absolute left-0 top-full hidden group-hover:block bg-gray shadow-xl p-2 rounded-lg min-[230px]">
+                    <div className="absolute left-0 top-full hidden group-hover:block bg-gray shadow-xl p-2 rounded-lg min-w-60">
                       {link.dropdown.map((item) => (
                         <Link
                           key={item.label}
                           href={item.href}
-                          className={`block px-4 py-1 rounded-md font-medium text-lg 
+                          className={`flex items-center gap-2 px-4 py-1 rounded-md font-medium text-lg transition-all duration-200 
                             ${
                               pathname === item.href
                                 ? "text-white underline font-semibold"
                                 : "text-white"
-                            } hover:text-primary hover:translate-x-1 transition-all duration-200`}
+                            } hover:text-primary hover:translate-x-1`}
                         >
                           <Image
                             src={MenuIcon}
                             alt="MenuDot"
+                            width={16}
+                            height={16}
                             className="invert brightness-100"
                           />
-                          {link.label}
+                          <span>{item.label}</span>
                         </Link>
                       ))}
                     </div>
