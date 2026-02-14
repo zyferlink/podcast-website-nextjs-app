@@ -10,9 +10,16 @@
     "format": "biome format --write"
   },
   "dependencies": {
+    "@fortawesome/free-brands-svg-icons": "^7.2.0",
+    "@iconify/react": "^6.0.2",
+    "bootstrap-icons": "^1.13.1",
     "next": "16.1.6",
     "react": "19.2.3",
-    "react-dom": "19.2.3"
+    "react-countup": "^6.5.3",
+    "react-dom": "19.2.3",
+    "react-icons": "^5.5.0",
+    "remixicon": "^4.9.1",
+    "swiper": "^12.1.1"
   },
   "devDependencies": {
     "@biomejs/biome": "2.2.0",
