@@ -24,6 +24,18 @@ const navLinks: NavLink[] = [
       { label: "Episodes Details", href: "/pages/episodes/2" },
     ],
   },
+  { label: "Blogs", href: "/" },
+  {
+    label: "More",
+    href: "/pages/about",
+    dropdown: [
+      { label: "About", href: "/pages/about" },
+      { label: "Host Profiles", href: "/pages/host-profile" },
+      { label: "Pricing Plan", href: "/pages/pricing" },
+      { label: "FAQ's", href: "/pages/faqs" },
+      { label: "Contact Us", href: "/pages/contact" },
+    ],
+  },
 ];
 
 export default function Navbar() {
