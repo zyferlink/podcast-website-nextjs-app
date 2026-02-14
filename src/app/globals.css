@@ -4,30 +4,48 @@
 @import "remixicon/fonts/remixicon.css";
 
 :root {
-  --primary: #ffb340;
-  --primary-light: #ffb340b3;
-  --secondary: #7a6eff;
-  --dark-shade: #1c1d20;
-  --text: #222e48;
-  --body: #1c1d20;
-  --gray-shade: #3b3b3c;
-  --gray-light: #262629;
-  --white: #fff;
-  --black: #000;
+  /* Brand Colors */
+  --color-primary: #ffb340;
+  --color-primary-light: #ffb340b3;
+  --color-secondary: #7a6eff;
 
+  /* Neutral Palette */
+  --color-dark: #1c1d20;
+  --color-text: #222e48;
+  --color-body: #1c1d20;
+  --color-gray: #3b3b3c;
+  --color-gray-light: #262629;
+  --color-white: #ffffff;
+  --color-black: #000000;
+
+  /* Typography */
   --font-kanit: "Kanit", sans-serif;
   --font-metal-mania: "Metal Mania", sans-serif;
 
-  --transition-regular: 0.3s;
-  --transition-slow: 0.6s;
+  /* Motion */
+  --transition-regular: 0.3s ease;
+  --transition-slow: 0.6s ease;
 }
 
-.Kanit {
-  font-family: var(--font-kanit);
-}
+@theme inline {
+  /* Colors */
+  --color-primary: var(--color-primary);
+  --color-primary-light: var(--color-primary-light);
+  --color-secondary: var(--color-secondary);
+  --color-bg: var(--color-body);
+  --color-text: var(--color-text);
+  --color-gray: var(--color-gray);
+  --color-gray-light: var(--color-gray-light);
+  --color-white: var(--color-white);
+  --color-black: var(--color-black);
 
-.MetalMania {
-  font-family: var(--font-metal-mania);
+  /* Fonts */
+  --font-kanit: var(--font-kanit);
+  --font-metal-mania: var(--font-metal-mania);
+
+  /* Transitions */
+  --transition-default: var(--transition-regular);
+  --transition-slow: var(--transition-slow);
 }
 
 body {
