@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Kanit, Metal_Mania } from "next/font/google";
 import "./globals.css";
+import NavBar from "@/components/navigation/nav-bar";
 
 const kanit = Kanit({
   weight: ["200", "300", "400", "500", "600", "700"],
@@ -39,6 +40,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${kanit.variable} ${metalMania.variable} antialiased`}
       >
+        <NavBar />
         {children}
       </body>
     </html>
