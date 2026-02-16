@@ -66,7 +66,7 @@ export default function Navbar() {
                   alt="Logo"
                   className="object-cover w-8 h-8"
                 />
-                <h1 className="font-kanit text-4x1 tracking-wider">
+                <h1 className="font-kanit text-2xl tracking-wider text-white">
                   Voice<span className="text-primary">Flow</span>
                 </h1>
               </div>
@@ -137,7 +137,102 @@ export default function Navbar() {
             </nav>
           </div>
 
-          <div></div>
+          {/* Right Section */}
+          <div className="flex items-center gap-4 nav-right">
+            <button type="button" className="btn btn1">
+              Login <i className="bi bi-arrow-right-short"></i>
+            </button>
+            <button type="button" className="btn btn2 text-white">
+              Register <i className="bi bi-arrow-right-short"></i>
+            </button>
+
+            {/* Mobile bars */}
+            <button
+              type="button"
+              className="lg:hidden flex flex-col gap-1.25"
+              onClick={() => setOpen(!open)}
+            >
+              <span
+                className={` block w-6 h-0.75 bg-white transition-all ${open ? "rotate-45 translate-y-2" : ""} `}
+              />
+              <span
+                className={` block w-6 h-0.75 bg-white transition-all ${open ? "opacity-0" : ""} `}
+              />
+              <span
+                className={` block w-6 h-0.75 bg-white transition-all ${open ? "-rotate-45 -translate-y-2" : ""}`}
+              />
+            </button>
+          </div>
+
+          {/* Mobile Menu */}
+          <div
+            className={`lg:hidden fixed top-18 left-0 w-full z-50 transition-all duration-300 
+              ${open ? "opacity-100 visible translate-y-0" : "opacity-0 invisible -translate-y-6"}`}
+          >
+            <div className="mx-[5%] rounded-2xl bg-body shadow-2xl border border-white/10">
+              <nav className="flex flex-col px-6 py-6 gap-5">
+                {navLinks.map((link) =>
+                  link.dropdown ? (
+                    <div
+                      key={link.label}
+                      className="border-b border-white/10 pb-3"
+                    >
+                      {/*Parent*/}
+                      <button
+                        type="button"
+                        onClick={() => toggleDropdown(link.label)}
+                        className="flex justify-between items-center w-full text-white text-lg Circula-font tracking-wide"
+                      >
+                        <span>{link.label}</span>
+                        <span
+                          className={`transition-all duration-300 ${
+                            openDropdown === link.label
+                              ? "rotate-90 text-primary"
+                              : "opacity-100"
+                          }`}
+                        >
+                          <Image
+                            src={MenuIcon}
+                            alt="menuDot"
+                            className="invert brightness"
+                          />
+                        </span>
+                      </button>
+
+                      {/* Dropdown*/}
+                      <div
+                        className={`overflow-hidden transition-all duration-300 ${openDropdown === link.label ? "max-h-96 mt-3" : "max-h-0"}`}
+                      >
+                        <div className="flex flex-col gap-3">
+                          {link.dropdown.map((item) => (
+                            <Link
+                              key={item.label}
+                              href={item.href}
+                              onClick={() => setOpen(false)}
+                              className="text-white/80 text-base hover:text-primary ps-3 pb-2 border-s border-e 
+                              border-white/50 rounded-sm hover:translate-x-1 transition-all"
+                            >
+                              {item.label}
+                            </Link>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                  ) : (
+                    <Link
+                      key={link.label}
+                      href={link.href}
+                      onClick={() => setOpen(false)}
+                      className="flex items-center justify-between text-white border-b 
+                      border-white/10 text-lg Circular-font tracking-wide hover:text-primary transition-all"
+                    >
+                      {link.label}
+                    </Link>
+                  ),
+                )}
+              </nav>
+            </div>
+          </div>
         </div>
       </div>
     </>
