@@ -19,12 +19,34 @@ const TopListensData = [
     episode: "Episode 06",
     hostName: "Devon Lane",
   },
+  {
+    id: 3,
+    title: "Laughing Through Life's Labyri ... ",
+    img: TopListens3,
+    episode: "Episode 12",
+    hostName: "Mr Jones Weks",
+  },
+  {
+    id: 4,
+    title: "Tech Trends Unveiled: Future H ... ",
+    img: TopListens2,
+    episode: "Episode 17",
+    hostName: "Arlene McCoy",
+  },
+
+  {
+    id: 5,
+    title: "Laughing Through Life's Labyri ... ",
+    img: TopListens3,
+    episode: "Episode 12",
+    hostName: "Mr Jones Weks",
+  },
 ];
 
 const FeaturedShows = () => {
   const swiperRef = useRef<SwiperType | null>(null);
   return (
-    <div className="dark-section">
+    <div className="dark-section bg-black/80">
       <div className="px-[8%] lg:px-[16%] py-30 pb-10 lg:pb-20">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="w-full lg:w-1/2">
@@ -36,7 +58,7 @@ const FeaturedShows = () => {
                 </h2>
               </div>
 
-              <h1 className="text-6xl lg:text-7xl font-semibold mt-4">
+              <h1 className="text-4xl lg:text-5xl text-white font-semibold mt-4">
                 Top Listens Now
               </h1>
             </div>
