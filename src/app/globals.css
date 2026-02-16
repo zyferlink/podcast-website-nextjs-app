@@ -428,3 +428,59 @@ body {
     width: 150px;
   }
 }
+
+/* Host Profiles Section */
+
+.wave-wrapper-section,
+.wave-wrapper-section2 {
+  position: relative;
+}
+
+.wave-wrapper-section:after,
+.wave-wrapper-section2:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 130px;
+  background: url(../../public/images/Wave-pattern.png);
+  background-repeat: no-repeat;
+}
+
+.wave-wrapper-section2:after {
+  top: -14% !important;
+  transform: rotate(180deg);
+  height: 150px;
+}
+
+.host-wrapper-swiper {
+  padding: 55px 0 !important;
+}
+
+.offset-card {
+  transform: translateY(-50px);
+}
+
+.host-info {
+  position: relative;
+}
+
+.host-info:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(-50%, -50%);
+  width: 2px;
+  height: 70%;
+  background-color: var(--color-primary);
+}
+
+/* Host Profiles MQ Section */
+
+@media (max-width: 600px) {
+  .offset-card {
+    transform: translateY(0px);
+  }
+}
