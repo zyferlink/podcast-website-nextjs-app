@@ -382,3 +382,49 @@ body {
     right: 16%;
   }
 }
+
+/* Episode Banner */
+
+.music-waves {
+  width: 260px;
+  height: 30px;
+  background-image: url(../../public/images/music-waves.png);
+  background-repeat: repeat-x;
+  background-size: auto 100%;
+  animation: waveScroll 50s linear infinite;
+}
+
+@keyframes waveScroll {
+  from {
+    background-position: 0 0;
+  }
+
+  to {
+    background-position: -1000px 0;
+  }
+}
+
+.music-waves2 {
+  width: 180px;
+  height: 30px;
+  background-image: url(../../public/images/music-waves2.png);
+  background-repeat: repeat-x;
+  background-size: auto 100%;
+  animation: waveScroll 50s linear infinite;
+}
+
+/* Recent Episode MQ Section */
+
+@media (max-width: 991px) {
+  .music-waves,
+  .music-waves2 {
+    width: 450px;
+  }
+}
+
+@media (max-width: 600px) {
+  .music-waves,
+  .music-waves2 {
+    width: 150px;
+  }
+}
