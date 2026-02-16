@@ -2,14 +2,15 @@
 
 import type { Swiper as SwiperType } from "swiper";
 import { Autoplay } from "swiper/modules";
-import { Swiper, SwiperSlide } from "swiper/react";
-import TopListens1 from "../../../../public/images/top-listens-1.png";
-import TopListens2 from "../../../../public/images/top-listens-2.png";
-import TopListens3 from "../../../../public/images/top-listens-3.png";
 import "swiper/css";
 import Image from "next/image";
 import Link from "next/link";
 import { useRef } from "react";
+
+import { Swiper, SwiperSlide } from "swiper/react";
+import TopListens1 from "../../../../public/images/top-listens-1.png";
+import TopListens2 from "../../../../public/images/top-listens-2.png";
+import TopListens3 from "../../../../public/images/top-listens-3.png";
 
 const TopListensData = [
   {
