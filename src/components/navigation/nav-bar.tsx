@@ -345,6 +345,20 @@ export default function Navbar() {
                   </>
                 )}
               </p>
+
+              {/* Footer */}
+              <p className="text-center text-sm text-white/50 pt-4 mt-6 border-t border-white/10">
+                By Signing in or signing up to <strong>ZyferLink</strong>, you
+                agree to our{" "}
+                <Link href="/" className="text-primary hover:underline">
+                  Terms Of Use
+                </Link>{" "}
+                and{" "}
+                <Link href="/" className="text-primary hover:underline">
+                  Privacy Policy
+                </Link>
+                .
+              </p>
             </div>
           </div>
         )}
