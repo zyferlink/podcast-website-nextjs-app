@@ -292,7 +292,59 @@ export default function Navbar() {
                     required
                   />
                 )}
+
+                <input
+                  type="email"
+                  placeholder="Email Address"
+                  className="w-full bg-gray-800 text-white border border-white px-3 py-3 rounded-xl 
+                    focus:border-primary focus:outline-none transition-all"
+                  required
+                />
+
+                <input
+                  type="password"
+                  placeholder="Password"
+                  className="w-full bg-gray-800 text-white border border-white px-3 py-3 rounded-xl 
+                    focus:border-primary focus:outline-none transition-all"
+                  required
+                />
+
+                {/* Submit */}
+                <button
+                  type="submit"
+                  className="w-full mt-3 bg-primary text-black py-3 rounded-xl
+                  font-semibold hover:bg-orange-300 transition-all cursor-pointer"
+                >
+                  {isLogin ? "Login Now" : "Register Now"}
+                </button>
               </form>
+
+              {/* Switch Auth */}
+              <p className="text-center text-sm mt-4 text-white/70 font-semibold">
+                {isLogin ? (
+                  <>
+                    Don't have an account?{" "}
+                    <button
+                      type="button"
+                      className="text-primary cursor-pointer hover:underline transition-all"
+                      onClick={() => setIsLogin(false)}
+                    >
+                      Register Here
+                    </button>
+                  </>
+                ) : (
+                  <>
+                    Already have an account?{" "}
+                    <button
+                      type="button"
+                      className="text-primary cursor-pointer hover:underline transition-all"
+                      onClick={() => setIsLogin(true)}
+                    >
+                      Login Here
+                    </button>
+                  </>
+                )}
+              </p>
             </div>
           </div>
         )}
