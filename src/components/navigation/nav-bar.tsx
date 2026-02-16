@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import LogoIcon from "../../../public/images/Logo-icon.png";
 import MenuIcon from "../../../public/images/Menu-dot.svg";
 
@@ -44,11 +44,25 @@ export default function Navbar() {
 
   const [scrolled, setScrolled] = useState(false);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   const pathname = usePathname();
 
   const toggleDropdown = (label: string) => {
     setOpenDropdown((prev) => (prev === label ? null : label));
   };
+
+  // Login and Registration Model
+
+  const [showModal, setShowModal] = useState(false);
+  const [isLogin, setIsLogin] = useState(true);
 
   return (
     <>
@@ -139,10 +153,24 @@ export default function Navbar() {
 
           {/* Right Section */}
           <div className="flex items-center gap-4 nav-right">
-            <button type="button" className="btn btn1">
+            <button
+              type="button"
+              className="btn btn1"
+              onClick={() => {
+                setIsLogin(true);
+                setShowModal(true);
+              }}
+            >
               Login <i className="bi bi-arrow-right-short"></i>
             </button>
-            <button type="button" className="btn btn2 text-white">
+            <button
+              type="button"
+              className="btn btn2 text-white"
+              onClick={() => {
+                setIsLogin(false);
+                setShowModal(true);
+              }}
+            >
               Register <i className="bi bi-arrow-right-short"></i>
             </button>
 
@@ -234,6 +262,40 @@ export default function Navbar() {
             </div>
           </div>
         </div>
+
+        {/* Login/Register Modal */}
+        {showModal && (
+          <div className="fixed inset-0 w-full h-screen z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm">
+            <div className="relative bg-[#2D333C] border Oborder-white/10 rounded-3xl p-10 w-[450px] md:w-[500px] shadow-2xl animate-fadeIn">
+              {/* Close */}
+              <button
+                type="button"
+                className="absolute top-5 right-5 text-4xl cursor-pointer text-white hover:text-primary transition-all"
+                onClick={() => setShowModal(false)}
+              >
+                X
+              </button>
+
+              {/* Title */}
+              <h2 className="text-3xl font-semibold mb-8 text-white">
+                {isLogin ? "Login to Your Account" : "Register Your Account"}
+              </h2>
+
+              {/* Form */}
+              <form className="flex flex-col gap-4">
+                {!isLogin && (
+                  <input
+                    type="text"
+                    placeholder="Full Name"
+                    className="w-full bg-gray-800 text-white border border-white px-3 py-3 rounded-xl 
+                    focus:border-primary focus:outline-none transition-all"
+                    required
+                  />
+                )}
+              </form>
+            </div>
+          </div>
+        )}
       </div>
     </>
   );
