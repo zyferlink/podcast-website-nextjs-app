@@ -32,7 +32,7 @@
   --color-primary: var(--color-primary);
   --color-primary-light: var(--color-primary-light);
   --color-secondary: var(--color-secondary);
-  --color-bg: var(--color-body);
+  --color-body: var(--color-body);
   --color-text: var(--color-text);
   --color-gray: var(--color-gray);
   --color-gray-light: var(--color-gray-light);
@@ -53,4 +53,114 @@ body {
   background: var(--body);
   color: var(--white);
   font-family: var(--font-kanit);
+}
+
+/* Nav bar*/
+.navbar {
+  z-index: 9999;
+}
+
+.btn {
+  border: 2px solid var(--color-primary);
+  padding: 5px 25px;
+  padding-bottom: 6px;
+  border-radius: 50px;
+  font-size: 20px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  gap: 15px;
+  position: relative;
+  z-index: 1;
+  transition: var(--transition-slow);
+  cursor: pointer;
+}
+
+.btn:hover {
+  color: var(--color-white);
+  border-color: var(--color-white);
+}
+
+.btn:hover i {
+  transform: rotate(-180deg) !important;
+}
+
+.btn i {
+  background-color: var(--color-primary);
+  color: var(--color-black);
+  border-radius: 100%;
+  width: 30px;
+  height: 30px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition-slow);
+}
+
+.btn1 {
+  color: var(--color-primary);
+}
+
+.btn1:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  border-radius: 50px;
+  width: 0;
+  height: 0;
+  background: var(--color-secondary);
+  transition: var(--transition-slow);
+  z-index: -1;
+}
+
+.btn1:hover:after {
+  width: 100%;
+  height: 100%;
+  right: auto;
+  left: 0;
+  bottom: auto;
+  top: 0;
+}
+
+.btn2 {
+  background-color: var(--color-primary);
+  color: var(--color-black);
+}
+
+.btn2 i {
+  background-color: var(--color-black);
+  color: var(--color-primary);
+}
+
+.btn2:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50px;
+  width: 0;
+  height: 0;
+  background: var(--color-secondary);
+  transition: var(--transition-slow);
+  z-index: -1;
+}
+
+.btn2:hover:after {
+  width: 100%;
+  height: 100%;
+  top: auto;
+  bottom: 0;
+  right: 0;
+  left: auto;
+}
+
+/* Nav MQ Section */
+
+@media (max-width: 600px) {
+  .nav-right .btn2 {
+    display: none;
+  }
 }
