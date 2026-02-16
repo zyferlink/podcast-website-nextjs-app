@@ -1,3 +1,9 @@
+import Index from "./index";
+
 export default function Home() {
-  return <main>Demo</main>;
+  return (
+    <main>
+      <Index />
+    </main>
+  );
 }

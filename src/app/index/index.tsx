@@ -1,7 +1,12 @@
 import React from "react";
+import Hero from "./hero/page";
 
-const index = () => {
-  return <div>index</div>;
+const Index = () => {
+  return (
+    <>
+      <Hero />
+    </>
+  );
 };
 
-export default index;
+export default Index;
