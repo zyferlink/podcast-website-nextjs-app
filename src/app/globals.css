@@ -249,10 +249,10 @@ body {
   top: 0;
   left: 54.7%;
   z-index: 0;
-  animation: smallTranstale 5s infinite ease-in-out;
+  animation: smallTranslate 5s infinite ease-in-out;
 }
 
-@keyframes smallTranstale {
+@keyframes smallTranslate {
   0% {
     transform: translate(0, 0);
   }
@@ -349,4 +349,36 @@ body {
 .light-section {
   background: url(../../public/images/texture-bg-1.png), rgb(38, 38, 41);
   background-size: cover;
+}
+
+/* Why Choose Us Section */
+
+.WhyChooseUs-img {
+  position: relative;
+  animation: smallTranslate 5s infinite ease-in-out;
+}
+
+.WhyChooseUs-img img:last-child {
+  position: absolute;
+  bottom: 10%;
+  right: -15%;
+  width: 300px;
+  height: 300px;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+/* Why Choose Us MQ Section */
+
+@media (max-width: 991px) {
+  .WhyChooseUs-img img:last-child {
+    right: -5%;
+  }
+}
+
+@media (max-width: 600px) {
+  .WhyChooseUs-img img:last-child {
+    bottom: -12%;
+    right: 16%;
+  }
 }
