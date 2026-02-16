@@ -1,7 +1,11 @@
-import React from "react";
+"use client";
 
-const Page = () => {
-  return <div>Page</div>;
+const RecentEpisodes = () => {
+  return (
+    <>
+      <div className="dark-section bg-black/70 text-white"> RecentEpisodes</div>
+    </>
+  );
 };
 
-export default Page;
+export default RecentEpisodes;
