@@ -52,7 +52,7 @@ const FeaturedShows = () => {
           <div className="w-full lg:w-1/2">
             <div className="title flex flex-col gap-2">
               <div>
-                <h2 className="inline-block px-4 py-2 rounded-full text-primary text-2x1 font-normal border border-primary">
+                <h2 className="inline-block px-4 py-2 rounded-full text-primary text-2xl font-normal border border-primary">
                   <i className="bi bi-rocket-takeoff pe-4"></i>
                   Featured Shows
                 </h2>
