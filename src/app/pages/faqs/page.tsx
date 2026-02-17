@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
 import { useState } from "react";
+import Banner from "@/app/index/banner/page";
 import BrandIcon1 from "../../../../public/images/brand-icon-1.png";
 import BrandIcon2 from "../../../../public/images/brand-icon-2.png";
 import BrandIcon3 from "../../../../public/images/brand-icon-3.png";
@@ -132,9 +133,11 @@ const Faqs = () => {
                 );
               })}
             </div>
+            <div className="border border-dashed border-primary mt-5 opacity-30"></div>
           </div>
         </div>
       </div>
+      <Banner />
     </>
   );
 };
