@@ -316,6 +316,106 @@ const Pricing = () => {
           </div>
         </div>
       </div>
+
+      <div className="light-section wave-wrapper-section text-white">
+        <div className="px-[8%] lg:px-[16%] py-40 pt-50 pb-20 lg:pb-40">
+          <div className="title flex flex-col items-center justify-center">
+            <div>
+              <h2 className="inline-block px-4 py-2 rounded-full text-primary text-2xl font-normal border border-primary">
+                <i className="bi bi-rocket-takeoff pe-4"></i>
+                FAQs
+              </h2>
+            </div>
+            <h1 className="text-5xl text-white lg:text-6xl font-semibold mb-5">
+              Frequently Asked Questions
+            </h1>
+            <p className="tracking-wider text-start md:text-center lg:w-[70%]">
+              FAQs are widely used on websites, in product manuals, and in
+              various instructional documents to address frequently asked
+              questions by users or customers.
+            </p>
+          </div>
+
+          <div className="flex flex-col lg:flex-row gap-5 pt-10">
+            <div className="w-full lg:w-1/2">
+              <div className="space-y-4 w-full py-10">
+                {faqData.map((item, index) => (
+                  <div
+                    key={index.toString()}
+                    className={`overflow-hidden rounded-md py-4 px-4 lg:px-8 transition-all duration-300 
+                      ${
+                        openLeftIndex === index
+                          ? "bg-primary text-text border border-[#222e48]"
+                          : "bg-gray border border-transparent"
+                      } `}
+                  >
+                    <button
+                      type="button"
+                      onClick={() => toggleLeft(index)}
+                      className={`w-full flex justify-between items-center cursor-pointer 
+                        transition-all duration-300 border-b border-dashed 
+                        ${openLeftIndex === index ? "pb-4 [border-[#222e48]" : "border-transparent"} `}
+                    >
+                      <span className="text-xl text-left">{item.question}</span>
+
+                      {openLeftIndex === index ? (
+                        <i className="bi bi-dash-circle-fill text-2xl text-gray"></i>
+                      ) : (
+                        <i className="bi bi-plus-circle-fill text-2xl text-primary"></i>
+                      )}
+                    </button>
+
+                    <div
+                      className={`transition-all duration-500 ease-in-out overflow-hidden 
+                    ${openLeftIndex === index ? "max-h-[300px] opacity-100 py-3" : "max-h-0 opacity-0 py-0"}`}
+                    >
+                      <p className="text-sm">{item.answer}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div className="w-full lg:w-1/2">
+              <div className="space-y-4 w-full py-10">
+                {faqData.map((item, index) => (
+                  <div
+                    key={index.toString()}
+                    className={`overflow-hidden rounded-md py-4 px-4 lg:px-8 transition-all duration-300 
+                      ${
+                        openRightIndex === index
+                          ? "bg-primary text-text border border-[#222e48]"
+                          : "bg-gray border border-transparent"
+                      } `}
+                  >
+                    <button
+                      type="button"
+                      onClick={() => toggleRight(index)}
+                      className={`w-full flex justify-between items-center cursor-pointer 
+                        transition-all duration-300 border-b border-dashed 
+                        ${openRightIndex === index ? "pb-4 [border-[#222e48]" : "border-transparent"} `}
+                    >
+                      <span className="text-xl text-left">{item.question}</span>
+
+                      {openRightIndex === index ? (
+                        <i className="bi bi-dash-circle-fill text-2xl text-gray"></i>
+                      ) : (
+                        <i className="bi bi-plus-circle-fill text-2xl text-primary"></i>
+                      )}
+                    </button>
+
+                    <div
+                      className={`transition-all duration-500 ease-in-out overflow-hidden 
+                    ${openRightIndex === index ? "max-h-[300px] opacity-100 py-3" : "max-h-0 opacity-0 py-0"}`}
+                    >
+                      <p className="text-sm">{item.answer}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </>
   );
 };
