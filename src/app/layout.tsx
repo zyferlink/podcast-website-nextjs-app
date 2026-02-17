@@ -31,6 +31,8 @@ export const metadata: Metadata = {
   description: "The Future of Podcast Platforms",
 };
 
+import { Toaster } from "react-hot-toast";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -44,6 +46,7 @@ export default function RootLayout({
         <NavBar />
         {children}
         <Footer />
+        <Toaster position="top-right" reverseOrder={false} />
       </body>
     </html>
   );
