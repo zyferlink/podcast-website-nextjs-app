@@ -146,7 +146,7 @@ const About = () => {
         <div className="px-[8%] lg:px-[16%] py-30 pb-50">
           <div className="flex flex-col lg:flex-row justify-between items-center gap-20">
             <div className="w-full lg:w-1/2">
-              <div className="WhyChoose-img flex items-end gap-5">
+              <div className="WhyChooseUs-img flex items-end gap-5">
                 <Image
                   src={WhyChooseUsImage1}
                   alt="WhyChooseImg"
@@ -177,21 +177,44 @@ const About = () => {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-5 my-5 border-b border-dashed border-primary-light pb-6 pt-5">
                   <h2 className="text-lg flex items-center gap-2">
-                    <i className="bi bi-check2 w-8 h-8 flex justify-center in-checked:bg-primary rounded-full"></i>
+                    <i className="bi bi-check2 w-8 h-8 flex justify-center items-center bg-primary rounded-full"></i>
                     More Collection Podcast
                   </h2>
                   <h2 className="text-lg flex items-center gap-2">
-                    <i className="bi bi-check2 w-8 h-8 flex justify-center in-checked:bg-primary rounded-full"></i>
+                    <i className="bi bi-check2 w-8 h-8 flex justify-center items-center bg-primary rounded-full"></i>
                     Create Your Channel
                   </h2>
                   <h2 className="text-lg flex items-center gap-2">
-                    <i className="bi bi-check2 w-8 h-8 flex justify-center in-checked:bg-primary rounded-full"></i>
+                    <i className="bi bi-check2 w-8 h-8 flex justify-center items-center bg-primary rounded-full"></i>
                     Listen To Podcast On Offline
                   </h2>
                   <h2 className="text-lg flex items-center gap-2">
-                    <i className="bi bi-check2 w-8 h-8 flex justify-center in-checked:bg-primary rounded-full"></i>
+                    <i className="bi bi-check2 w-8 h-8 flex justify-center items-center bg-primary rounded-full"></i>
                     Listen In Screen Off Position
                   </h2>
+                </div>
+
+                <div className="flex items-center gap-5">
+                  <button
+                    type="button"
+                    className="btn btn2"
+                    style={{ fontWeight: 500 }}
+                  >
+                    Get Started Free <i className="bi bi-arrow-right-short"></i>
+                  </button>
+                  <Link
+                    href="/app/pages"
+                    className="flex items-center gap-2 group"
+                  >
+                    <i
+                      className="bi bi-play p-4 bg-primary rounded-full flex items-center 
+                      justify-center text-black text-2xl group-hover:bg-secondary 
+                      group-hover:text-white cursor-pointer transition-all duration-200"
+                    ></i>
+                    <h2 className="text-xl underline text-primary group-hover:text-secondary transition-all duration-200">
+                      See About Us
+                    </h2>
+                  </Link>
                 </div>
               </div>
             </div>
