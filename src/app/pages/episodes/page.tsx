@@ -202,11 +202,50 @@ const Episodes = () => {
                         } me-3 text-xl cursor-pointer transition-all duration-200`}
                       ></i>
                     </div>
+
+                    <Link href={`/pages/Episodes/${episode.id}`}>
+                      <h2 className="mt-3 text-2xl hover:text-primary transition-all duration-200">
+                        {episode.title}
+                      </h2>
+                      <p className="my-3">{episode.pere}</p>
+                    </Link>
+
+                    <div className="flex justify-between items-center gap-5">
+                      <Link
+                        href={`/pages/Episodes/${episode.id}`}
+                        className="flex items-center gap-2 group"
+                      >
+                        <i
+                          className="bi bi-play p-4 bg-primary rounded-full flex text-black text-2x1 group-hover:bg-secondary 
+                          group-hover:text-white items-center justify-center transition-all duration-200"
+                        ></i>
+                        <h2 className="text-lg underline text-primary group-hover:text-secondary transition-all duration-200">
+                          Listen Now
+                        </h2>
+                      </Link>
+
+                      <span className="bg-gray px-5 py-3 rounded-full text-sm text-primary font-semibold tracking-wide">
+                        {episode.episode}
+                      </span>
+                    </div>
                   </div>
                 </div>
               </div>
             ))}
           </div>
+
+          {EpisodesData.length > 10 && (
+            <div className="flex justify-center mt-12">
+              <button
+                type="button"
+                className="btn btn2"
+                onClick={() => setShowAll(!showAll)}
+              >
+                {showAll ? "Show less" : "Show More"}
+                <i className="bi bi-arrow-right-short"></i>
+              </button>
+            </div>
+          )}
         </div>
       </div>
     </>
