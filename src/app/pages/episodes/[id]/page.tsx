@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { useParams } from "next/navigation";
 import { useEffect, useState } from "react";
 import toast from "react-hot-toast";
 import BrandIcon1 from "../../../../../public/images/brand-icon-1.png";
@@ -28,6 +29,27 @@ type Episode = {
 };
 
 const EpisodeDetails = () => {
+  const { id } = useParams();
+
+  const episode = EpisodesData.find((ep) => ep.id === Number(id)) as
+    | Episode
+    | undefined;
+
+  if (!episode) {
+    return (
+      <div className="dark-section px-[8%] lg:px-[16%] py-30 text-center bg-black/98 text-white">
+        <h2 className="text-4xl text-gray-400">Episode not found</h2>
+
+        <Link
+          href="/pages/episodes"
+          className="inline-block mt-6 text-primary underline"
+        >
+          Back to Episodes
+        </Link>
+      </div>
+    );
+  }
+
   return <div>Page</div>;
 };
 
