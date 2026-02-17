@@ -48,7 +48,7 @@ const About = () => {
       {/* Experience */}
       <div className="dark-section pb-20 bg-black/98 text-white">
         <div className="px-[8%] lg:px-[16%] py-20">
-          <div className="flex flex-col lg:flow-row justify-between items-center gap-20">
+          <div className="flex flex-col lg:flex-row justify-between items-center gap-20">
             <div className="w-full lg:w-1/2">
               <div className="content">
                 <div className="title flex flex-col gap-2">
@@ -134,6 +134,64 @@ const About = () => {
                     </h2>
                     <p className="text-xl w-1/2">Years of experience</p>
                   </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Why Choose Us */}
+      <div className="light-section">
+        <div className="px-[8%] lg:px-[16%] py-30 pb-50">
+          <div className="flex flex-col lg:flex-row justify-between items-center gap-20">
+            <div className="w-full lg:w-1/2">
+              <div className="WhyChoose-img flex items-end gap-5">
+                <Image
+                  src={WhyChooseUsImage1}
+                  alt="WhyChooseImg"
+                  className="w-full h-fit border-t-2 border-primary pt-5"
+                />
+                <Image
+                  src={WhyChooseUsImage2}
+                  alt="WhyChooseImg"
+                  className="w-full h-fit"
+                />
+                <Image src={WhyChooseUsImage3} alt="WhyChooseImg" />
+              </div>
+            </div>
+
+            <div className="w-full lg:w-1/2 text-white">
+              <div className="content">
+                <div className="title flex flex-col gap-2">
+                  <div>
+                    <h2 className="inline-block px-4 py-2 rounded-full text-primary text-2xl font-normal border border-primary">
+                      <i className="bi bi-rocket-takeoff pe-4"></i>
+                      Why Choose Us
+                    </h2>
+                  </div>
+                  <h1 className="text-5xl md:text-6xl font-semibold mt-7 mb-5">
+                    What Makes Us Different From Other
+                  </h1>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-5 my-5 border-b border-dashed border-primary-light pb-6 pt-5">
+                  <h2 className="text-lg flex items-center gap-2">
+                    <i className="bi bi-check2 w-8 h-8 flex justify-center in-checked:bg-primary rounded-full"></i>
+                    More Collection Podcast
+                  </h2>
+                  <h2 className="text-lg flex items-center gap-2">
+                    <i className="bi bi-check2 w-8 h-8 flex justify-center in-checked:bg-primary rounded-full"></i>
+                    Create Your Channel
+                  </h2>
+                  <h2 className="text-lg flex items-center gap-2">
+                    <i className="bi bi-check2 w-8 h-8 flex justify-center in-checked:bg-primary rounded-full"></i>
+                    Listen To Podcast On Offline
+                  </h2>
+                  <h2 className="text-lg flex items-center gap-2">
+                    <i className="bi bi-check2 w-8 h-8 flex justify-center in-checked:bg-primary rounded-full"></i>
+                    Listen In Screen Off Position
+                  </h2>
                 </div>
               </div>
             </div>
