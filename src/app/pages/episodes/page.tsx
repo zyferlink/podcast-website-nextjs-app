@@ -54,6 +54,40 @@ const Episodes = () => {
     return 0;
   });
 
+  const [favorites, setFavorites] = useState<Episode[]>(() => {
+    if (typeof window === "undefined") return [];
+
+    const stored = localStorage.getItem("favoriteEpisodes");
+    return stored ? (JSON.parse(stored) as Episode[]) : [];
+  });
+
+  const toggleFavorite = (episode: Episode) => {
+    let updatedFavorites: Episode[];
+
+    const isFav = favorites.some((fav) => fav.id === episode.id);
+
+    if (isFav) {
+      updatedFavorites = favorites.filter((fav) => fav.id !== episode.id);
+
+      toast.error(`Removed from Favorites `, {
+        icon: "💔",
+      });
+    } else {
+      updatedFavorites = [...favorites, episode];
+
+      toast.error(`Added to Favorites `, {
+        icon: "❤️",
+      });
+    }
+
+    setFavorites(updatedFavorites);
+    localStorage.setItem("favoriteEpisodes", JSON.stringify(updatedFavorites));
+  };
+
+  const isFavorite = (id: number) => {
+    return favorites.some((fav: Episode) => fav.id === id);
+  };
+
   return (
     <>
       {/* Page Section */}
@@ -125,6 +159,41 @@ const Episodes = () => {
               </h2>
             </div>
           )}
+
+          {/* Episodes List */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mt-10">
+            {sortedEpisode.map((episode, index) => (
+              <div
+                key={index.toString()}
+                className="flex w-full flex-col lg:flex-row justify-between bg-gray-light rounded-lg p-4 overflow-hidden"
+              >
+                <div className="w-full lg:w-1/2 flex justify-center items-center">
+                  <div className="w-[80%] lg:w-full">
+                    <Image
+                      src={"/images" + episode.image}
+                      alt={episode.name}
+                      width={1000}
+                      height={1000}
+                      className="w-full h-full rounded-2xl object-cover"
+                    />
+                  </div>
+                </div>
+
+                <div className="w-full lg:w-1/1">
+                  <div className="p-5">
+                    <div className="flex flex-row flex-wrap justify-between items-center">
+                      <Link href={`/pages/Episodes/${episode.id}`}>
+                        <p className="font-light text-gray-200 hover:text-primary tracking-wider transition-all duration-200">
+                          <i className="bi bi-mic text-primary"></i>
+                          {episode.name}
+                        </p>
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </>
