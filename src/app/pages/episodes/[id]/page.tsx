@@ -82,6 +82,13 @@ const EpisodeDetails = () => {
     .sort(() => Math.random() - 0.5)
     .slice(0, 2);
 
+  // Faq's
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
+
+  const toggleFaq = (index: number) => {
+    setOpenIndex(openIndex === index ? null : index);
+  };
+
   return (
     <>
       {/* Page Section */}
@@ -322,6 +329,55 @@ const EpisodeDetails = () => {
                     ></i>
                   </div>
                 </div>
+              </div>
+            </div>
+
+            {/* Faq */}
+            <div className="bg-gray p-5 rounded-2xl mt-5">
+              <h2 className="text-3xl font-semibold text-primary">FAQs</h2>
+              <div className="border border-dashed border-primary mt-3 mb-5 opacity-30"></div>
+              {/* Faq Content */}
+              <div className="space-y-4">
+                {faqs.map((faq, index) => {
+                  const isOpen = openIndex === index;
+                  return (
+                    <div
+                      key={index.toString()}
+                      className={` rounded-xl p-4 transition-all duration-500 ease-in-out 
+                        ${isOpen ? "bg-primary text-black" : "bg-gray-light"}`}
+                    >
+                      {/* Question */}
+                      <div
+                        className={`flex justify-between items-center cursor-pointer 
+                          pb-3 transition-all duration-300 
+                          ${isOpen ? "border-b border-dashed border-black/40" : ""}`}
+                        onClick={() => toggleFaq(index)}
+                      >
+                        <h3 className="text-xl font-medium">{faq.question}</h3>
+
+                        {/* Icon */}
+                        <span
+                          className={`w-10 h-10 flex items-center justify-center 
+                            rounded-full transition-all duration-300 
+                            ${isOpen ? "bg-black text-primary" : "bg-primary text-black"} `}
+                        >
+                          <i
+                            className={`bi ${isOpen ? "bi-dash-lg" : "bi-plus-lg"} text-xl`}
+                          ></i>
+                        </span>
+                      </div>
+
+                      {/* Answer */}
+                      <div
+                        className={`overflow-hidden transition-all duration-300 
+                          ease-in-out 
+                          ${isOpen ? "max-h-40 mt-3 opacity-100" : "max-h-0 opacity-0"} `}
+                      >
+                        <p className="text-sm">{faq.answer}</p>
+                      </div>
+                    </div>
+                  );
+                })}
               </div>
             </div>
           </div>
