@@ -3,6 +3,7 @@ import FeaturedShows from "./featured-shows/page";
 import Hero from "./hero/page";
 import HostProfiles from "./host-profiles/page";
 import RecentEpisodes from "./recent-episodes/page";
+import Testimonial from "./testimonial/page";
 import WhyChooseUs from "./why-choose-us/page";
 
 const Index = () => {
@@ -13,6 +14,7 @@ const Index = () => {
       <WhyChooseUs />
       <RecentEpisodes />
       <HostProfiles />
+      <Testimonial />
     </>
   );
 };
