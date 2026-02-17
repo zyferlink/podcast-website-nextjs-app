@@ -586,3 +586,11 @@ body {
   background-size: auto 100%;
   animation: waveScroll 50s linear infinite;
 }
+
+
+/* Footer Section */
+
+.footer-waves .music-waves2{
+width: 350px;
+height: 40px;
+}
