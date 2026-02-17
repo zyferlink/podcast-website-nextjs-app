@@ -1,6 +1,9 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
+import { useState } from "react";
+import toast from "react-hot-toast";
 import BrandIcon1 from "../../../../public/images/brand-icon-1.png";
 import BrandIcon2 from "../../../../public/images/brand-icon-2.png";
 import BrandIcon3 from "../../../../public/images/brand-icon-3.png";
@@ -10,8 +13,47 @@ import PageElement1 from "../../../../public/images/page-elm-1.png";
 import PageElement2 from "../../../../public/images/page-elm-2.png";
 import PageElement3 from "../../../../public/images/page-elm-3.png";
 import PageElement4 from "../../../../public/images/page-elm-4.png";
+import EpisodesData from "../../../data/EpisodeData.json";
+
+type Episode = {
+  id: number;
+  name: string;
+  title: string;
+  pere: string;
+  episode: string;
+  image: string;
+};
 
 const Episodes = () => {
+  const [showAll, setShowAll] = useState(false);
+
+  // Search Episodes
+  const [searchTerm, setSearchTerm] = useState("");
+
+  const filteredEpisodes = EpisodesData.filter(
+    (episode) =>
+      episode.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      episode.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      episode.episode.toLowerCase().includes(searchTerm.toLowerCase()),
+  );
+
+  const visibleEpisodes = showAll
+    ? filteredEpisodes
+    : filteredEpisodes.slice(0, 10);
+
+  const [sortBy, setSortBy] = useState("default");
+
+  const sortedEpisode = [...visibleEpisodes].sort((a, b) => {
+    const epA = parseInt(a.episode.replace("Episode", ""));
+    const epB = parseInt(b.episode.replace("Episode", ""));
+
+    if (sortBy === "high") return epB - epA;
+    if (sortBy === "low") return epA - epB;
+    if (sortBy === "title") return a.title.localeCompare(b.title);
+
+    return 0;
+  });
+
   return (
     <>
       {/* Page Section */}
@@ -44,7 +86,8 @@ const Episodes = () => {
             <input
               type="text"
               placeholder="Search Episode ... "
-              // value={(e) => }
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
               className="w-[80%] py-3 outline-none ps-5 text-xl bg-transparent"
             />
             <button type="button" className="btn btn2">
@@ -53,13 +96,13 @@ const Episodes = () => {
           </div>
 
           <div className="flex justify-between items-center gap-5 mt-4">
-            <h2>Total Episodes Available (5 )</h2>
+            <h2>Total Episodes Available ( {visibleEpisodes.length} )</h2>
 
             {/* Sorting */}
             <div className="relative">
               <select
-                // value={}
-                // value={(e) => }
+                value={sortBy}
+                onChange={(e) => setSortBy(e.target.value)}
                 className="appearance-none bg-gray text-primary px-5 py-3 pr-12 
                 rounded-full outline-none cursor-pointer font-medium hover:bg-gray-light 
                 transition-all duration-300"
@@ -73,6 +116,15 @@ const Episodes = () => {
               <i className="bi bi-chevron-down absolute right-5 top-1/2 -translate-y-1/2 text-primary pointer-events-none"></i>
             </div>
           </div>
+
+          {/* Episodes Not Found */}
+          {searchTerm && sortedEpisode.length === 0 && (
+            <div className="w-full text-center mt-12">
+              <h2 className="text-3xl text-gray-400 border-t border-b border-red-400 py-5">
+                '{searchTerm}' Episode not Found
+              </h2>
+            </div>
+          )}
         </div>
       </div>
     </>
