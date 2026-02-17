@@ -680,3 +680,12 @@ body {
   left: 10%;
   animation-delay: 0.7s;
 }
+
+.episode-search {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 5;
+  width: 70%;
+}

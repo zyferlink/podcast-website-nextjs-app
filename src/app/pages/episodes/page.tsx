@@ -52,7 +52,7 @@ const Episodes = () => {
             </button>
           </div>
 
-          <div className="flex justify-between items-center gap-5">
+          <div className="flex justify-between items-center gap-5 mt-4">
             <h2>Total Episodes Available (5 )</h2>
 
             {/* Sorting */}
@@ -70,7 +70,7 @@ const Episodes = () => {
                 <option value="title">Title: A to Z</option>
               </select>
 
-              <i className="bi bi-chevron-down absolute right-5 top-1/2 text-primary pointer-events-none"></i>
+              <i className="bi bi-chevron-down absolute right-5 top-1/2 -translate-y-1/2 text-primary pointer-events-none"></i>
             </div>
           </div>
         </div>
