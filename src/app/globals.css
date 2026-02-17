@@ -771,6 +771,6 @@ body {
 
 
 .about-wave2::after{
-top: -35%;
+top: -35% !important;
 height: 150px;
 }

@@ -3,6 +3,9 @@
 import Image from "next/image";
 import Link from "next/link";
 import CountUp from "react-countup";
+import Banner from "@/app/index/banner/page";
+import HostProfiles from "@/app/index/host-profiles/page";
+import Testimonial from "@/app/index/testimonial/page";
 import BrandIcon1 from "../../../../public/images/brand-icon-1.png";
 import BrandIcon2 from "../../../../public/images/brand-icon-2.png";
 import BrandIcon3 from "../../../../public/images/brand-icon-3.png";
@@ -221,6 +224,49 @@ const About = () => {
           </div>
         </div>
       </div>
+
+      {/* Counter Info*/}
+      <div className="dark-section about-wave2 wave-wrapper-section2 bg-black/90 text-white">
+        <div className="px-[8%] lg:px-[16%] py-20">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {/* Card 1 */}
+            <div className="bg-gray-light rounded-2xl p-8 text-center">
+              <h2 className="text-6xl font-semibold text-primary">
+                <CountUp start={0} end={99} enableScrollSpy scrollSpyOnce />+
+              </h2>
+              <p className="mt-3 text-xl text-gray-300">Total Episodes</p>
+            </div>
+
+            {/* Card 2 */}
+            <div className="bg-gray-light rounded-2xl p-8 text-center">
+              <h2 className="text-6xl font-semibold text-primary">
+                <CountUp start={0} end={595} enableScrollSpy scrollSpyOnce />K
+              </h2>
+              <p className="mt-3 text-xl text-gray-300">Podcast Subscribers</p>
+            </div>
+
+            {/* Card 3 */}
+            <div className="bg-gray-light rounded-2xl p-8 text-center">
+              <h2 className="text-6xl font-semibold text-primary">
+                <CountUp start={0} end={210} enableScrollSpy scrollSpyOnce />M
+              </h2>
+              <p className="mt-3 text-xl text-gray-300">Happy Listeners</p>
+            </div>
+
+            {/* Card 4 */}
+            <div className="bg-gray-light rounded-2xl p-8 text-center">
+              <h2 className="text-6xl font-semibold text-primary">
+                <CountUp start={0} end={210} enableScrollSpy scrollSpyOnce />+
+              </h2>
+              <p className="mt-3 text-xl text-gray-300">Our Awards</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <HostProfiles />
+      <Testimonial />
+      <Banner />
     </>
   );
 };
