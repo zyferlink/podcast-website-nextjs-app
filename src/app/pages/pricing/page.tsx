@@ -111,6 +111,87 @@ const Pricing = () => {
             <h1 className="text-5xl text-white lg:text-6xl font-semibold mt-7">
               Flexible Pricing Options
             </h1>
+
+            <div className="flex items-center justify-center gap-4">
+              <span className={billing === "monthly" ? "text-white" : ""}>
+                Monthly
+              </span>
+
+              <button
+                type="button"
+                onClick={() =>
+                  setBilling(billing === "monthly" ? "yearly" : "monthly")
+                }
+                className="relative w-14 h-7 bg-gray rounded-full"
+              >
+                <span
+                  className={`absolute top-1 w-5 h-5 bg-primary rounded-full transition-all 
+                  duration-300 ${billing === "yearly" ? "left-8" : "left-1"}`}
+                ></span>
+              </button>
+
+              <span className={billing === "yearly" ? "text-white" : ""}>
+                Yearly <span className="text-primary">(Save 30%)</span>
+              </span>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 pt-15">
+                <div className="bg-gray-light px-6 py-6 rounded-xl">
+                  <div className="border-b border-dashed border-primary-light pb-8">
+                    <h4 className="font-semibold text-xl mb-2">Free</h4>
+                    <div className="flex items-end gap-1 mb-5">
+                      <h1 className="text-5xl text-primary font-semibold">
+                        0.00
+                      </h1>
+                      <span className="text-xl text-primary">
+                        /{billing === "monthly" ? "Mo" : "Yr"}
+                      </span>
+                    </div>
+
+                    <p className="">
+                      Get exclusive podcasts from your favorite hosts on here
+                      for free.
+                    </p>
+                  </div>
+
+                  <ul className="space-y-3 list-none py-8">
+                    <li className="flex gap-3 items-center">
+                      <i className="bi bi-check-circle-fill text-primary text-xl"></i>
+                      Latest and freebies topics
+                    </li>
+
+                    <li className="flex gap-3 items-center">
+                      <i className="bi bi-check-circle-fill text-primary text-xl"></i>
+                      Curated speakers
+                    </li>
+
+                    <li className="flex gap-3 items-center">
+                      <i className="bi bi-check-circle-fill text-primary text-xl"></i>
+                      Free content only
+                    </li>
+
+                    <li className="flex gap-3 items-center">
+                      <i className="bi bi-check-circle-fill text-primary text-xl"></i>
+                      Available on all platforms
+                    </li>
+
+                    <li className="flex gap-3 items-center">
+                      <i className="bi bi-check-circle-fill text-primary text-xl"></i>
+                      upto 20 channel Subscribe
+                    </li>
+
+                    <li className="flex gap-3 items-center">
+                      <i className="bi bi-check-circle-fill text-primary text-xl"></i>
+                      Unlimited episodes
+                    </li>
+
+                    <li className="flex gap-3 items-center">
+                      <i className="bi bi-check-circle-fill text-primary text-xl"></i>
+                      Get Started Now
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
