@@ -484,3 +484,62 @@ body {
     transform: translateY(0px);
   }
 }
+
+/* Testimonials Section*/
+
+.test-img {
+  opacity: 0;
+  animation: fade-right 1s 0.6s forwards linear;
+}
+
+.test-content-wrap .test-content .test-stars {
+  opacity: 0;
+  animation: fade-right 1s 0.7s forwards linear;
+}
+
+.test-content-wrap .test-content p {
+  opacity: 0;
+  animation: fade-right 1s 0.8s forwards linear;
+}
+
+.test-content-wrap .test-content .test-border {
+  opacity: 0;
+  animation: fade-right 1s 1s forwards linear;
+}
+
+.test-content-wrap .test-content .test-info {
+  opacity: 0;
+  animation: fade-right 1s 1.2s forwards linear;
+}
+
+.test-content-wrap .text-btns {
+  opacity: 0;
+  animation: fade-right 1s 1.5s forwards linear;
+}
+
+@keyframes fade-right {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+
+@keyframes fade-left {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+
