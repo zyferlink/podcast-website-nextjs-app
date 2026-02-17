@@ -18,12 +18,12 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRef, useState } from "react";
 import toast from "react-hot-toast";
-import musicWavesImage from "@/public/music-waves.png";
 import BrandIcon1 from "../../../../public/images/brand-icon-1.png";
 import BrandIcon2 from "../../../../public/images/brand-icon-2.png";
 import BrandIcon3 from "../../../../public/images/brand-icon-3.png";
 import BrandIcon4 from "../../../../public/images/brand-icon-4.png";
 import BrandIcon5 from "../../../../public/images/brand-icon-5.png";
+import MusicWavesImage from "../../../../public/images/music-waves.png";
 import PageBanner1 from "../../../../public/images/Page-banner-1.png";
 import PageBanner2 from "../../../../public/images/Page-banner-2.png";
 import PageElement1 from "../../../../public/images/page-elm-1.png";
@@ -112,7 +112,7 @@ const Pricing = () => {
               Flexible Pricing Options
             </h1>
 
-            <div className="flex items-center justify-center gap-4">
+            <div className="flex items-center justify-center gap-4 mt-4">
               <span className={billing === "monthly" ? "text-white" : ""}>
                 Monthly
               </span>
@@ -122,7 +122,7 @@ const Pricing = () => {
                 onClick={() =>
                   setBilling(billing === "monthly" ? "yearly" : "monthly")
                 }
-                className="relative w-14 h-7 bg-gray rounded-full"
+                className="relative w-14 h-7 bg-gray rounded-full cursor-pointer"
               >
                 <span
                   className={`absolute top-1 w-5 h-5 bg-primary rounded-full transition-all 
@@ -133,63 +133,184 @@ const Pricing = () => {
               <span className={billing === "yearly" ? "text-white" : ""}>
                 Yearly <span className="text-primary">(Save 30%)</span>
               </span>
+            </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 pt-15">
-                <div className="bg-gray-light px-6 py-6 rounded-xl">
-                  <div className="border-b border-dashed border-primary-light pb-8">
-                    <h4 className="font-semibold text-xl mb-2">Free</h4>
-                    <div className="flex items-end gap-1 mb-5">
-                      <h1 className="text-5xl text-primary font-semibold">
-                        0.00
-                      </h1>
-                      <span className="text-xl text-primary">
-                        /{billing === "monthly" ? "Mo" : "Yr"}
-                      </span>
-                    </div>
-
-                    <p className="">
-                      Get exclusive podcasts from your favorite hosts on here
-                      for free.
-                    </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 pt-15">
+              <div className="bg-gray-light px-6 py-6 rounded-xl">
+                <div className="border-b border-dashed border-primary-light pb-8">
+                  <h4 className="font-semibold text-xl text-start mb-2">
+                    Free
+                  </h4>
+                  <div className="flex items-end justify-center gap-1 mb-5">
+                    <h1 className="text-5xl text-primary font-semibold">
+                      0.00
+                    </h1>
+                    <span className="text-xl text-primary">
+                      /{billing === "monthly" ? "Mo" : "Yr"}
+                    </span>
                   </div>
 
-                  <ul className="space-y-3 list-none py-8">
-                    <li className="flex gap-3 items-center">
-                      <i className="bi bi-check-circle-fill text-primary text-xl"></i>
-                      Latest and freebies topics
-                    </li>
-
-                    <li className="flex gap-3 items-center">
-                      <i className="bi bi-check-circle-fill text-primary text-xl"></i>
-                      Curated speakers
-                    </li>
-
-                    <li className="flex gap-3 items-center">
-                      <i className="bi bi-check-circle-fill text-primary text-xl"></i>
-                      Free content only
-                    </li>
-
-                    <li className="flex gap-3 items-center">
-                      <i className="bi bi-check-circle-fill text-primary text-xl"></i>
-                      Available on all platforms
-                    </li>
-
-                    <li className="flex gap-3 items-center">
-                      <i className="bi bi-check-circle-fill text-primary text-xl"></i>
-                      upto 20 channel Subscribe
-                    </li>
-
-                    <li className="flex gap-3 items-center">
-                      <i className="bi bi-check-circle-fill text-primary text-xl"></i>
-                      Unlimited episodes
-                    </li>
-
-                    <li className="flex gap-3 items-center">
-                      <i className="bi bi-check-circle-fill text-primary text-xl"></i>
-                      Get Started Now
-                    </li>
-                  </ul>
+                  <p className="">
+                    Get exclusive podcasts from your favorite hosts on here for
+                    free.
+                  </p>
                 </div>
+
+                <ul className="space-y-3 list-none py-8">
+                  <li className="flex gap-3 items-center">
+                    <i className="bi bi-check-circle-fill text-primary text-xl"></i>
+                    Latest and freebies topics
+                  </li>
+
+                  <li className="flex gap-3 items-center">
+                    <i className="bi bi-check-circle-fill text-primary text-xl"></i>
+                    Curated speakers
+                  </li>
+
+                  <li className="flex gap-3 items-center">
+                    <i className="bi bi-check-circle-fill text-primary text-xl"></i>
+                    Free content only
+                  </li>
+
+                  <li className="flex gap-3 items-center">
+                    <i className="bi bi-check-circle-fill text-primary text-xl"></i>
+                    Available on all platforms
+                  </li>
+
+                  <li className="flex gap-3 items-center">
+                    <i className="bi bi-check-circle-fill text-primary text-xl"></i>
+                    upto 20 channel Subscribe
+                  </li>
+
+                  <li className="flex gap-3 items-center">
+                    <i className="bi bi-check-circle-fill text-primary text-xl"></i>
+                    Unlimited episodes
+                  </li>
+                </ul>
+
+                <button type="button" className="btn btn1">
+                  Get Started Now <i className="bi bi-arrow-right-short"></i>
+                </button>
+              </div>
+
+              <div className="bg-gray-light px-6 py-6 rounded-xl">
+                <div className="border-b border-dashed border-primary-light pb-8">
+                  <div className="flex justify-center text-start items-center">
+                    <h4 className="font-semibold text-xl mb-2">Premium</h4>
+                    <Image
+                      src={MusicWavesImage}
+                      alt="music-waves-img"
+                      className="w-40"
+                    />
+                  </div>
+
+                  <div className="flex items-end justify-center gap-1 mb-5">
+                    <h1 className="text-5xl text-primary font-semibold">
+                      {billing === "monthly" ? "29.00" : "329.00"}
+                    </h1>
+                    <span className="text-xl text-primary">
+                      /{billing === "monthly" ? "Mo" : "Yr"}
+                    </span>
+                  </div>
+
+                  <p className="">
+                    Get exclusive podcasts from your favorite hosts on here for
+                    free.
+                  </p>
+                </div>
+
+                <ul className="space-y-3 list-none py-8">
+                  <li className="flex gap-3 items-center">
+                    <i className="bi bi-check-circle-fill text-primary text-xl"></i>
+                    Latest and Premium topics
+                  </li>
+
+                  <li className="flex gap-3 items-center">
+                    <i className="bi bi-check-circle-fill text-primary text-xl"></i>
+                    Curated speakers
+                  </li>
+
+                  <li className="flex gap-3 items-center">
+                    <i className="bi bi-check-circle-fill text-primary text-xl"></i>
+                    All content
+                  </li>
+
+                  <li className="flex gap-3 items-center">
+                    <i className="bi bi-check-circle-fill text-primary text-xl"></i>
+                    Available on all platforms
+                  </li>
+
+                  <li className="flex gap-3 items-center">
+                    <i className="bi bi-check-circle-fill text-primary text-xl"></i>
+                    upto 20 channel Subscribe
+                  </li>
+
+                  <li className="flex gap-3 items-center">
+                    <i className="bi bi-check-circle-fill text-primary text-xl"></i>
+                    Unlimited episodes
+                  </li>
+                </ul>
+
+                <button type="button" className="btn btn1">
+                  Get Started Now <i className="bi bi-arrow-right-short"></i>
+                </button>
+              </div>
+
+              <div className="bg-gray-light px-6 py-6 rounded-xl">
+                <div className="border-b border-dashed border-primary-light pb-8">
+                  <h4 className="font-semibold text-xl text-start mb-2">
+                    Special
+                  </h4>
+                  <div className="flex items-end justify-center gap-1 mb-5">
+                    <h1 className="text-5xl text-primary font-semibold">
+                      {billing === "monthly" ? "99.00" : "999.00"}
+                    </h1>
+                    <span className="text-xl text-primary">
+                      /{billing === "monthly" ? "Mo" : "Yr"}
+                    </span>
+                  </div>
+
+                  <p className="">
+                    Get exclusive podcasts from your favorite hosts on here for
+                    free.
+                  </p>
+                </div>
+
+                <ul className="space-y-3 list-none py-8">
+                  <li className="flex gap-3 items-center">
+                    <i className="bi bi-check-circle-fill text-primary text-xl"></i>
+                    Latest and freebies topics
+                  </li>
+
+                  <li className="flex gap-3 items-center">
+                    <i className="bi bi-check-circle-fill text-primary text-xl"></i>
+                    Curated speakers
+                  </li>
+
+                  <li className="flex gap-3 items-center">
+                    <i className="bi bi-check-circle-fill text-primary text-xl"></i>
+                    Free content only
+                  </li>
+
+                  <li className="flex gap-3 items-center">
+                    <i className="bi bi-check-circle-fill text-primary text-xl"></i>
+                    Available on all platforms
+                  </li>
+
+                  <li className="flex gap-3 items-center">
+                    <i className="bi bi-check-circle-fill text-primary text-xl"></i>
+                    upto 20 channel Subscribe
+                  </li>
+
+                  <li className="flex gap-3 items-center">
+                    <i className="bi bi-check-circle-fill text-primary text-xl"></i>
+                    Unlimited episodes
+                  </li>
+                </ul>
+
+                <button type="button" className="btn btn1">
+                  Get Started Now <i className="bi bi-arrow-right-short"></i>
+                </button>
               </div>
             </div>
           </div>
