@@ -12,6 +12,10 @@ import ExperienceBanner1 from "../../../../public/images/elevate-banner-1.png";
 import ExperienceBanner2 from "../../../../public/images/elevate-banner-2.png";
 import ExperienceBannerArrow1 from "../../../../public/images/elevate-banner-arrow1.png";
 import ExperienceBannerArrow2 from "../../../../public/images/elevate-banner-arrow2.png";
+import PageElement1 from "../../../../public/images/page-elm-1.png";
+import PageElement2 from "../../../../public/images/page-elm-2.png";
+import PageElement3 from "../../../../public/images/page-elm-3.png";
+import PageElement4 from "../../../../public/images/page-elm-4.png";
 import WhyChooseUsImage1 from "../../../../public/images/why-choose-1.png";
 import WhyChooseUsImage2 from "../../../../public/images/why-choose-2.png";
 import WhyChooseUsImage3 from "../../../../public/images/why-choose-3.png";
@@ -21,14 +25,14 @@ const About = () => {
     <>
       {/* Page Section */}
       <div className="page-section bg-black/98 text-white">
-        {/* <Image src={PageElement2} alt="Element" className="elm2 elemet" />
+        <Image src={PageElement2} alt="Element" className="elm2 elemet" />
         <Image src={PageElement3} alt="Element" className="elm3 elemet" />
-        <Image src={PageElement4} alt="Element" className="elm4 elemet" /> */}
+        <Image src={PageElement4} alt="Element" className="elm4 elemet" />
         <div className="page-content w-full md:w-1/2 flex justify-center flex-col pt-10">
-          {/* <Image src={PageElement1} alt="Element" className="w-full h-full" /> */}
+          <Image src={PageElement1} alt="Element" className="w-full h-full" />
 
           <h1 className="text-6xl lg:text-8x1 justify-center my-6">
-            Favorite <span className="text-primary">Episodes</span>
+            About <span className="text-primary">VoiceFlow</span>
           </h1>
 
           <div className="flex items-center justify-center gap-3 cursor-pointer mt-5">
@@ -42,7 +46,7 @@ const About = () => {
       </div>
 
       {/* Experience */}
-      <div className="dark-section pb-20">
+      <div className="dark-section pb-20 bg-black/98 text-white">
         <div className="px-[8%] lg:px-[16%] py-20">
           <div className="flex flex-col lg:flow-row justify-between items-center gap-20">
             <div className="w-full lg:w-1/2">
@@ -58,6 +62,38 @@ const About = () => {
                     Explore Excellence in{" "}
                     <span className="text-primary">Podcasting</span>
                   </h1>
+                </div>
+
+                <p className="my-5 tracking-wider">
+                  Explore vibrant soundscapes where stories of every kind come
+                  alive, taking you on an immersive journey and through
+                  captivating narratives.
+                </p>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-5 my-5 border-b border-dashed border-primary-light pb-6 pt-5">
+                  <div className="flex items-center gap-2">
+                    <div>
+                      <i className="bi bi-volume-up border-s-2 ps-2 border-[#0de27c] text-5xl text-primary"></i>
+                    </div>
+                    <div className="flex flex-col">
+                      <h2 className="text-2xl">Empower Listeners</h2>
+                      <p className="mt-3 text-gray-300">
+                        Explore vibrant soundscapes where stories
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-center gap-2">
+                    <div>
+                      <i className="bi bi-volume-up border-s-2 ps-2 border-[#0de27c] text-5xl text-primary"></i>
+                    </div>
+                    <div className="flex flex-col">
+                      <h2 className="text-2xl">Build Community</h2>
+                      <p className="mt-3 text-gray-300">
+                        Explore vibrant soundscapes where stories
+                      </p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
