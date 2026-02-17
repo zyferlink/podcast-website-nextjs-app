@@ -429,6 +429,20 @@ const EpisodeDetails = () => {
                   </div>
                 </div>
               </div>
+
+              <div className="bg-[#1c1d20] p-5 rounded-2xl mt-5">
+                <h2 className="text-3xl text-primary font-semibold">
+                  Listen On
+                </h2>
+                <div className="border border-dashed border-primary mt-3 mb-5 opacity-30"></div>
+                <div className="flex items-center justify-center gap-3 cursor-pointer mt-5">
+                  <Image src={BrandIcon1} alt="brand" />
+                  <Image src={BrandIcon2} alt="brand" />
+                  <Image src={BrandIcon3} alt="brand" />
+                  <Image src={BrandIcon4} alt="brand" />
+                  <Image src={BrandIcon5} alt="brand" />
+                </div>
+              </div>
             </div>
           </div>
         </div>
