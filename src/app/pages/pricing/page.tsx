@@ -18,6 +18,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRef, useState } from "react";
 import toast from "react-hot-toast";
+import Banner from "@/app/index/banner/page";
+import Testimonial from "@/app/index/testimonial/page";
 import BrandIcon1 from "../../../../public/images/brand-icon-1.png";
 import BrandIcon2 from "../../../../public/images/brand-icon-2.png";
 import BrandIcon3 from "../../../../public/images/brand-icon-3.png";
@@ -86,7 +88,7 @@ const Pricing = () => {
           <Image src={PageElement1} alt="Element" className="w-full h-full" />
 
           <h1 className="text-6xl lg:text-8xl justify-center my-6">
-            <span className="text-primary">Pricing</span>
+            <span className="text-primary">Pricing</span> Plan
           </h1>
 
           <div className="flex items-center justify-center gap-3 cursor-pointer mt-5">
@@ -416,6 +418,9 @@ const Pricing = () => {
           </div>
         </div>
       </div>
+
+      <Testimonial />
+      <Banner />
     </>
   );
 };
