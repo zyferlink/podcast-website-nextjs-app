@@ -620,7 +620,63 @@ body {
   }
 }
 
-@media (max-width:575px) {
-.footer-waves .music-waves2{
-width: 80vw;}
+@media (max-width: 575px) {
+  .footer-waves .music-waves2 {
+    width: 80vw;
+  }
+}
+
+/* Episode Listing Section */
+
+.page-section {
+  width: 100%;
+  height: 60vh;
+  background: url(../../public/images/texture-bg-1.png), rgb(38, 38, 41);
+  background-repeat: no-repeat;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding-bottom: 3%;
+  overflow: hidden !important;
+  z-index: 1;
+}
+
+.page-section:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(../../public/images/vector-line.png);
+  background-position: 85% center;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
+.elemet {
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: Anim-rotate 5s infinite forwards linear;
+}
+
+.elm2 {
+  top: 10%;
+  left: 5%;
+  animation-delay: 0.3s;
+}
+
+.elm3 {
+  top: 65%;
+  left: 85%;
+  animation-delay: 0.5s;
+}
+
+.elm4 {
+  top: 70%;
+  left: 10%;
+  animation-delay: 0.7s;
 }
