@@ -188,6 +188,19 @@ const Episodes = () => {
                           {episode.name}
                         </p>
                       </Link>
+                      <h2 className="text-gray-300">
+                        <i className="bi bi-clock pe-1 text-primary"></i>
+                        4hr 12min
+                      </h2>
+
+                      <i
+                        onClick={() => toggleFavorite(episode)}
+                        className={`bi ${
+                          isFavorite(episode.id)
+                            ? "bi-balloon-heart-fill text-red-500"
+                            : "bi-balloon-heart text-primary"
+                        } me-3 text-xl cursor-pointer transition-all duration-200`}
+                      ></i>
                     </div>
                   </div>
                 </div>
