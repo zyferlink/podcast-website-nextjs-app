@@ -44,6 +44,22 @@ const Contact = () => {
           </div>
         </div>
       </div>
+
+      <div className="dark-section bg-black/98 text-white">
+        <div className="px-[8%] lg:px-[16%] py-40  pb-20">
+          <div className="title text-center">
+            <div>
+              <h2 className="inline-block px-4 py-2 rounded-full text-primary text-2xl font-normal border border-primary">
+                <i className="bi bi-rocket-takeoff pe-4"></i>
+                Get In Touch
+              </h2>
+            </div>
+            <h1 className="text-5xl text-white lg:text-6xl font-semibold mt-7 mb-5">
+              Let Us Help You
+            </h1>
+          </div>
+        </div>
+      </div>
     </>
   );
 };
