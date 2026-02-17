@@ -741,3 +741,12 @@ body {
     width: 70%;
   }
 }
+
+/* About Page Section */
+
+.exp-arrow1 {
+  position: absolute;
+  bottom: -20%;
+  left: 10%;
+  z-index: -1;
+}
