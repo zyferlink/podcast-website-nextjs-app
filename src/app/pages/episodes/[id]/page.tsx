@@ -233,6 +233,67 @@ const EpisodeDetails = () => {
                     ))}
                   </div>
                 </div>
+
+                <h2 className="text-3xl my-5 mt-8">Transcript</h2>
+                <p className="text-gray-300">
+                  For those who prefer reading or have accessibility needs,
+                  here's the full transcript of the episode. View captivating
+                  images and visuals that complement the storytelling journey
+                  explored in this episode. Untangle the strands that bind us to
+                  stories that have formed cultures, sparked imaginations, and
+                  stirred emotions throughout history. This podcast allows you
+                  to dive into the stories that resonate and uncover the
+                  everlasting essence of storytelling, whether you're a literary
+                  aficionado, a cinema buff, or simply intrigued by the craft of
+                  weaving narratives.
+                </p>
+
+                <h2 className="text-2xl my-5">
+                  App Exploration: Your Current Playground?{" "}
+                </h2>
+                <p className="text-gray-300">
+                  The ever-changing world of apps gives you a front-row ticket
+                  to the latest technological marvels. Join us as we explore the
+                  exciting world of digital innovation, with each episode
+                  serving as a journey of discovery through the apps that shape
+                  our daily lives. Apps have become our digital playgrounds in a
+                  tech-centric world, bringing together creativity, utility, and
+                  enjoyment. Our podcast explores the various programs that
+                  enrich and simplify our modern existence.
+                </p>
+
+                <div className="flex items-center gap-5 mt-5">
+                  <h2 className="text-primary text-3xl">
+                    Follow <i className="bi bi-chevron-double-right" />
+                  </h2>
+                  <div className="flex items-center gap-2 mt-2">
+                    <i
+                      className="bi bi-instagram w-10 h-10 text-primary rounded-full flex items-center 
+                                justify-center border border-primary hover:bg-primary hover:text-black text-xl transition-all 
+                                duration-300 cursor-pointer"
+                    ></i>
+                    <i
+                      className="bi bi-github w-10 h-10 text-primary rounded-full flex items-center 
+                                justify-center border border-primary hover:bg-primary hover:text-black text-xl transition-all 
+                                duration-300 cursor-pointer"
+                    ></i>
+                    <i
+                      className="bi bi-twitter w-10 h-10 text-primary rounded-full flex items-center 
+                                justify-center border border-primary hover:bg-primary hover:text-black text-xl transition-all 
+                                duration-300 cursor-pointer"
+                    ></i>
+                    <i
+                      className="ri-youtube-line w-10 h-10 text-primary rounded-full flex items-center 
+                                justify-center border border-primary hover:bg-primary hover:text-black text-xl transition-all 
+                                duration-300 cursor-pointer"
+                    ></i>
+                    <i
+                      className="bi bi-threads w-10 h-10 text-primary rounded-full flex items-center 
+                                justify-center border border-primary hover:bg-primary hover:text-black text-xl transition-all 
+                                duration-300 cursor-pointer"
+                    ></i>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
