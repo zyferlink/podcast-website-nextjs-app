@@ -1,4 +1,5 @@
-import React from "react";
+import Image from "next/image";
+import BannerImage from "../../../../public/images/banner.png";
 
 const Banner = () => {
   return (
@@ -7,7 +8,7 @@ const Banner = () => {
         <div className="">
           <div className="flex flex-col lg:flex-row items-center gap-10 lg:gap-25">
             <div className="w-full lg:w-1/2 relative">
-              <h1 className="text-5xl lg:text-6x1 text-text font-semibold my-10">
+              <h1 className="text-4xl lg:text-5x1 text-text font-semibold my-10">
                 Get the Latest Episode & Never Miss an Episode
               </h1>
               <div
@@ -26,6 +27,16 @@ const Banner = () => {
                     Subscribe <i className="bi bi-arrow-right-short"></i>
                   </button>
                 </div>
+              </div>
+            </div>
+
+            <div className="w-full lg:w-1/2">
+              <div className="banner-img">
+                <Image
+                  src={BannerImage}
+                  alt="bannerImg"
+                  className="w-full h-full object-cover"
+                />
               </div>
             </div>
           </div>

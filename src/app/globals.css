@@ -554,3 +554,35 @@ body {
     top: -10% !important;
   }
 }
+
+/* Banner Section */
+
+.banner-img {
+  position: relative;
+}
+
+.banner-img:after {
+  content: "";
+  position: absolute;
+  top: 5%;
+  right: -10%;
+  width: 550px;
+  height: 60px;
+  background-image: url(../../public/images/music-waves.png);
+  background-repeat: repeat-x;
+  background-size: auto 100%;
+  animation: waveScroll 50s linear infinite;
+}
+
+.banner-img:before {
+  content: "";
+  position: absolute;
+  bottom: 5%;
+  left: 0;
+  width: 350px;
+  height: 60px;
+  background-image: url(../../public/images/music-waves.png);
+  background-repeat: repeat-x;
+  background-size: auto 100%;
+  animation: waveScroll 50s linear infinite;
+}
