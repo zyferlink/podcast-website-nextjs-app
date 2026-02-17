@@ -270,7 +270,7 @@ const Episodes = () => {
 
             <div className="music-waves"></div>
             <div className="my-3 mt-5">
-              <span className="flex items-center gap-2 text-black px-4 py-3 rounded-full border-black">
+              <span className="flex items-center gap-2 text-black px-4 py-3 rounded-full border border-black">
                 <Image
                   src={RocketIcon}
                   alt="rocketIcon"

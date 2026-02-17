@@ -689,3 +689,55 @@ body {
   z-index: 5;
   width: 70%;
 }
+
+.page-banner {
+  background: url(../../public/images/Page-banner-bg.png), var(--color-primary);
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  overflow: hidden;
+}
+
+.page-banner .music-waves {
+  width: 500px;
+  height: 80px;
+}
+
+.page-banner .btn2 {
+  background-color: var(--color-text);
+  color: var(--color-white);
+}
+
+.page-banner .btn2 i {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+/* Episode Listing MQ Section */
+
+@media (max-width: 991px) {
+  .elm2 {
+    top: 15%;
+  }
+
+  .episode-search {
+    width: 85%;
+  }
+}
+
+@media (max-width: 600px) {
+  .elm2 {
+    width: 100px;
+    height: 100px;
+  }
+  .elm3 {
+    left: 80%;
+    width: 100px;
+    height: 100px;
+  }
+  .episode-search {
+    width: 90%;
+  }
+  .episode-search input {
+    width: 70%;
+  }
+}
