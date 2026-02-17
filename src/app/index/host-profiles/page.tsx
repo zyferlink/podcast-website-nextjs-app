@@ -138,6 +138,7 @@ const HostProfiles = () => {
           loop={true}
           autoplay={{ delay: 2000, disableOnInteraction: false }}
           modules={[Autoplay]}
+          speed={1800}
           breakpoints={{
             1200: { slidesPerView: 4 },
             991: { slidesPerView: 2 },
