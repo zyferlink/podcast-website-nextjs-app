@@ -382,7 +382,55 @@ const EpisodeDetails = () => {
             </div>
           </div>
 
-          <div className="w-full lg:w-1/2 sticky top-20 left-0 h-full"></div>
+          <div className="w-full lg:w-1/2 sticky top-20 left-0 h-full">
+            <div className="bg-gray p-5 rounded-2xl">
+              <div className="bg-[#1c1d20] p-5 rounded-2xl">
+                <div className="flex justify-center items-center">
+                  <div className="w-[200px] h-[200px] overflow-hidden rounded-full">
+                    <Image
+                      src={`/images${episode.image}`}
+                      alt={episode.name}
+                      width={800}
+                      height={800}
+                      className="w-full h-full rounded-full object-cover"
+                    />
+                  </div>
+                </div>
+                <div className="text-center flex flex-col items-center justify-center mt-4">
+                  <h3 className="text-primary">Hosted by</h3>
+                  <h2 className="text-2xl">{episode.name}</h2>
+                  <h3 className="text-primary">Follow on</h3>
+                  <div className="flex items-center gap-2 mt-2">
+                    <i
+                      className="bi bi-instagram w-10 h-10 text-primary rounded-full flex items-center 
+                                justify-center border border-primary hover:bg-primary hover:text-black text-xl transition-all 
+                                duration-300 cursor-pointer"
+                    ></i>
+                    <i
+                      className="bi bi-github w-10 h-10 text-primary rounded-full flex items-center 
+                                justify-center border border-primary hover:bg-primary hover:text-black text-xl transition-all 
+                                duration-300 cursor-pointer"
+                    ></i>
+                    <i
+                      className="bi bi-twitter w-10 h-10 text-primary rounded-full flex items-center 
+                                justify-center border border-primary hover:bg-primary hover:text-black text-xl transition-all 
+                                duration-300 cursor-pointer"
+                    ></i>
+                    <i
+                      className="ri-youtube-line w-10 h-10 text-primary rounded-full flex items-center 
+                                justify-center border border-primary hover:bg-primary hover:text-black text-xl transition-all 
+                                duration-300 cursor-pointer"
+                    ></i>
+                    <i
+                      className="bi bi-threads w-10 h-10 text-primary rounded-full flex items-center 
+                                justify-center border border-primary hover:bg-primary hover:text-black text-xl transition-all 
+                                duration-300 cursor-pointer"
+                    ></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </>
