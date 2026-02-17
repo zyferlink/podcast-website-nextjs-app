@@ -147,7 +147,7 @@ const HostProfile = () => {
                     <div className="host-icons absolute bottom-5 bg-gray rounded-full right-5 group">
                       {/* Plus Icon */}
                       <i
-                        className="bi bi-plus-lg bg-gray w-14 h-14 flex items-center 
+                        className="bi bi-plus-lg bg-gray w-12 h-12 flex items-center 
                         justify-center rounded-full cursor-pointer border border-transparent 
                         group-hover:rounded-t-none group-hover:bg-gray-light 
                         group-hover:border-gray transition-all duration-300"
@@ -155,12 +155,26 @@ const HostProfile = () => {
 
                       {/* Hidden Social Icons */}
                       <div
-                        className="host-hidden-icon flex flex-col absolute bottom-13 right-0 
+                        className="host-hidden-icon flex flex-col absolute bottom-12 right-0 
                         opacity-0 invisible translate-y-4 group-hover:opacity-100 
                         group-hover:visible group-hover:translate-y-0 transition-all duration-300 
                         ease-out bg-gray rounded-t-full p-2"
                       >
-                        <i></i>
+                        <i
+                          className="bi bi-facebook w-8 h-8 mb-1 flex items-center 
+                        justify-center rounded-full bg-gray-light border border-primary 
+                        hover:bg-primary transition-all duration-200 cursor-pointer"
+                        ></i>
+                        <i
+                          className="bi bi-dribbble w-8 h-8 mb-1 flex items-center 
+                        justify-center rounded-full bg-gray-light border border-primary 
+                        hover:bg-primary transition-all duration-200 cursor-pointer"
+                        ></i>
+                        <i
+                          className="bi bi-twitter-x w-8 h-8 mb-1 flex items-center 
+                        justify-center rounded-full bg-gray-light border border-primary 
+                        hover:bg-primary transition-all duration-200 cursor-pointer"
+                        ></i>
                       </div>
                     </div>
                   </div>
