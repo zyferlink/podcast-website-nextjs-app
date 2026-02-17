@@ -587,10 +587,40 @@ body {
   animation: waveScroll 50s linear infinite;
 }
 
-
 /* Footer Section */
 
+.footer-waves .music-waves2 {
+  width: 350px;
+  height: 40px;
+}
+
+.footer-col {
+  position: relative;
+}
+
+.footer-col:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 25%;
+  width: 1px;
+  height: 100%;
+  background-color: rgba(255, 179, 64, 0.3);
+}
+
+/* Footer MQ Section */
+
+@media (max-width: 600px) {
+  .footer-waves .music-waves2 {
+    width: 500px;
+  }
+
+  .footer-col::after {
+    right: 0;
+  }
+}
+
+@media (max-width:575px) {
 .footer-waves .music-waves2{
-width: 350px;
-height: 40px;
+width: 80vw;}
 }
