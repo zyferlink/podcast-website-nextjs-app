@@ -45,6 +45,107 @@ const Footer = () => {
               </h2>
             </div>
           </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 lg:gap-5 py-15 pb-15">
+            <div className="footer-col">
+              <h2 className="text-4xl mb-5">Pages</h2>
+
+              <div className="flex flex-col gap-2">
+                <Link href="/">
+                  <h3 className="text-gray-300 text-xl hover:text-primary hover:translate-z-1 transition-all duration-300 cursor-pointer">
+                    Home
+                  </h3>
+                </Link>
+                <Link href="/">
+                  <h3 className=" text-gray-300 text-xl hover:text-primary hover:translate-z-1 transition-all duration-300 cursor-pointer">
+                    About
+                  </h3>
+                </Link>
+
+                <Link href="/">
+                  <h3 className=" text-gray-300 text-xl hover:text-primary hover:translate-z-1 transition-all duration-300 cursor-pointer">
+                    Episodes
+                  </h3>
+                </Link>
+
+                <Link href="/">
+                  <h3 className=" text-gray-300 text-xl hover:text-primary hover:translate-z-1 transition-all duration-300 cursor-pointer">
+                    Blog
+                  </h3>
+                </Link>
+              </div>
+            </div>
+
+            <div className="footer-col">
+              <h2 className="text-4xl mb-5">Contact</h2>
+
+              <div className="flex flex-col gap-2">
+                <div className="flex flex-col gap-3">
+                  <h2 className="text-xl text-gray-300 hover:text-primary transition-all duration-300 cursor-pointer">
+                    <i className="bi bi-telephone-x pe-2 text-primary"></i>
+                    +91 123 456 7890
+                  </h2>
+
+                  <h2 className="text-xl text-gray-300 hover:text-primary transition-all duration-300 cursor-pointer">
+                    <i className="bi bi-telephone-x pe-2 text-primary"></i>
+                    +91 123 456 6587
+                  </h2>
+
+                  <h2 className="text-xl text-gray-300 hover:text-primary transition-all duration-300 cursor-pointer">
+                    <i className="bi bi-envelope pe-2 text-primary"></i>
+                    info@gmail.com
+                  </h2>
+                </div>
+              </div>
+            </div>
+
+            <div className="">
+              <h2 className="text-4xl mb-5">Address</h2>
+
+              <div className="flex flex-col gap-2">
+                <div className="flex flex-col gap-3">
+                  <h2 className="text-xl text-gray-300 hover:text-primary transition-all duration-300 cursor-pointer">
+                    <i className="bi bi-geo-alt pe-2 text-primary"></i>
+                    742 Evergreen Terrace, Springfield, IL 62704
+                  </h2>
+
+                  <h2 className="text-xl text-gray-300 hover:text-primary transition-all duration-300 cursor-pointer">
+                    <i className="bi bi-geo-alt pe-2 text-primary"></i>
+                    901 Sunset Blvd, Palm Valley, CA 90210
+                  </h2>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="footer-bottom border-t border-primary/30 pt-8">
+            <div className="flex flex-wrap justify-center lg:justify-between items-center gap-5">
+              <p className="text-gray-300">
+                @Copyright 2026. All Rights Reserved by{" "}
+                <Link
+                  href="https://github.com/zyferlink"
+                  className="text-primary text-xl"
+                >
+                  ZyferLink
+                </Link>
+              </p>
+              <div className="flex items-center gap-3">
+                <Link
+                  href="/"
+                  className="hover:text-primary hover:-translate-y-1 transition-all duration-300 cursor-pointer"
+                >
+                  Terms & Conditions
+                </Link>
+
+                <Link
+                  href="/"
+                  className="hover:text-primary hover:-translate-y-1 transition-all duration-300 cursor-pointer"
+                >
+                  Privacy Policy
+                </Link>
+              </div>
+            </div>
+          </div>
         </footer>
       </div>
     </div>
