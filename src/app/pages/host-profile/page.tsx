@@ -32,6 +32,69 @@ import PageElement4 from "../../../../public/images/page-elm-4.png";
 import RocketIcon from "../../../../public/images/rocket-icon.png";
 import EpisodesData from "../../../data/EpisodeData.json";
 
+const HostProfilesData = [
+  {
+    id: 1,
+    img: HostImage1,
+    name: "Kathryn Murphy",
+    role: "Singer",
+  },
+  {
+    id: 2,
+    img: HostImage2,
+    name: "Ashadul islam",
+    role: "Developer",
+  },
+  {
+    id: 3,
+    img: HostImage3,
+    name: "Kathryn Murphy",
+    role: "Singer",
+  },
+  {
+    id: 4,
+    img: HostImage4,
+    name: "Ashadul islam",
+    role: "Developer",
+  },
+  {
+    id: 5,
+    img: HostImage5,
+    name: "Ashadul islam",
+    role: "Developer",
+  },
+  {
+    id: 6,
+    img: HostImage6,
+    name: "Kathryn Murphy",
+    role: "Singer",
+  },
+  {
+    id: 7,
+    img: HostImage7,
+    name: "Ashadul islam",
+    role: "Developer",
+  },
+  {
+    id: 8,
+    img: HostImage8,
+    name: "Kathryn Murphy",
+    role: "Singer",
+  },
+  {
+    id: 9,
+    img: HostImage9,
+    name: "Ashadul islam",
+    role: "Developer",
+  },
+  {
+    id: 10,
+    img: HostImage10,
+    name: "Ashadul islam",
+    role: "Developer",
+  },
+];
+
 const HostProfile = () => {
   return (
     <>
@@ -43,7 +106,7 @@ const HostProfile = () => {
         <div className="page-content w-full md:w-1/2 flex justify-center flex-col pt-10">
           <Image src={PageElement1} alt="Element" className="w-full h-full" />
 
-          <h1 className="text-6xl lg:text-8x1 justify-center my-6">
+          <h1 className="text-6xl lg:text-8xl justify-center my-6">
             Host <span className="text-primary">Profile</span>
           </h1>
 
@@ -53,6 +116,57 @@ const HostProfile = () => {
             <Image src={BrandIcon3} alt="brand" />
             <Image src={BrandIcon4} alt="brand" />
             <Image src={BrandIcon5} alt="brand" />
+          </div>
+        </div>
+      </div>
+
+      <div className="dark-section pt-20 bg-black/98 text-white">
+        <div className="mt-0 md:mt-10 px-[8%] lg:px-[16%] lg:pb-30 pb-10">
+          <div>
+            <div>
+              <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                {HostProfilesData.map((host, index) => (
+                  <div key={index.toString()} className={`host-card relative`}>
+                    <div className="host-img-wrap">
+                      <div className="host-img overflow-auto rounded-2xl">
+                        <Image
+                          src={host.img}
+                          alt={host.name}
+                          width={1000}
+                          height={1000}
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
+                    </div>
+
+                    <div className="host-info px-3 py-4">
+                      <h3 className="text-2xl text-gray-300">{host.name}</h3>
+                      <p className="text-lg text-gray-300">{host.role}</p>
+                    </div>
+
+                    <div className="host-icons absolute bottom-5 bg-gray rounded-full right-5 group">
+                      {/* Plus Icon */}
+                      <i
+                        className="bi bi-plus-lg bg-gray w-14 h-14 flex items-center 
+                        justify-center rounded-full cursor-pointer border border-transparent 
+                        group-hover:rounded-t-none group-hover:bg-gray-light 
+                        group-hover:border-gray transition-all duration-300"
+                      ></i>
+
+                      {/* Hidden Social Icons */}
+                      <div
+                        className="host-hidden-icon flex flex-col absolute bottom-13 right-0 
+                        opacity-0 invisible translate-y-4 group-hover:opacity-100 
+                        group-hover:visible group-hover:translate-y-0 transition-all duration-300 
+                        ease-out bg-gray rounded-t-full p-2"
+                      >
+                        <i></i>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </div>
