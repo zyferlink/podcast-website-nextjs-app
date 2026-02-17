@@ -95,6 +95,46 @@ const About = () => {
                     </div>
                   </div>
                 </div>
+
+                <div className="flex items-center gap-5">
+                  <button
+                    type="button"
+                    className="btn btn2"
+                    style={{ fontWeight: 500 }}
+                  >
+                    Get Started Free <i className="bi bi-arrow-right-short"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div className="w-full lg:w-1/2 relative">
+              <div className="experience-images flex items-start gap-3">
+                <Image
+                  src={ExperienceBanner1}
+                  alt="Experience1"
+                  className="exp-img rounded-2xl"
+                />
+                <Image
+                  src={ExperienceBanner2}
+                  alt="Experience1"
+                  className="exp-img hidden md:block rounded-2xl"
+                />
+
+                <Image
+                  src={ExperienceBannerArrow1}
+                  alt="arrow1"
+                  className="exp-arrow1"
+                />
+
+                <div className="absolute bottom-0 right-35 lg:right-0 bg-[#0de27c] p-5 rounded-2xl">
+                  <div className="flex items-center justify-center gap-5 text-text">
+                    <h2 className="text-6xl font-semibold">
+                      <CountUp start={0} end={17} duration={5} />
+                    </h2>
+                    <p className="text-xl w-1/2">Years of experience</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
