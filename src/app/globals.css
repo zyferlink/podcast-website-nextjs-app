@@ -529,7 +529,6 @@ body {
   }
 }
 
-
 @keyframes fade-left {
   0% {
     transform: translateX(-100%);
@@ -542,4 +541,16 @@ body {
   }
 }
 
+/* Testimonial MQ Section */
 
+@media (max-width: 991px) {
+  .wave-wrapper-section2:after {
+    top: -16% !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .wave-wrapper-section2:after {
+    top: -10% !important;
+  }
+}
