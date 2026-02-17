@@ -133,7 +133,7 @@ const LatestEpisodes = () => {
                     ></i>
                   </div>
 
-                  <Link href={`/pages/Episodes/${episode.id}`}>
+                  <Link href={`/pages/episodes/${episode.id}`}>
                     <h2 className="mt-3 text-2xl hover:text-primary transition-all duration-200">
                       {episode.title}
                     </h2>
@@ -142,7 +142,7 @@ const LatestEpisodes = () => {
 
                   <div className="flex justify-between items-center gap-5">
                     <Link
-                      href={`/pages/Episodes/${episode.id}`}
+                      href={`/pages/episodes/${episode.id}`}
                       className="flex items-center gap-2 group"
                     >
                       <i

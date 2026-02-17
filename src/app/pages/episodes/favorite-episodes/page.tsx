@@ -101,7 +101,7 @@ const FavoriteEpisodes = () => {
                 <div className="w-full lg:w-1/1">
                   <div className="p-5">
                     <div className="flex flex-row flex-wrap justify-between items-center">
-                      <Link href={`/pages/Episodes/${episode.id}`}>
+                      <Link href={`/pages/episodes/${episode.id}`}>
                         <p className="font-light text-gray-200 hover:text-primary tracking-wider transition-all duration-200">
                           <i className="bi bi-mic text-primary"></i>
                           {episode.name}
@@ -120,7 +120,7 @@ const FavoriteEpisodes = () => {
                       ></i>
                     </div>
 
-                    <Link href={`/pages/Episodes/${episode.id}`}>
+                    <Link href={`/pages/episodes/${episode.id}`}>
                       <h2 className="mt-3 text-2xl hover:text-primary transition-all duration-200">
                         {episode.title}
                       </h2>

@@ -206,7 +206,7 @@ const Episodes = () => {
                       ></i>
                     </div>
 
-                    <Link href={`/pages/Episodes/${episode.id}`}>
+                    <Link href={`/pages/episodes/${episode.id}`}>
                       <h2 className="mt-3 text-2xl hover:text-primary transition-all duration-200">
                         {episode.title}
                       </h2>
