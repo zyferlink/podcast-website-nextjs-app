@@ -241,11 +241,38 @@ const BlogDetails = () => {
 
             <div className="w-full lg:w-1/2 sticky top-20 left-0 h-full">
               <div className="bg-gray p-5 rounded-2xl mt-5">
-                <div className="Obg-[#1c1d20] p-5 rounded-2x1">
+                <div className="bg-[#1c1d20] p-5 rounded-2xl">
                   <h2 className="text-3xl font-semibold text-primary">
                     More Related Blog
                   </h2>
                   <div className="border border-dashed border-primary mt-3 mb-5 opacity-30"></div>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1">
+                  {BlogsData.slice(1, 7).map((blog, index) => (
+                    <Link
+                      key={index.toString()}
+                      className="flex items-center gap-3 mt-5"
+                      href={`/pages/blogs/${blog.id}`}
+                    >
+                      <div className="w-full md:w-1/2">
+                        <Image
+                          key={index.toString()}
+                          src={`/images${blog.image}`}
+                          alt="topListens"
+                          width={1000}
+                          height={1000}
+                          className="w-full h-full rounded-lg"
+                        />
+                      </div>
+                      <div className="w-full md:w-1/1 flex flex-col">
+                        <h2 className="text-gray-300 text-2xl md-text-[1rem] hover:text-primary transition-all duration-300 cursor-pointer">
+                          {blog.title}
+                        </h2>
+                        <h4 className="text-primary mt-2">{blog.date}</h4>
+                      </div>
+                    </Link>
+                  ))}
                 </div>
               </div>
             </div>
