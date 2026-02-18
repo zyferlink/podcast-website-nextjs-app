@@ -24,7 +24,7 @@ const navLinks: NavLink[] = [
       { label: "Episodes Details", href: "/pages/episodes/2" },
     ],
   },
-  { label: "Blogs", href: "/" },
+  { label: "Blogs", href: "/pages/blogs" },
   {
     label: "More",
     href: "/pages/about",
