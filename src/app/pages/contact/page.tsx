@@ -224,6 +224,62 @@ const Contact = () => {
                 </div>
               </div>
             </div>
+
+            <div className="w-full lg:w-1/2">
+              <div className="bg-gray p-5 rounded-2xl">
+                <div className="bg-gray-light p-5 rounded-2xl">
+                  <h2 className="text-3xl">Get In Touch</h2>
+                  <div className="border-b py-2 border-dashed border-primary/30"></div>
+                  <div className="mt-5">
+                    <form>
+                      <div className="flex flex-col gap-1">
+                        <label>Name</label>
+                        <input
+                          type="text"
+                          placeholder="Enter Your Name"
+                          className="outline-none bg-gray px-4 py-3 rounded-lg 
+                          border border-transparent focus:border-primary transition-all duration-300"
+                        />
+                      </div>
+
+                      <div className="flex flex-col gap-1 mt-2">
+                        <label>E-mail</label>
+                        <input
+                          type="text"
+                          placeholder="Enter Your Email"
+                          className="outline-none bg-gray px-4 py-3 rounded-lg 
+                          border border-transparent focus:border-primary transition-all duration-300"
+                        />
+                      </div>
+
+                      <div className="flex flex-col gap-1 mt-2">
+                        <label>Phone</label>
+                        <input
+                          type="text"
+                          placeholder="Enter Your Phone"
+                          className="outline-none bg-gray px-4 py-3 rounded-lg 
+                          border border-transparent focus:border-primary transition-all duration-300"
+                        />
+                      </div>
+
+                      <div className="flex flex-col gap-1 mt-2">
+                        <label>Message</label>
+                        <textarea
+                          rows={4}
+                          placeholder="Write Your Message"
+                          className="outline-none bg-gray px-4 py-3 rounded-lg 
+                          border border-transparent focus:border-primary transition-all 
+                          duration-300 resize-none"
+                        />
+                      </div>
+                      <button type="button" className="btn btn2 mt-5">
+                        Send Message <i className="bi bi-arrow-right-short"></i>
+                      </button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
