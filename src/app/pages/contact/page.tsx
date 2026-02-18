@@ -13,13 +13,11 @@ import ContactClient2 from "../../../../public/images/contact-client-2.png";
 import ContactClient3 from "../../../../public/images/contact-client-3.png";
 import ContactClient4 from "../../../../public/images/contact-client-4.png";
 import ContactClient5 from "../../../../public/images/contact-client-5.png";
-import PageBanner1 from "../../../../public/images/Page-banner-1.png";
-import PageBanner2 from "../../../../public/images/Page-banner-2.png";
+
 import PageElement1 from "../../../../public/images/page-elm-1.png";
 import PageElement2 from "../../../../public/images/page-elm-2.png";
 import PageElement3 from "../../../../public/images/page-elm-3.png";
 import PageElement4 from "../../../../public/images/page-elm-4.png";
-import RocketIcon from "../../../../public/images/rocket-icon.png";
 
 const Contact = () => {
   return (
