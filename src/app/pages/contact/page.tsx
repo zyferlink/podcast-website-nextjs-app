@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import Link from "next/link";
 import { useState } from "react";
 import Banner from "@/app/index/banner/page";
 import BrandIcon1 from "../../../../public/images/brand-icon-1.png";
@@ -57,6 +58,105 @@ const Contact = () => {
             <h1 className="text-5xl text-white lg:text-6xl font-semibold mt-7 mb-5">
               Let Us Help You
             </h1>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mt-15">
+            <div
+              className="flex gap-3 bg-gray-600/30 backdrop-blur-2xl p-5 rounded-2xl group hover:bg-primary 
+              hover:text-text transition-all duration-300"
+            >
+              <div
+                className="mt-3 w-15 h-15 rounded-full bg-primary group-hover:bg-text 
+                transition-all duration-300 px-5 flex items-center justify-center"
+              >
+                <i
+                  className="bi bi-geo-alt text-text group-hover:text-primary text-3xl 
+                  transition-all duration-300"
+                ></i>
+              </div>
+              <div>
+                <h2 className="text-4xl group-hover:text-text transition-all duration-300">
+                  Main Office
+                </h2>
+                <p className="text-gray-300 my-2 group-hover:text-text transition-all duration-300">
+                  2972 Westheimer Rd. Santa Ana, Illinois 85486
+                </p>
+
+                <Link
+                  href="/"
+                  className="text-primary border-b border-primary group-hover:border-text 
+                font-semibold group-hover:text-text transition-all duration-300"
+                >
+                  Find Location
+                </Link>
+              </div>
+            </div>
+
+            <div
+              className="flex gap-3 bg-gray-600/30 backdrop-blur-2xl p-5 rounded-2xl group hover:bg-primary 
+              hover:text-text transition-all duration-300"
+            >
+              <div
+                className="mt-3 w-15 h-15 rounded-full bg-primary group-hover:bg-text 
+                transition-all duration-300 px-5 flex items-center justify-center"
+              >
+                <i
+                  className="bi bi-envelope text-text group-hover:text-primary text-3xl 
+                  transition-all duration-300"
+                ></i>
+              </div>
+              <div>
+                <h2 className="text-4xl group-hover:text-text transition-all duration-300">
+                  Email Address
+                </h2>
+                <p className="text-gray-300 my-2 group-hover:text-text transition-all duration-300">
+                  info@gmail.com
+                  <br />
+                  website.info@gmail.com
+                </p>
+
+                <Link
+                  href="/"
+                  className="text-primary border-b border-primary group-hover:border-text 
+                font-semibold group-hover:text-text transition-all duration-300"
+                >
+                  Get In Touch
+                </Link>
+              </div>
+            </div>
+
+            <div
+              className="flex gap-3 bg-gray-600/30 backdrop-blur-2xl p-5 rounded-2xl group hover:bg-primary 
+              hover:text-text transition-all duration-300"
+            >
+              <div
+                className="mt-3 w-15 h-15 rounded-full bg-primary group-hover:bg-text 
+                transition-all duration-300 px-5 flex items-center justify-center"
+              >
+                <i
+                  className="bi bi-telephone-inbound text-text group-hover:text-primary text-3xl 
+                  transition-all duration-300"
+                ></i>
+              </div>
+              <div>
+                <h2 className="text-4xl group-hover:text-text transition-all duration-300">
+                  Phone Number
+                </h2>
+                <p className="text-gray-300 my-2 group-hover:text-text transition-all duration-300">
+                  +91 123 456 7890
+                  <br />
+                  +91 321 846 8975
+                </p>
+
+                <Link
+                  href="/"
+                  className="text-primary border-b border-primary group-hover:border-text 
+                font-semibold group-hover:text-text transition-all duration-300"
+                >
+                  Contact Us Today!
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
       </div>
