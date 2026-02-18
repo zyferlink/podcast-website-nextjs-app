@@ -160,6 +160,73 @@ const Contact = () => {
           </div>
         </div>
       </div>
+
+      <div className="light-section wave-wrapper-section text-white">
+        <div className="px-[8%] lg:px-[16%] py-20 pt-40">
+          <div className="flex mask-1-from-current lg:flex-row justify-between items-center gap-5">
+            <div className="w-full lg:w-1/2">
+              <div className="title">
+                <div>
+                  <h2 className="inline-block px-4 py-2 rounded-full text-primary text-2xl font-normal border border-primary">
+                    <i className="bi bi-rocket-takeoff pe-4"></i>
+                    Contact Us
+                  </h2>
+                </div>
+                <h1 className="text-5xl text-white lg:text-6xl font-semibold mt-7 mb-5">
+                  Have questions? don't hesitate to{" "}
+                  <span className="text-primary">contact us</span>
+                </h1>
+                <p>
+                  Purpose of an introduction is to grab the audience's
+                  attention, their interest, provide a preview of the value or
+                  insights.
+                </p>
+
+                <div className="my-5 mt-10 flex items-center gap-3">
+                  <div className="flex items-center">
+                    <Image
+                      src={ContactClient1}
+                      alt="client1"
+                      className="rounded-full -me-3"
+                    />
+                    <Image
+                      src={ContactClient2}
+                      alt="client1"
+                      className="rounded-full -me-3"
+                    />
+                    <Image
+                      src={ContactClient3}
+                      alt="client1"
+                      className="rounded-full -me-3"
+                    />
+                    <Image
+                      src={ContactClient4}
+                      alt="client1"
+                      className="rounded-full -me-3"
+                    />
+                    <Image
+                      src={ContactClient5}
+                      alt="client1"
+                      className="rounded-full -me-3"
+                    />
+                  </div>
+
+                  <div className="flex flex-col gap-2 ms-6">
+                    <div className="flex items-center gap-1">
+                      <i className="bi bi-star-fill text-primary"></i>
+                      <i className="bi bi-star-fill text-primary"></i>
+                      <i className="bi bi-star-fill text-primary"></i>
+                      <i className="bi bi-star-fill text-primary"></i>
+                      <i className="bi bi-star-fill text-primary"></i>
+                    </div>
+                    <h2>2.5k+ reviews (4.95 of 5)</h2>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </>
   );
 };
