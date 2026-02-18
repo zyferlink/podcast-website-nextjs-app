@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Kanit, Metal_Mania } from "next/font/google";
 import "./globals.css";
-import Footer from "@/components/footer/footer";
-import NavBar from "@/components/navigation/nav-bar";
 
 const kanit = Kanit({
   weight: ["200", "300", "400", "500", "600", "700"],
@@ -31,7 +29,7 @@ export const metadata: Metadata = {
   description: "The Future of Podcast Platforms",
 };
 
-import { Toaster } from "react-hot-toast";
+import ClientWrapper from "@/components/client-wrapper";
 
 export default function RootLayout({
   children,
@@ -43,10 +41,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${kanit.variable} ${metalMania.variable} antialiased`}
       >
-        <NavBar />
-        {children}
-        <Footer />
-        <Toaster position="top-right" reverseOrder={false} />
+        <ClientWrapper>{children}</ClientWrapper>
       </body>
     </html>
   );

@@ -15,7 +15,6 @@ import HostImage9 from "../../../../public/images/host-profile-9.png";
 import HostImage10 from "../../../../public/images/host-profile-10.png";
 import "swiper/css";
 import Image from "next/image";
-import Link from "next/link";
 import { useRef } from "react";
 
 const HostProfilesData = [
@@ -120,7 +119,7 @@ const HostProfiles = () => {
                 type="button"
                 onClick={() => swiperRef.current?.slideNext()}
                 className="w-12 h-12 flex items-center justify-center rounded-full 
-                border border-primary text-primary hover:bg-primary Ohover:text-black 
+                border border-primary text-primary hover:bg-primary hover:text-black 
                 transition-all duration-200 hover:translate-x-1 cursor-pointer"
               >
                 <i className="bi bi-chevron-double-right"></i>
