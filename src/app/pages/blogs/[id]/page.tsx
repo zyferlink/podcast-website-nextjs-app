@@ -174,7 +174,7 @@ const BlogDetails = () => {
                     {BlogsData.slice(1, 5).map((blog, index) => (
                       <Image
                         key={index.toString()}
-                        src={blog.image}
+                        src={`/images${blog.image}`}
                         alt="toplisting"
                         width={1000}
                         height={1000}
@@ -238,17 +238,19 @@ const BlogDetails = () => {
                 </div>
               </div>
             </div>
+          </div>
 
-            <div className="w-full lg:w-1/2 sticky top-20 left-0 h-full">
-              <div className="bg-gray p-5 rounded-2xl mt-5">
-                <div className="bg-[#1c1d20] p-5 rounded-2xl">
+          <div className="w-full lg:w-1/2 sticky top-20 left-0 h-full">
+            <div className="bg-gray p-5 rounded-2xl">
+              <div className="">
+                <div className="bg-[#1c1d20] p-5 rounded-t-2xl">
                   <h2 className="text-3xl font-semibold text-primary">
                     More Related Blog
                   </h2>
-                  <div className="border border-dashed border-primary mt-3 mb-5 opacity-30"></div>
+                  <div className="border border-dashed border-primary mt-3 opacity-30"></div>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 bg-[#1c1d20] px-4 rounded-b-2xl">
                   {BlogsData.slice(1, 7).map((blog, index) => (
                     <Link
                       key={index.toString()}
@@ -262,67 +264,17 @@ const BlogDetails = () => {
                           alt="topListens"
                           width={1000}
                           height={1000}
-                          className="w-full h-full rounded-lg"
+                          className="w-full min-w-20 h-full rounded-lg"
                         />
                       </div>
                       <div className="w-full md:w-1/1 flex flex-col">
-                        <h2 className="text-gray-300 text-2xl md-text-[1rem] hover:text-primary transition-all duration-300 cursor-pointer">
+                        <h2 className="text-gray-300 text-xl md-text-2xl hover:text-primary transition-all duration-300 cursor-pointer">
                           {blog.title}
                         </h2>
                         <h4 className="text-primary mt-2">{blog.date}</h4>
                       </div>
                     </Link>
                   ))}
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="w-full lg:w-1/2 sticky top-20 left-0 h-full">
-            <div className="bg-gray p-5 rounded-2xl">
-              <div className="bg-[#1c1d20] p-5 rounded-2xl">
-                <div className="flex justify-center items-center">
-                  <div className="w-[200px] h-[200px] overflow-hidden rounded-full">
-                    <Image
-                      src={`/images${blog.image}`}
-                      alt={blog.title}
-                      width={800}
-                      height={800}
-                      className="w-full h-full rounded-full object-cover"
-                    />
-                  </div>
-                </div>
-                <div className="text-center flex flex-col items-center justify-center mt-4">
-                  <h3 className="text-primary">Hosted by</h3>
-                  <h2 className="text-2xl">{blog.title}</h2>
-                  <h3 className="text-primary">Follow on</h3>
-                  <div className="flex items-center gap-2 mt-2">
-                    <i
-                      className="bi bi-instagram w-10 h-10 text-primary rounded-full flex items-center 
-                                justify-center border border-primary hover:bg-primary hover:text-black text-xl transition-all 
-                                duration-300 cursor-pointer"
-                    ></i>
-                    <i
-                      className="bi bi-github w-10 h-10 text-primary rounded-full flex items-center 
-                                justify-center border border-primary hover:bg-primary hover:text-black text-xl transition-all 
-                                duration-300 cursor-pointer"
-                    ></i>
-                    <i
-                      className="bi bi-twitter w-10 h-10 text-primary rounded-full flex items-center 
-                                justify-center border border-primary hover:bg-primary hover:text-black text-xl transition-all 
-                                duration-300 cursor-pointer"
-                    ></i>
-                    <i
-                      className="ri-youtube-line w-10 h-10 text-primary rounded-full flex items-center 
-                                justify-center border border-primary hover:bg-primary hover:text-black text-xl transition-all 
-                                duration-300 cursor-pointer"
-                    ></i>
-                    <i
-                      className="bi bi-threads w-10 h-10 text-primary rounded-full flex items-center 
-                                justify-center border border-primary hover:bg-primary hover:text-black text-xl transition-all 
-                                duration-300 cursor-pointer"
-                    ></i>
-                  </div>
                 </div>
               </div>
 
