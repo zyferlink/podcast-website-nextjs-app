@@ -163,7 +163,7 @@ const Contact = () => {
 
       <div className="light-section wave-wrapper-section text-white">
         <div className="px-[8%] lg:px-[16%] py-20 pt-40">
-          <div className="flex mask-1-from-current lg:flex-row justify-between items-center gap-5">
+          <div className="flex flex-col lg:flex-row justify-between items-center gap-5">
             <div className="w-full lg:w-1/2">
               <div className="title">
                 <div>
@@ -282,6 +282,10 @@ const Contact = () => {
             </div>
           </div>
         </div>
+      </div>
+
+      <div className="light-section">
+        <Banner />
       </div>
     </>
   );
