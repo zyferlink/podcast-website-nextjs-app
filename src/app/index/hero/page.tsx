@@ -18,7 +18,7 @@ import RoundedText from "../../../../public/images/Rouded-text.webp";
 const Hero = () => {
   return (
     <div
-      className="flex relative w-full bg-black/90 h-screen items-center pb-[3%] 
+      className="flex relative w-full bg-black/90 text-light-text h-screen items-center pb-[3%] 
     overflow-hidden z-10 bg-[url('/images/texture-bg-1.png')] bg-no-repeat"
     >
       {/* vector line drawing*/}
@@ -36,19 +36,21 @@ const Hero = () => {
           <div className="w-full lg:w-1/2">
             <div className="flex flex-col w-full justify-center items-center text-center pb-[5%]">
               <Image src={HeroBarImage} alt="hero bar" className="h-10" />
-              <h1 className="text-3xl md:text-4xl my-4 font-bold text-white">
-                Explore <span className="text-primary"> Sound </span>{" "}
-                Storytelling Magic
+
+              <h1 className="min-w-md text-[1.9rem] md:text-[2.3rem] my-4 font-bold text-white leading-tight">
+                Discover<span className="text-primary"> Podcasts </span> <br />
+                You'll Love, Right Here
               </h1>
-              <p className="tracking-normal text-base text-white/80">
-                Discover the harmony of heartfelt conversations. Bringing
-                clarity to life's complexities. Focus on what matters most
+              <p className="min-w-md font-poiret-one font-bold tracking-widest text-base text-white/90">
+                Dive into meaningful talks. Navigating life's complexities with
+                clarity.
               </p>
 
               {/* action buttons */}
               <div className="flex items-center gap-5 my-5">
                 <StyledButtonSecondary
                   onClick={() => {}}
+                  className="px-8"
                   icon={<FaArrowRight size={12} />}
                 >
                   Latest
