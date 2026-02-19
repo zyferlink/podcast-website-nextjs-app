@@ -18,36 +18,36 @@ import RoundedText from "../../../../public/images/Rouded-text.webp";
 const Hero = () => {
   return (
     <div
-      className="flex relative w-full bg-black/90 text-light-text h-screen items-center pb-[3%] 
-    overflow-hidden z-10 bg-[url('/images/texture-bg-1.png')] bg-no-repeat"
+      className="flex relative h-screen overflow-x-hidden  bg-black/90 text-light-text items-center justify-center pb-[3%] 
+    overflow-hidden z-10 bg-[url('/images/texture-bg-1.png')] bg-no-repeat bg-cover bg-center"
     >
       {/* vector line drawing*/}
       <div className="absolute top-0 left-0 w-full h-full bg-[url('/images/vector-line.png')] bg-no-repeat -z-10" />
 
       {/* rotating sparkling elements */}
-      <div className="sparkling-elem">
+      <div className="sparkling-elem pointer-events-none ">
         <Image src={SparkleStar} alt="Sun Shape Image" />
         <Image src={SparkleStar} alt="Sun Shape Image" />
         <Image src={SparkleStar} alt="Sun Shape Image" />
       </div>
 
-      <div className="px-[8%] lg:px-[16%] pt-20">
-        <div className="flex flex-col lg:flex-row justify-between items-center gap-5">
-          <div className="w-full lg:w-1/2">
+      <div className="max-w-6xl mx-auto pt-24">
+        <div className="flex flex-col md:flex-row justify-center items-center">
+          <div className="flex w-full md:w-1/2">
             <div className="flex flex-col w-full justify-center items-center text-center pb-[5%]">
               <Image src={HeroBarImage} alt="hero bar" className="h-10" />
 
-              <h1 className="min-w-md text-[1.9rem] md:text-[2.3rem] my-4 font-bold text-white leading-tight">
+              <h1 className="min-w-md text-[1.9rem] md:text-[2.3rem] 2xl:text-[3rem] my-4 font-bold text-white leading-tight">
                 Discover<span className="text-primary"> Podcasts </span> <br />
                 You'll Love, Right Here
               </h1>
-              <p className="min-w-md font-poiret-one font-bold tracking-widest text-base text-white/90">
+              <p className="min-w-md font-poiret-one font-bold tracking-widest text-base 2xl:text-lg text-white/90">
                 Dive into meaningful talks. Navigating life's complexities with
                 clarity.
               </p>
 
               {/* action buttons */}
-              <div className="flex items-center gap-5 my-5">
+              <div className="flex items-center gap-5 my-7 2xl:my-10">
                 <StyledButtonSecondary
                   onClick={() => {}}
                   className="px-8 tracking-normal"
@@ -65,8 +65,8 @@ const Hero = () => {
                 </StyledButtonPrimary>
               </div>
 
-              <div className="mt-4">
-                <p className="tracking-wide font-normal text-lg">
+              <div>
+                <p className="tracking-wide font-normal text-lg 2xl:text-xl">
                   Listen to Podcaster through
                 </p>
                 <div className="flex w-full  justify-center items-center gap-3 cursor-pointer my-2">
@@ -81,11 +81,24 @@ const Hero = () => {
           </div>
 
           {/* Hero image */}
-          <div className="flex w-full hero-img">
-            <Image src={HeroImage} alt="HeroImg" className="w-68 lg:w-87" />
-            <div className="rounded-text">
-              <Image src={RoundedText} alt="roundedText" />
-              <i className="bi bi-arrow-right-short"></i>
+          <div className="flex w-full max-w-xl">
+            <div className="relative flex top-0 left-[25%] lg:left-[10%] items-center justify-center z-0 animate-[anim-small-translate_5s_infinite_ease-in-out]">
+              <Image src={HeroImage} alt="HeroImg" className="w-full lg:w-82" />
+            </div>
+
+            <div className="relative top-50 lg:top-80 -translate-x-1/2 -translate-y-1/2 w-50 h-50 flex items-center justify-center">
+              <Image
+                src={RoundedText}
+                alt="roundedText"
+                className="left-1/2 top-1/2 animate-[spin_5s_infinite_linear]"
+              />
+
+              <i
+                className="bi bi-arrow-right-short absolute left-1/2 top-1/2 bg-primary text-black 
+               -translate-x-1/2 -translate-y-1/2 w-15 h-15 
+              rounded-full flex items-center justify-center text-4xl hover:scale-110 
+              transition-all duration-300 cursor-pointer"
+              ></i>
             </div>
           </div>
         </div>

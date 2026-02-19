@@ -244,12 +244,12 @@ body {
 .hero-img {
   position: absolute;
   top: 0;
-  left: 54.7%;
+  left: 50%;
   z-index: 0;
-  animation: smallTranslate 5s infinite ease-in-out;
+  animation: anim-small-translate 5s infinite ease-in-out;
 }
 
-@keyframes smallTranslate {
+@keyframes anim-small-translate {
   0% {
     transform: translate(0, 0);
   }
@@ -266,6 +266,8 @@ body {
     transform: translate(0px, 0px);
   }
 }
+
+
 
 /* Rotating sparkling elements */
 
@@ -355,7 +357,7 @@ body {
 
 .WhyChooseUs-img {
   position: relative;
-  animation: smallTranslate 5s infinite ease-in-out;
+  animation: anim-small-translate 5s infinite ease-in-out;
 }
 
 .WhyChooseUs-img img:last-child {
