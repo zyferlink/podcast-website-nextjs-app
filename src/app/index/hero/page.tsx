@@ -10,9 +10,9 @@ import PlatformIcon1 from "../../../../public/assets/images/platform-icon-soundc
 import PlatformIcon2 from "../../../../public/assets/images/platform-icon-spotify.svg";
 import PlatformIcon3 from "../../../../public/assets/images/platform-icon-swarm.svg";
 import PlatformIcon4 from "../../../../public/assets/images/platform-icon-youtube.svg";
+import SparkleStar from "../../../../public/assets/images/sparkle-star.png";
 import HeroImage from "../../../../public/images/Hero.png";
 import HeroBarImage from "../../../../public/images/hero-1.png";
-import SunShapeImage from "../../../../public/images/hero-sun-shape.png";
 import RoundedText from "../../../../public/images/Rouded-text.webp";
 
 const Hero = () => {
@@ -24,11 +24,11 @@ const Hero = () => {
       {/* vector line drawing*/}
       <div className="absolute top-0 left-0 w-full h-full bg-[url('/images/vector-line.png')] bg-no-repeat -z-10" />
 
-      {/* rotating sun elements */}
-      <div className="sun-elem">
-        <Image src={SunShapeImage} alt="Sun Shape Image" />
-        <Image src={SunShapeImage} alt="Sun Shape Image" />
-        <Image src={SunShapeImage} alt="Sun Shape Image" />
+      {/* rotating sparkling elements */}
+      <div className="sparkling-elem">
+        <Image src={SparkleStar} alt="Sun Shape Image" />
+        <Image src={SparkleStar} alt="Sun Shape Image" />
+        <Image src={SparkleStar} alt="Sun Shape Image" />
       </div>
 
       <div className="px-[8%] lg:px-[16%] pt-20">

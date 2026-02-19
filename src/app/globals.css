@@ -267,8 +267,9 @@ body {
   }
 }
 
-/* Rotating sun elements */
-.sun-elem img {
+/* Rotating sparkling elements */
+
+.sparkling-elem img {
   position: absolute;
   top: 0;
   left: 0;
@@ -276,17 +277,17 @@ body {
   animation: anim-spin 5s infinite linear;
 }
 
-.sun-elem img:nth-child(1) {
+.sparkling-elem img:nth-child(1) {
   top: 75%;
   left: 5%;
 }
 
-.sun-elem img:nth-child(2) {
+.sparkling-elem img:nth-child(2) {
   top: 40%;
   left: 47%;
 }
 
-.sun-elem img:nth-child(3) {
+.sparkling-elem img:nth-child(3) {
   top: 50%;
   left: 90%;
 }
