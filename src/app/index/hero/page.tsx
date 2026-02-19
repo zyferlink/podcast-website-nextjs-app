@@ -20,10 +20,11 @@ const Hero = () => {
       {/* vector line drawing*/}
       <div className="absolute top-0 left-0 w-full h-full bg-[url('/images/vector-line.png')] bg-no-repeat -z-10" />
 
-      <div className="sun-shape">
-        <Image src={SunShapeImage} alt="sunShape" />
-        <Image src={SunShapeImage} alt="sunShape" />
-        <Image src={SunShapeImage} alt="sunShape" />
+      {/* Rotating sun elements */}
+      <div className="sun-elem">
+        <Image src={SunShapeImage} alt="Sun Shape Image" />
+        <Image src={SunShapeImage} alt="Sun Shape Image" />
+        <Image src={SunShapeImage} alt="Sun Shape Image" />
       </div>
 
       <div className="px-[8%] lg:px-[16%] pt-20">

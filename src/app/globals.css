@@ -267,30 +267,32 @@ body {
   }
 }
 
-.sun-shape img {
+/* Rotating sun elements */
+.sun-elem img {
   position: absolute;
   top: 0;
   left: 0;
   z-index: -1;
-  animation: Anim-rotate 5s infinite forwards linear;
+  animation: anim-spin 5s infinite linear;
 }
 
-.sun-shape img:nth-child(1) {
+.sun-elem img:nth-child(1) {
   top: 75%;
   left: 5%;
 }
 
-.sun-shape img:nth-child(2) {
+.sun-elem img:nth-child(2) {
   top: 40%;
   left: 47%;
 }
-.sun-shapeIimg:nth-child(3) {
+
+.sun-elem img:nth-child(3) {
   top: 50%;
   left: 90%;
 }
 
-@keyframes Anim-rotate {
-  100% {
+@keyframes anim-spin {
+  to {
     transform: rotate(360deg);
   }
 }
