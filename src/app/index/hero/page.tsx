@@ -5,11 +5,11 @@ import { FaArrowRight } from "react-icons/fa6";
 import { StyledButtonPrimary } from "@/components/buttons/styled-button-primary";
 import { StyledButtonSecondary } from "@/components/buttons/styled-button-secondary";
 // Assets
-import BrandIcon1 from "../../../../public/images/brand-icon-1.png";
-import BrandIcon2 from "../../../../public/images/brand-icon-2.png";
-import BrandIcon3 from "../../../../public/images/brand-icon-3.png";
-import BrandIcon4 from "../../../../public/images/brand-icon-4.png";
-import BrandIcon5 from "../../../../public/images/brand-icon-5.png";
+import PlatformIcon5 from "../../../../public/assets/images/platform-icon-instagram.svg";
+import PlatformIcon1 from "../../../../public/assets/images/platform-icon-soundcloud.svg";
+import PlatformIcon2 from "../../../../public/assets/images/platform-icon-spotify.svg";
+import PlatformIcon3 from "../../../../public/assets/images/platform-icon-swarm.svg";
+import PlatformIcon4 from "../../../../public/assets/images/platform-icon-youtube.svg";
 import HeroImage from "../../../../public/images/Hero.png";
 import HeroBarImage from "../../../../public/images/hero-1.png";
 import SunShapeImage from "../../../../public/images/hero-sun-shape.png";
@@ -70,11 +70,11 @@ const Hero = () => {
                   Listen to Podcaster through
                 </p>
                 <div className="flex w-full  justify-center items-center gap-3 cursor-pointer my-2">
-                  <Image src={BrandIcon1} alt="brand" className="w-8" />
-                  <Image src={BrandIcon2} alt="brand" className="w-8" />
-                  <Image src={BrandIcon3} alt="brand" className="w-8" />
-                  <Image src={BrandIcon4} alt="brand" className="w-8" />
-                  <Image src={BrandIcon5} alt="brand" className="w-8" />
+                  <Image src={PlatformIcon1} alt="brand" className="w-8" />
+                  <Image src={PlatformIcon2} alt="brand" className="w-8" />
+                  <Image src={PlatformIcon3} alt="brand" className="w-8" />
+                  <Image src={PlatformIcon4} alt="brand" className="w-8" />
+                  <Image src={PlatformIcon5} alt="brand" className="w-8" />
                 </div>
               </div>
             </div>
