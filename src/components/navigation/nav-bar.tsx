@@ -1,13 +1,18 @@
 "use client";
 
+// React & Next.js components
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
+// Icons
 import { FaArrowRight } from "react-icons/fa6";
+// Data
 import { navLinks } from "@/data/navigation";
+// Assets
 import MenuIndicator from "../../../public/assets/images/menu-indicator.svg";
 import LogoIcon from "../../../public/assets/images/voice-flow-icon.png";
+// Components
 import { MobileMenuButton } from "../buttons/mobile-menu-button";
 import { StyledButtonPrimary } from "../buttons/styled-button-primary";
 import { StyledButtonSecondary } from "../buttons/styled-button-secondary";
