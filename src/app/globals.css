@@ -19,8 +19,8 @@
   --color-black: #000000;
 
   /* Typography */
-  --font-kanit: "Kanit", sans-serif;
-  --font-metal-mania: "Metal Mania", sans-serif;
+  --font-zain: "Zain", sans-serif;
+  --font-poiret-one: "Poiret One", sans-serif;
 
   /* Motion */
   --transition-regular: 0.3s ease;
@@ -40,8 +40,8 @@
   --color-black: var(--color-black);
 
   /* Fonts */
-  --font-kanit: var(--font-kanit);
-  --font-metal-mania: var(--font-metal-mania);
+  --font-zain: var(--font-zain);
+  --font-poiret-one: var(--font-poiret-one);
 
   /* Transitions */
   --transition-default: var(--transition-regular);
@@ -52,7 +52,7 @@ body {
   overflow-x: hidden !important;
   background: var(--body);
   color: var(--white);
-  font-family: var(--font-kanit);
+  font-family: var(--font-zain);
 }
 
 /* Nav bar*/
@@ -241,7 +241,7 @@ body {
 }
 
 .hero-btn button {
-  font-weight: 500;
+  font-weight: 400;
 }
 
 .hero-img {
