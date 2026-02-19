@@ -1,4 +1,6 @@
+// Next.js components
 import Image from "next/image";
+// Assets
 import BrandIcon1 from "../../../../public/images/brand-icon-1.png";
 import BrandIcon2 from "../../../../public/images/brand-icon-2.png";
 import BrandIcon3 from "../../../../public/images/brand-icon-3.png";
@@ -11,7 +13,7 @@ import RoundedText from "../../../../public/images/Rouded-text.webp";
 
 const Hero = () => {
   return (
-    <div className="hero bg-black/80">
+    <div className="flex relative w-full bg-black/90 h-screen items-center pb-[3%] overflow-hidden z-10 bg-[url('/images/texture-bg-1.png')] bg-no-repeat">
       <div className="sun-shape">
         <Image src={SunShapeImage} alt="sunShape" />
         <Image src={SunShapeImage} alt="sunShape" />
@@ -63,7 +65,6 @@ const Hero = () => {
               <i className="bi bi-arrow-right-short"></i>
             </div>
           </div>
-          I
         </div>
       </div>
     </div>
