@@ -17,6 +17,8 @@
   --color-gray-light: #262629;
   --color-white: #ffffff;
   --color-black: #000000;
+  --color-dark-text: #222e48;
+  --color-light-text: #ffffff;
 
   /* Typography */
   --font-zain: "Zain", sans-serif;
@@ -38,6 +40,8 @@
   --color-gray-light: var(--color-gray-light);
   --color-white: var(--color-white);
   --color-black: var(--color-black);
+  --color-dark-text: var(--color-dark-text);
+  --color-light-text: var(--color-light-text);
 
   /* Fonts */
   --font-zain: var(--font-zain);
@@ -56,10 +60,6 @@ body {
 }
 
 /* Nav bar*/
-.navbar {
-  z-index: 9999;
-}
-
 .btn {
   border: 2px solid var(--color-primary-light);
   padding: 5px 25px;
@@ -205,9 +205,6 @@ body {
     left: 50%;
   }
 
-  .nav-right .btn2 {
-    display: none;
-  }
 }
 
 @media (max-width: 575px) {

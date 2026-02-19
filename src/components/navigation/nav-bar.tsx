@@ -4,10 +4,12 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
+import { FaArrowRight } from "react-icons/fa6";
 import { navLinks } from "@/data/navigation";
 import MenuIndicator from "../../../public/assets/images/menu-indicator.svg";
 import LogoIcon from "../../../public/assets/images/voice-flow-icon.png";
-import { StyledButton } from "../buttons/styled-button";
+import { StyledButtonPrimary } from "../buttons/styled-button-primary";
+import { StyledButtonSecondary } from "../buttons/styled-button-secondary";
 
 export default function Navbar() {
   const pathname = usePathname();
@@ -122,27 +124,25 @@ export default function Navbar() {
         {/* Right Section */}
         <div className="flex items-center gap-4 ">
           <div className="md:flex hidden items-center gap-4">
-            <StyledButton
-              variant="primary"
+            <StyledButtonPrimary
               onClick={() => {
                 setIsLogin(true);
                 setShowModal(true);
               }}
-              icon={<i className="bi bi-arrow-right-short"></i>}
+              icon={<FaArrowRight size={12} />}
             >
               Login
-            </StyledButton>
+            </StyledButtonPrimary>
 
-            <button
-              type="button"
-              className="btn btn2 text-white"
+            <StyledButtonSecondary
               onClick={() => {
-                setIsLogin(false);
+                setIsLogin(true);
                 setShowModal(true);
               }}
+              icon={<FaArrowRight size={12} />}
             >
-              Register <i className="bi bi-arrow-right-short"></i>
-            </button>
+              Register
+            </StyledButtonSecondary>
           </div>
 
           {/* Mobile bars */}
