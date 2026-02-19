@@ -50,7 +50,7 @@ const Hero = () => {
               <div className="flex items-center gap-5 my-5">
                 <StyledButtonSecondary
                   onClick={() => {}}
-                  className="px-8"
+                  className="px-8 tracking-normal"
                   icon={<FaArrowRight size={12} />}
                 >
                   Latest
@@ -58,6 +58,7 @@ const Hero = () => {
 
                 <StyledButtonPrimary
                   onClick={() => {}}
+                  className="tracking-wide"
                   icon={<FaArrowRight size={12} />}
                 >
                   Subscribe
@@ -65,10 +66,10 @@ const Hero = () => {
               </div>
 
               <div className="mt-4">
-                <p className="tracking-wider text-xl text-white">
+                <p className="tracking-wide font-normal text-lg">
                   Listen to Podcaster through
                 </p>
-                <div className="flex items-center gap-3 cursor-pointer my-2">
+                <div className="flex w-full  justify-center items-center gap-3 cursor-pointer my-2">
                   <Image src={BrandIcon1} alt="brand" className="w-8" />
                   <Image src={BrandIcon2} alt="brand" className="w-8" />
                   <Image src={BrandIcon3} alt="brand" className="w-8" />
