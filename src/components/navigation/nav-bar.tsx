@@ -4,8 +4,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
-import LogoIcon from "../../../public/images/Logo-icon.png";
-import MenuIcon from "../../../public/images/Menu-dot.svg";
+import MenuIcon from "../../../public/assets/images/menu-indicator.svg";
+import LogoIcon from "../../../public/assets/images/voice-flow-icon.png";
 
 type NavLink = {
   label: string;
@@ -21,7 +21,6 @@ const navLinks: NavLink[] = [
     dropdown: [
       { label: "Latest Episodes", href: "/pages/episodes/latest-episodes" },
       { label: "Favorite Episodes", href: "/pages/episodes/favorite-episodes" },
-      { label: "Episodes Details", href: "/pages/episodes/2" },
     ],
   },
   { label: "Blogs", href: "/pages/blogs" },
