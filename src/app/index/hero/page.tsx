@@ -30,8 +30,8 @@ const Hero = () => {
       <div className="px-[8%] lg:px-[16%] pt-20">
         <div className="flex flex-col lg:flex-row justify-between items-center gap-5">
           <div className="w-full lg:w-1/2">
-            <div className="hero-content w-full">
-              <Image src={HeroBarImage} alt="heroBar" className="h-10" />
+            <div className="flex flex-col w-full justify-center items-center text-center pb-[5%]">
+              <Image src={HeroBarImage} alt="hero bar" className="h-10" />
               <h1 className="text-3xl md:text-4xl my-4 font-bold text-white">
                 Explore <span className="text-primary"> Sound </span>{" "}
                 Storytelling Magic .
@@ -64,6 +64,7 @@ const Hero = () => {
               </div>
             </div>
           </div>
+
           {/* Hero image */}
           <div className="flex w-full hero-img">
             <Image src={HeroImage} alt="HeroImg" className="w-68 lg:w-87" />
