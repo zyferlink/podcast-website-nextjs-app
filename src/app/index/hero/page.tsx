@@ -13,7 +13,13 @@ import RoundedText from "../../../../public/images/Rouded-text.webp";
 
 const Hero = () => {
   return (
-    <div className="flex relative w-full bg-black/90 h-screen items-center pb-[3%] overflow-hidden z-10 bg-[url('/images/texture-bg-1.png')] bg-no-repeat">
+    <div
+      className="flex relative w-full bg-black/90 h-screen items-center pb-[3%] 
+    overflow-hidden z-10 bg-[url('/images/texture-bg-1.png')] bg-no-repeat"
+    >
+      {/* vector line drawing*/}
+      <div className="absolute top-0 left-0 w-full h-full bg-[url('/images/vector-line.png')] bg-no-repeat -z-10" />
+
       <div className="sun-shape">
         <Image src={SunShapeImage} alt="sunShape" />
         <Image src={SunShapeImage} alt="sunShape" />
