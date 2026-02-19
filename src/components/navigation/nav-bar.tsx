@@ -11,6 +11,7 @@ import LogoIcon from "../../../public/assets/images/voice-flow-icon.png";
 import { MobileMenuButton } from "../buttons/mobile-menu-button";
 import { StyledButtonPrimary } from "../buttons/styled-button-primary";
 import { StyledButtonSecondary } from "../buttons/styled-button-secondary";
+import LoginRegisterModal from "./login-register-modal";
 
 export default function Navbar() {
   const pathname = usePathname();
@@ -39,8 +40,8 @@ export default function Navbar() {
   // Nav Bar UI
   return (
     <div
-      className={`px-[8%] lg:px-[16%] fixed top-0 left-0 w-full z-9000 transition-all duration-300 
-            ${scrolled ? "bg-black/80 backdrop-blur-md shadow-lg" : "bg-transparent "} `}
+      className={`fixed px-[8%] lg:px-[16%] top-0 left-0 w-full z-9000 transition-all duration-300 
+            ${scrolled ? "bg-black/80 backdrop-blur-md shadow-lg" : "bg-transparent"} `}
     >
       <div className="flex justify-between items-center gap-5 py-3">
         <div className="flex items-center gap-8">
@@ -137,7 +138,7 @@ export default function Navbar() {
 
             <StyledButtonSecondary
               onClick={() => {
-                setIsLogin(true);
+                setIsLogin(false);
                 setShowModal(true);
               }}
               icon={<FaArrowRight size={12} />}
@@ -226,102 +227,12 @@ export default function Navbar() {
 
       {/* Login/Register Modal */}
       {showModal && (
-        <div className="fixed inset-0 w-full h-screen z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm">
-          <div className="relative bg-[#2D333C] border Oborder-white/10 rounded-3xl p-10 w-[450px] md:w-[500px] shadow-2xl animate-fadeIn">
-            {/* Close */}
-            <button
-              type="button"
-              className="absolute top-5 right-5 text-4xl cursor-pointer text-white hover:text-primary transition-all"
-              onClick={() => setShowModal(false)}
-            >
-              X
-            </button>
-
-            {/* Title */}
-            <h2 className="text-3xl font-semibold mb-8 text-white">
-              {isLogin ? "Login to Your Account" : "Register Your Account"}
-            </h2>
-
-            {/* Form */}
-            <form className="flex flex-col gap-4">
-              {!isLogin && (
-                <input
-                  type="text"
-                  placeholder="Full Name"
-                  className="w-full bg-gray-800 text-white border border-white px-3 py-3 rounded-xl 
-                    focus:border-primary focus:outline-none transition-all"
-                  required
-                />
-              )}
-
-              <input
-                type="email"
-                placeholder="Email Address"
-                className="w-full bg-gray-800 text-white border border-white px-3 py-3 rounded-xl 
-                    focus:border-primary focus:outline-none transition-all"
-                required
-              />
-
-              <input
-                type="password"
-                placeholder="Password"
-                className="w-full bg-gray-800 text-white border border-white px-3 py-3 rounded-xl 
-                    focus:border-primary focus:outline-none transition-all"
-                required
-              />
-
-              {/* Submit */}
-              <button
-                type="submit"
-                className="w-full mt-3 bg-primary text-black py-3 rounded-xl
-                  font-semibold hover:bg-orange-300 transition-all cursor-pointer"
-              >
-                {isLogin ? "Login Now" : "Register Now"}
-              </button>
-            </form>
-
-            {/* Switch Auth */}
-            <p className="text-center text-sm mt-4 text-white/70 font-semibold">
-              {isLogin ? (
-                <>
-                  Don't have an account?{" "}
-                  <button
-                    type="button"
-                    className="text-primary cursor-pointer hover:underline transition-all"
-                    onClick={() => setIsLogin(false)}
-                  >
-                    Register Here
-                  </button>
-                </>
-              ) : (
-                <>
-                  Already have an account?{" "}
-                  <button
-                    type="button"
-                    className="text-primary cursor-pointer hover:underline transition-all"
-                    onClick={() => setIsLogin(true)}
-                  >
-                    Login Here
-                  </button>
-                </>
-              )}
-            </p>
-
-            {/* Footer */}
-            <p className="text-center text-sm text-white/50 pt-4 mt-6 border-t border-white/10">
-              By Signing in or signing up to <strong>ZyferLink</strong>, you
-              agree to our{" "}
-              <Link href="/" className="text-primary hover:underline">
-                Terms Of Use
-              </Link>{" "}
-              and{" "}
-              <Link href="/" className="text-primary hover:underline">
-                Privacy Policy
-              </Link>
-              .
-            </p>
-          </div>
-        </div>
+        <LoginRegisterModal
+          setShowModal={setShowModal}
+          showModal={showModal}
+          isLogin={isLogin}
+          setIsLogin={setIsLogin}
+        />
       )}
     </div>
   );
