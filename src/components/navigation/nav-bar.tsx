@@ -8,6 +8,7 @@ import { FaArrowRight } from "react-icons/fa6";
 import { navLinks } from "@/data/navigation";
 import MenuIndicator from "../../../public/assets/images/menu-indicator.svg";
 import LogoIcon from "../../../public/assets/images/voice-flow-icon.png";
+import { MobileMenuButton } from "../buttons/mobile-menu-button";
 import { StyledButtonPrimary } from "../buttons/styled-button-primary";
 import { StyledButtonSecondary } from "../buttons/styled-button-secondary";
 
@@ -146,21 +147,10 @@ export default function Navbar() {
           </div>
 
           {/* Mobile bars */}
-          <button
-            type="button"
-            className="lg:hidden flex flex-col gap-1.25"
-            onClick={() => setOpen(!open)}
-          >
-            <span
-              className={` block w-6 h-0.75 bg-white transition-all ${open ? "rotate-45 translate-y-2" : ""} `}
-            />
-            <span
-              className={` block w-6 h-0.75 bg-white transition-all ${open ? "opacity-0" : ""} `}
-            />
-            <span
-              className={` block w-6 h-0.75 bg-white transition-all ${open ? "-rotate-45 -translate-y-2" : ""}`}
-            />
-          </button>
+          <MobileMenuButton
+            open={open}
+            onClick={() => setOpen((prev) => !prev)}
+          />
         </div>
 
         {/* Mobile Menu */}
