@@ -19,10 +19,9 @@ const HostProfiles = () => {
             {/* header title */}
             <HeaderTitle
               badgeText="Host Profiles"
-              badgeIcon="bi bi-mic"
+              badgeIcon="bi bi-rocket-takeoff"
               title="Meet the Voices Behind"
-              className="items-start text-start leading-tight"
-              titleProps="text-[3.5rem] md:text-[4.5rem]"
+              titleProps="text-[3.5rem] md:text-[4.5rem] leading-[1.1]"
             />
           </div>
 

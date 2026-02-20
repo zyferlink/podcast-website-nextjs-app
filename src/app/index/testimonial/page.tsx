@@ -7,6 +7,7 @@ import "swiper/css";
 import Image from "next/image";
 import Link from "next/link";
 import { useRef } from "react";
+import HeaderTitle from "@/components/header-title";
 import QuoteImage from "../../../../public/images/quote.png";
 import TestimonialCard1 from "../../../../public/images/testimonial-card-1.png";
 import TestimonialCard2 from "../../../../public/images/testimonial-card-2.png";
@@ -57,21 +58,20 @@ const Testimonial = () => {
   const swiperRef = useRef<SwiperType | null>(null);
   return (
     <div className="dark-section wave-wrapper-section2">
-      <div className="px-[8%] lg:px-[16%] py-30 pb-10 lg:pb-20">
+      <div className="px-[8%] lg:px-[16%] pt-28 pb-16">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="w-full flex justify-center items-center text-center">
-            <div className="w-full lg:w-1/2 title flex flex-col gap-2">
-              <div>
-                <h2 className="inline-block px-4 py-2 rounded-full text-primary text-2xl font-normal border border-primary">
-                  <i className="bi bi-rocket-takeoff pe-4"></i>
-                  Testimonial
-                </h2>
-              </div>
+            <div className="w-full lg:w-2/3 title flex flex-col gap-2">
+              {/* header title */}
+              <HeaderTitle
+                badgeText="Testimonial"
+                badgeIcon="bi bi-rocket-takeoff"
+                title="Listener Love, What They Say"
+                className="items-center text-center leading-[1.1]"
+                titleProps="text-[3.5rem] md:text-[4.2rem]"
+              />
 
-              <h1 className="text-4xl lg:text-5xl text-white font-semibold mt-4">
-                Listener Love, What They Say
-              </h1>
-              <p className="text-gray-300 tracking-wider">
+              <p className="text-gray-100 tracking-wider pt-2 text-lg font-light">
                 Explore what our listeners have to say about their experiences
                 with our podcast. Their testimonials capture the essence of the
                 joy, inspiration
