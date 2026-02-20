@@ -15,7 +15,8 @@ const WhyChooseUs = () => {
       <div className="px-[8%] lg:px-[12%] pt-28 pb-24">
         <div className="flex flex-col lg:flex-row justify-between items-center gap-20">
           <div className="w-full lg:w-1/2">
-            <div className="WhyChooseUs-img flex items-end gap-5">
+            {/* why choose us image section */}
+            <div className="relative animate-[anim-small-translate_5s_ease-in-out_infinite] flex items-end gap-5">
               <Image
                 src={WhyChooseUsImage1}
                 alt="WhyChooseUsImg"
@@ -26,7 +27,11 @@ const WhyChooseUs = () => {
                 alt="WhyChooseUsImg"
                 className="w-full h-fit"
               />
-              <Image src={WhyChooseUsImage3} alt="WhyChooseUsImg" />
+              <Image
+                src={WhyChooseUsImage3}
+                alt="WhyChooseUsImg"
+                className="absolute bottom-[10%] -right-[15%] w-70 h-70 object-contain rounded-lg lg:right-[-15%]"
+              />
             </div>
           </div>
 
