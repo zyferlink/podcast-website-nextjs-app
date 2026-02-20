@@ -4,6 +4,8 @@ import Image from "next/image";
 import { FaArrowRight } from "react-icons/fa6";
 import { StyledButtonPrimary } from "@/components/buttons/styled-button-primary";
 import { StyledButtonSecondary } from "@/components/buttons/styled-button-secondary";
+import BannerRoundedText from "../../../../public/assets/images/banner-rounded.png";
+import HeroImage from "../../../../public/assets/images/hero-image.png";
 // Assets
 import PlatformIcon5 from "../../../../public/assets/images/platform-icon-instagram.svg";
 import PlatformIcon1 from "../../../../public/assets/images/platform-icon-soundcloud.svg";
@@ -11,9 +13,7 @@ import PlatformIcon2 from "../../../../public/assets/images/platform-icon-spotif
 import PlatformIcon3 from "../../../../public/assets/images/platform-icon-swarm.svg";
 import PlatformIcon4 from "../../../../public/assets/images/platform-icon-youtube.svg";
 import SparkleStar from "../../../../public/assets/images/sparkle-star.png";
-import HeroImage from "../../../../public/images/Hero.png";
 import HeroBarImage from "../../../../public/images/hero-1.png";
-import RoundedText from "../../../../public/images/Rouded-text.webp";
 
 const Hero = () => {
   return (
@@ -26,9 +26,9 @@ const Hero = () => {
 
       {/* rotating sparkling elements */}
       <div className="sparkling-elem pointer-events-none ">
-        <Image src={SparkleStar} alt="Sun Shape Image" />
-        <Image src={SparkleStar} alt="Sun Shape Image" />
-        <Image src={SparkleStar} alt="Sun Shape Image" />
+        <Image src={SparkleStar} alt="Sun Shape Image" className="opacity-70" />
+        <Image src={SparkleStar} alt="Sun Shape Image" className="opacity-70" />
+        <Image src={SparkleStar} alt="Sun Shape Image" className="opacity-70" />
       </div>
 
       <div className="max-w-6xl mx-auto pt-24">
@@ -86,9 +86,9 @@ const Hero = () => {
               <Image src={HeroImage} alt="HeroImg" className="w-full lg:w-82" />
             </div>
 
-            <div className="relative top-50 lg:top-80 -translate-x-1/2 -translate-y-1/2 w-50 h-50 flex items-center justify-center">
+            <div className="relative top-50 lg:top-80 -translate-x-1/2 -translate-y-1/2 w-36 h-36 flex items-center justify-center">
               <Image
-                src={RoundedText}
+                src={BannerRoundedText}
                 alt="roundedText"
                 className="left-1/2 top-1/2 animate-[spin_5s_infinite_linear]"
               />
