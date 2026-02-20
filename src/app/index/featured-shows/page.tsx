@@ -67,10 +67,10 @@ const FeaturedShows = () => {
             0: { slidesPerView: 1 },
           }}
         >
-          {TopListensData.map((item, idx) => (
-            <SwiperSlide key={idx.toString()}>
+          {TopListensData.map((item) => (
+            <SwiperSlide key={item.id}>
               <div className="w-full">
-                <div className="flex w-full justify-between bg-gray-light rounded-lg overflow-hidden">
+                <div className="flex w-full min-h-87 justify-between bg-gray-light rounded-lg overflow-hidden">
                   <div className="w-full lg:w-1/2">
                     <Image
                       src={item.image}
@@ -83,18 +83,18 @@ const FeaturedShows = () => {
 
                   <div className="w-full lg:w-1/2">
                     <div className="p-2">
-                      <div className="flex flex-col lg:flex-row justify-between items-center">
-                        <span className="bg-gray/50 px-4 py-1 rounded-2xl text-primary font-medium text-base tracking-wide">
-                          {item.episode}
-                        </span>
+                      <div className="flex flex-col justify-between items-center">
                         <Link href="/app/pages">
                           <p className="ml-2 py-2 font-light text-gray-200 hover:text-primary tracking-wider transition-all duration-200">
                             <i className="bi bi-mic text-primary"></i>
                             {item.hostName}
                           </p>
                         </Link>
+                        <span className="bg-gray/50 px-4 py-1 rounded-2xl text-primary font-medium text-base tracking-wide">
+                          {item.episode}
+                        </span>
                       </div>
-                      <h2 className="my-5 text-white  text-xl lg:text-3xl font-semibold">
+                      <h2 className="my-8 mx-2 text-center text-white text-2xl lg:text-xl font-semibold">
                         {item.title}
                       </h2>
                       <div className="flex items-center gap-3">
