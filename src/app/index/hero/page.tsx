@@ -82,11 +82,11 @@ const Hero = () => {
 
           {/* Hero image */}
           <div className="flex w-full max-w-xl">
-            <div className="relative flex top-0 left-[25%] lg:left-[10%] items-center justify-center z-0 animate-[anim-small-translate_5s_infinite_ease-in-out]">
-              <Image src={HeroImage} alt="HeroImg" className="w-full lg:w-82" />
+            <div className="relative flex top-0 left-[10%] lg:left-[5%] items-center justify-center z-0 animate-[anim-small-translate_5s_infinite_ease-in-out]">
+              <Image src={HeroImage} alt="HeroImg" className="w-full lg:w-92" />
             </div>
 
-            <div className="relative top-50 lg:top-80 -translate-x-1/2 -translate-y-1/2 w-36 h-36 flex items-center justify-center">
+            <div className="relative top-60 lg:top-64 right-36 -translate-x-1/2 -translate-y-1/2 w-36 h-36 flex items-center justify-center">
               <Image
                 src={BannerRoundedText}
                 alt="roundedText"
