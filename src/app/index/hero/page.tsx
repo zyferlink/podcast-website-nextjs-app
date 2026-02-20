@@ -1,69 +1,106 @@
+"use client";
+// Next.js components
 import Image from "next/image";
-import BrandIcon1 from "../../../../public/images/brand-icon-1.png";
-import BrandIcon2 from "../../../../public/images/brand-icon-2.png";
-import BrandIcon3 from "../../../../public/images/brand-icon-3.png";
-import BrandIcon4 from "../../../../public/images/brand-icon-4.png";
-import BrandIcon5 from "../../../../public/images/brand-icon-5.png";
+import { FaArrowRight } from "react-icons/fa6";
+import { StyledButtonPrimary } from "@/components/buttons/styled-button-primary";
+import { StyledButtonSecondary } from "@/components/buttons/styled-button-secondary";
+// Assets
+import PlatformIcon5 from "../../../../public/assets/images/platform-icon-instagram.svg";
+import PlatformIcon1 from "../../../../public/assets/images/platform-icon-soundcloud.svg";
+import PlatformIcon2 from "../../../../public/assets/images/platform-icon-spotify.svg";
+import PlatformIcon3 from "../../../../public/assets/images/platform-icon-swarm.svg";
+import PlatformIcon4 from "../../../../public/assets/images/platform-icon-youtube.svg";
+import SparkleStar from "../../../../public/assets/images/sparkle-star.png";
 import HeroImage from "../../../../public/images/Hero.png";
 import HeroBarImage from "../../../../public/images/hero-1.png";
-import SunShapeImage from "../../../../public/images/hero-sun-shape.png";
 import RoundedText from "../../../../public/images/Rouded-text.webp";
 
 const Hero = () => {
   return (
-    <div className="hero bg-black/80">
-      <div className="sun-shape">
-        <Image src={SunShapeImage} alt="sunShape" />
-        <Image src={SunShapeImage} alt="sunShape" />
-        <Image src={SunShapeImage} alt="sunShape" />
+    <div
+      className="flex relative h-screen overflow-x-hidden  bg-black/90 text-light-text items-center justify-center pb-[3%] 
+    overflow-hidden z-10 bg-[url('/images/texture-bg-1.png')] bg-no-repeat bg-cover bg-center"
+    >
+      {/* vector line drawing*/}
+      <div className="absolute top-0 left-0 w-full h-full bg-[url('/images/vector-line.png')] bg-no-repeat -z-10" />
+
+      {/* rotating sparkling elements */}
+      <div className="sparkling-elem pointer-events-none ">
+        <Image src={SparkleStar} alt="Sun Shape Image" />
+        <Image src={SparkleStar} alt="Sun Shape Image" />
+        <Image src={SparkleStar} alt="Sun Shape Image" />
       </div>
 
-      <div className="px-[8%] lg:px-[16%] pt-20">
-        <div className="flex flex-col lg:flex-row justify-between items-center gap-5">
-          <div className="w-full lg:w-1/2">
-            <div className="hero-content w-full">
-              <Image src={HeroBarImage} alt="heroBar" className="h-10" />
-              <h1 className="text-3xl md:text-4xl my-4 font-bold text-white">
-                Explore <span className="text-primary"> Sound </span>{" "}
-                Storytelling Magic .
+      <div className="max-w-6xl mx-auto pt-24">
+        <div className="flex flex-col md:flex-row justify-center items-center">
+          <div className="flex w-full md:w-1/2">
+            <div className="flex flex-col w-full justify-center items-center text-center pb-[5%]">
+              <Image src={HeroBarImage} alt="hero bar" className="h-10" />
+
+              <h1 className="min-w-md text-[1.9rem] md:text-[2.3rem] 2xl:text-[3rem] my-4 font-bold text-white leading-tight">
+                Discover<span className="text-primary"> Podcasts </span> <br />
+                You'll Love, Right Here
               </h1>
-              <p className="tracking-normal text-base text-white/80">
-                Discover the harmony of heartfelt conversations. Bringing
-                clarity to life's complexities. Focus on what matters most
+              <p className="min-w-md font-poiret-one font-bold tracking-widest text-base 2xl:text-lg text-white/90">
+                Dive into meaningful talks. Navigating life's complexities with
+                clarity.
               </p>
 
-              <div className="hero-btn flex items-center gap-5 my-5">
-                <button type="button" className="btn btn2">
-                  Latest <i className="bi bi-arrow-right-short"></i>
-                </button>
-                <button type="button" className="btn btn1">
-                  Subscribe <i className="bi bi-arrow-right-short"></i>
-                </button>
+              {/* action buttons */}
+              <div className="flex items-center gap-5 my-7 2xl:my-10">
+                <StyledButtonSecondary
+                  onClick={() => {}}
+                  className="px-8 tracking-normal"
+                  icon={<FaArrowRight size={12} />}
+                >
+                  Latest
+                </StyledButtonSecondary>
+
+                <StyledButtonPrimary
+                  onClick={() => {}}
+                  className="tracking-wide"
+                  icon={<FaArrowRight size={12} />}
+                >
+                  Subscribe
+                </StyledButtonPrimary>
               </div>
 
-              <div className="mt-4">
-                <p className="tracking-wider text-xl text-white">
+              <div>
+                <p className="tracking-wide font-normal text-lg 2xl:text-xl">
                   Listen to Podcaster through
                 </p>
-                <div className="flex items-center gap-3 cursor-pointer my-2">
-                  <Image src={BrandIcon1} alt="brand" className="w-8" />
-                  <Image src={BrandIcon2} alt="brand" className="w-8" />
-                  <Image src={BrandIcon3} alt="brand" className="w-8" />
-                  <Image src={BrandIcon4} alt="brand" className="w-8" />
-                  <Image src={BrandIcon5} alt="brand" className="w-8" />
+                <div className="flex w-full  justify-center items-center gap-3 cursor-pointer my-2">
+                  <Image src={PlatformIcon1} alt="brand" className="w-8" />
+                  <Image src={PlatformIcon2} alt="brand" className="w-8" />
+                  <Image src={PlatformIcon3} alt="brand" className="w-8" />
+                  <Image src={PlatformIcon4} alt="brand" className="w-8" />
+                  <Image src={PlatformIcon5} alt="brand" className="w-8" />
                 </div>
               </div>
             </div>
           </div>
+
           {/* Hero image */}
-          <div className="flex w-full hero-img">
-            <Image src={HeroImage} alt="HeroImg" className="w-68 lg:w-87" />
-            <div className="rounded-text">
-              <Image src={RoundedText} alt="roundedText" />
-              <i className="bi bi-arrow-right-short"></i>
+          <div className="flex w-full max-w-xl">
+            <div className="relative flex top-0 left-[25%] lg:left-[10%] items-center justify-center z-0 animate-[anim-small-translate_5s_infinite_ease-in-out]">
+              <Image src={HeroImage} alt="HeroImg" className="w-full lg:w-82" />
+            </div>
+
+            <div className="relative top-50 lg:top-80 -translate-x-1/2 -translate-y-1/2 w-50 h-50 flex items-center justify-center">
+              <Image
+                src={RoundedText}
+                alt="roundedText"
+                className="left-1/2 top-1/2 animate-[spin_5s_infinite_linear]"
+              />
+
+              <i
+                className="bi bi-arrow-right-short absolute left-1/2 top-1/2 bg-primary text-black 
+               -translate-x-1/2 -translate-y-1/2 w-15 h-15 
+              rounded-full flex items-center justify-center text-4xl hover:scale-110 
+              transition-all duration-300 cursor-pointer"
+              ></i>
             </div>
           </div>
-          I
         </div>
       </div>
     </div>
