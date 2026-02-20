@@ -6,8 +6,8 @@ import { FaArrowRight } from "react-icons/fa6";
 import { StyledButtonSecondary } from "@/components/buttons/styled-button-secondary";
 import HeaderTitle from "@/components/header-title";
 import WhyChooseUsImage1 from "../../../../public/assets/images/why-choose-1.jpg";
+import WhyChooseUsImage2 from "../../../../public/assets/images/why-choose-2.jpg";
 import WhyChooseUsImage3 from "../../../../public/assets/images/why-choose-3.jpg";
-import WhyChooseUsImage2 from "../../../../public/images/why-choose-2.png";
 
 const WhyChooseUs = () => {
   return (
@@ -16,11 +16,11 @@ const WhyChooseUs = () => {
         <div className="flex flex-col lg:flex-row justify-between items-center gap-20">
           <div className="w-full lg:w-1/2">
             {/* why choose us image section */}
-            <div className="relative animate-[anim-small-translate_5s_ease-in-out_infinite] flex items-end gap-5">
+            <div className="relative animate-[anim-small-translate_5s_ease-in-out_infinite] flex items-end gap-5 overflow-hidden">
               <Image
                 src={WhyChooseUsImage1}
                 alt="WhyChooseUsImg"
-                className="w-full h-fit border-t-2 border-primary pt-5"
+                className="w-full h-fit border-t-2 border-purple-600 pt-3"
               />
               <Image
                 src={WhyChooseUsImage2}
@@ -30,7 +30,7 @@ const WhyChooseUs = () => {
               <Image
                 src={WhyChooseUsImage3}
                 alt="WhyChooseUsImg"
-                className="absolute bottom-[10%] -right-[15%] w-70 h-70 object-contain lg:right-[-15%]"
+                className="absolute bottom-0 -right-[10%] w-50 h-50 object-contain lg:right-[20%]"
               />
             </div>
           </div>
