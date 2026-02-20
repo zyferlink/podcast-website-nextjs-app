@@ -64,23 +64,23 @@ const Footer = () => {
             </div>
 
             <div className="footer-col">
-              <h2 className="text-4xl mb-5">Contact</h2>
+              <h2 className="text-3xl mb-5">Contact</h2>
 
               <div className="flex flex-col gap-2">
                 <div className="flex flex-col gap-3">
-                  <h2 className="text-xl text-gray-300 hover:text-primary transition-all duration-300 cursor-pointer">
-                    <i className="bi bi-telephone-x pe-2 text-primary"></i>
-                    +91 123 456 7890
+                  <h2 className="text-lg text-gray-300 hover:text-primary transition-all duration-300 cursor-pointer">
+                    <i className="bi bi-telephone pe-2 text-primary"></i>
+                    +91 123 456 789
                   </h2>
 
-                  <h2 className="text-xl text-gray-300 hover:text-primary transition-all duration-300 cursor-pointer">
-                    <i className="bi bi-telephone-x pe-2 text-primary"></i>
-                    +91 123 456 6587
+                  <h2 className="text-lg text-gray-300 hover:text-primary transition-all duration-300 cursor-pointer">
+                    <i className="bi bi-telephone pe-2 text-primary"></i>
+                    +91 123 456 670
                   </h2>
 
-                  <h2 className="text-xl text-gray-300 hover:text-primary transition-all duration-300 cursor-pointer">
+                  <h2 className="text-lg text-gray-300 hover:text-primary transition-all duration-300 cursor-pointer">
                     <i className="bi bi-envelope pe-2 text-primary"></i>
-                    info@gmail.com
+                    info@example.com
                   </h2>
                 </div>
               </div>
