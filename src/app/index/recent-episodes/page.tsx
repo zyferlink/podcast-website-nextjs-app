@@ -6,7 +6,7 @@ import { FaArrowRight } from "react-icons/fa6";
 import { StyledButtonSecondary } from "@/components/buttons/styled-button-secondary";
 import HeaderTitle from "@/components/header-title";
 import { type RecentEpisode, RecentEpisodeData } from "@/data/recent-episodes";
-import BannerImage from "../../../../public/images/episode-card-banner.png";
+import EpisodeBannerImage from "../../../../public/assets/images/episode-card-banner.png";
 
 const RecentEpisodes = () => {
   const mainBannerData: RecentEpisode = RecentEpisodeData[0];
@@ -50,7 +50,7 @@ const RecentEpisodes = () => {
           <div className="flex flex-col lg:flex-row justify-center lg:justify-between gap-0 lg:gap-5">
             <div className="w-full lg:w-1/2">
               <Image
-                src={BannerImage}
+                src={EpisodeBannerImage}
                 alt="bannerImg"
                 className="w-full h-full"
               />
@@ -69,7 +69,7 @@ const RecentEpisodes = () => {
                 <div className="flex items-center gap-3">
                   <i className="bi bi-balloon-heart me-3 text-text text-xl"></i>
                   <div
-                    className="w-20 md:w-40 h-7.5 bg-[url('../../public/images/music-waves.png')] 
+                    className="w-20 md:w-40 h-7.5 bg-[url('/assets/images/music-waves-1.png')] 
                   bg-repeat-x bg-size-[auto_100%] animate-[anim-wave-scroll_50s_linear_infinite]"
                   />
                 </div>
@@ -121,7 +121,7 @@ const RecentEpisodes = () => {
                   <div className="flex items-center gap-3">
                     <i className="bi bi-balloon-heart me-3 text-gray-300 text-xl"></i>
                     <div
-                      className="w-20 md:w-30 h-7.5 bg-[url('../../public/images/music-waves2.png')] 
+                      className="w-20 md:w-30 h-7.5 bg-[url('/assets/images/music-waves-2.png')] 
                   bg-repeat-x bg-size-[auto_100%] animate-[anim-wave-scroll_50s_linear_infinite]"
                     />
                   </div>
