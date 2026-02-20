@@ -105,97 +105,50 @@ const RecentEpisodes = () => {
         </div>
 
         <div className="flex flex-col lg:flex-row items-center gap-5 mt-10">
-          <div className="w-full lg:w-1/2">
-            <div className="p-6 rounded-2xl bg-gray">
-              <div className="flex flex-wrap items-center gap-5">
-                <Link href="/app/pages">
+          {RecentEpisodeData.slice(1, 3).map((item) => (
+            <div key={item.id} className="w-full lg:w-1/2">
+              <div className="p-6 rounded-2xl bg-gray">
+                <div className="flex flex-wrap items-center gap-5">
+                  <Link href="/app/pages">
+                    <h2 className="text-gray-300">
+                      <i className="bi bi-mic"> {item.hostName}</i>
+                    </h2>
+                  </Link>
+
                   <h2 className="text-gray-300">
-                    <i className="bi bi-mic"> Devon Lane</i>
+                    <i className="bi bi-clock pe-1"></i> {item.duration}
                   </h2>
-                </Link>
-
-                <h2 className="text-gray-300">
-                  <i className="bi bi-clock pe-1"></i> 4hr 12min
-                </h2>
-                <div className="flex items-center gap-3">
-                  <i className="bi bi-balloon-heart me-3 text-gray-300 text-xl"></i>
-                  <div className="music-waves2"></div>
+                  <div className="flex items-center gap-3">
+                    <i className="bi bi-balloon-heart me-3 text-gray-300 text-xl"></i>
+                    <div className="music-waves2"></div>
+                  </div>
                 </div>
-              </div>
 
-              <h2 className="text-gray-300 text-2xl md:text-3xl font-semibold">
-                Laughter Unleashed: Join Us for Joyful Conversations Today
-              </h2>
-              <p className=" my-4 tracking-wide">
-                Embark on a journey of unexplored wisdom as we delve into
-                fascinating topics that challenge the mind
-              </p>
-              <div className="flex justify-between items-center gap-5 ">
-                <Link
-                  href="/app/pages"
-                  className="flex items-center gap-2 group"
-                >
-                  <i
-                    className="bi bi-play p-2 bg-primary rounded-full flex items-center 
+                <h2 className="text-gray-300 text-2xl md:text-3xl font-semibold">
+                  {item.title}
+                </h2>
+                <p className=" my-4 tracking-wide">{item.desc}</p>
+                <div className="flex justify-between items-center gap-5 ">
+                  <Link
+                    href="/app/pages"
+                    className="flex items-center gap-2 group"
+                  >
+                    <i
+                      className="bi bi-play p-2 bg-primary rounded-full flex items-center 
                     justify-center text-black text-2xl group-hover:bg-secondary 
                     group-hover:text-white cursor-pointer transition-all duration-200"
-                  ></i>
-                  <h2 className="text-xl underline text-black group-hover:text-secondary transition-all duration-200">
-                    Listen Now
-                  </h2>
-                </Link>
-                <span className="bg-gray-800 text-primary px-5 py-2 rounded-full text-xl">
-                  Episode 04
-                </span>
-              </div>
-            </div>
-          </div>
-
-          <div className="w-full lg:w-1/2">
-            <div className="p-6 rounded-2xl bg-gray">
-              <div className="flex flex-wrap items-center gap-5">
-                <Link href="/app/pages">
-                  <h2 className="text-gray-300">
-                    <i className="bi bi-mic"> Devon Lane</i>
-                  </h2>
-                </Link>
-
-                <h2 className="text-gray-300">
-                  <i className="bi bi-clock pe-1"></i> 4hr 12min
-                </h2>
-                <div className="flex items-center gap-3">
-                  <i className="bi bi-balloon-heart me-3 text-gray-300 text-xl"></i>
-                  <div className="music-waves2"></div>
+                    ></i>
+                    <h2 className="text-xl underline text-black group-hover:text-secondary transition-all duration-200">
+                      Listen Now
+                    </h2>
+                  </Link>
+                  <span className="bg-gray-800 text-primary px-5 py-2 rounded-full text-xl">
+                    {item.episode}
+                  </span>
                 </div>
               </div>
-
-              <h2 className="text-gray-300 text-2xl md:text-3xl font-semibold">
-                Behind the Scenes: Candid Talks on Podcasting Strategies
-              </h2>
-              <p className=" my-4 tracking-wide">
-                Unlock the secrets of inspiration with heartfelt stories and
-                motivational insights in this uplifting episode
-              </p>
-              <div className="flex justify-between items-center gap-5 ">
-                <Link
-                  href="/app/pages"
-                  className="flex items-center gap-2 group"
-                >
-                  <i
-                    className="bi bi-play p-2 bg-primary rounded-full flex items-center 
-                    justify-center text-black text-2xl group-hover:bg-secondary 
-                    group-hover:text-white cursor-pointer transition-all duration-200"
-                  ></i>
-                  <h2 className="text-xl underline text-black group-hover:text-secondary transition-all duration-200">
-                    Listen Now
-                  </h2>
-                </Link>
-                <span className="bg-gray-800 text-primary px-5 py-2 rounded-full text-xl">
-                  Episode 04
-                </span>
-              </div>
             </div>
-          </div>
+          ))}
         </div>
       </div>
     </div>
