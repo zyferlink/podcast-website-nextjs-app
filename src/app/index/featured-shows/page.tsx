@@ -1,3 +1,4 @@
+/** biome-ignore-all lint/suspicious/noAssignInExpressions: <explanation> */
 "use client";
 
 import type { Swiper as SwiperType } from "swiper";
@@ -14,7 +15,7 @@ const FeaturedShows = () => {
   const swiperRef = useRef<SwiperType | null>(null);
   return (
     <div className="dark-section">
-      <div className="px-[8%] lg:px-[16%] py-24">
+      <div className="px-[8%] lg:px-[16%] pt-24 pb-16">
         <div className="flex flex-col md:flex-row justify-between items-center">
           {/* header title */}
           <div className="w-full lg:w-1/2">
@@ -32,20 +33,20 @@ const FeaturedShows = () => {
                 type="button"
                 onClick={() => swiperRef.current?.slidePrev()}
                 className="w-12 h-12 flex items-center justify-center rounded-full 
-                border border-primary text-primary hover:bg-primary Ohover:text-black 
+                border border-primary text-primary hover:bg-primary hover:text-black 
                 transition-all duration-200 hover:-translate-x-1 cursor-pointer"
               >
-                <i className="bi bi-chevron-double-left"></i>
+                <i className="bi bi-chevron-double-left pt-1" />
               </button>
 
               <button
                 type="button"
                 onClick={() => swiperRef.current?.slideNext()}
                 className="w-12 h-12 flex items-center justify-center rounded-full 
-                border border-primary text-primary hover:bg-primary Ohover:text-black 
+                border border-primary text-primary hover:bg-primary hover:text-black 
                 transition-all duration-200 hover:translate-x-1 cursor-pointer"
               >
-                <i className="bi bi-chevron-double-right"></i>
+                <i className="bi bi-chevron-double-right pt-1" />
               </button>
             </div>
           </div>
@@ -69,6 +70,7 @@ const FeaturedShows = () => {
         >
           {TopListensData.map((item) => (
             <SwiperSlide key={item.id}>
+              {/* detail card */}
               <div className="w-full">
                 <div className="flex w-full min-h-87 justify-between bg-gray-light rounded-lg overflow-hidden ">
                   <div className="w-full lg:w-1/2">
