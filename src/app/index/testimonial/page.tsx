@@ -44,19 +44,19 @@ const Testimonial = () => {
           slidesPerView={1}
           spaceBetween={10}
           loop={true}
-          autoplay={{ delay: 2000, disableOnInteraction: false }}
+          autoplay={{ delay: 3000, disableOnInteraction: false }}
           modules={[Autoplay]}
           speed={1500}
           className="test-wrapper-swiper"
         >
-          {TestimonialData.map((test, index) => (
-            <SwiperSlide key={index.toString()}>
+          {TestimonialData.map((testimonial) => (
+            <SwiperSlide key={testimonial.id}>
               <div className="flex flex-col md:flex-row justify-between items-center gap-10">
                 <div className="w-full lg:w-2/5">
                   <div className="test-img relative">
                     <Image
-                      src={test.image}
-                      alt={test.name}
+                      src={testimonial.image}
+                      alt={testimonial.name}
                       className="w-full h-full object-cover rounded-2xl"
                     />
 
@@ -86,14 +86,16 @@ const Testimonial = () => {
                     </div>
 
                     <p className="text-xl text-gray-300 tracking-wide my-5">
-                      {test.quote}
+                      {testimonial.quote}
                     </p>
 
-                    <div className="test-border border-t border-dashed border-primary-light opacity-50 pt-5"></div>
+                    <div className="test-border border-t border-dashed border-primary-light opacity-50 pt-5" />
                     <div className="test-info">
-                      <h2 className="text-3xl text-white">{test.name}</h2>
-                      <h2 className="text-xl mt-2 text-gray-400">
-                        {test.role}
+                      <h2 className="text-3xl text-white">
+                        {testimonial.name}
+                      </h2>
+                      <h2 className="text-xl mt-2 text-gray-300 font-light">
+                        {testimonial.role}
                       </h2>
                     </div>
                   </div>
@@ -104,20 +106,20 @@ const Testimonial = () => {
                       type="button"
                       onClick={() => swiperRef.current?.slidePrev()}
                       className="w-12 h-12 flex items-center justify-center rounded-full 
-                border border-primary text-primary hover:bg-primary Ohover:text-black 
+                border border-primary text-primary hover:bg-primary hover:text-black 
                 transition-all duration-200 hover:-translate-x-1 cursor-pointer"
                     >
-                      <i className="bi bi-chevron-double-left"></i>
+                      <i className="bi bi-chevron-double-left" />
                     </button>
 
                     <button
                       type="button"
                       onClick={() => swiperRef.current?.slideNext()}
                       className="w-12 h-12 flex items-center justify-center rounded-full 
-                border border-primary text-primary hover:bg-primary Ohover:text-black 
+                border border-primary text-primary hover:bg-primary hover:text-black 
                 transition-all duration-200 hover:translate-x-1 cursor-pointer"
                     >
-                      <i className="bi bi-chevron-double-right"></i>
+                      <i className="bi bi-chevron-double-right" />
                     </button>
                   </div>
                 </div>
