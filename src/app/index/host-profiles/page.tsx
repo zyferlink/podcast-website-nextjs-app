@@ -85,7 +85,7 @@ const HostProfiles = () => {
   const swiperRef = useRef<SwiperType | null>(null);
   return (
     <div className="light-section wave-wrapper-section">
-      <div className="px-[8%] lg:px-[16%] pt-28 pb-24">
+      <div className="px-[8%] lg:px-[16%] pt-28 pb-16">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="w-full md:w-3/4">
             {/* header title */}
@@ -105,10 +105,10 @@ const HostProfiles = () => {
                 type="button"
                 onClick={() => swiperRef.current?.slidePrev()}
                 className="w-12 h-12 flex items-center justify-center rounded-full 
-                border border-primary text-primary hover:bg-primary Ohover:text-black 
+                border border-primary text-primary hover:bg-primary hover:text-black 
                 transition-all duration-200 hover:-translate-x-1 cursor-pointer"
               >
-                <i className="bi bi-chevron-double-left"></i>
+                <i className="bi bi-chevron-double-left" />
               </button>
 
               <button
@@ -118,14 +118,14 @@ const HostProfiles = () => {
                 border border-primary text-primary hover:bg-primary hover:text-black 
                 transition-all duration-200 hover:translate-x-1 cursor-pointer"
               >
-                <i className="bi bi-chevron-double-right"></i>
+                <i className="bi bi-chevron-double-right" />
               </button>
             </div>
           </div>
         </div>
       </div>
 
-      <div className="mt-0 md:mt-10 px-[8%] lg:px-[16%] lg:pb-30 pb-10">
+      <div className="px-[8%] lg:px-[16%] lg:pb-30 pb-10">
         <Swiper
           onSwiper={(swiper) => (swiperRef.current = swiper)}
           slidesPerView={4}
@@ -133,7 +133,7 @@ const HostProfiles = () => {
           loop={true}
           autoplay={{ delay: 2000, disableOnInteraction: false }}
           modules={[Autoplay]}
-          speed={1800}
+          speed={2000}
           breakpoints={{
             1200: { slidesPerView: 4 },
             991: { slidesPerView: 2 },
@@ -160,38 +160,40 @@ const HostProfiles = () => {
                 </div>
 
                 <div className="host-info px-3 py-4">
-                  <h3 className="text-xl text-gray-300">{host.name}</h3>
+                  <h3 className="text-xl text-gray-200 font-bold">
+                    {host.name}
+                  </h3>
                   <p className="text-lg text-gray-300">{host.role}</p>
                 </div>
 
-                <div className="host-icons absolute bottom-5 bg-gray rounded-full right-5 group">
+                <div className="host-icons absolute bottom-6 bg-gray rounded-full right-0 group">
                   {/* Plush Icon */}
                   <i
-                    className="bi bi-plus-lg bg-gray w-12 h-12 flex 
+                    className="bi bi-plus-lg bg-gray-600 w-11 h-11 flex 
                     items-center justify-center rounded-full cursor-pointer border 
-                    border-transparent group-hover:rounded-t-none group-hover:bg-gray-light 
+                    border-transparent group-hover:rounded-t-none group-hover:bg-gray-500 
                     group-hover:border group-hover:border-gray transition-all duration-300"
                   ></i>
 
                   {/* Hidden Social Icon */}
                   <div
-                    className="host-hidden flex flex-col absolute bottom-11 right-0 
+                    className="host-hidden flex flex-col absolute bottom-10 right-0 
                     opacity-0 invisible translate-y-4 group-hover:opacity-100 
                     group-hover:visible group-hover:translate-y-0 transition-all 
                     duration-300 ease-out bg-gray rounded-t-full p-2"
                   >
                     <i
-                      className="bi bi-facebook w-8 h-8 mb-1 flex items-center 
+                      className="bi bi-facebook w-7 h-7 mb-1 flex items-center 
                       justify-center rounded-full bg-gray-200 border border-primary hover:bg-primary 
                       transition-all duration-300 cursor-pointer"
                     />
                     <i
-                      className="bi bi-dribbble w-8 h-8 mb-1 flex items-center 
+                      className="bi bi-dribbble w-7 h-7 mb-1 flex items-center 
                       justify-center rounded-full bg-gray-200 border border-primary hover:bg-primary 
                       transition-all duration-300 cursor-pointer"
                     />
                     <i
-                      className="bi bi-twitter-x w-8 h-8 mb-1 flex items-center 
+                      className="bi bi-twitter-x w-7 h-7 mb-1 flex items-center 
                       justify-center rounded-full bg-gray-200 border border-primary hover:bg-primary 
                       transition-all duration-300 cursor-pointer"
                     />
