@@ -20,6 +20,7 @@
   --color-matte-black: #28282b;
   --color-dark-text: #222e48;
   --color-light-text: #ffffff;
+  --color-banner-background: #FFCA79;
 
   /* Typography */
   --font-zain: "Zain", sans-serif;
@@ -44,6 +45,7 @@
   --color-matte-black: var(--color-matte-black);
   --color-dark-text: var(--color-dark-text);
   --color-light-text: var(--color-light-text);
+  --color-banner-background: var(--color-banner-background);
 
   /* Fonts */
   --font-zain: var(--font-zain);

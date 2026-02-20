@@ -4,7 +4,7 @@ import BannerImage from "../../../../public/images/banner.png";
 const Banner = () => {
   return (
     <div className="px-[8%] lg:px-[16%] py-20 light-section">
-      <div className="banner bg-[#FFCA79] px-[7%] rounded-xl">
+      <div className="banner bg-banner-background px-[7%] rounded-xl">
         <div className="">
           <div className="flex flex-col lg:flex-row items-center gap-10 lg:gap-25">
             <div className="w-full lg:w-1/2 relative">

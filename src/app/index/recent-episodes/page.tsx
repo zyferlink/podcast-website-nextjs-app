@@ -46,7 +46,7 @@ const RecentEpisodes = () => {
 
       <div className="mt-10 px-[8%] lg:px-[12%] pb-30">
         {/* main banner */}
-        <div className="episodeBanner bg-[#FFCA79] px-5 rounded-2xl pb-5 lg:pb-0">
+        <div className="episodeBanner bg-banner-background px-5 rounded-2xl pb-5 lg:pb-0">
           <div className="flex flex-col lg:flex-row justify-center lg:justify-between gap-0 lg:gap-5">
             <div className="w-full lg:w-1/2">
               <Image
