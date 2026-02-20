@@ -108,9 +108,9 @@ const RecentEpisodes = () => {
           {RecentEpisodeData.slice(1, 3).map((item) => (
             <div key={item.id} className="w-full lg:w-1/2">
               <div className="p-6 rounded-2xl bg-gray">
-                <div className="flex flex-wrap items-center gap-5">
+                <div className="flex flex-wrap items-center gap-3">
                   <Link href="/app/pages">
-                    <h2 className="text-gray-300">
+                    <h2 className="text-gray-300 hover:text-primary">
                       <i className="bi bi-mic"> {item.hostName}</i>
                     </h2>
                   </Link>
@@ -120,14 +120,17 @@ const RecentEpisodes = () => {
                   </h2>
                   <div className="flex items-center gap-3">
                     <i className="bi bi-balloon-heart me-3 text-gray-300 text-xl"></i>
-                    <div className="music-waves2"></div>
+                    <div
+                      className="w-20 md:w-30 h-7.5 bg-[url('../../public/images/music-waves2.png')] 
+                  bg-repeat-x bg-size-[auto_100%] animate-[anim-wave-scroll_50s_linear_infinite]"
+                    />
                   </div>
                 </div>
 
-                <h2 className="text-gray-300 text-2xl md:text-3xl font-semibold">
+                <h2 className="text-gray-300 text-2xl md:text-3xl font-semibold pt-8">
                   {item.title}
                 </h2>
-                <p className=" my-4 tracking-wide">{item.desc}</p>
+                <p className="my-4 tracking-wide text-gray-300">{item.desc}</p>
                 <div className="flex justify-between items-center gap-5 ">
                   <Link
                     href="/app/pages"
@@ -137,8 +140,8 @@ const RecentEpisodes = () => {
                       className="bi bi-play p-2 bg-primary rounded-full flex items-center 
                     justify-center text-black text-2xl group-hover:bg-secondary 
                     group-hover:text-white cursor-pointer transition-all duration-200"
-                    ></i>
-                    <h2 className="text-xl underline text-black group-hover:text-secondary transition-all duration-200">
+                    />
+                    <h2 className="text-xl underline  text-gray-300 group-hover:text-secondary transition-all duration-200">
                       Listen Now
                     </h2>
                   </Link>
