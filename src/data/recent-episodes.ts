@@ -1,6 +1,6 @@
 import type { StaticImageData } from "next/dist/shared/lib/get-img-props";
 
-export interface TopListen {
+export interface RecentEpisode {
   id: number;
   title: string;
   desc: string;
@@ -10,7 +10,7 @@ export interface TopListen {
   image?: StaticImageData;
 }
 
-export const RecentEpisodeData: TopListen[] = [
+export const RecentEpisodeData: RecentEpisode[] = [
   {
     id: 1,
     title: "Innovation Insights: Diving Deep into Future Tech Trends",

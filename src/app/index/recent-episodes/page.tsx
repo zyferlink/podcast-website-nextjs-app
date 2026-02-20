@@ -5,9 +5,12 @@ import Link from "next/link";
 import { FaArrowRight } from "react-icons/fa6";
 import { StyledButtonSecondary } from "@/components/buttons/styled-button-secondary";
 import HeaderTitle from "@/components/header-title";
+import { type RecentEpisode, RecentEpisodeData } from "@/data/recent-episodes";
 import BannerImage from "../../../../public/images/episode-card-banner.png";
 
 const RecentEpisodes = () => {
+  const mainBannerData: RecentEpisode = RecentEpisodeData[0];
+
   return (
     <div className="dark-section">
       <div className="px-[8%] lg:px-[12%] pt-28 pb-24">
@@ -41,7 +44,8 @@ const RecentEpisodes = () => {
         </div>
       </div>
 
-      <div className="mt-10 px-[8%] lg:px-[16%] pb-30">
+      <div className="mt-10 px-[8%] lg:px-[12%] pb-30">
+        {/* main banner */}
         <div className="episodeBanner bg-[#FFCA79] px-5 rounded-2xl pb-5 lg:pb-0">
           <div className="flex flex-col lg:flex-row justify-center lg:justify-between gap-0 lg:gap-5">
             <div className="w-full lg:w-1/2">
@@ -55,16 +59,19 @@ const RecentEpisodes = () => {
               <div className="flex items-center gap-5 py-5">
                 <Link href="/app/pages">
                   <h2 className="text-text hover:text-black">
-                    <i className="bi bi-mic"> Devon Lane</i>
+                    <i className="bi bi-mic">{mainBannerData.hostName}</i>
                   </h2>
                 </Link>
 
                 <h2 className="text-text">
-                  <i className="bi bi-clock pe-1"></i> 4hr 12min
+                  <i className="bi bi-clock pe-1"></i> {mainBannerData.duration}
                 </h2>
                 <div className="flex items-center gap-3">
                   <i className="bi bi-balloon-heart me-3 text-text text-xl"></i>
-                  <div className="music-waves"></div>
+                  <div
+                    className="w-20 md:w-40 h-7.5 bg-[url('../../public/images/music-waves.png')] 
+                  bg-repeat-x bg-size-[auto_100%] animate-[anim-wave-scroll_50s_linear_infinite]"
+                  />
                 </div>
               </div>
 

@@ -366,10 +366,10 @@ body {
   background-image: url(../../public/images/music-waves.png);
   background-repeat: repeat-x;
   background-size: auto 100%;
-  animation: waveScroll 50s linear infinite;
+  animation: anim-wave-scroll 50s linear infinite;
 }
 
-@keyframes waveScroll {
+@keyframes anim-wave-scroll {
   from {
     background-position: 0 0;
   }
@@ -385,7 +385,7 @@ body {
   background-image: url(../../public/images/music-waves2.png);
   background-repeat: repeat-x;
   background-size: auto 100%;
-  animation: waveScroll 50s linear infinite;
+  animation: anim-wave-scroll 50s linear infinite;
 }
 
 /* Recent Episode MQ Section */
@@ -546,7 +546,7 @@ body {
   background-image: url(../../public/images/music-waves.png);
   background-repeat: repeat-x;
   background-size: auto 100%;
-  animation: waveScroll 50s linear infinite;
+  animation: anim-wave-scroll 50s linear infinite;
 }
 
 .banner-img:before {
@@ -559,7 +559,7 @@ body {
   background-image: url(../../public/images/music-waves.png);
   background-repeat: repeat-x;
   background-size: auto 100%;
-  animation: waveScroll 50s linear infinite;
+  animation: anim-wave-scroll 50s linear infinite;
 }
 
 /* Footer Section */
