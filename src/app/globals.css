@@ -637,7 +637,7 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  animation: Anim-rotate 5s infinite forwards linear;
+  animation: anim-spin 5s infinite forwards linear;
 }
 
 .elm2 {
