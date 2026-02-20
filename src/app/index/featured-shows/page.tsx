@@ -8,41 +8,10 @@ import Link from "next/link";
 import { useRef } from "react";
 
 import { Swiper, SwiperSlide } from "swiper/react";
+import { TopListensData } from "@/data/featured-shows";
 import TopListens1 from "../../../../public/images/top-listens-1.png";
 import TopListens2 from "../../../../public/images/top-listens-2.png";
 import TopListens3 from "../../../../public/images/top-listens-3.png";
-
-const TopListensData = [
-  {
-    id: 1,
-    title: "Behind the Mic: Podcasting Exp ... ",
-    img: TopListens1,
-    episode: "Episode 06",
-    hostName: "Devon Lane",
-  },
-  {
-    id: 3,
-    title: "Laughing Through Life's Labyri ... ",
-    img: TopListens3,
-    episode: "Episode 12",
-    hostName: "Mr Jones Weks",
-  },
-  {
-    id: 4,
-    title: "Tech Trends Unveiled: Future H ... ",
-    img: TopListens2,
-    episode: "Episode 17",
-    hostName: "Arlene McCoy",
-  },
-
-  {
-    id: 5,
-    title: "Laughing Through Life's Labyri ... ",
-    img: TopListens3,
-    episode: "Episode 12",
-    hostName: "Mr Jones Weks",
-  },
-];
 
 const FeaturedShows = () => {
   const swiperRef = useRef<SwiperType | null>(null);
@@ -114,7 +83,7 @@ const FeaturedShows = () => {
                 <div className="flex w-full justify-between bg-gray-light rounded-lg overflow-hidden">
                   <div className="w-full lg:w-1/2">
                     <Image
-                      src={item.img}
+                      src={item.image}
                       alt="TopListens"
                       width={1000}
                       height={1000}
