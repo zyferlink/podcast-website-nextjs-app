@@ -17,6 +17,7 @@
   --color-gray-light: #262629;
   --color-white: #ffffff;
   --color-black: #000000;
+  --color-matte-black: #28282b;
   --color-dark-text: #222e48;
   --color-light-text: #ffffff;
 
@@ -40,6 +41,7 @@
   --color-gray-light: var(--color-gray-light);
   --color-white: var(--color-white);
   --color-black: var(--color-black);
+  --color-matte-black: var(--color-matte-black);
   --color-dark-text: var(--color-dark-text);
   --color-light-text: var(--color-light-text);
 
@@ -204,7 +206,6 @@ body {
   .rounded-text {
     left: 50%;
   }
-
 }
 
 @media (max-width: 575px) {
@@ -266,8 +267,6 @@ body {
     transform: translate(0px, 0px);
   }
 }
-
-
 
 /* Rotating sparkling elements */
 
@@ -343,14 +342,18 @@ body {
 
 /* Featured Shows Section */
 
-.dark-section {
-  background-image: url(../../public/images/texture-bg-1.png);
+.dark-section,
+.light-section {
   background-size: cover;
+  color: var(--white);
+}
+
+.dark-section {
+  background: var(--color-dark) url(../../public/images/texture-bg-1.png) no-repeat center/cover;
 }
 
 .light-section {
-  background: url(../../public/images/texture-bg-1.png), rgb(38, 38, 41);
-  background-size: cover;
+  background: var(--color-matte-black) url(../../public/images/texture-bg-1.png) no-repeat center/cover;
 }
 
 /* Why Choose Us Section */
@@ -771,8 +774,7 @@ body {
   }
 }
 
-
-.about-wave2::after{
-top: -35% !important;
-height: 150px;
+.about-wave2::after {
+  top: -35% !important;
+  height: 150px;
 }

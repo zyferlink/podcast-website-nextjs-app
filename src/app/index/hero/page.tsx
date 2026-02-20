@@ -18,7 +18,7 @@ import SparkleStar from "../../../../public/assets/images/sparkle-star.png";
 const Hero = () => {
   return (
     <div
-      className="flex relative h-screen overflow-x-hidden  bg-black/90 text-light-text items-center justify-center pb-[3%] 
+      className="flex relative h-screen overflow-x-hidden bg-black/92 text-light-text items-center justify-center pb-[3%] 
     overflow-hidden z-10 bg-[url('/assets/images/texture-bg-1.png')] bg-no-repeat bg-cover bg-center"
     >
       {/* vector line drawing*/}
