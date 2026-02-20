@@ -12,7 +12,7 @@ import WhyChooseUsImage3 from "../../../../public/images/why-choose-3.png";
 const WhyChooseUs = () => {
   return (
     <div className="light-section">
-      <div className="px-[8%] lg:px-[12%] py-30">
+      <div className="px-[8%] lg:px-[12%] pt-28 pb-24">
         <div className="flex flex-col lg:flex-row justify-between items-center gap-20">
           <div className="w-full lg:w-1/2">
             <div className="WhyChooseUs-img flex items-end gap-5">
@@ -36,15 +36,17 @@ const WhyChooseUs = () => {
               <HeaderTitle
                 badgeText="Why Choose Us"
                 badgeIcon="bi bi-rocket-takeoff"
-                title="What Makes Us Different From Other"
-                className="items-center text-center"
+                title="What Makes Us Unique"
+                className="items-center text-center leading-tight"
               />
 
-              <p className="my-4 tracking-wider text-white">
-                Explore vibrant soundscapes where stories of every kind come
-                alive, taking you on an immersive journey and through
-                captivating narratives.
+              <p className="my-2 tracking-wider text-lg font-light leading-snug text-white">
+                Experience the magic of sound as stories from all walks of life
+                come to life, inviting you on an immersive journey through
+                powerful narratives.
               </p>
+
+              {/* points list */}
               <div className="grid grid-cols-1 md:grid-cols-2 text-white gap-5 my-4 border-b border-dashed border-primary-light pb-6 pt-5">
                 <h2 className="text-lg flex items-center gap-2">
                   <i className="bi bi-check2 w-8 h-8 flex justify-center items-center bg-primary rounded-full"></i>
@@ -84,7 +86,6 @@ const WhyChooseUs = () => {
                     justify-center text-black text-2xl group-hover:bg-secondary 
                       group-hover:text-white cursor-pointer transition-all duration-200"
                   />
-
                   <h2 className="text-xl underline text-primary group-hover:text-secondary transition-all duration-200">
                     See About us
                   </h2>
