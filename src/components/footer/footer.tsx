@@ -67,18 +67,18 @@ const Footer = () => {
               <h2 className="text-3xl mb-5">Contact</h2>
 
               <div className="flex flex-col gap-2">
-                <div className="flex flex-col gap-3">
-                  <h2 className="text-lg text-gray-300 hover:text-primary transition-all duration-300 cursor-pointer">
+                <div className="flex flex-col gap-3 font-sans">
+                  <h2 className="text-base 2xl:text-lg text-gray-200 hover:text-primary transition-all duration-300 cursor-pointer">
                     <i className="bi bi-telephone pe-2 text-primary"></i>
                     +91 123 456 789
                   </h2>
 
-                  <h2 className="text-lg text-gray-300 hover:text-primary transition-all duration-300 cursor-pointer">
+                  <h2 className="text-base 2xl:text-lg text-gray-200 hover:text-primary transition-all duration-300 cursor-pointer">
                     <i className="bi bi-telephone pe-2 text-primary"></i>
                     +91 123 456 670
                   </h2>
 
-                  <h2 className="text-lg text-gray-300 hover:text-primary transition-all duration-300 cursor-pointer">
+                  <h2 className="text-base 2xl:text-lg text-gray-200 hover:text-primary transition-all duration-300 cursor-pointer">
                     <i className="bi bi-envelope pe-2 text-primary"></i>
                     info@example.com
                   </h2>
@@ -90,13 +90,13 @@ const Footer = () => {
               <h2 className="text-3xl mb-5">Address</h2>
 
               <div className="flex flex-col gap-2">
-                <div className="flex flex-col gap-3">
-                  <h2 className="text-lg text-gray-300 hover:text-primary transition-all duration-300 cursor-pointer">
+                <div className="flex flex-col gap-3 font-sans">
+                  <h2 className="text-base 2xl:text-lg text-gray-200 hover:text-primary transition-all duration-300 cursor-pointer">
                     <i className="bi bi-geo-alt pe-2 text-primary"></i>
                     742 Evergreen Terrace, Springfield, IL 62704
                   </h2>
 
-                  <h2 className="text-lg text-gray-300 hover:text-primary transition-all duration-300 cursor-pointer">
+                  <h2 className="text-base 2xl:text-lg text-gray-200 hover:text-primary transition-all duration-300 cursor-pointer">
                     <i className="bi bi-geo-alt pe-2 text-primary"></i>
                     901 Sunset Blvd, Palm Valley, CA 90210
                   </h2>
@@ -107,16 +107,16 @@ const Footer = () => {
 
           <div className="footer-bottom border-t border-primary/30 pt-8 text-white">
             <div className="flex flex-wrap justify-center lg:justify-between items-center gap-5">
-              <p className="text-gray-300">
+              <p className="text-gray-200 font-sans">
                 @Copyright 2026. All Rights Reserved by{" "}
                 <Link
                   href="https://github.com/zyferlink"
-                  className="text-primary text-xl"
+                  className="text-primary"
                 >
                   ZyferLink
                 </Link>
               </p>
-              <div className="flex items-center gap-3">
+              <div className="flex items-center gap-4 font-sans">
                 <Link
                   href="/"
                   className="hover:text-primary hover:-translate-y-1 transition-all duration-300 cursor-pointer"
