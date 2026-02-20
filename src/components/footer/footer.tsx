@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { NavLinksFooter } from "@/data/navigation";
 import PlatformIcon5 from "../../../public/assets/images/platform-icon-instagram.svg";
 import PlatformIcon1 from "../../../public/assets/images/platform-icon-soundcloud.svg";
 import PlatformIcon2 from "../../../public/assets/images/platform-icon-spotify.svg";
@@ -46,31 +47,19 @@ const Footer = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 lg:gap-5 py-15 pb-15 text-white">
             <div className="footer-col">
-              <h2 className="text-4xl mb-5">Pages</h2>
+              <h2 className="text-3xl mb-5">Pages</h2>
 
               <div className="flex flex-col gap-2">
-                <Link href="/">
-                  <h3 className="text-gray-300 text-xl hover:text-primary hover:translate-z-1 transition-all duration-300 cursor-pointer">
-                    Home
-                  </h3>
-                </Link>
-                <Link href="/">
-                  <h3 className=" text-gray-300 text-xl hover:text-primary hover:translate-z-1 transition-all duration-300 cursor-pointer">
-                    About
-                  </h3>
-                </Link>
-
-                <Link href="/">
-                  <h3 className=" text-gray-300 text-xl hover:text-primary hover:translate-z-1 transition-all duration-300 cursor-pointer">
-                    Episodes
-                  </h3>
-                </Link>
-
-                <Link href="/">
-                  <h3 className=" text-gray-300 text-xl hover:text-primary hover:translate-z-1 transition-all duration-300 cursor-pointer">
-                    Blog
-                  </h3>
-                </Link>
+                {NavLinksFooter.map((link, index) => (
+                  <Link key={index.toString()} href={link.href}>
+                    <h3
+                      className="font-light text-xl text-gray-200 hover:text-primary 
+                      hover:translate-z-1 transition-all duration-300 cursor-pointer"
+                    >
+                      {link.label}
+                    </h3>
+                  </Link>
+                ))}
               </div>
             </div>
 
