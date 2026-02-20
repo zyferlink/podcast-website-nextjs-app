@@ -2,6 +2,8 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { FaArrowRight } from "react-icons/fa6";
+import { StyledButtonSecondary } from "@/components/buttons/styled-button-secondary";
 import HeaderTitle from "@/components/header-title";
 import WhyChooseUsImage1 from "../../../../public/images/why-choose-1.png";
 import WhyChooseUsImage2 from "../../../../public/images/why-choose-2.png";
@@ -10,7 +12,7 @@ import WhyChooseUsImage3 from "../../../../public/images/why-choose-3.png";
 const WhyChooseUs = () => {
   return (
     <div className="light-section">
-      <div className="px-[8%] lg:px-[16%] py-30">
+      <div className="px-[8%] lg:px-[12%] py-30">
         <div className="flex flex-col lg:flex-row justify-between items-center gap-20">
           <div className="w-full lg:w-1/2">
             <div className="WhyChooseUs-img flex items-end gap-5">
@@ -35,14 +37,15 @@ const WhyChooseUs = () => {
                 badgeText="Why Choose Us"
                 badgeIcon="bi bi-rocket-takeoff"
                 title="What Makes Us Different From Other"
+                className="items-center text-center"
               />
 
-              <p className="my-5 tracking-wider text-white">
+              <p className="my-4 tracking-wider text-white">
                 Explore vibrant soundscapes where stories of every kind come
                 alive, taking you on an immersive journey and through
                 captivating narratives.
               </p>
-              <div className="grid grid-cols-1 md:grid-cols-2 text-white gap-5 my-5 border-b border-dashed border-primary-light pb-6 pt-5">
+              <div className="grid grid-cols-1 md:grid-cols-2 text-white gap-5 my-4 border-b border-dashed border-primary-light pb-6 pt-5">
                 <h2 className="text-lg flex items-center gap-2">
                   <i className="bi bi-check2 w-8 h-8 flex justify-center items-center bg-primary rounded-full"></i>
                   More Collection Podcast
@@ -62,23 +65,25 @@ const WhyChooseUs = () => {
                   Listen In Screen Off Position
                 </h2>
               </div>
-              <div className="flex items-center gap-5">
-                <button
-                  type="button"
-                  className="btn btn2"
-                  style={{ fontWeight: 500 }}
+              {/* bottom buttons */}
+              <div className="flex flex-col items-center gap-5 pt-4">
+                <StyledButtonSecondary
+                  onClick={() => {}}
+                  className="px-8 tracking-normal text-xl"
+                  icon={<FaArrowRight size={12} />}
                 >
-                  Get Started Free <i className="bi bi-arrow-right-short"></i>
-                </button>
+                  Get Started Free
+                </StyledButtonSecondary>
+
                 <Link
                   href="/app/pages"
-                  className="flex items-center gap-2 group"
+                  className="flex items-center gap-3 group"
                 >
                   <i
-                    className="bi bi-play p-4 bg-primary rounded-full flex 
-                      items-center justify-center text-black text-2xl group-hover:bg-secondary 
+                    className="bi bi-play p-3 bg-primary rounded-full flex items-center 
+                    justify-center text-black text-2xl group-hover:bg-secondary 
                       group-hover:text-white cursor-pointer transition-all duration-200"
-                  ></i>
+                  />
 
                   <h2 className="text-xl underline text-primary group-hover:text-secondary transition-all duration-200">
                     See About us
