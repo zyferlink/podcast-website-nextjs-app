@@ -8,7 +8,7 @@ import { useEffect, useState } from "react";
 // Icons
 import { FaArrowRight } from "react-icons/fa6";
 // Data
-import { navLinks } from "@/data/navigation";
+import { NavLinks } from "@/data/navigation";
 // Assets
 import MenuIndicator from "../../../public/assets/images/menu-indicator.svg";
 import LogoIcon from "../../../public/assets/images/voice-flow-icon.png";
@@ -66,7 +66,7 @@ export default function Navbar() {
 
         <div className="hidden lg:flex items-center gap-3">
           <nav className="hidden lg:flex space-x-6 menu-link relative z-40">
-            {navLinks.map((link) =>
+            {NavLinks.map((link) =>
               link.dropdown ? (
                 <div key={link.label} className="relative group">
                   <Link
@@ -166,7 +166,7 @@ export default function Navbar() {
         >
           <div className="mx-[5%] rounded-2xl bg-body shadow-2xl border border-white/10">
             <nav className="flex flex-col px-6 py-6 gap-5">
-              {navLinks.map((link) =>
+              {NavLinks.map((link) =>
                 link.dropdown ? (
                   <div
                     key={link.label}
