@@ -7,6 +7,7 @@ import "swiper/css";
 import Image from "next/image";
 import { useRef } from "react";
 import HeaderTitle from "@/components/header-title";
+import { StarRating } from "@/components/star-rating";
 import { TestimonialData } from "@/data/testimonial-data";
 import QuoteImage from "../../../../public/images/quote.png";
 import QuoteBg from "../../../../public/images/testimonial-card-qoute-bg.png";
@@ -77,13 +78,10 @@ const Testimonial = () => {
 
                 <div className="w-full lg:w-1/2 test-content-wrap">
                   <div className="test-content">
-                    <div className="test-stars flex items-center gap-3">
-                      <div className="bi bi-star-fill text-primary"></div>
-                      <div className="bi bi-star-fill text-primary"></div>
-                      <div className="bi bi-star-fill text-primary"></div>
-                      <div className="bi bi-star-half text-primary"></div>
-                      <div className="bi bi-star text-primary"></div>
-                    </div>
+                    <StarRating
+                      rating={testimonial.rating}
+                      className={"test-stars flex items-center gap-3"}
+                    />
 
                     <p className="text-xl text-gray-300 tracking-wide my-5">
                       {testimonial.quote}

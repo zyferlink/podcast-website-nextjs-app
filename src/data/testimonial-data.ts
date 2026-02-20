@@ -40,7 +40,7 @@ export const TestimonialData: Testimonial[] = [
     quote:
       "The offline listening feature saves me during my long flights. Best podcast app out there.",
     name: "Natalie Kim",
-    rating: 4.5,
+    rating: 4,
     role: "Travel Enthusiast",
   },
   {
@@ -49,7 +49,7 @@ export const TestimonialData: Testimonial[] = [
     quote:
       "Easy to use, great sound quality, and the best part is how quickly episodes upload.",
     name: "Marcus Johnson",
-    rating: 4,
+    rating: 3,
     role: "News Podcast Host",
   },
   {
