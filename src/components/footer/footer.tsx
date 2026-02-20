@@ -87,16 +87,16 @@ const Footer = () => {
             </div>
 
             <div className="">
-              <h2 className="text-4xl mb-5">Address</h2>
+              <h2 className="text-3xl mb-5">Address</h2>
 
               <div className="flex flex-col gap-2">
                 <div className="flex flex-col gap-3">
-                  <h2 className="text-xl text-gray-300 hover:text-primary transition-all duration-300 cursor-pointer">
+                  <h2 className="text-lg text-gray-300 hover:text-primary transition-all duration-300 cursor-pointer">
                     <i className="bi bi-geo-alt pe-2 text-primary"></i>
                     742 Evergreen Terrace, Springfield, IL 62704
                   </h2>
 
-                  <h2 className="text-xl text-gray-300 hover:text-primary transition-all duration-300 cursor-pointer">
+                  <h2 className="text-lg text-gray-300 hover:text-primary transition-all duration-300 cursor-pointer">
                     <i className="bi bi-geo-alt pe-2 text-primary"></i>
                     901 Sunset Blvd, Palm Valley, CA 90210
                   </h2>
