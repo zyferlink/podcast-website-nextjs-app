@@ -3,6 +3,7 @@ interface HeaderTitleProps {
   badgeIcon?: string;
   title: string;
   className?: string;
+  titleProps?: string;
 }
 
 const HeaderTitle: React.FC<HeaderTitleProps> = ({
@@ -10,6 +11,7 @@ const HeaderTitle: React.FC<HeaderTitleProps> = ({
   badgeIcon = "bi bi-rocket-takeoff",
   title,
   className = "",
+  titleProps = "",
 }) => {
   return (
     <div className={`flex flex-col gap-2 ${className}`}>
@@ -19,7 +21,9 @@ const HeaderTitle: React.FC<HeaderTitleProps> = ({
           {badgeText}
         </h2>
       </div>
-      <h1 className="text-[2.3rem] md:text-[3rem] text-white font-semibold mt-4">
+      <h1
+        className={`text-[2.3rem] md:text-[3rem] text-white font-semibold mt-4 ${titleProps}`}
+      >
         {title}
       </h1>
     </div>

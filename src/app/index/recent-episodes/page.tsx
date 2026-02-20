@@ -2,25 +2,23 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import HeaderTitle from "@/components/header-title";
 import BannerImage from "../../../../public/images/episode-card-banner.png";
 
 const RecentEpisodes = () => {
   return (
-    <div className="dark-section bg-black/95 text-white">
-      <div className="px-[8%] lg:px-[16%] py-30 pb-0 md:pb-10">
+    <div className="dark-section">
+      <div className="px-[8%] lg:px-[12%] pt-28 pb-24">
         <div className="flex flex-col md:flex-row justify-between items-center">
-          <div className="w-full lg:w-1/1">
-            <div className="title flex flex-col gap-2">
-              <div>
-                <h2 className="inline-block px-4 py-2 rounded-full text-primary text-2xl font-normal border border-primary">
-                  <i className="bi bi-rocket-takeoff pe-4"></i>
-                  Recent Episodes
-                </h2>
-              </div>
-              <h1 className="text-4xl text-white lg:text-5xl font-semibold mt-7">
-                Explore Our Latest Talks
-              </h1>
-            </div>
+          <div className="w-full lg:w-1/2">
+            {/* header title */}
+            <HeaderTitle
+              badgeText="Recent Episodes"
+              badgeIcon="bi bi-mic"
+              title="Explore Our Latest Talks"
+              className="items-center text-center leading-tight"
+              titleProps="text-[3rem] md:text-[4rem]"
+            />
           </div>
 
           <div className="w-full lg:w-1/2 p-4">
