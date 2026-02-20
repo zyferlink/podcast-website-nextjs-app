@@ -76,29 +76,28 @@ const RecentEpisodes = () => {
               </div>
 
               <h2 className="text-text text-4xl font-semibold">
-                Innovation Insights: Diving Deep into Future Tech Trends
+                {mainBannerData.title}
               </h2>
               <p className="text-text my-4 tracking-wide">
-                Ever wondered what happens behind the scenes? Join us for a
-                candid conversation about podcasting and more
+                {mainBannerData.desc}
               </p>
 
-              <div className="flex justify-between items-center gap-5 ">
+              <div className="flex justify-between items-center gap-5 pb-4">
                 <Link
                   href="/app/pages"
                   className="flex items-center gap-2 group"
                 >
                   <i
-                    className="bi bi-play p-2 bg-black rounded-full flex items-center 
+                    className="bi bi-play p-3 bg-black rounded-full flex items-center 
                     justify-center text-primary text-2xl group-hover:bg-secondary 
                     group-hover:text-white cursor-pointer transition-all duration-200"
-                  ></i>
+                  />
                   <h2 className="text-xl underline text-black group-hover:text-secondary transition-all duration-200">
                     Listen Now
                   </h2>
                 </Link>
-                <span className="bg-black text-primary px-5 py-2 rounded-full text-xl">
-                  Episode 04
+                <span className="bg-black text-primary px-5 py-2 pointer-events-none rounded-full text-xl">
+                  {mainBannerData.episode}
                 </span>
               </div>
             </div>
