@@ -1,28 +1,28 @@
 "use client";
-// Next.js components
+// React & Next.js components
 import Image from "next/image";
 import { FaArrowRight } from "react-icons/fa6";
 import { StyledButtonPrimary } from "@/components/buttons/styled-button-primary";
 import { StyledButtonSecondary } from "@/components/buttons/styled-button-secondary";
+// Assets
 import BannerRoundedText from "../../../../public/assets/images/banner-rounded.png";
 import HeroImage from "../../../../public/assets/images/hero-image.png";
-// Assets
+import HeroWaveLinesImage from "../../../../public/assets/images/hero-wave-lines.png";
 import PlatformIcon5 from "../../../../public/assets/images/platform-icon-instagram.svg";
 import PlatformIcon1 from "../../../../public/assets/images/platform-icon-soundcloud.svg";
 import PlatformIcon2 from "../../../../public/assets/images/platform-icon-spotify.svg";
 import PlatformIcon3 from "../../../../public/assets/images/platform-icon-swarm.svg";
 import PlatformIcon4 from "../../../../public/assets/images/platform-icon-youtube.svg";
 import SparkleStar from "../../../../public/assets/images/sparkle-star.png";
-import HeroBarImage from "../../../../public/images/hero-1.png";
 
 const Hero = () => {
   return (
     <div
       className="flex relative h-screen overflow-x-hidden  bg-black/90 text-light-text items-center justify-center pb-[3%] 
-    overflow-hidden z-10 bg-[url('/images/texture-bg-1.png')] bg-no-repeat bg-cover bg-center"
+    overflow-hidden z-10 bg-[url('/assets/images/texture-bg-1.png')] bg-no-repeat bg-cover bg-center"
     >
       {/* vector line drawing*/}
-      <div className="absolute top-0 left-0 w-full h-full bg-[url('/images/vector-line.png')] bg-no-repeat -z-10" />
+      <div className="absolute top-0 left-0 w-full h-full bg-[url('/assets/images/vector-line.png')] bg-no-repeat -z-10" />
 
       {/* rotating sparkling elements */}
       <div className="sparkling-elem pointer-events-none ">
@@ -35,7 +35,7 @@ const Hero = () => {
         <div className="flex flex-col md:flex-row justify-center items-center">
           <div className="flex w-full md:w-1/2">
             <div className="flex flex-col w-full justify-center items-center text-center pb-[5%]">
-              <Image src={HeroBarImage} alt="hero bar" className="h-10" />
+              <Image src={HeroWaveLinesImage} alt="hero bar" className="h-10" />
 
               <h1 className="min-w-md text-[1.9rem] md:text-[2.3rem] 2xl:text-[3rem] my-4 font-bold text-white leading-tight">
                 Discover<span className="text-primary"> Podcasts </span> <br />
