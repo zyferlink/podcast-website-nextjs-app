@@ -2,6 +2,8 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { FaArrowRight } from "react-icons/fa6";
+import { StyledButtonSecondary } from "@/components/buttons/styled-button-secondary";
 import HeaderTitle from "@/components/header-title";
 import BannerImage from "../../../../public/images/episode-card-banner.png";
 
@@ -21,14 +23,20 @@ const RecentEpisodes = () => {
             />
           </div>
 
-          <div className="w-full lg:w-1/2 p-4">
-            <p>
+          <div className="flex flex-col w-full lg:w-1/2 p-4 items-center justify-center ">
+            <p className="text-white max-w-xs text-xl font-light text-center tracking-wider pb-8 ">
               Dive into the most recent episodes that just hit the airwaves.
+              <br />
               Discover what's trending
             </p>
-            <button type="button" className="btn btn2 mt-4 font-bold">
-              View All Episode <i className="bi bi-arrow-right-short"></i>
-            </button>
+
+            <StyledButtonSecondary
+              onClick={() => {}}
+              className="px-8 tracking-normal text-xl"
+              icon={<FaArrowRight size={12} />}
+            >
+              View All Episode
+            </StyledButtonSecondary>
           </div>
         </div>
       </div>
