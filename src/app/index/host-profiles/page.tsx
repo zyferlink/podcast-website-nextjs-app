@@ -16,6 +16,7 @@ import HostImage10 from "../../../../public/images/host-profile-10.png";
 import "swiper/css";
 import Image from "next/image";
 import { useRef } from "react";
+import HeaderTitle from "@/components/header-title";
 
 const HostProfilesData = [
   {
@@ -84,26 +85,21 @@ const HostProfiles = () => {
   const swiperRef = useRef<SwiperType | null>(null);
   return (
     <div className="light-section wave-wrapper-section">
-      <div className="px-[8%] lg:px-[16%] py-30 pb-10 lg:pb-20">
+      <div className="px-[8%] lg:px-[16%] pt-28 pb-24">
         <div className="flex flex-col md:flex-row justify-between items-center">
-          <div className="w-full lg:w-1/1">
-            <div className="title flex flex-col gap-2">
-              <div>
-                <h2 className="inline-block px-4 py-2 rounded-full text-primary text-2xl font-normal border border-primary">
-                  <i className="bi bi-rocket-takeoff pe-4"></i>
-                  Host Profiles
-                </h2>
-              </div>
-
-              <h1 className="text-4xl lg:text-5xl text-white font-semibold mt-4">
-                Meet the Voices Behind
-              </h1>
-            </div>
+          <div className="w-full md:w-3/4">
+            {/* header title */}
+            <HeaderTitle
+              badgeText="Host Profiles"
+              badgeIcon="bi bi-mic"
+              title="Meet the Voices Behind"
+              className="items-start text-start leading-tight"
+              titleProps="text-[3.5rem] md:text-[4.5rem]"
+            />
           </div>
 
-          <div className="w-full md:w-1/2">
+          <div className="w-full md:w-1/4">
             {/* Custom Navigation Button */}
-
             <div className="flex justify-start md:justify-end gap-4 mt-6 lg:mt-0">
               <button
                 type="button"
