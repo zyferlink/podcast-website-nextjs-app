@@ -2,45 +2,55 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import BannerImage from "../../../../public/images/episode-card-banner.png";
+import { FaArrowRight } from "react-icons/fa6";
+import { StyledButtonSecondary } from "@/components/buttons/styled-button-secondary";
+import HeaderTitle from "@/components/header-title";
+import { type RecentEpisode, RecentEpisodeData } from "@/data/recent-episodes";
+import EpisodeBannerImage from "../../../../public/assets/images/episode-card-banner.png";
 
 const RecentEpisodes = () => {
+  const mainBannerData: RecentEpisode = RecentEpisodeData[0];
+
   return (
-    <div className="dark-section bg-black/95 text-white">
-      <div className="px-[8%] lg:px-[16%] py-30 pb-0 md:pb-10">
+    <div className="dark-section">
+      <div className="px-[8%] lg:px-[12%] pt-28 pb-24">
         <div className="flex flex-col md:flex-row justify-between items-center">
-          <div className="w-full lg:w-1/1">
-            <div className="title flex flex-col gap-2">
-              <div>
-                <h2 className="inline-block px-4 py-2 rounded-full text-primary text-2xl font-normal border border-primary">
-                  <i className="bi bi-rocket-takeoff pe-4"></i>
-                  Recent Episodes
-                </h2>
-              </div>
-              <h1 className="text-4xl text-white lg:text-5xl font-semibold mt-7">
-                Explore Our Latest Talks
-              </h1>
-            </div>
+          <div className="w-full lg:w-1/2">
+            {/* header title */}
+            <HeaderTitle
+              badgeText="Recent Episodes"
+              badgeIcon="bi bi-mic"
+              title="Explore Our Latest Talks"
+              className="items-center text-center leading-tight"
+              titleProps="text-[3rem] md:text-[4rem]"
+            />
           </div>
 
-          <div className="w-full lg:w-1/2 p-4">
-            <p>
+          <div className="flex flex-col w-full lg:w-1/2 p-4 items-center justify-center ">
+            <p className="text-white max-w-xs text-xl font-light text-center tracking-wider pb-8 ">
               Dive into the most recent episodes that just hit the airwaves.
+              <br />
               Discover what's trending
             </p>
-            <button type="button" className="btn btn2 mt-4 font-bold">
-              View All Episode <i className="bi bi-arrow-right-short"></i>
-            </button>
+
+            <StyledButtonSecondary
+              onClick={() => {}}
+              className="px-8 tracking-normal text-xl"
+              icon={<FaArrowRight size={12} />}
+            >
+              View All Episode
+            </StyledButtonSecondary>
           </div>
         </div>
       </div>
 
-      <div className="mt-10 px-[8%] lg:px-[16%] pb-30">
-        <div className="episodeBanner bg-[#FFCA79] px-5 rounded-2xl pb-5 lg:pb-0">
+      <div className="mt-10 px-[8%] lg:px-[12%] pb-30">
+        {/* main banner */}
+        <div className="episodeBanner bg-banner-background px-5 rounded-2xl pb-5 lg:pb-0">
           <div className="flex flex-col lg:flex-row justify-center lg:justify-between gap-0 lg:gap-5">
             <div className="w-full lg:w-1/2">
               <Image
-                src={BannerImage}
+                src={EpisodeBannerImage}
                 alt="bannerImg"
                 className="w-full h-full"
               />
@@ -49,43 +59,45 @@ const RecentEpisodes = () => {
               <div className="flex items-center gap-5 py-5">
                 <Link href="/app/pages">
                   <h2 className="text-text hover:text-black">
-                    <i className="bi bi-mic"> Devon Lane</i>
+                    <i className="bi bi-mic">{mainBannerData.hostName}</i>
                   </h2>
                 </Link>
 
                 <h2 className="text-text">
-                  <i className="bi bi-clock pe-1"></i> 4hr 12min
+                  <i className="bi bi-clock pe-1"></i> {mainBannerData.duration}
                 </h2>
                 <div className="flex items-center gap-3">
                   <i className="bi bi-balloon-heart me-3 text-text text-xl"></i>
-                  <div className="music-waves"></div>
+                  <div
+                    className="w-20 md:w-40 h-7.5 bg-[url('/assets/images/music-waves-1.png')] 
+                  bg-repeat-x bg-size-[auto_100%] animate-[anim-wave-scroll_50s_linear_infinite]"
+                  />
                 </div>
               </div>
 
               <h2 className="text-text text-4xl font-semibold">
-                Innovation Insights: Diving Deep into Future Tech Trends
+                {mainBannerData.title}
               </h2>
               <p className="text-text my-4 tracking-wide">
-                Ever wondered what happens behind the scenes? Join us for a
-                candid conversation about podcasting and more
+                {mainBannerData.desc}
               </p>
 
-              <div className="flex justify-between items-center gap-5 ">
+              <div className="flex justify-between items-center gap-5 pb-4">
                 <Link
                   href="/app/pages"
                   className="flex items-center gap-2 group"
                 >
                   <i
-                    className="bi bi-play p-2 bg-black rounded-full flex items-center 
+                    className="bi bi-play p-3 bg-black rounded-full flex items-center 
                     justify-center text-primary text-2xl group-hover:bg-secondary 
                     group-hover:text-white cursor-pointer transition-all duration-200"
-                  ></i>
+                  />
                   <h2 className="text-xl underline text-black group-hover:text-secondary transition-all duration-200">
                     Listen Now
                   </h2>
                 </Link>
-                <span className="bg-black text-primary px-5 py-2 rounded-full text-xl">
-                  Episode 04
+                <span className="bg-black text-primary px-5 py-2 pointer-events-none rounded-full text-xl">
+                  {mainBannerData.episode}
                 </span>
               </div>
             </div>
@@ -93,97 +105,53 @@ const RecentEpisodes = () => {
         </div>
 
         <div className="flex flex-col lg:flex-row items-center gap-5 mt-10">
-          <div className="w-full lg:w-1/2">
-            <div className="p-6 rounded-2xl bg-gray">
-              <div className="flex flex-wrap items-center gap-5">
-                <Link href="/app/pages">
+          {RecentEpisodeData.slice(1, 3).map((item) => (
+            <div key={item.id} className="w-full lg:w-1/2">
+              <div className="p-6 rounded-2xl bg-gray">
+                <div className="flex flex-wrap items-center gap-3">
+                  <Link href="/app/pages">
+                    <h2 className="text-gray-300 hover:text-primary">
+                      <i className="bi bi-mic"> {item.hostName}</i>
+                    </h2>
+                  </Link>
+
                   <h2 className="text-gray-300">
-                    <i className="bi bi-mic"> Devon Lane</i>
+                    <i className="bi bi-clock pe-1"></i> {item.duration}
                   </h2>
-                </Link>
-
-                <h2 className="text-gray-300">
-                  <i className="bi bi-clock pe-1"></i> 4hr 12min
-                </h2>
-                <div className="flex items-center gap-3">
-                  <i className="bi bi-balloon-heart me-3 text-gray-300 text-xl"></i>
-                  <div className="music-waves2"></div>
+                  <div className="flex items-center gap-3">
+                    <i className="bi bi-balloon-heart me-3 text-gray-300 text-xl"></i>
+                    <div
+                      className="w-20 md:w-30 h-7.5 bg-[url('/assets/images/music-waves-2.png')] 
+                  bg-repeat-x bg-size-[auto_100%] animate-[anim-wave-scroll_50s_linear_infinite]"
+                    />
+                  </div>
                 </div>
-              </div>
 
-              <h2 className="text-gray-300 text-2xl md:text-3xl font-semibold">
-                Laughter Unleashed: Join Us for Joyful Conversations Today
-              </h2>
-              <p className=" my-4 tracking-wide">
-                Embark on a journey of unexplored wisdom as we delve into
-                fascinating topics that challenge the mind
-              </p>
-              <div className="flex justify-between items-center gap-5 ">
-                <Link
-                  href="/app/pages"
-                  className="flex items-center gap-2 group"
-                >
-                  <i
-                    className="bi bi-play p-2 bg-primary rounded-full flex items-center 
+                <h2 className="text-gray-300 text-2xl md:text-3xl font-semibold pt-8">
+                  {item.title}
+                </h2>
+                <p className="my-4 tracking-wide text-gray-300">{item.desc}</p>
+                <div className="flex justify-between items-center gap-5 ">
+                  <Link
+                    href="/app/pages"
+                    className="flex items-center gap-2 group"
+                  >
+                    <i
+                      className="bi bi-play p-2 bg-primary rounded-full flex items-center 
                     justify-center text-black text-2xl group-hover:bg-secondary 
                     group-hover:text-white cursor-pointer transition-all duration-200"
-                  ></i>
-                  <h2 className="text-xl underline text-black group-hover:text-secondary transition-all duration-200">
-                    Listen Now
-                  </h2>
-                </Link>
-                <span className="bg-gray-800 text-primary px-5 py-2 rounded-full text-xl">
-                  Episode 04
-                </span>
-              </div>
-            </div>
-          </div>
-
-          <div className="w-full lg:w-1/2">
-            <div className="p-6 rounded-2xl bg-gray">
-              <div className="flex flex-wrap items-center gap-5">
-                <Link href="/app/pages">
-                  <h2 className="text-gray-300">
-                    <i className="bi bi-mic"> Devon Lane</i>
-                  </h2>
-                </Link>
-
-                <h2 className="text-gray-300">
-                  <i className="bi bi-clock pe-1"></i> 4hr 12min
-                </h2>
-                <div className="flex items-center gap-3">
-                  <i className="bi bi-balloon-heart me-3 text-gray-300 text-xl"></i>
-                  <div className="music-waves2"></div>
+                    />
+                    <h2 className="text-xl underline  text-gray-300 group-hover:text-secondary transition-all duration-200">
+                      Listen Now
+                    </h2>
+                  </Link>
+                  <span className="bg-gray-800 text-primary px-5 py-2 rounded-full text-xl">
+                    {item.episode}
+                  </span>
                 </div>
               </div>
-
-              <h2 className="text-gray-300 text-2xl md:text-3xl font-semibold">
-                Behind the Scenes: Candid Talks on Podcasting Strategies
-              </h2>
-              <p className=" my-4 tracking-wide">
-                Unlock the secrets of inspiration with heartfelt stories and
-                motivational insights in this uplifting episode
-              </p>
-              <div className="flex justify-between items-center gap-5 ">
-                <Link
-                  href="/app/pages"
-                  className="flex items-center gap-2 group"
-                >
-                  <i
-                    className="bi bi-play p-2 bg-primary rounded-full flex items-center 
-                    justify-center text-black text-2xl group-hover:bg-secondary 
-                    group-hover:text-white cursor-pointer transition-all duration-200"
-                  ></i>
-                  <h2 className="text-xl underline text-black group-hover:text-secondary transition-all duration-200">
-                    Listen Now
-                  </h2>
-                </Link>
-                <span className="bg-gray-800 text-primary px-5 py-2 rounded-full text-xl">
-                  Episode 04
-                </span>
-              </div>
             </div>
-          </div>
+          ))}
         </div>
       </div>
     </div>

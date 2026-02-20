@@ -17,8 +17,10 @@
   --color-gray-light: #262629;
   --color-white: #ffffff;
   --color-black: #000000;
+  --color-matte-black: #28282b;
   --color-dark-text: #222e48;
   --color-light-text: #ffffff;
+  --color-banner-background: #FFCA79;
 
   /* Typography */
   --font-zain: "Zain", sans-serif;
@@ -40,8 +42,10 @@
   --color-gray-light: var(--color-gray-light);
   --color-white: var(--color-white);
   --color-black: var(--color-black);
+  --color-matte-black: var(--color-matte-black);
   --color-dark-text: var(--color-dark-text);
   --color-light-text: var(--color-light-text);
+  --color-banner-background: var(--color-banner-background);
 
   /* Fonts */
   --font-zain: var(--font-zain);
@@ -204,7 +208,6 @@ body {
   .rounded-text {
     left: 50%;
   }
-
 }
 
 @media (max-width: 575px) {
@@ -266,8 +269,6 @@ body {
     transform: translate(0px, 0px);
   }
 }
-
-
 
 /* Rotating sparkling elements */
 
@@ -343,47 +344,21 @@ body {
 
 /* Featured Shows Section */
 
-.dark-section {
-  background-image: url(../../public/images/texture-bg-1.png);
+.dark-section,
+.light-section {
   background-size: cover;
+  color: var(--white);
+}
+
+.dark-section {
+  background: var(--color-dark) url(../../public/images/texture-bg-1.png) no-repeat center/cover;
 }
 
 .light-section {
-  background: url(../../public/images/texture-bg-1.png), rgb(38, 38, 41);
-  background-size: cover;
+  background: var(--color-matte-black) url(../../public/images/texture-bg-1.png) no-repeat center/cover;
 }
 
-/* Why Choose Us Section */
 
-.WhyChooseUs-img {
-  position: relative;
-  animation: anim-small-translate 5s infinite ease-in-out;
-}
-
-.WhyChooseUs-img img:last-child {
-  position: absolute;
-  bottom: 10%;
-  right: -15%;
-  width: 300px;
-  height: 300px;
-  object-fit: contain;
-  border-radius: 10px;
-}
-
-/* Why Choose Us MQ Section */
-
-@media (max-width: 991px) {
-  .WhyChooseUs-img img:last-child {
-    right: -5%;
-  }
-}
-
-@media (max-width: 600px) {
-  .WhyChooseUs-img img:last-child {
-    bottom: -12%;
-    right: 16%;
-  }
-}
 
 /* Episode Banner */
 
@@ -393,10 +368,10 @@ body {
   background-image: url(../../public/images/music-waves.png);
   background-repeat: repeat-x;
   background-size: auto 100%;
-  animation: waveScroll 50s linear infinite;
+  animation: anim-wave-scroll 50s linear infinite;
 }
 
-@keyframes waveScroll {
+@keyframes anim-wave-scroll {
   from {
     background-position: 0 0;
   }
@@ -412,7 +387,7 @@ body {
   background-image: url(../../public/images/music-waves2.png);
   background-repeat: repeat-x;
   background-size: auto 100%;
-  animation: waveScroll 50s linear infinite;
+  animation: anim-wave-scroll 50s linear infinite;
 }
 
 /* Recent Episode MQ Section */
@@ -573,7 +548,7 @@ body {
   background-image: url(../../public/images/music-waves.png);
   background-repeat: repeat-x;
   background-size: auto 100%;
-  animation: waveScroll 50s linear infinite;
+  animation: anim-wave-scroll 50s linear infinite;
 }
 
 .banner-img:before {
@@ -586,7 +561,7 @@ body {
   background-image: url(../../public/images/music-waves.png);
   background-repeat: repeat-x;
   background-size: auto 100%;
-  animation: waveScroll 50s linear infinite;
+  animation: anim-wave-scroll 50s linear infinite;
 }
 
 /* Footer Section */
@@ -662,7 +637,7 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  animation: Anim-rotate 5s infinite forwards linear;
+  animation: anim-spin 5s infinite forwards linear;
 }
 
 .elm2 {
@@ -678,7 +653,7 @@ body {
 }
 
 .elm4 {
-  top: 70%;
+  top: 50%;
   left: 10%;
   animation-delay: 0.7s;
 }
@@ -771,8 +746,7 @@ body {
   }
 }
 
-
-.about-wave2::after{
-top: -35% !important;
-height: 150px;
+.about-wave2::after {
+  top: -35% !important;
+  height: 150px;
 }

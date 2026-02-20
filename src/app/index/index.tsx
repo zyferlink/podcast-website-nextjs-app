@@ -1,4 +1,3 @@
-import React from "react";
 import Banner from "./banner/page";
 import FeaturedShows from "./featured-shows/page";
 import Hero from "./hero/page";
@@ -9,7 +8,7 @@ import WhyChooseUs from "./why-choose-us/page";
 
 const Index = () => {
   return (
-    <>
+    <main>
       <Hero />
       <FeaturedShows />
       <WhyChooseUs />
@@ -17,7 +16,7 @@ const Index = () => {
       <HostProfiles />
       <Testimonial />
       <Banner />
-    </>
+    </main>
   );
 };
 

@@ -5,73 +5,31 @@ import { Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import Image from "next/image";
-import Link from "next/link";
 import { useRef } from "react";
-import QuoteImage from "../../../../public/images/quote.png";
-import TestimonialCard1 from "../../../../public/images/testimonial-card-1.png";
-import TestimonialCard2 from "../../../../public/images/testimonial-card-2.png";
-import TestimonialCard3 from "../../../../public/images/testimonial-card-3.png";
-import TestimonialCard4 from "../../../../public/images/testimonial-card-4.png";
-import TestimonialCard5 from "../../../../public/images/testimonial-card-5.png";
-import QuoteBg from "../../../../public/images/testimonial-card-qoute-bg.png";
-
-const TestimonialData = [
-  {
-    id: 1,
-    img: TestimonialCard1,
-    pere: " I stubled upon this a month ago",
-    name: "Jenifer",
-    role: "Developer",
-  },
-  {
-    id: 2,
-    img: TestimonialCard2,
-    pere: " I stubled upon this a month ago",
-    name: "Jenifer",
-    role: "Developer",
-  },
-  {
-    id: 3,
-    img: TestimonialCard3,
-    pere: " I stubled upon this a month ago",
-    name: "Jenifer",
-    role: "Developer",
-  },
-  {
-    id: 4,
-    img: TestimonialCard4,
-    pere: " I stubled upon this a month ago",
-    name: "Jenifer",
-    role: "Developer",
-  },
-  {
-    id: 5,
-    img: TestimonialCard5,
-    pere: " I stubled upon this a month ago",
-    name: "Jenifer",
-    role: "Developer",
-  },
-];
+import HeaderTitle from "@/components/header-title";
+import { StarRating } from "@/components/star-rating";
+import { TestimonialData } from "@/data/testimonial-data";
+import QuoteIcon from "../../../../public/assets/images/quote-icon.svg";
+import QuoteBg from "../../../../public/assets/images/testimonial-card-qoute-bg.png";
 
 const Testimonial = () => {
   const swiperRef = useRef<SwiperType | null>(null);
   return (
-    <div className="light-section wave-wrapper-section">
-      <div className="px-[8%] lg:px-[16%] py-30 pb-10 lg:pb-20">
+    <div className="dark-section wave-wrapper-section2">
+      <div className="px-[8%] lg:px-[16%] pt-28 pb-16">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="w-full flex justify-center items-center text-center">
-            <div className="w-full lg:w-1/2 title flex flex-col gap-2">
-              <div>
-                <h2 className="inline-block px-4 py-2 rounded-full text-primary text-2xl font-normal border border-primary">
-                  <i className="bi bi-rocket-takeoff pe-4"></i>
-                  Testimonial
-                </h2>
-              </div>
+            <div className="w-full lg:w-2/3 title flex flex-col gap-2">
+              {/* header title */}
+              <HeaderTitle
+                badgeText="Testimonial"
+                badgeIcon="bi bi-rocket-takeoff"
+                title="Listener Love, What They Say"
+                className="items-center text-center leading-[1.1]"
+                titleProps="text-[3.5rem] md:text-[4.2rem]"
+              />
 
-              <h1 className="text-4xl lg:text-5xl text-white font-semibold mt-4">
-                Listener Love, What They Say
-              </h1>
-              <p className="text-gray-300 tracking-wider">
+              <p className="text-gray-100 tracking-wider pt-2 text-lg font-light">
                 Explore what our listeners have to say about their experiences
                 with our podcast. Their testimonials capture the essence of the
                 joy, inspiration
@@ -87,19 +45,19 @@ const Testimonial = () => {
           slidesPerView={1}
           spaceBetween={10}
           loop={true}
-          autoplay={{ delay: 2000, disableOnInteraction: false }}
+          autoplay={{ delay: 3000, disableOnInteraction: false }}
           modules={[Autoplay]}
           speed={1500}
           className="test-wrapper-swiper"
         >
-          {TestimonialData.map((test, index) => (
-            <SwiperSlide key={index.toString()}>
+          {TestimonialData.map((testimonial) => (
+            <SwiperSlide key={testimonial.id}>
               <div className="flex flex-col md:flex-row justify-between items-center gap-10">
                 <div className="w-full lg:w-2/5">
                   <div className="test-img relative">
                     <Image
-                      src={test.img}
-                      alt={test.name}
+                      src={testimonial.image}
+                      alt={testimonial.name}
                       className="w-full h-full object-cover rounded-2xl"
                     />
 
@@ -110,8 +68,10 @@ const Testimonial = () => {
                         className="object-contain absolute top-0 right-0"
                       />
                       <Image
-                        src={QuoteImage}
+                        src={QuoteIcon}
                         alt="qoute"
+                        width={100}
+                        height={100}
                         className="object-contain p-5 rounded-full absolute bg-primary top-0 right-0"
                       />
                     </div>
@@ -120,23 +80,22 @@ const Testimonial = () => {
 
                 <div className="w-full lg:w-1/2 test-content-wrap">
                   <div className="test-content">
-                    <div className="test-stars flex items-center gap-3">
-                      <div className="bi bi-star-fill text-primary"></div>
-                      <div className="bi bi-star-fill text-primary"></div>
-                      <div className="bi bi-star-fill text-primary"></div>
-                      <div className="bi bi-star-half text-primary"></div>
-                      <div className="bi bi-star text-primary"></div>
-                    </div>
+                    <StarRating
+                      rating={testimonial.rating}
+                      className={"test-stars flex items-center gap-3"}
+                    />
 
                     <p className="text-xl text-gray-300 tracking-wide my-5">
-                      {test.pere}
+                      {testimonial.quote}
                     </p>
 
-                    <div className="test-border border-t border-dashed border-primary-light opacity-50 pt-5"></div>
+                    <div className="test-border border-t border-dashed border-primary-light opacity-50 pt-5" />
                     <div className="test-info">
-                      <h2 className="text-3xl text-white">{test.name}</h2>
-                      <h2 className="text-xl mt-2 text-gray-400">
-                        {test.role}
+                      <h2 className="text-3xl text-white">
+                        {testimonial.name}
+                      </h2>
+                      <h2 className="text-xl mt-2 text-gray-300 font-light">
+                        {testimonial.role}
                       </h2>
                     </div>
                   </div>
@@ -147,20 +106,20 @@ const Testimonial = () => {
                       type="button"
                       onClick={() => swiperRef.current?.slidePrev()}
                       className="w-12 h-12 flex items-center justify-center rounded-full 
-                border border-primary text-primary hover:bg-primary Ohover:text-black 
-                transition-all duration-200 hover:-translate-x-1 cursor-pointer"
+                      border border-primary text-primary hover:bg-primary hover:text-black 
+                      transition-all duration-200 hover:-translate-x-1 cursor-pointer"
                     >
-                      <i className="bi bi-chevron-double-left"></i>
+                      <i className="bi bi-chevron-double-left" />
                     </button>
 
                     <button
                       type="button"
                       onClick={() => swiperRef.current?.slideNext()}
                       className="w-12 h-12 flex items-center justify-center rounded-full 
-                border border-primary text-primary hover:bg-primary Ohover:text-black 
-                transition-all duration-200 hover:translate-x-1 cursor-pointer"
+                      border border-primary text-primary hover:bg-primary hover:text-black 
+                      transition-all duration-200 hover:translate-x-1 cursor-pointer"
                     >
-                      <i className="bi bi-chevron-double-right"></i>
+                      <i className="bi bi-chevron-double-right" />
                     </button>
                   </div>
                 </div>

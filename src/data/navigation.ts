@@ -4,7 +4,7 @@ export type NavLink = {
   dropdown?: NavLink[];
 };
 
-export const navLinks: NavLink[] = [
+export const NavLinks: NavLink[] = [
   { label: "Home", href: "/" },
   {
     label: "Episodes",
@@ -26,4 +26,15 @@ export const navLinks: NavLink[] = [
       { label: "Contact Us", href: "/pages/contact" },
     ],
   },
+];
+
+export const NavLinksFooter: NavLink[] = [
+  { label: "Home", href: "/" },
+  { label: "About", href: "/pages/about" },
+  {
+    label: "Episodes",
+    href: "/pages/episodes",
+  },
+  { label: "Blogs", href: "/pages/blogs" },
+  { label: "Contact Us", href: "/pages/contact" },
 ];
