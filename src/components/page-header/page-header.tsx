@@ -31,12 +31,12 @@ const PageHeader: React.FC<PageHeaderProps> = ({
       <Image
         src={PageElement3}
         alt="Element"
-        className="elm3 elemet opacity-75"
+        className="elm3 elemet opacity-55"
       />
       <Image
         src={PageElement4}
         alt="Element"
-        className="elm4 elemet opacity-75"
+        className="elm4 elemet opacity-40"
       />
       <div className="page-content w-full md:w-1/2 flex justify-center flex-col pt-12">
         <Image src={PageElement1} alt="Element" className="w-full h-8" />
