@@ -5,8 +5,8 @@ import Link from "next/link";
 import { FaArrowRight } from "react-icons/fa6";
 import { StyledButtonSecondary } from "@/components/buttons/styled-button-secondary";
 import HeaderTitle from "@/components/header-title";
+import WhyChooseUsImage1 from "../../../../public/assets/images/why-choose-1.jpg";
 import WhyChooseUsImage3 from "../../../../public/assets/images/why-choose-3.jpg";
-import WhyChooseUsImage1 from "../../../../public/images/why-choose-1.png";
 import WhyChooseUsImage2 from "../../../../public/images/why-choose-2.png";
 
 const WhyChooseUs = () => {
