@@ -9,8 +9,8 @@ import { useRef } from "react";
 import HeaderTitle from "@/components/header-title";
 import { StarRating } from "@/components/star-rating";
 import { TestimonialData } from "@/data/testimonial-data";
-import QuoteImage from "../../../../public/images/quote.png";
-import QuoteBg from "../../../../public/images/testimonial-card-qoute-bg.png";
+import QuoteIcon from "../../../../public/assets/images/quote-icon.svg";
+import QuoteBg from "../../../../public/assets/images/testimonial-card-qoute-bg.png";
 
 const Testimonial = () => {
   const swiperRef = useRef<SwiperType | null>(null);
@@ -68,8 +68,10 @@ const Testimonial = () => {
                         className="object-contain absolute top-0 right-0"
                       />
                       <Image
-                        src={QuoteImage}
+                        src={QuoteIcon}
                         alt="qoute"
+                        width={100}
+                        height={100}
                         className="object-contain p-5 rounded-full absolute bg-primary top-0 right-0"
                       />
                     </div>
@@ -104,8 +106,8 @@ const Testimonial = () => {
                       type="button"
                       onClick={() => swiperRef.current?.slidePrev()}
                       className="w-12 h-12 flex items-center justify-center rounded-full 
-                border border-primary text-primary hover:bg-primary hover:text-black 
-                transition-all duration-200 hover:-translate-x-1 cursor-pointer"
+                      border border-primary text-primary hover:bg-primary hover:text-black 
+                      transition-all duration-200 hover:-translate-x-1 cursor-pointer"
                     >
                       <i className="bi bi-chevron-double-left" />
                     </button>
@@ -114,8 +116,8 @@ const Testimonial = () => {
                       type="button"
                       onClick={() => swiperRef.current?.slideNext()}
                       className="w-12 h-12 flex items-center justify-center rounded-full 
-                border border-primary text-primary hover:bg-primary hover:text-black 
-                transition-all duration-200 hover:translate-x-1 cursor-pointer"
+                      border border-primary text-primary hover:bg-primary hover:text-black 
+                      transition-all duration-200 hover:translate-x-1 cursor-pointer"
                     >
                       <i className="bi bi-chevron-double-right" />
                     </button>
