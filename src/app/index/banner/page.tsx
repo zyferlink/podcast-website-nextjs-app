@@ -7,7 +7,7 @@ import BannerMicImage from "../../../../public/assets/images/banner-mic.png";
 
 const Banner = () => {
   return (
-    <div className="light-section px-[8%] lg:px-[12%] py-20">
+    <div className="dark-section px-[8%] lg:px-[12%] py-20">
       <div className="banner bg-banner-background px-[7%] rounded-xl">
         <div className="">
           <div className="flex flex-col lg:flex-row items-center gap-10 lg:gap-25">

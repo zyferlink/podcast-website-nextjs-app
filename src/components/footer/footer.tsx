@@ -1,11 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
+import LogoIcon from "../../../public/assets/images/voice-flow-icon.png";
 import BrandIcon1 from "../../../public/images/brand-icon-1.png";
 import BrandIcon2 from "../../../public/images/brand-icon-2.png";
 import BrandIcon3 from "../../../public/images/brand-icon-3.png";
 import BrandIcon4 from "../../../public/images/brand-icon-4.png";
 import BrandIcon5 from "../../../public/images/brand-icon-5.png";
-import LogoIcon from "../../../public/images/Logo-icon.png";
 
 const Footer = () => {
   return (
@@ -13,18 +13,16 @@ const Footer = () => {
       <div className="px-[8%] lg:px-[16%] py-20 pb-10">
         <footer>
           <div className="flex flex-wrap justify-between items-center gap-5 border-b border-primary/30 pb-8">
-            <Link href="/">
-              <div className="flex items-center gap-2 overflow-hidden">
-                <Image
-                  src={LogoIcon}
-                  alt="Logo"
-                  className="object-cover w-8 h-8"
-                />
-                <h1 className="font-kanit text-2xl tracking-wider">
-                  Voice<span className="text-primary">Flow</span>
-                </h1>
-              </div>
-            </Link>
+            <div className="flex items-center gap-2 pointer-events-none">
+              <Image
+                src={LogoIcon}
+                alt="App logo"
+                className="object-cover w-8 h-8"
+              />
+              <h1 className="font-poiret-one text-2xl tracking-widest font-bold text-white">
+                Voice<span className="text-primary">Flow</span>
+              </h1>
+            </div>
 
             <div className="footer-waves relative">
               <div className="music-waves2"></div>
