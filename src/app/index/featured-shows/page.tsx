@@ -52,7 +52,7 @@ const FeaturedShows = () => {
         </div>
       </div>
 
-      <div className="mt-10 px-5 pb-30">
+      <div className="px-5 pb-30">
         <Swiper
           onSwiper={(swiper) => (swiperRef.current = swiper)}
           slidesPerView={3}
@@ -70,7 +70,7 @@ const FeaturedShows = () => {
           {TopListensData.map((item) => (
             <SwiperSlide key={item.id}>
               <div className="w-full">
-                <div className="flex w-full min-h-87 justify-between bg-gray-light rounded-lg overflow-hidden">
+                <div className="flex w-full min-h-87 justify-between bg-gray-light rounded-lg overflow-hidden ">
                   <div className="w-full lg:w-1/2">
                     <Image
                       src={item.image}
@@ -94,21 +94,20 @@ const FeaturedShows = () => {
                           {item.episode}
                         </span>
                       </div>
-                      <h2 className="my-8 mx-2 text-center text-white text-2xl lg:text-xl font-semibold">
+                      <h2 className="my-8 mx-2 text-center text-white text-2xl lg:text-xl font-semibold line-clamp-3">
                         {item.title}
                       </h2>
                       <div className="flex items-center gap-3">
                         <i
-                          className="bi bi-play p-4 bg-primary rounded-full flex items-center justify-center text-black text-2xl 
+                          className="bi bi-play p-3 bg-primary rounded-full flex items-center justify-center text-black text-2xl 
                           hover:bg-secondary hover:text-white cursor-pointer transition-all duration-200"
-                        ></i>
-
-                        <div className="w-full flex flex-col gap-2">
+                        />
+                        <div className="w-full flex flex-col gap-2 pt-6">
                           <div className="w-full h-1 bg-gray"></div>
                           <span className="text-gray-200">0:00</span>
                         </div>
                       </div>
-                      <div className="mt-7">
+                      <div className="ml-4 mt-6">
                         <Link
                           href="/"
                           className="text-primary hover:text-white underline transition-all duration-300 tracking-wider"
