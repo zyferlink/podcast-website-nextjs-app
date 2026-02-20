@@ -6,37 +6,27 @@ import "swiper/css";
 import Image from "next/image";
 import Link from "next/link";
 import { useRef } from "react";
-
 import { Swiper, SwiperSlide } from "swiper/react";
+import HeaderTitle from "@/components/header-title";
 import { TopListensData } from "@/data/featured-shows";
-import TopListens1 from "../../../../public/images/top-listens-1.png";
-import TopListens2 from "../../../../public/images/top-listens-2.png";
-import TopListens3 from "../../../../public/images/top-listens-3.png";
 
 const FeaturedShows = () => {
   const swiperRef = useRef<SwiperType | null>(null);
   return (
-    <div className="dark-section bg-black/80">
-      <div className="px-[8%] lg:px-[16%] py-30 pb-10 lg:pb-20">
+    <div className="dark-section">
+      <div className="px-[8%] lg:px-[16%] py-24">
         <div className="flex flex-col md:flex-row justify-between items-center">
+          {/* header title */}
           <div className="w-full lg:w-1/2">
-            <div className="title flex flex-col gap-2">
-              <div>
-                <h2 className="inline-block px-4 py-2 rounded-full text-primary text-2xl font-normal border border-primary">
-                  <i className="bi bi-rocket-takeoff pe-4"></i>
-                  Featured Shows
-                </h2>
-              </div>
-
-              <h1 className="text-4xl lg:text-5xl text-white font-semibold mt-4">
-                Top Listens Now
-              </h1>
-            </div>
+            <HeaderTitle
+              badgeText="Featured Shows"
+              badgeIcon="bi bi-rocket-takeoff"
+              title="Top Listens Now"
+            />
           </div>
 
+          {/* custom navigation button */}
           <div className="w-full md:w-1/2">
-            {/* Custom Navigation Button */}
-
             <div className="flex justify-start md:justify-end gap-4 mt-6 lg:mt-0">
               <button
                 type="button"
