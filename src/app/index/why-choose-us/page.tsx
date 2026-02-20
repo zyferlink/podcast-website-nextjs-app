@@ -47,25 +47,21 @@ const WhyChooseUs = () => {
               </p>
 
               {/* points list */}
-              <div className="grid grid-cols-1 md:grid-cols-2 text-white gap-5 my-4 border-b border-dashed border-primary-light pb-6 pt-5">
-                <h2 className="text-lg flex items-center gap-2">
-                  <i className="bi bi-check2 w-8 h-8 flex justify-center items-center bg-primary rounded-full"></i>
-                  More Collection Podcast
-                </h2>
-                <h2 className="text-lg flex items-center gap-2">
-                  <i className="bi bi-check2 w-8 h-8 flex justify-center items-center bg-primary rounded-full"></i>
-                  Create Your Channel
-                </h2>
-
-                <h2 className="text-lg flex items-center gap-2">
-                  <i className="bi bi-check2 w-8 h-8 flex justify-center items-center bg-primary rounded-full"></i>
-                  Listen To Podcast On Offline
-                </h2>
-
-                <h2 className="text-lg flex items-center gap-2">
-                  <i className="bi bi-check2 w-8 h-8 flex justify-center items-center bg-primary rounded-full"></i>
-                  Listen In Screen Off Position
-                </h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 text-white gap-4 my-4 border-b border-dashed border-primary-light pb-6 pt-5">
+                {[
+                  "Play in Background",
+                  "Create Your Channel",
+                  "Listen Offline",
+                  "Browse More Podcasts",
+                ].map((point, index) => (
+                  <div
+                    key={index.toString()}
+                    className="text-lg flex items-center gap-2 "
+                  >
+                    <i className="bi bi-check2 w-7 h-7 flex justify-center items-center bg-primary rounded-full text-dark shrink-0"></i>
+                    <span>{point}</span>
+                  </div>
+                ))}
               </div>
               {/* bottom buttons */}
               <div className="flex flex-col items-center gap-5 pt-4">
