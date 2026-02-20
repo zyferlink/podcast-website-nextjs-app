@@ -7,14 +7,14 @@ import HostImage4 from "../../public/assets/images/host-profile-4.jpg";
 import HostImage5 from "../../public/assets/images/host-profile-5.jpg";
 import HostImage6 from "../../public/assets/images/host-profile-6.jpg";
 
-interface HostProfile {
+export interface HostProfile {
   id: number;
   image: StaticImageData;
   name: string;
   role: string;
 }
 
-const HostProfileData: HostProfile[] = [
+export const HostProfileData: HostProfile[] = [
   {
     id: 1,
     image: HostImage1,
@@ -49,7 +49,7 @@ const HostProfileData: HostProfile[] = [
   {
     id: 6,
     image: HostImage6,
-    name: "Isabella Thompson",
+    name: "Zoya Sheikh",
     role: "Podcast Producer",
   },
 ];

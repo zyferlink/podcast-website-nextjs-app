@@ -3,83 +3,12 @@
 import type { Swiper as SwiperType } from "swiper";
 import { Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
-import HostImage1 from "../../../../public/images/host-profile-1.png";
-import HostImage2 from "../../../../public/images/host-profile-2.png";
-import HostImage3 from "../../../../public/images/host-profile-3.png";
-import HostImage4 from "../../../../public/images/host-profile-4.png";
-import HostImage5 from "../../../../public/images/host-profile-5.png";
-import HostImage6 from "../../../../public/images/host-profile-6.png";
-import HostImage7 from "../../../../public/images/host-profile-7.png";
-import HostImage8 from "../../../../public/images/host-profile-8.png";
-import HostImage9 from "../../../../public/images/host-profile-9.png";
-import HostImage10 from "../../../../public/images/host-profile-10.png";
+
 import "swiper/css";
 import Image from "next/image";
 import { useRef } from "react";
 import HeaderTitle from "@/components/header-title";
-
-const HostProfilesData = [
-  {
-    id: 1,
-    img: HostImage1,
-    name: "Kathryn Murphy",
-    role: "Singer",
-  },
-  {
-    id: 2,
-    img: HostImage2,
-    name: "Ashadul islam",
-    role: "Developer",
-  },
-  {
-    id: 3,
-    img: HostImage3,
-    name: "Kathryn Murphy",
-    role: "Singer",
-  },
-  {
-    id: 4,
-    img: HostImage4,
-    name: "Ashadul islam",
-    role: "Developer",
-  },
-  {
-    id: 5,
-    img: HostImage5,
-    name: "Ashadul islam",
-    role: "Developer",
-  },
-  {
-    id: 6,
-    img: HostImage6,
-    name: "Kathryn Murphy",
-    role: "Singer",
-  },
-  {
-    id: 7,
-    img: HostImage7,
-    name: "Ashadul islam",
-    role: "Developer",
-  },
-  {
-    id: 8,
-    img: HostImage8,
-    name: "Kathryn Murphy",
-    role: "Singer",
-  },
-  {
-    id: 9,
-    img: HostImage9,
-    name: "Ashadul islam",
-    role: "Developer",
-  },
-  {
-    id: 10,
-    img: HostImage10,
-    name: "Ashadul islam",
-    role: "Developer",
-  },
-];
+import { HostProfileData } from "@/data/host-profiles";
 
 const HostProfiles = () => {
   const swiperRef = useRef<SwiperType | null>(null);
@@ -137,12 +66,12 @@ const HostProfiles = () => {
           breakpoints={{
             1200: { slidesPerView: 4 },
             991: { slidesPerView: 2 },
-            757: { slidesPerView: 1 },
+            757: { slidesPerView: 2 },
             0: { slidesPerView: 1 },
           }}
           className="host-wrapper-swiper"
         >
-          {HostProfilesData.map((host, index) => (
+          {HostProfileData.map((host, index) => (
             <SwiperSlide key={index.toString()}>
               <div
                 className={`host-card ${index % 2 === 1 ? "offset-card" : ""}`}
@@ -150,7 +79,7 @@ const HostProfiles = () => {
                 <div className="host-img-wrap">
                   <div className="host-img overflow-hidden rounded-2xl">
                     <Image
-                      src={host.img}
+                      src={host.image}
                       alt={host.name}
                       width={1000}
                       height={100}
@@ -160,16 +89,18 @@ const HostProfiles = () => {
                 </div>
 
                 <div className="host-info px-3 py-4">
-                  <h3 className="text-xl text-gray-200 font-bold">
+                  <h3 className="text-lg text-gray-100 font-bold">
                     {host.name}
                   </h3>
-                  <p className="text-lg text-gray-300">{host.role}</p>
+                  <p className="text-base text-gray-300 font-bold">
+                    {host.role}
+                  </p>
                 </div>
 
                 <div className="host-icons absolute bottom-6 bg-gray rounded-full right-0 group">
                   {/* Plush Icon */}
                   <i
-                    className="bi bi-plus-lg bg-gray-600 w-11 h-11 flex 
+                    className="bi bi-plus-lg text-primary bg-gray-600 w-11 h-11 flex 
                     items-center justify-center rounded-full cursor-pointer border 
                     border-transparent group-hover:rounded-t-none group-hover:bg-gray-500 
                     group-hover:border group-hover:border-gray transition-all duration-300"
