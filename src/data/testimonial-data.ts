@@ -1,10 +1,10 @@
 import type { StaticImageData } from "next/image";
 
-import TestimonialCard1 from "../../public/images/testimonial-card-1.jpg";
-import TestimonialCard2 from "../../public/images/testimonial-card-2.jpg";
-import TestimonialCard3 from "../../public/images/testimonial-card-3.jpg";
-import TestimonialCard4 from "../../public/images/testimonial-card-4.jpg";
-import TestimonialCard5 from "../../public/images/testimonial-card-5.jpg";
+import TestimonialCard1 from "../../public/assets/images/testimonial-card-1.jpg";
+import TestimonialCard2 from "../../public/assets/images/testimonial-card-2.jpg";
+import TestimonialCard3 from "../../public/assets/images/testimonial-card-3.jpg";
+import TestimonialCard4 from "../../public/assets/images/testimonial-card-4.jpg";
+import TestimonialCard5 from "../../public/assets/images/testimonial-card-5.jpg";
 
 export interface Testimonial {
   id: number;
