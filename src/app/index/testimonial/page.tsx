@@ -5,54 +5,11 @@ import { Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import Image from "next/image";
-import Link from "next/link";
 import { useRef } from "react";
 import HeaderTitle from "@/components/header-title";
+import { TestimonialData } from "@/data/testimonial-data";
 import QuoteImage from "../../../../public/images/quote.png";
-import TestimonialCard1 from "../../../../public/images/testimonial-card-1.png";
-import TestimonialCard2 from "../../../../public/images/testimonial-card-2.png";
-import TestimonialCard3 from "../../../../public/images/testimonial-card-3.png";
-import TestimonialCard4 from "../../../../public/images/testimonial-card-4.png";
-import TestimonialCard5 from "../../../../public/images/testimonial-card-5.png";
 import QuoteBg from "../../../../public/images/testimonial-card-qoute-bg.png";
-
-const TestimonialData = [
-  {
-    id: 1,
-    img: TestimonialCard1,
-    pere: " I stubled upon this a month ago",
-    name: "Jenifer",
-    role: "Developer",
-  },
-  {
-    id: 2,
-    img: TestimonialCard2,
-    pere: " I stubled upon this a month ago",
-    name: "Jenifer",
-    role: "Developer",
-  },
-  {
-    id: 3,
-    img: TestimonialCard3,
-    pere: " I stubled upon this a month ago",
-    name: "Jenifer",
-    role: "Developer",
-  },
-  {
-    id: 4,
-    img: TestimonialCard4,
-    pere: " I stubled upon this a month ago",
-    name: "Jenifer",
-    role: "Developer",
-  },
-  {
-    id: 5,
-    img: TestimonialCard5,
-    pere: " I stubled upon this a month ago",
-    name: "Jenifer",
-    role: "Developer",
-  },
-];
 
 const Testimonial = () => {
   const swiperRef = useRef<SwiperType | null>(null);
@@ -98,7 +55,7 @@ const Testimonial = () => {
                 <div className="w-full lg:w-2/5">
                   <div className="test-img relative">
                     <Image
-                      src={test.img}
+                      src={test.image}
                       alt={test.name}
                       className="w-full h-full object-cover rounded-2xl"
                     />
@@ -129,7 +86,7 @@ const Testimonial = () => {
                     </div>
 
                     <p className="text-xl text-gray-300 tracking-wide my-5">
-                      {test.pere}
+                      {test.quote}
                     </p>
 
                     <div className="test-border border-t border-dashed border-primary-light opacity-50 pt-5"></div>
