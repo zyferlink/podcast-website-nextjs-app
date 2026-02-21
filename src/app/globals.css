@@ -63,6 +63,7 @@ body {
   font-family: var(--font-zain);
 }
 
+/* Custom animations - START */
 
 @keyframes anim-small-translate {
   0% {
@@ -81,6 +82,49 @@ body {
     transform: translate(0px, 0px);
   }
 }
+
+@keyframes anim-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+@keyframes anim-wave-scroll {
+  from {
+    background-position: 0 0;
+  }
+
+  to {
+    background-position: -1000px 0;
+  }
+}
+
+@keyframes fade-right {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes fade-left {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+/* Custom animations - END */
 
 /* Rotating sparkling elements */
 
@@ -107,11 +151,7 @@ body {
   left: 90%;
 }
 
-@keyframes anim-spin {
-  to {
-    transform: rotate(360deg);
-  }
-}
+
 
 
 /* Featured Shows Section */
@@ -123,59 +163,16 @@ body {
 }
 
 .dark-section {
-  background: var(--color-dark) url(../../public/images/texture-bg-1.png) no-repeat center/cover;
+  background: var(--color-dark) url(../../public/assets/images/texture-bg-1.png) no-repeat center/cover;
 }
 
 .light-section {
-  background: var(--color-matte-black) url(../../public/images/texture-bg-1.png) no-repeat center/cover;
+  background: var(--color-matte-black) url(../../public/assets/images/texture-bg-1.png) no-repeat center/cover;
 }
 
 
-/* Episode Banner */
 
-.music-waves {
-  width: 260px;
-  height: 30px;
-  background-image: url(../../public/images/music-waves.png);
-  background-repeat: repeat-x;
-  background-size: auto 100%;
-  animation: anim-wave-scroll 50s linear infinite;
-}
 
-@keyframes anim-wave-scroll {
-  from {
-    background-position: 0 0;
-  }
-
-  to {
-    background-position: -1000px 0;
-  }
-}
-
-.music-waves2 {
-  width: 180px;
-  height: 30px;
-  background-image: url(../../public/images/music-waves2.png);
-  background-repeat: repeat-x;
-  background-size: auto 100%;
-  animation: anim-wave-scroll 50s linear infinite;
-}
-
-/* Recent Episode MQ Section */
-
-@media (max-width: 991px) {
-  .music-waves,
-  .music-waves2 {
-    width: 450px;
-  }
-}
-
-@media (max-width: 600px) {
-  .music-waves,
-  .music-waves2 {
-    width: 150px;
-  }
-}
 
 /* Host Profiles Section */
 
@@ -192,7 +189,7 @@ body {
   left: 0;
   width: 100%;
   height: 130px;
-  background: url(../../public/images/Wave-pattern.png);
+  background: url(../../public/assets/images/wave-pattern.png);
   background-repeat: no-repeat;
 }
 
@@ -265,29 +262,7 @@ body {
   animation: fade-right 1s 1.5s forwards linear;
 }
 
-@keyframes fade-right {
-  0% {
-    transform: translateX(100%);
-    opacity: 0;
-  }
 
-  100% {
-    transform: translateX(0%);
-    opacity: 1;
-  }
-}
-
-@keyframes fade-left {
-  0% {
-    transform: translateX(-100%);
-    opacity: 0;
-  }
-
-  100% {
-    transform: translateX(0%);
-    opacity: 1;
-  }
-}
 
 /* Testimonial MQ Section */
 
@@ -316,7 +291,7 @@ body {
   right: -10%;
   width: 550px;
   height: 60px;
-  background-image: url(../../public/images/music-waves.png);
+  background-image: url(../../public/assets/images/music-waves-1.png);
   background-repeat: repeat-x;
   background-size: auto 100%;
   animation: anim-wave-scroll 50s linear infinite;
@@ -329,51 +304,19 @@ body {
   left: 0;
   width: 350px;
   height: 60px;
-  background-image: url(../../public/images/music-waves.png);
+  background-image: url(../../public/assets/images/music-waves-1.png);
   background-repeat: repeat-x;
   background-size: auto 100%;
   animation: anim-wave-scroll 50s linear infinite;
 }
 
-/* Footer Section */
-
-.footer-waves .music-waves2 {
-  width: 350px;
-  height: 40px;
-}
-
-.footer-col {
-  position: relative;
-}
-
-.footer-col:after {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 25%;
-  width: 1px;
-  height: 100%;
-  background-color: rgba(255, 179, 64, 0.3);
-}
-
-@media (max-width: 600px) {
-  .footer-col::after {
-    right: 0;
-  }
-}
-
-@media (max-width: 575px) {
-  .footer-waves .music-waves2 {
-    width: 80vw;
-  }
-}
 
 /* Episode Listing Section */
 
 .page-section {
   width: 100%;
   height: 60vh;
-  background: url(../../public/images/texture-bg-1.png), rgb(38, 38, 41);
+  background: url(../../public/assets/images/texture-bg-1.png), rgb(38, 38, 41);
   background-repeat: no-repeat;
   position: relative;
   display: flex;
@@ -392,7 +335,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url(../../public/images/vector-line.png);
+  background-image: url(../../public/assets/images/vector-line.png);
   background-position: 85% center;
   background-repeat: no-repeat;
   z-index: -1;
@@ -433,7 +376,7 @@ body {
 }
 
 .page-banner {
-  background: url(../../public/images/Page-banner-bg.png), var(--color-primary);
+  background: url(../../public/assets/images/page-banner-bg.png), var(--color-primary);
   background-repeat: no-repeat;
   background-position: bottom center;
   overflow: hidden;
