@@ -201,38 +201,38 @@ const BlogDetails = () => {
           </div>
 
           <div className="w-full lg:w-1/2 sticky top-20 left-0 h-full">
-            <div className="bg-gray p-5 rounded-2xl">
-              <div className="">
-                <div className="bg-[#1c1d20] p-5 rounded-t-2xl">
-                  <h2 className="text-3xl font-semibold text-primary">
+            <div className="bg-gray p-3 rounded-2xl">
+              <div className="bg-[#1c1d20] p-4 rounded-2xl">
+                <div className="">
+                  <h2 className="text-2xl font-semibold text-primary">
                     More Related Blog
                   </h2>
-                  <div className="border border-dashed border-primary mt-3 opacity-30"></div>
+                  <div className="border border-dashed border-primary mt-3 opacity-30" />
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 bg-[#1c1d20] px-4 rounded-b-2xl">
-                  {BlogsData.slice(1, 7).map((blog, index) => (
+                  {BlogPosts.slice(1, 7).map((blog, index) => (
                     <Link
                       key={index.toString()}
-                      className="flex items-center gap-3 mt-5"
+                      className="flex flex-col items-center gap-3 mt-5"
                       href={`/pages/blogs/${blog.id}`}
                     >
-                      <div className="w-full md:w-1/2">
+                      <div className="w-full">
                         <Image
-                          key={index.toString()}
-                          src={`/images${blog.image}`}
+                          src={blog.image}
                           alt="topListens"
                           width={1000}
                           height={1000}
-                          className="w-full min-w-20 h-full rounded-lg"
+                          className="w-full max-h-30 rounded-lg object-cover"
                         />
                       </div>
-                      <div className="w-full md:w-1/1 flex flex-col">
-                        <h2 className="text-gray-300 text-xl md-text-2xl hover:text-primary transition-all duration-300 cursor-pointer">
+                      <div className="w-full md:w-1/1 flex flex-col text-center">
+                        <h2 className="text-white text-base font-bold hover:text-primary transition-all duration-300 cursor-pointer leading-6">
                           {blog.title}
                         </h2>
-                        <h4 className="text-primary mt-2">{blog.date}</h4>
+                        <h4 className="text-primary font-sans">{blog.date}</h4>
                       </div>
+                      <div className="w-[70%] border border-gray-500 opacity-30 " />
                     </Link>
                   ))}
                 </div>
