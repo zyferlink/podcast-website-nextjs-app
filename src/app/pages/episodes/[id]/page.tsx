@@ -103,13 +103,13 @@ const EpisodeDetails = () => {
                     <div className="p-5">
                       <div className="flex flex-row flex-wrap justify-between items-center">
                         <Link href={`/pages/episodes/${episode.id}`}>
-                          <p className="font-light text-gray-200 hover:text-primary tracking-wider transition-all duration-200">
+                          <p className=" text-gray-200 hover:text-primary tracking-wider transition-all duration-200">
                             <i className="bi bi-mic text-primary" />{" "}
                             {episode.hostName}
                           </p>
                         </Link>
 
-                        <h2 className="text-gray-300">
+                        <h2 className="text-gray-300 font-light">
                           <i className="bi bi-clock pe-1 text-primary" />{" "}
                           {episode.duration}
                         </h2>
@@ -119,22 +119,24 @@ const EpisodeDetails = () => {
                         </span>
                       </div>
 
-                      <Link href={`/pages/Episodes/${episode.id}`}>
-                        <h2 className="mt-3 text-2xl hover:text-primary transition-all duration-200">
+                      <Link href={`/pages/episodes/${episode.id}`}>
+                        <h2 className="mt-3 text-2xl text-white hover:text-primary transition-all duration-200">
                           {episode.title}
                         </h2>
-                        <p className="my-3">{episode.desc}</p>
+                        <p className="my-3 text-gray-300 font-light text-base">
+                          {episode.desc}
+                        </p>
                       </Link>
 
-                      <div className="flex justify-between items-center gap-5">
+                      <div className="flex justify-between items-center gap-5 pt-2">
                         <Link
-                          href={`/pages/Episodes/${episode.id}`}
+                          href={`/pages/episodes/${episode.id}`}
                           className="flex items-center gap-2 group"
                         >
                           <i
-                            className="bi bi-play p-4 bg-primary rounded-full flex text-black text-2x1 group-hover:bg-secondary 
+                            className="bi bi-play p-3 bg-primary rounded-full flex text-black text-2xl group-hover:bg-secondary 
                           group-hover:text-white items-center justify-center transition-all duration-200"
-                          ></i>
+                          />
                           <h2 className="text-lg underline text-primary group-hover:text-secondary transition-all duration-200">
                             Listen Now
                           </h2>
@@ -144,19 +146,23 @@ const EpisodeDetails = () => {
                   </div>
                 </div>
 
-                <div className="bg-gray-light rounded-lg mt-5 p-5">
-                  <h2 className="text-4xl mb-4">Episode Description</h2>
-                  <p className=" text-gray-200 tracking-wide">
-                    ore the enchanting world of storytelling in Episode 12 -
-                    "Stories Resonate: The Art of Storytelling. " In this
+                <div className="bg-gray-light rounded-lg mt-3 p-5">
+                  <h2 className="text-4xl mb-4 text-white">
+                    Episode Description
+                  </h2>
+                  <p className="text-gray-100 tracking-wide font-light">
+                    Explore the enchanting world of storytelling in Episode 12 -
+                    "Stories Resonate: The Art of Storytelling. "In this
                     episode, we unravel the power of narratives, discussing how
                     stories connect us, evoke emotions, and leave a lasting
                     impact. Join us for an insightful conversation on the
                     techniques, emotions, and magic that make storytelling a
                     timeless art form .
                   </p>
-                  <h2 className="text-3xl my-5">Guest appearance</h2>
-                  <p className=" text-gray-200 tracking-wide">
+                  <h2 className="text-3xl my-5 pt-4 text-white">
+                    Guest appearance
+                  </h2>
+                  <p className="text-gray-100 tracking-wide font-light">
                     Learn more about our special guest, a seasoned storyteller
                     with a passion for weaving narratives that resonate. Segment
                     of our podcast, where we bring you the insights and
@@ -164,12 +170,14 @@ const EpisodeDetails = () => {
                     mark in various fields.
                   </p>
 
-                  <h2 className="text-4xl my-5 mt-8">More Related Episodes</h2>
-                  <div className="flex flex-col mt-5">
-                    {randomEpisodes.map((episode, index) => (
+                  <h2 className="text-4xl my-6 mt-12 text-white">
+                    More Related Episodes
+                  </h2>
+                  <div className="flex flex-col">
+                    {randomEpisodes.map((episode) => (
                       <div
-                        key={index.toString()}
-                        className="flex flex-col bg-gray p-5 rounded-2xl items-center gap-2"
+                        key={episode.id}
+                        className="flex flex-col bg-gray my-2 p-3 rounded-2xl items-center gap-2"
                       >
                         <Link
                           href={`/pages/episodes/${episode.id}`}
@@ -181,45 +189,47 @@ const EpisodeDetails = () => {
                               alt={episode.title}
                               width={1000}
                               height={1000}
-                              className="w-full min-w-[12rem] h-full rounded-2xl object-cover"
+                              className="w-full min-w-48 h-full rounded-2xl object-cover"
                             />
                           </div>
 
-                          <div className="">
-                            <h2 className="text-3xl hover:text-primary transition-all duration-200">
+                          <div className="flex flex-col py-2 justify-between">
+                            <h2 className="text-3xl text-white hover:text-primary transition-all duration-200">
                               {episode.title}
                             </h2>
                             <h2 className="text-2xl my-2 text-primary">
                               {episode.hostName}
                             </h2>
-                            <p className="text-gray-200">{episode.desc}</p>
+                            <p className="text-gray-200 font-light my-4">
+                              {episode.desc}
+                            </p>
 
                             <div className="flex items-center gap-2 mt-2">
                               <i
                                 className="bi bi-instagram w-10 h-10 text-primary rounded-full flex items-center 
                                 justify-center border border-primary hover:bg-primary hover:text-black text-xl transition-all 
                                 duration-300 cursor-pointer"
-                              ></i>
+                              />
                               <i
                                 className="bi bi-github w-10 h-10 text-primary rounded-full flex items-center 
                                 justify-center border border-primary hover:bg-primary hover:text-black text-xl transition-all 
                                 duration-300 cursor-pointer"
-                              ></i>
+                              />
                               <i
                                 className="bi bi-twitter w-10 h-10 text-primary rounded-full flex items-center 
                                 justify-center border border-primary hover:bg-primary hover:text-black text-xl transition-all 
                                 duration-300 cursor-pointer"
-                              ></i>
+                              />
                               <i
                                 className="ri-youtube-line w-10 h-10 text-primary rounded-full flex items-center 
                                 justify-center border border-primary hover:bg-primary hover:text-black text-xl transition-all 
                                 duration-300 cursor-pointer"
-                              ></i>
+                              />
                               <i
                                 className="bi bi-threads w-10 h-10 text-primary rounded-full flex items-center 
                                 justify-center border border-primary hover:bg-primary hover:text-black text-xl transition-all 
                                 duration-300 cursor-pointer"
-                              ></i>
+                              />
                             </div>
                           </div>
                         </Link>
