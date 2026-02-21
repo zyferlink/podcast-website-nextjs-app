@@ -1,6 +1,9 @@
 import Image from "next/image";
+import { FaArrowRight } from "react-icons/fa6";
 import PageBanner1 from "../../public/assets/images/page-banner-1.png";
 import PageBanner2 from "../../public/assets/images/page-banner-2.png";
+import { StyledButtonPrimary } from "./buttons/styled-button-primary";
+import { StyledButtonSecondary } from "./buttons/styled-button-secondary";
 
 const PageBannerCustom = () => {
   return (
@@ -22,20 +25,24 @@ const PageBannerCustom = () => {
         />
 
         <div className="music-waves" />
-        <div className="my-3 mt-5">
+        <div className="my-3 ">
           <span className="flex items-center gap-2 text-black px-4 py-3 rounded-full border-[1.5px] border-black">
             <i className="bi bi-rocket-takeoff text-2xl" />
             <h2 className="text-xl">Call To Action</h2>
           </span>
         </div>
-        <h1 className="text-2xl lg:text-3xl mb-5 font-semibold w-full lg:w-[50%] text-text">
+        <h1 className="text-3xl lg:text-4xl mb-5 font-semibold w-full lg:w-[50%] text-text">
           Let's Discuss <br />
           For <br />
           Any Episodes
         </h1>
-        <button type="button" className="btn btn2 bg-text">
-          Get In Touch <i className="bi bi-arrow-right-short"></i>
-        </button>
+
+        <StyledButtonPrimary
+          className="px-8 text-xl bg-dark-text text-white tracking-normal"
+          icon={<FaArrowRight size={12} className="text-white" />}
+        >
+          Get In Touch
+        </StyledButtonPrimary>
       </div>
     </div>
   );
