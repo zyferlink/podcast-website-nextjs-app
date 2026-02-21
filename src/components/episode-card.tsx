@@ -6,12 +6,14 @@ interface EpisodeCardProps {
   episode: Episode;
   toggleFavorite: (episode: Episode) => void;
   isFavorite: (id: number) => boolean;
+  removeFavorite?: (id: number) => void;
 }
 
 const EpisodeCard: React.FC<EpisodeCardProps> = ({
   episode,
   toggleFavorite,
   isFavorite,
+  removeFavorite,
 }) => {
   return (
     <div className="flex w-full flex-col lg:flex-row justify-between bg-gray-light rounded-lg p-4 overflow-hidden">
@@ -42,15 +44,25 @@ const EpisodeCard: React.FC<EpisodeCardProps> = ({
               </h2>
             </div>
 
-            <button type="button" onClick={() => toggleFavorite(episode)}>
-              <i
-                className={`bi ${
-                  isFavorite(episode.id)
-                    ? "bi-balloon-heart-fill text-red-500"
-                    : "bi-balloon-heart text-primary"
-                } me-3 text-xl cursor-pointer transition-all duration-200`}
-              />
-            </button>
+            {removeFavorite ? (
+              <button type="button" onClick={() => removeFavorite(episode.id)}>
+                <i
+                  className="bi bi-x-circle text-primary text-3xl cursor-pointer 
+                        transition-all duration-200"
+                  title="Remove from Favorite"
+                />
+              </button>
+            ) : (
+              <button type="button" onClick={() => toggleFavorite(episode)}>
+                <i
+                  className={`bi ${
+                    isFavorite(episode.id)
+                      ? "bi-balloon-heart-fill text-red-500"
+                      : "bi-balloon-heart text-primary"
+                  } me-3 text-xl cursor-pointer transition-all duration-200`}
+                />
+              </button>
+            )}
           </div>
 
           <Link href={`/pages/episodes/${episode.id}`}>
