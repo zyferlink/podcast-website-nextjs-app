@@ -92,7 +92,7 @@ const Episodes = () => {
 
       {/* Episodes */}
       <div className="dark-section">
-        <div className="px-[8%] lg:px-[12%] py-30 pb-0 md:pb-10 relative">
+        <div className="px-[8%] lg:px-[12%] py-30 pb-0 md:pb-8 relative">
           {/* Search Episodes */}
           <div
             className="flex md:flex-row flex-col absolute -top-4 z-5 w-[85%] md:w-[75%] bg-gray px-4 py-2 
@@ -114,8 +114,10 @@ const Episodes = () => {
             </StyledButtonSecondary>
           </div>
 
-          <div className="flex justify-between items-center gap-5 mt-4">
-            <h2>Total Episodes Available ( {visibleEpisodes.length} )</h2>
+          <div className="flex justify-between items-center gap-5 px-2 sm:pt-0 pt-5">
+            <h2 className="text-white text-lg font-semibold">
+              Total Episodes Available ( {visibleEpisodes.length} )
+            </h2>
 
             {/* Sorting */}
             <div className="relative">
@@ -123,7 +125,7 @@ const Episodes = () => {
                 value={sortBy}
                 onChange={(e) => setSortBy(e.target.value)}
                 className="appearance-none bg-gray text-primary px-5 py-3 pr-12 
-                rounded-full outline-none cursor-pointer font-medium hover:bg-gray-light 
+                rounded-full outline-none cursor-pointer font-sans text-base font-medium hover:bg-gray-light 
                 transition-all duration-300"
               >
                 <option value="default">Sort by</option>
@@ -132,7 +134,7 @@ const Episodes = () => {
                 <option value="title">Title: A to Z</option>
               </select>
 
-              <i className="bi bi-chevron-down absolute right-5 top-1/2 -translate-y-1/2 text-primary pointer-events-none"></i>
+              <i className="bi bi-chevron-down absolute right-4 top-[60%] -translate-y-1/2 text-primary pointer-events-none" />
             </div>
           </div>
 
