@@ -1,17 +1,3 @@
-import type { StaticImageData } from "next/dist/shared/lib/get-img-props";
-
-import EpisodeImage1 from "../../public/assets/images/episode-1.jpg";
-import EpisodeImage2 from "../../public/assets/images/episode-2.jpg";
-import EpisodeImage3 from "../../public/assets/images/episode-3.jpg";
-import EpisodeImage4 from "../../public/assets/images/episode-4.jpg";
-import EpisodeImage5 from "../../public/assets/images/episode-5.jpg";
-import EpisodeImage6 from "../../public/assets/images/episode-6.jpg";
-import EpisodeImage7 from "../../public/assets/images/episode-7.jpg";
-import EpisodeImage8 from "../../public/assets/images/episode-8.jpg";
-import EpisodeImage9 from "../../public/assets/images/episode-9.jpg";
-import EpisodeImage10 from "../../public/assets/images/episode-10.jpg";
-import EpisodeImage11 from "../../public/assets/images/episode-11.jpg";
-
 export interface Episode {
   id: number;
   title: string;
@@ -19,7 +5,7 @@ export interface Episode {
   duration: string;
   episode: string;
   hostName: string;
-  image: StaticImageData;
+  image: string;
 }
 
 export const EpisodeData: Episode[] = [
@@ -30,7 +16,7 @@ export const EpisodeData: Episode[] = [
     duration: "2hr 25min",
     episode: "Episode 04",
     hostName: "Ethan Anderson",
-    image: EpisodeImage1,
+    image: "/assets/images/episode-1.jpg",
   },
   {
     id: 2,
@@ -39,7 +25,7 @@ export const EpisodeData: Episode[] = [
     duration: "1hr 52min",
     episode: "Episode 12",
     hostName: "Sophia Reynolds",
-    image: EpisodeImage2,
+    image: "/assets/images/episode-2.jpg",
   },
   {
     id: 3,
@@ -48,7 +34,7 @@ export const EpisodeData: Episode[] = [
     duration: "4hr 28min",
     episode: "Episode 17",
     hostName: "Benjamin Foster",
-    image: EpisodeImage3,
+    image: "/assets/images/episode-3.jpg",
   },
   {
     id: 4,
@@ -57,7 +43,7 @@ export const EpisodeData: Episode[] = [
     title: "Comic Relief: Laughter in Every",
     desc: "Exploring the art of storytelling and its impact on various mediums, from books to podcasts.",
     episode: "Episode 11",
-    image: EpisodeImage4,
+    image: "/assets/images/episode-4.jpg",
   },
   {
     id: 5,
@@ -66,7 +52,7 @@ export const EpisodeData: Episode[] = [
     title: "Mic Magic: Crafting Captivating Podcasts",
     desc: "Exploring the art of storytelling and its impact on various mediums, from books to podcasts.",
     episode: "Episode 35",
-    image: EpisodeImage5,
+    image: "/assets/images/episode-5.jpg",
   },
   {
     id: 6,
@@ -75,7 +61,7 @@ export const EpisodeData: Episode[] = [
     title: "Triumphs Unveiled: Stories",
     desc: "Exploring the art of storytelling and its impact on various mediums, from books to podcasts.",
     episode: "Episode 45",
-    image: EpisodeImage6,
+    image: "/assets/images/episode-6.jpg",
   },
   {
     id: 7,
@@ -84,7 +70,7 @@ export const EpisodeData: Episode[] = [
     title: "Culinary Journeys: Flavors of the World",
     desc: "Exploring the art of storytelling and its impact on various mediums, from books to podcasts.",
     episode: "Episode 15",
-    image: EpisodeImage7,
+    image: "/assets/images/episode-7.jpg",
   },
   {
     id: 8,
@@ -93,7 +79,7 @@ export const EpisodeData: Episode[] = [
     title: "Mindful Moments: Finding Peace Within",
     desc: "Exploring the art of storytelling and its impact on various mediums, from books to podcasts.",
     episode: "Episode 06",
-    image: EpisodeImage8,
+    image: "/assets/images/episode-8.jpg",
   },
   {
     id: 9,
@@ -102,7 +88,7 @@ export const EpisodeData: Episode[] = [
     title: "Future Tech: Exploring Tomorrow's",
     desc: "Exploring the art of storytelling and its impact on various mediums, from books to podcasts.",
     episode: "Episode 16",
-    image: EpisodeImage9,
+    image: "/assets/images/episode-9.jpg",
   },
   {
     id: 10,
@@ -111,7 +97,7 @@ export const EpisodeData: Episode[] = [
     title: "Startup Stories: Entrepreneurs",
     desc: "Exploring the art of storytelling and its impact on various mediums, from books to podcasts.",
     episode: "Episode 32",
-    image: EpisodeImage10,
+    image: "/assets/images/episode-10.jpg",
   },
   {
     id: 11,
@@ -120,6 +106,6 @@ export const EpisodeData: Episode[] = [
     title: "Stories Resonate: The Art of Storytelling",
     desc: "Exploring the art of storytelling and its impact on various mediums, from books to podcasts.",
     episode: "Episode 12",
-    image: EpisodeImage11,
+    image: "/assets/images/episode-11.jpg",
   },
 ];
