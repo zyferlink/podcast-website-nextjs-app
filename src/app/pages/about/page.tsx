@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { useRef } from "react";
 import CountUp from "react-countup";
 import { FaArrowRight } from "react-icons/fa6";
 import Banner from "@/app/index/banner/page";
@@ -212,7 +213,15 @@ const About = () => {
             {/* Card 1 */}
             <div className="bg-gray-light rounded-2xl p-8 text-center">
               <h2 className="text-6xl font-semibold text-primary">
-                <CountUp start={0} end={99} enableScrollSpy scrollSpyOnce />+
+                <CountUp
+                  start={0}
+                  end={99}
+                  enableScrollSpy
+                  scrollSpyOnce
+                  suffix="+"
+                >
+                  {({ countUpRef }) => <span ref={countUpRef} />}
+                </CountUp>
               </h2>
               <p className="mt-3 text-xl text-gray-300">Total Episodes</p>
             </div>
@@ -220,7 +229,15 @@ const About = () => {
             {/* Card 2 */}
             <div className="bg-gray-light rounded-2xl p-8 text-center">
               <h2 className="text-6xl font-semibold text-primary">
-                <CountUp start={0} end={595} enableScrollSpy scrollSpyOnce />K
+                <CountUp
+                  start={0}
+                  end={595}
+                  enableScrollSpy
+                  scrollSpyOnce
+                  suffix="K"
+                >
+                  {({ countUpRef }) => <span ref={countUpRef} />}
+                </CountUp>
               </h2>
               <p className="mt-3 text-xl text-gray-300">Podcast Subscribers</p>
             </div>
@@ -228,7 +245,15 @@ const About = () => {
             {/* Card 3 */}
             <div className="bg-gray-light rounded-2xl p-8 text-center">
               <h2 className="text-6xl font-semibold text-primary">
-                <CountUp start={0} end={210} enableScrollSpy scrollSpyOnce />M
+                <CountUp
+                  start={0}
+                  end={210}
+                  enableScrollSpy
+                  scrollSpyOnce
+                  suffix="M"
+                >
+                  {({ countUpRef }) => <span ref={countUpRef} />}
+                </CountUp>
               </h2>
               <p className="mt-3 text-xl text-gray-300">Happy Listeners</p>
             </div>
@@ -236,7 +261,15 @@ const About = () => {
             {/* Card 4 */}
             <div className="bg-gray-light rounded-2xl p-8 text-center">
               <h2 className="text-6xl font-semibold text-primary">
-                <CountUp start={0} end={210} enableScrollSpy scrollSpyOnce />+
+                <CountUp
+                  start={0}
+                  end={210}
+                  enableScrollSpy
+                  scrollSpyOnce
+                  suffix="+"
+                >
+                  {({ countUpRef }) => <span ref={countUpRef} />}
+                </CountUp>
               </h2>
               <p className="mt-3 text-xl text-gray-300">Our Awards</p>
             </div>
