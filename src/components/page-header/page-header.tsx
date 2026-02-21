@@ -38,22 +38,25 @@ const PageHeader: React.FC<PageHeaderProps> = ({
       <Image
         src={PageElement4}
         alt="Element"
-        className="absolute top-[70%] left-[15%] w-auto h-auto animate-spin opacity-40 delay-700"
+        className="absolute top-[50%] left-[20%] w-auto h-auto animate-spin opacity-40 delay-700"
       />
-      <div className="page-content w-full md:w-1/2 flex justify-center flex-col pt-12">
-        <Image src={PageElement1} alt="Element" className="w-full h-8" />
+      <div className="flex w-full h-full flex-col items-center">
+        <div className="page-content z-10  w-full md:w-1/2 flex justify-center items-center flex-col mt-20">
+          <Image src={PageElement1} alt="Element" className="w-[70%] h-8" />
 
-        <h1 className="text-5xl lg:text-6xl justify-center my-8 text-white ">
-          {title}
-        </h1>
+          <h1 className="text-5xl lg:text-7xl justify-center my-5 text-white ">
+            {title}
+          </h1>
 
-        <div className="flex items-center justify-center gap-3 cursor-pointer ">
-          <Image src={PlatformIcon1} alt="brand" className="w-8" />
-          <Image src={PlatformIcon2} alt="brand" className="w-8" />
-          <Image src={PlatformIcon3} alt="brand" className="w-8" />
-          <Image src={PlatformIcon4} alt="brand" className="w-8" />
-          <Image src={PlatformIcon5} alt="brand" className="w-8" />
+          <div className="flex items-center justify-center gap-3 cursor-pointer ">
+            <Image src={PlatformIcon1} alt="brand" className="w-8" />
+            <Image src={PlatformIcon2} alt="brand" className="w-8" />
+            <Image src={PlatformIcon3} alt="brand" className="w-8" />
+            <Image src={PlatformIcon4} alt="brand" className="w-8" />
+            <Image src={PlatformIcon5} alt="brand" className="w-8" />
+          </div>
         </div>
+        <div className="flex absolute z-0 bottom-10 w-full h-10 wave-wrapper-section2" />
       </div>
     </div>
   );
