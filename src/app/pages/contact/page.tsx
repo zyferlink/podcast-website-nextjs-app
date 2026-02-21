@@ -1,7 +1,9 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
+import { FaArrowRight } from "react-icons/fa6";
 import Banner from "@/app/index/banner/page";
+import { StyledButtonSecondary } from "@/components/buttons/styled-button-secondary";
 import HeaderTitle from "@/components/header-title";
 import PageHeader from "@/components/page-header/page-header";
 import ContactClient1 from "../../../../public/assets/images/contact-client-1.png";
@@ -243,9 +245,14 @@ const Contact = () => {
                           duration-300 resize-none"
                         />
                       </div>
-                      <button type="button" className="btn btn2 mt-5">
-                        Send Message <i className="bi bi-arrow-right-short"></i>
-                      </button>
+
+                      <StyledButtonSecondary
+                        onClick={() => {}}
+                        className="px-8 text-xl  mt-5 tracking-normal"
+                        icon={<FaArrowRight size={12} />}
+                      >
+                        Send Message
+                      </StyledButtonSecondary>
                     </form>
                   </div>
                 </div>

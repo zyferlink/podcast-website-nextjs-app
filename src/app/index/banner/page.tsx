@@ -26,15 +26,13 @@ const Banner = () => {
                     className="text-white placeholder:text-gray-300 px-3 py-2 outline-none"
                   />
                 </div>
-                <div className="sub-btn">
-                  <StyledButtonPrimary
-                    onClick={() => {}}
-                    className="tracking-wide"
-                    icon={<FaArrowRight size={12} />}
-                  >
-                    Subscribe
-                  </StyledButtonPrimary>
-                </div>
+                <StyledButtonPrimary
+                  onClick={() => {}}
+                  className="tracking-wide"
+                  icon={<FaArrowRight size={12} />}
+                >
+                  Subscribe
+                </StyledButtonPrimary>
               </div>
             </div>
 
