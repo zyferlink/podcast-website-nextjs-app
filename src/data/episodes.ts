@@ -19,7 +19,7 @@ export interface Episode {
   duration: string;
   episode: string;
   hostName: string;
-  image?: StaticImageData;
+  image: StaticImageData;
 }
 
 export const EpisodeData: Episode[] = [
@@ -106,7 +106,7 @@ export const EpisodeData: Episode[] = [
   },
   {
     id: 10,
-    hostName: "Lucas Mitchell",
+    hostName: "Ava Mitchell",
     duration: "4hr 12min",
     title: "Startup Stories: Entrepreneurs",
     desc: "Exploring the art of storytelling and its impact on various mediums, from books to podcasts.",
@@ -115,7 +115,7 @@ export const EpisodeData: Episode[] = [
   },
   {
     id: 11,
-    hostName: "Ethan Walker",
+    hostName: "Isabella Walker",
     duration: "4hr 12min",
     title: "Stories Resonate: The Art of Storytelling",
     desc: "Exploring the art of storytelling and its impact on various mediums, from books to podcasts.",
