@@ -7,39 +7,12 @@ import { useState } from "react";
 import PageHeader from "@/components/page-header/page-header";
 import SocialMediaSet2 from "@/components/social-media-buttons/social-media-set-2";
 import { type Episode, EpisodeData } from "@/data/episodes";
+import { FaqData } from "@/data/faq";
 import PlatformIcon5 from "../../../../../public/assets/images/platform-icon-instagram.svg";
 import PlatformIcon1 from "../../../../../public/assets/images/platform-icon-soundcloud.svg";
 import PlatformIcon2 from "../../../../../public/assets/images/platform-icon-spotify.svg";
 import PlatformIcon3 from "../../../../../public/assets/images/platform-icon-swarm.svg";
 import PlatformIcon4 from "../../../../../public/assets/images/platform-icon-youtube.svg";
-
-const faqs = [
-  {
-    question: "How often are new episodes released?",
-    answer:
-      "If you have premium or exclusive content, provide information on how listeners can access it. Share information about any online communities or forums where listeners can connect and discuss episodes.",
-  },
-  {
-    question: "Can I suggest topics or guests for future episodes?",
-    answer:
-      "If you have premium or exclusive content, provide information on how listeners can access it. Share information about any online communities or forums where listeners can connect and discuss episodes.",
-  },
-  {
-    question: "Is there a way to get early access or exclusive content?",
-    answer:
-      "If you have premium or exclusive content, provide information on how listeners can access it. Share information about any online communities or forums where listeners can connect and discuss episodes.",
-  },
-  {
-    question: "How do I leave a review or feedback?",
-    answer:
-      "If you have premium or exclusive content, provide information on how listeners can access it. Share information about any online communities or forums where listeners can connect and discuss episodes.",
-  },
-  {
-    question: "Do you accept listener questions?",
-    answer:
-      "If you have premium or exclusive content, provide information on how listeners can access it. Share information about any online communities or forums where listeners can connect and discuss episodes.",
-  },
-];
 
 const EpisodeDetails = () => {
   const { id } = useParams();
@@ -252,26 +225,37 @@ const EpisodeDetails = () => {
 
             {/* Faq */}
             <div className="bg-gray p-5 rounded-2xl mt-5">
-              <h2 className="text-3xl font-semibold text-primary">FAQs</h2>
+              <h2 className="text-4xl font-semibold text-primary">FAQs</h2>
               <div className="border border-dashed border-primary mt-3 mb-5 opacity-30"></div>
               {/* Faq Content */}
               <div className="space-y-4">
-                {faqs.map((faq, index) => {
-                  const isOpen = openIndex === index;
+                {FaqData.map((faq) => {
+                  const isOpen = openIndex === faq.id;
                   return (
                     <div
-                      key={index.toString()}
+                      key={faq.id}
                       className={` rounded-xl p-4 transition-all duration-500 ease-in-out 
                         ${isOpen ? "bg-primary text-black" : "bg-gray-light"}`}
                     >
                       {/* Question */}
                       <div
+                        role="group"
                         className={`flex justify-between items-center cursor-pointer 
                           pb-3 transition-all duration-300 
                           ${isOpen ? "border-b border-dashed border-black/40" : ""}`}
-                        onClick={() => toggleFaq(index)}
+                        onClick={() => toggleFaq(faq.id)}
+                        onKeyDown={(e) => {
+                          if (e.key === "Enter" || e.key === " ") {
+                            e.preventDefault();
+                            toggleFaq(faq.id);
+                          }
+                        }}
                       >
-                        <h3 className="text-xl font-medium">{faq.question}</h3>
+                        <h3
+                          className={`text-xl font-medium  ${isOpen ? "text-black" : "text-white"}`}
+                        >
+                          {faq.question}
+                        </h3>
 
                         {/* Icon */}
                         <span
@@ -280,18 +264,17 @@ const EpisodeDetails = () => {
                             ${isOpen ? "bg-black text-primary" : "bg-primary text-black"} `}
                         >
                           <i
-                            className={`bi ${isOpen ? "bi-dash-lg" : "bi-plus-lg"} text-xl`}
-                          ></i>
+                            className={`bi ${isOpen ? "bi-dash-lg" : "bi-plus-lg"} pt-1 text-xl`}
+                          />
                         </span>
                       </div>
 
                       {/* Answer */}
                       <div
-                        className={`overflow-hidden transition-all duration-300 
-                          ease-in-out 
+                        className={`overflow-hidden transition-all duration-300 ease-in-out 
                           ${isOpen ? "max-h-40 mt-3 opacity-100" : "max-h-0 opacity-0"} `}
                       >
-                        <p className="text-sm">{faq.answer}</p>
+                        <p className="text-base px-2">{faq.answer}</p>
                       </div>
                     </div>
                   );
@@ -304,7 +287,7 @@ const EpisodeDetails = () => {
             <div className="bg-gray p-5 rounded-2xl">
               <div className="bg-[#1c1d20] p-5 rounded-2xl">
                 <div className="flex justify-center items-center">
-                  <div className="w-[200px] h-[200px] overflow-hidden rounded-full">
+                  <div className="w-50 h-50 overflow-hidden rounded-full">
                     <Image
                       src={episode.image}
                       alt={episode.title}
