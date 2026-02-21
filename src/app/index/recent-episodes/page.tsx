@@ -47,7 +47,7 @@ const RecentEpisodes = () => {
 
       <div className="mt-10 px-[8%] lg:px-[12%] pb-30">
         {/* main banner */}
-        <div className="episodeBanner bg-banner-background px-5 rounded-2xl pb-5 lg:pb-0">
+        <div className="episodeBanner bg-linear-to-tr from-primary/60 to-amber-100 px-5 rounded-2xl pb-5 lg:pb-0">
           <div className="flex flex-col lg:flex-row justify-center lg:justify-between gap-0 lg:gap-5">
             <div className="w-full lg:w-1/2">
               <Image
@@ -70,7 +70,7 @@ const RecentEpisodes = () => {
                 <div className="flex items-center gap-3">
                   <i className="bi bi-balloon-heart me-3 text-text text-xl"></i>
                   <div
-                    className="w-20 md:w-40 h-7.5 bg-[url('/assets/images/music-waves-1.png')] 
+                    className="w-20 md:w-40 2xl:w-55 h-7.5 bg-[url('/assets/images/music-waves-1.png')] 
                   bg-repeat-x bg-size-[auto_100%] animate-[anim-wave-scroll_50s_linear_infinite]"
                   />
                 </div>
@@ -108,7 +108,7 @@ const RecentEpisodes = () => {
         <div className="flex flex-col lg:flex-row items-center gap-5 mt-10">
           {bannerList.map((item) => (
             <div key={item.id} className="w-full lg:w-1/2">
-              <div className="p-6 rounded-2xl bg-gray">
+              <div className="p-6 rounded-2xl bg-linear-to-tr from-dark to-gray">
                 <div className="flex flex-wrap items-center gap-3">
                   <Link href="/app/pages">
                     <h2 className="text-gray-300 hover:text-primary">
@@ -122,7 +122,7 @@ const RecentEpisodes = () => {
                   <div className="flex items-center gap-3">
                     <i className="bi bi-balloon-heart me-3 text-gray-300 text-xl"></i>
                     <div
-                      className="w-20 md:w-30 h-7.5 bg-[url('/assets/images/music-waves-2.png')] 
+                      className="w-20 md:w-30 2xl:w-50 h-7.5 bg-[url('/assets/images/music-waves-2.png')] 
                       bg-repeat-x bg-size-[auto_100%] animate-[anim-wave-scroll_50s_linear_infinite]"
                     />
                   </div>
