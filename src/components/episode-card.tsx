@@ -28,7 +28,7 @@ const EpisodeCard: React.FC<EpisodeCardProps> = ({
       </div>
 
       <div className="w-full lg:w-1/1">
-        <div className="p-5">
+        <div className="px-5">
           <div className="flex flex-row flex-wrap justify-between items-center">
             <div className="flex md:flex-col flex-row justify-between w-[80%]">
               <Link href={`/pages/episodes/${episode.id}`}>
@@ -57,12 +57,14 @@ const EpisodeCard: React.FC<EpisodeCardProps> = ({
             <h2 className="mt-3 text-xl font-bold text-white hover:text-primary transition-all duration-200">
               {episode.title}
             </h2>
-            <p className="my-3 text-gray-300 font-light">{episode.desc}</p>
+            <p className="my-3 text-gray-300 font-light line-clamp-3">
+              {episode.desc}
+            </p>
           </Link>
 
           <div className="flex justify-between items-center gap-5">
             <Link
-              href={`/pages/Episodes/${episode.id}`}
+              href={`/pages/episodes/${episode.id}`}
               className="flex items-center gap-2 group"
             >
               <i
