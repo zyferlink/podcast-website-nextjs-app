@@ -149,125 +149,37 @@ const Pricing = () => {
                 ]}
               />
 
-              <div className="bg-gray-light px-6 py-6 rounded-xl">
-                <div className="border-b border-dashed border-primary-light pb-8">
-                  <div className="flex justify-center text-start items-center">
-                    <h4 className="font-semibold text-xl mb-2">Premium</h4>
-                    <Image
-                      src={MusicWavesImage}
-                      alt="music-waves-img"
-                      className="w-40"
-                    />
-                  </div>
+              <PricingCard
+                packageName="Premium"
+                price={billing === BillingPeriod.MONTHLY ? "29.00" : "329.00"}
+                period={billing === BillingPeriod.MONTHLY ? "Mo" : "Yr"}
+                desc="Get exclusive podcasts from your favorite hosts on here for
+                    free."
+                serviceList={[
+                  "Latest and freebies topics",
+                  "Curated speakers",
+                  "Free content only",
+                  "Available on all platforms",
+                  "Upto 20 channel Subscribe",
+                  "Unlimited episodes",
+                ]}
+              />
 
-                  <div className="flex items-end justify-center gap-1 mb-5">
-                    <h1 className="text-5xl text-primary font-semibold">
-                      {billing === "monthly" ? "29.00" : "329.00"}
-                    </h1>
-                    <span className="text-xl text-primary">
-                      /{billing === "monthly" ? "Mo" : "Yr"}
-                    </span>
-                  </div>
-
-                  <p className="">
-                    Get exclusive podcasts from your favorite hosts on here for
-                    free.
-                  </p>
-                </div>
-
-                <ul className="space-y-3 list-none py-8">
-                  <li className="flex gap-3 items-center">
-                    <i className="bi bi-check-circle-fill text-primary text-xl"></i>
-                    Latest and Premium topics
-                  </li>
-
-                  <li className="flex gap-3 items-center">
-                    <i className="bi bi-check-circle-fill text-primary text-xl"></i>
-                    Curated speakers
-                  </li>
-
-                  <li className="flex gap-3 items-center">
-                    <i className="bi bi-check-circle-fill text-primary text-xl"></i>
-                    All content
-                  </li>
-
-                  <li className="flex gap-3 items-center">
-                    <i className="bi bi-check-circle-fill text-primary text-xl"></i>
-                    Available on all platforms
-                  </li>
-
-                  <li className="flex gap-3 items-center">
-                    <i className="bi bi-check-circle-fill text-primary text-xl"></i>
-                    upto 20 channel Subscribe
-                  </li>
-
-                  <li className="flex gap-3 items-center">
-                    <i className="bi bi-check-circle-fill text-primary text-xl"></i>
-                    Unlimited episodes
-                  </li>
-                </ul>
-
-                <button type="button" className="btn btn1">
-                  Get Started Now <i className="bi bi-arrow-right-short"></i>
-                </button>
-              </div>
-
-              <div className="bg-gray-light px-6 py-6 rounded-xl">
-                <div className="border-b border-dashed border-primary-light pb-8">
-                  <h4 className="font-semibold text-xl text-start mb-2">
-                    Special
-                  </h4>
-                  <div className="flex items-end justify-center gap-1 mb-5">
-                    <h1 className="text-5xl text-primary font-semibold">
-                      {billing === "monthly" ? "99.00" : "999.00"}
-                    </h1>
-                    <span className="text-xl text-primary">
-                      /{billing === "monthly" ? "Mo" : "Yr"}
-                    </span>
-                  </div>
-
-                  <p className="">
-                    Get exclusive podcasts from your favorite hosts on here for
-                    free.
-                  </p>
-                </div>
-
-                <ul className="space-y-3 list-none py-8">
-                  <li className="flex gap-3 items-center">
-                    <i className="bi bi-check-circle-fill text-primary text-xl"></i>
-                    Latest and freebies topics
-                  </li>
-
-                  <li className="flex gap-3 items-center">
-                    <i className="bi bi-check-circle-fill text-primary text-xl"></i>
-                    Curated speakers
-                  </li>
-
-                  <li className="flex gap-3 items-center">
-                    <i className="bi bi-check-circle-fill text-primary text-xl"></i>
-                    Free content only
-                  </li>
-
-                  <li className="flex gap-3 items-center">
-                    <i className="bi bi-check-circle-fill text-primary text-xl"></i>
-                    Available on all platforms
-                  </li>
-
-                  <li className="flex gap-3 items-center">
-                    <i className="bi bi-check-circle-fill text-primary text-xl"></i>
-                    upto 20 channel Subscribe
-                  </li>
-
-                  <li className="flex gap-3 items-center">
-                    <i className="bi bi-check-circle-fill text-primary text-xl"></i>
-                    Unlimited episodes
-                  </li>
-                </ul>
-
-                <button type="button" className="btn btn1">
-                  Get Started Now <i className="bi bi-arrow-right-short"></i>
-                </button>
-              </div>
+              <PricingCard
+                packageName="Special"
+                price={billing === BillingPeriod.MONTHLY ? "99.00" : "999.00"}
+                period={billing === BillingPeriod.MONTHLY ? "Mo" : "Yr"}
+                desc="Get exclusive podcasts from your favorite hosts on here for
+                    free."
+                serviceList={[
+                  "Latest and freebies topics",
+                  "Curated speakers",
+                  "Free content only",
+                  "Available on all platforms",
+                  "Upto 20 channel Subscribe",
+                  "Unlimited episodes",
+                ]}
+              />
             </div>
           </div>
         </div>
