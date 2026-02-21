@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useParams } from "next/navigation";
 import { useEffect, useState } from "react";
 import toast from "react-hot-toast";
+import { type Episode, EpisodeData } from "@/data/episodes";
 import BrandIcon1 from "../../../../../public/images/brand-icon-1.png";
 import BrandIcon2 from "../../../../../public/images/brand-icon-2.png";
 import BrandIcon3 from "../../../../../public/images/brand-icon-3.png";
@@ -17,16 +18,6 @@ import PageElement2 from "../../../../../public/images/page-elm-2.png";
 import PageElement3 from "../../../../../public/images/page-elm-3.png";
 import PageElement4 from "../../../../../public/images/page-elm-4.png";
 import RocketIcon from "../../../../../public/images/rocket-icon.png";
-import EpisodesData from "../../../../data/EpisodeData.json";
-
-type Episode = {
-  id: number;
-  name: string;
-  title: string;
-  pere: string;
-  episode: string;
-  image: string;
-};
 
 const faqs = [
   {
@@ -59,7 +50,7 @@ const faqs = [
 const EpisodeDetails = () => {
   const { id } = useParams();
 
-  const episode = EpisodesData.find((ep) => ep.id === Number(id)) as
+  const episode = EpisodeData.find((ep) => ep.id === Number(id)) as
     | Episode
     | undefined;
 
@@ -78,7 +69,7 @@ const EpisodeDetails = () => {
     );
   }
 
-  const randomEpisodes = [...EpisodesData]
+  const randomEpisodes = [...EpisodeData]
     .sort(() => Math.random() - 0.5)
     .slice(0, 2);
 
@@ -125,8 +116,8 @@ const EpisodeDetails = () => {
                   <div className="w-full lg:w-1/2 flex justify-center items-center">
                     <div className="w-[80%] lg:w-full">
                       <Image
-                        src={"/images" + episode.image}
-                        alt={episode.name}
+                        src={episode.image}
+                        alt={episode.title}
                         width={1000}
                         height={1000}
                         className="w-full h-full rounded-2xl object-cover"
@@ -140,7 +131,7 @@ const EpisodeDetails = () => {
                         <Link href={`/pages/Episodes/${episode.id}`}>
                           <p className="font-light text-gray-200 hover:text-primary tracking-wider transition-all duration-200">
                             <i className="bi bi-mic text-primary"></i>
-                            {episode.name}
+                            {episode.hostName}
                           </p>
                         </Link>
                         <h2 className="text-gray-300">
@@ -218,7 +209,7 @@ const EpisodeDetails = () => {
                         >
                           <div className="">
                             <Image
-                              src={`/images${episode.image}`}
+                              src={episode.image}
                               alt={episode.title}
                               width={1000}
                               height={1000}
@@ -231,9 +222,9 @@ const EpisodeDetails = () => {
                               {episode.title}
                             </h2>
                             <h2 className="text-2xl my-2 text-primary">
-                              {episode.name}
+                              {episode.hostName}
                             </h2>
-                            <p className="text-gray-200">{episode.pere}</p>
+                            <p className="text-gray-200">{episode.desc}</p>
 
                             <div className="flex items-center gap-2 mt-2">
                               <i
@@ -388,8 +379,8 @@ const EpisodeDetails = () => {
                 <div className="flex justify-center items-center">
                   <div className="w-[200px] h-[200px] overflow-hidden rounded-full">
                     <Image
-                      src={`/images${episode.image}`}
-                      alt={episode.name}
+                      src={episode.image}
+                      alt={episode.title}
                       width={800}
                       height={800}
                       className="w-full h-full rounded-full object-cover"
@@ -398,7 +389,7 @@ const EpisodeDetails = () => {
                 </div>
                 <div className="text-center flex flex-col items-center justify-center mt-4">
                   <h3 className="text-primary">Hosted by</h3>
-                  <h2 className="text-2xl">{episode.name}</h2>
+                  <h2 className="text-2xl">{episode.hostName}</h2>
                   <h3 className="text-primary">Follow on</h3>
                   <div className="flex items-center gap-2 mt-2">
                     <i
