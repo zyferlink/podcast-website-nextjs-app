@@ -5,6 +5,7 @@ import { useParams } from "next/navigation";
 import PageHeader from "@/components/page-header/page-header";
 import SocialMediaSet2 from "@/components/social-media-buttons/social-media-set-2";
 import { BlogPosts } from "@/data/blog";
+import { TagsData } from "@/data/tags";
 import PlatformIcon5 from "../../../../../public/assets/images/platform-icon-instagram.svg";
 import PlatformIcon1 from "../../../../../public/assets/images/platform-icon-soundcloud.svg";
 import PlatformIcon2 from "../../../../../public/assets/images/platform-icon-spotify.svg";
@@ -232,7 +233,7 @@ const BlogDetails = () => {
                 </div>
               </div>
 
-              <div className="bg-[#1c1d20] p-5 rounded-2xl mt-5">
+              <div className="bg-[#1c1d20] p-5 rounded-2xl mt-3">
                 <h2 className="text-2xl text-primary font-semibold">
                   Listen On
                 </h2>
@@ -246,36 +247,20 @@ const BlogDetails = () => {
                 </div>
               </div>
 
-              <div className="bg-[#1c1d20] p-5 rounded-2xl mt-5">
-                <h2 className="text-3xl text-primary font-semibold">
+              <div className="bg-[#1c1d20] p-5 rounded-2xl mt-3">
+                <h2 className="text-2xl text-primary font-semibold">
                   Popular Tag
                 </h2>
                 <div className="border border-dashed border-primary mt-3 mb-5 opacity-30"></div>
                 <div className="flex flex-wrap items-center gap-3 mt-5">
-                  <span className="px-6 py-2 rounded-full bg-gray hover:bg-primary hover:text-black transition-all duration-300 cursor-pointer">
-                    Love Story
-                  </span>
-                  <span className="px-6 py-2 rounded-full bg-gray hover:bg-primary hover:text-black transition-all duration-300 cursor-pointer">
-                    Romantic
-                  </span>
-                  <span className="px-6 py-2 rounded-full bg-gray hover:bg-primary hover:text-black transition-all duration-300 cursor-pointer">
-                    Music
-                  </span>
-                  <span className="px-6 py-2 rounded-full bg-gray hover:bg-primary hover:text-black transition-all duration-300 cursor-pointer">
-                    Storytelling
-                  </span>
-                  <span className="px-6 py-2 rounded-full bg-gray hover:bg-primary hover:text-black transition-all duration-300 cursor-pointer">
-                    New
-                  </span>
-                  <span className="px-6 py-2 rounded-full bg-gray hover:bg-primary hover:text-black transition-all duration-300 cursor-pointer">
-                    Emotional
-                  </span>
-                  <span className="px-6 py-2 rounded-full bg-gray hover:bg-primary hover:text-black transition-all duration-300 cursor-pointer">
-                    Softhearted
-                  </span>
-                  <span className="px-6 py-2 rounded-full bg-gray hover:bg-primary hover:text-black transition-all duration-300 cursor-pointer">
-                    Melancholic
-                  </span>
+                  {TagsData.map((tag) => (
+                    <span
+                      key={tag.id}
+                      className="px-5 py-1 text-white rounded-full bg-gray hover:bg-primary hover:text-black transition-all duration-300 cursor-pointer"
+                    >
+                      {tag.label}
+                    </span>
+                  ))}
                 </div>
               </div>
             </div>
