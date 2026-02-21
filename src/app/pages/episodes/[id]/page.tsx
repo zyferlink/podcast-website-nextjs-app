@@ -3,21 +3,14 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useParams } from "next/navigation";
-import { useEffect, useState } from "react";
-import toast from "react-hot-toast";
+import { useState } from "react";
+import PageHeader from "@/components/page-header/page-header";
 import { type Episode, EpisodeData } from "@/data/episodes";
-import BrandIcon1 from "../../../../../public/images/brand-icon-1.png";
-import BrandIcon2 from "../../../../../public/images/brand-icon-2.png";
-import BrandIcon3 from "../../../../../public/images/brand-icon-3.png";
-import BrandIcon4 from "../../../../../public/images/brand-icon-4.png";
-import BrandIcon5 from "../../../../../public/images/brand-icon-5.png";
-import PageBanner1 from "../../../../../public/images/Page-banner-1.png";
-import PageBanner2 from "../../../../../public/images/Page-banner-2.png";
-import PageElement1 from "../../../../../public/images/page-elm-1.png";
-import PageElement2 from "../../../../../public/images/page-elm-2.png";
-import PageElement3 from "../../../../../public/images/page-elm-3.png";
-import PageElement4 from "../../../../../public/images/page-elm-4.png";
-import RocketIcon from "../../../../../public/images/rocket-icon.png";
+import PlatformIcon5 from "../../../../../public/assets/images/platform-icon-instagram.svg";
+import PlatformIcon1 from "../../../../../public/assets/images/platform-icon-soundcloud.svg";
+import PlatformIcon2 from "../../../../../public/assets/images/platform-icon-spotify.svg";
+import PlatformIcon3 from "../../../../../public/assets/images/platform-icon-swarm.svg";
+import PlatformIcon4 from "../../../../../public/assets/images/platform-icon-youtube.svg";
 
 const faqs = [
   {
@@ -82,27 +75,8 @@ const EpisodeDetails = () => {
 
   return (
     <>
-      {/* Page Section */}
-      <div className="page-section bg-black/98 text-white">
-        <Image src={PageElement2} alt="Element" className="elm2 elemet" />
-        <Image src={PageElement3} alt="Element" className="elm3 elemet" />
-        <Image src={PageElement4} alt="Element" className="elm4 elemet" />
-        <div className="page-content w-full md:w-1/2 flex justify-center flex-col pt-10">
-          <Image src={PageElement1} alt="Element" className="w-full h-full" />
-
-          <h1 className="text-6xl lg:text-8x1 justify-center my-6">
-            Episode <span className="text-primary">Details</span>
-          </h1>
-
-          <div className="flex items-center justify-center gap-3 cursor-pointer mt-5">
-            <Image src={BrandIcon1} alt="brand" />
-            <Image src={BrandIcon2} alt="brand" />
-            <Image src={BrandIcon3} alt="brand" />
-            <Image src={BrandIcon4} alt="brand" />
-            <Image src={BrandIcon5} alt="brand" />
-          </div>
-        </div>
-      </div>
+      {/* Page Header */}
+      <PageHeader title="Episode Details" />
 
       {/* Episode Details Wrapper */}
       <div className="dark-section px-[8%] lg:px-[16%] py-20 bg-black/98 text-white">
@@ -151,7 +125,7 @@ const EpisodeDetails = () => {
                         <h2 className="mt-3 text-2xl hover:text-primary transition-all duration-200">
                           {episode.title}
                         </h2>
-                        <p className="my-3">{episode.pere}</p>
+                        <p className="my-3">{episode.desc}</p>
                       </Link>
 
                       <div className="flex justify-between items-center gap-5">
@@ -427,11 +401,11 @@ const EpisodeDetails = () => {
                 </h2>
                 <div className="border border-dashed border-primary mt-3 mb-5 opacity-30"></div>
                 <div className="flex items-center justify-center gap-3 cursor-pointer mt-5">
-                  <Image src={BrandIcon1} alt="brand" />
-                  <Image src={BrandIcon2} alt="brand" />
-                  <Image src={BrandIcon3} alt="brand" />
-                  <Image src={BrandIcon4} alt="brand" />
-                  <Image src={BrandIcon5} alt="brand" />
+                  <Image src={PlatformIcon1} alt="brand" className="w-8" />
+                  <Image src={PlatformIcon2} alt="brand" className="w-8" />
+                  <Image src={PlatformIcon3} alt="brand" className="w-8" />
+                  <Image src={PlatformIcon4} alt="brand" className="w-8" />
+                  <Image src={PlatformIcon5} alt="brand" className="w-8" />
                 </div>
               </div>
 
