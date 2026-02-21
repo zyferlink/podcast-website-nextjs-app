@@ -2,7 +2,9 @@
 import Image from "next/image";
 import { useState } from "react";
 import Banner from "@/app/index/banner/page";
+import HeaderTitle from "@/components/header-title";
 import PageHeader from "@/components/page-header/page-header";
+import { FaqData } from "@/data/faq";
 import BrandIcon1 from "../../../../public/images/brand-icon-1.png";
 import BrandIcon2 from "../../../../public/images/brand-icon-2.png";
 import BrandIcon3 from "../../../../public/images/brand-icon-3.png";
@@ -59,16 +61,15 @@ const Faqs = () => {
       <div className="dark-section">
         <div className="px-[8%] lg:px-[16%] py-40 pt-30 pb-20">
           <div className="title flex flex-col items-center justify-center">
-            <div>
-              <h2 className="inline-block px-4 py-2 rounded-full text-primary text-2xl font-normal border border-primary">
-                <i className="bi bi-rocket-takeoff pe-4"></i>
-                FAQs
-              </h2>
-            </div>
-            <h1 className="text-5xl text-white lg:text-6xl font-semibold mt-7 mb-5">
-              Frequently Asked Questions
-            </h1>
-            <p>
+            {/* header title */}
+            <HeaderTitle
+              badgeText="FAQs"
+              badgeIcon="bi bi-rocket-takeoff"
+              title="Frequently Asked Questions"
+              className="items-center text-center leading-[1.1]"
+              titleProps="text-[3.2rem] md:text-[4rem]"
+            />
+            <p className="tracking-wider text-start text-white md:text-center pt-8 lg:w-[70%]">
               FAQs are widely used on websites, in product manuals, and in
               various instructional documents to address frequently asked
               questions by users or customers.
@@ -77,45 +78,54 @@ const Faqs = () => {
 
           {/* Faqs */}
           <div className="bg-gray p-5 rounded-2xl mt-15">
-            <div className="border border-dashed border-primary mt-3 mb-5 opacity-30"></div>
+            <div className="border border-dashed border-primary mt-3 mb-5 opacity-30" />
             {/* faq content */}
             <div className="space-y-4">
-              {faqs.map((faq, index) => {
-                const isOpen = openIndex === index;
+              {FaqData.map((faq) => {
+                const isOpen = openIndex === faq.id;
                 return (
                   <div
-                    key={index.toString()}
-                    className={` rounded-xl p-4 transition-all duration-500 ease-in-out ${isOpen ? "bg-primary text-black" : "bg-gray-light"} `}
+                    key={faq.id}
+                    className={` rounded-xl p-4 transition-all duration-500 ease-in-out 
+                        ${isOpen ? "bg-primary text-black" : "bg-gray-light"}`}
                   >
-                    <div
-                      className={`flex justify-between items-center cursor-pointer pb-3 transition-all duration-300 
-                        ${isOpen ? "border-b border-dashed border-black/40" : ""} `}
-                      onClick={() => toggleFaq(index)}
+                    {/* Question */}
+                    <button
+                      type="button"
+                      onClick={() => toggleFaq(faq.id)}
+                      className={`flex w-full justify-between items-center cursor-pointer pb-2 px-2 transition-all duration-300 
+                          ${isOpen ? "border-b border-dashed border-black/40" : ""}`}
                     >
-                      <h3 className="text-md md:text-xl font-medium">
+                      <h3
+                        className={`text-xl font-medium  ${isOpen ? "text-black" : "text-white"}`}
+                      >
                         {faq.question}
                       </h3>
+
                       {/* Icon */}
                       <span
-                        className={`w-10 h-10 flex items-center justify-center rounded-full 
-                          transition-all duration-300 ${isOpen ? "bg-black text-primary" : "bg-primary text-black"} `}
+                        className={`w-10 h-10 flex items-center justify-center 
+                            rounded-full transition-all duration-300 
+                            ${isOpen ? "bg-black text-primary" : "bg-primary text-black"} `}
                       >
                         <i
-                          className={`bi ${isOpen ? "bi-dash-lg" : "bi-plus-lg"} text-xl `}
-                        ></i>
+                          className={`bi ${isOpen ? "bi-dash-lg" : "bi-plus-lg"} pt-1 text-xl`}
+                        />
                       </span>
-                    </div>
+                    </button>
 
+                    {/* Answer */}
                     <div
-                      className={`overflow-hidden transition-all duration-500 ease-in-out ${isOpen ? "max-h-40 mt-3 opacity-100" : "max-h-0 opacity-0"} `}
+                      className={`overflow-hidden transition-all duration-300 ease-in-out 
+                          ${isOpen ? "max-h-40 mt-3 opacity-100" : "max-h-0 opacity-0"} `}
                     >
-                      <p className="text-sm">{faq.answer}</p>
+                      <p className="text-base px-2">{faq.answer}</p>
                     </div>
                   </div>
                 );
               })}
             </div>
-            <div className="border border-dashed border-primary mt-5 opacity-30"></div>
+            <div className="border border-dashed border-primary mt-5 opacity-30" />
           </div>
         </div>
       </div>
