@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import Banner from "@/app/index/banner/page";
+import HeaderTitle from "@/components/header-title";
 import PageHeader from "@/components/page-header/page-header";
 import BrandIcon1 from "../../../../public/images/brand-icon-1.png";
 import BrandIcon2 from "../../../../public/images/brand-icon-2.png";
@@ -25,103 +26,103 @@ const Contact = () => {
       {/* Page Header */}
       <PageHeader title="Contact Us" />
 
-      <div className="dark-section bg-black/98 text-white">
-        <div className="px-[8%] lg:px-[16%] py-40  pb-20">
-          <div className="title text-center">
-            <div>
-              <h2 className="inline-block px-4 py-2 rounded-full text-primary text-2xl font-normal border border-primary">
-                <i className="bi bi-rocket-takeoff pe-4"></i>
-                Get In Touch
-              </h2>
-            </div>
-            <h1 className="text-5xl text-white lg:text-6xl font-semibold mt-7 mb-5">
-              Let Us Help You
-            </h1>
-          </div>
+      <div className="dark-section">
+        <div className="px-[8%] lg:px-[16%] py-20  pb-20">
+          {/* header title */}
+          <HeaderTitle
+            badgeText="Get In Touch"
+            badgeIcon="bi bi-rocket-takeoff"
+            title="Let Us Help You"
+            className="items-center text-center leading-[1.1]"
+            titleProps="text-[3.5rem] md:text-[4.2rem]"
+          />
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mt-15">
+            {/* Main Office */}
             <div
               className="flex gap-3 bg-gray-600/30 backdrop-blur-2xl p-5 rounded-2xl group hover:bg-primary 
-              hover:text-text transition-all duration-300"
+              hover:text-dark-text transition-all duration-300"
             >
               <div
-                className="mt-3 w-15 h-15 rounded-full bg-primary group-hover:bg-text 
+                className="mt-3 w-15 h-15 rounded-full bg-primary group-hover:bg-dark-text 
                 transition-all duration-300 px-5 flex items-center justify-center"
               >
                 <i
-                  className="bi bi-geo-alt text-text group-hover:text-primary text-3xl 
+                  className="bi bi-geo-alt text-dark-text group-hover:text-primary text-3xl 
                   transition-all duration-300"
                 ></i>
               </div>
               <div>
-                <h2 className="text-4xl group-hover:text-text transition-all duration-300">
+                <h2 className="text-4xl text-white cursor-pointer group-hover:text-dark-text  transition-all duration-300">
                   Main Office
                 </h2>
-                <p className="text-gray-300 my-2 group-hover:text-text transition-all duration-300">
+                <p className="text-gray-400 my-2 group-hover:text-dark-text transition-all duration-300">
                   2972 Westheimer Rd. Santa Ana, Illinois 85486
                 </p>
 
                 <Link
                   href="/"
-                  className="text-primary border-b border-primary group-hover:border-text 
-                font-semibold group-hover:text-text transition-all duration-300"
+                  className="text-primary border-b border-primary group-hover:border-dark-text 
+                font-semibold group-hover:text-dark-text transition-all duration-300"
                 >
                   Find Location
                 </Link>
               </div>
             </div>
 
+            {/* Email Address */}
             <div
               className="flex gap-3 bg-gray-600/30 backdrop-blur-2xl p-5 rounded-2xl group hover:bg-primary 
-              hover:text-text transition-all duration-300"
+              hover:text-dark-text transition-all duration-300"
             >
               <div
-                className="mt-3 w-15 h-15 rounded-full bg-primary group-hover:bg-text 
+                className="mt-3 w-15 h-15 rounded-full bg-primary group-hover:bg-dark-text 
                 transition-all duration-300 px-5 flex items-center justify-center"
               >
                 <i
-                  className="bi bi-envelope text-text group-hover:text-primary text-3xl 
+                  className="bi bi-envelope text-dark-text group-hover:text-primary text-3xl 
                   transition-all duration-300"
                 ></i>
               </div>
-              <div>
-                <h2 className="text-4xl group-hover:text-text transition-all duration-300">
+              <div className="flex flex-col justify-between">
+                <h2 className="text-4xl text-white cursor-pointer group-hover:text-dark-text transition-all duration-300">
                   Email Address
                 </h2>
-                <p className="text-gray-300 my-2 group-hover:text-text transition-all duration-300">
-                  info@gmail.com
+                <p className="text-gray-300 my-2 group-hover:text-dark-text transition-all duration-300">
+                  info@example.com
                   <br />
-                  website.info@gmail.com
+                  support@example.com
                 </p>
 
                 <Link
                   href="/"
-                  className="text-primary border-b border-primary group-hover:border-text 
-                font-semibold group-hover:text-text transition-all duration-300"
+                  className="flex w-fit font-normal text-primary border-b border-primary group-hover:border-dark-text 
+                   group-hover:text-dark-text transition-all duration-300"
                 >
                   Get In Touch
                 </Link>
               </div>
             </div>
 
+            {/* Phone Number */}
             <div
               className="flex gap-3 bg-gray-600/30 backdrop-blur-2xl p-5 rounded-2xl group hover:bg-primary 
-              hover:text-text transition-all duration-300"
+              hover:text-dark-text transition-all duration-300"
             >
               <div
-                className="mt-3 w-15 h-15 rounded-full bg-primary group-hover:bg-text 
+                className="mt-3 w-15 h-15 rounded-full bg-primary group-hover:bg-dark-text 
                 transition-all duration-300 px-5 flex items-center justify-center"
               >
                 <i
-                  className="bi bi-telephone-inbound text-text group-hover:text-primary text-3xl 
+                  className="bi bi-telephone-inbound text-dark-text group-hover:text-primary text-3xl 
                   transition-all duration-300"
                 ></i>
               </div>
               <div>
-                <h2 className="text-4xl group-hover:text-text transition-all duration-300">
+                <h2 className="text-4xl text-white cursor-pointer group-hover:text-dark-text transition-all duration-300">
                   Phone Number
                 </h2>
-                <p className="text-gray-300 my-2 group-hover:text-text transition-all duration-300">
+                <p className="text-gray-300 my-2 group-hover:text-dark-text transition-all duration-300">
                   +91 123 456 7890
                   <br />
                   +91 321 846 8975
@@ -129,8 +130,8 @@ const Contact = () => {
 
                 <Link
                   href="/"
-                  className="text-primary border-b border-primary group-hover:border-text 
-                font-semibold group-hover:text-text transition-all duration-300"
+                  className="text-primary border-b border-primary group-hover:border-dark-text 
+                font-semibold group-hover:text-dark-text transition-all duration-300"
                 >
                   Contact Us Today!
                 </Link>
