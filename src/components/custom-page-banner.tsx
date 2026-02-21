@@ -4,9 +4,13 @@ import PageBanner1 from "../../public/assets/images/page-banner-1.png";
 import PageBanner2 from "../../public/assets/images/page-banner-2.png";
 import { StyledButtonPrimary } from "./buttons/styled-button-primary";
 
-const PageBannerCustom = () => {
+interface PageBannerProps {
+  mainProps?: string;
+}
+
+const CustomPageBanner: React.FC<PageBannerProps> = ({ mainProps = "" }) => {
   return (
-    <div className="px-[8%] lg:px-[10%] py-20">
+    <div className={`px-[8%] lg:px-[10%] py-20 ${mainProps}`}>
       <div className="page-banner p-15 flex flex-col justify-center items-center text-center rounded-2xl relative">
         <Image
           src={PageBanner1}
@@ -47,4 +51,4 @@ const PageBannerCustom = () => {
   );
 };
 
-export default PageBannerCustom;
+export default CustomPageBanner;
