@@ -18,6 +18,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRef, useState } from "react";
 import toast from "react-hot-toast";
+import PageHeader from "@/components/page-header/page-header";
+import { HostProfileData } from "@/data/host-profiles";
 import BrandIcon1 from "../../../../public/images/brand-icon-1.png";
 import BrandIcon2 from "../../../../public/images/brand-icon-2.png";
 import BrandIcon3 from "../../../../public/images/brand-icon-3.png";
@@ -98,39 +100,20 @@ const HostProfilesData = [
 const HostProfile = () => {
   return (
     <>
-      {/* Page Section */}
-      <div className="page-section bg-black/98 text-white">
-        <Image src={PageElement2} alt="Element" className="elm2 elemet" />
-        <Image src={PageElement3} alt="Element" className="elm3 elemet" />
-        <Image src={PageElement4} alt="Element" className="elm4 elemet" />
-        <div className="page-content w-full md:w-1/2 flex justify-center flex-col pt-10">
-          <Image src={PageElement1} alt="Element" className="w-full h-full" />
-
-          <h1 className="text-6xl lg:text-8xl justify-center my-6">
-            Host <span className="text-primary">Profile</span>
-          </h1>
-
-          <div className="flex items-center justify-center gap-3 cursor-pointer mt-5">
-            <Image src={BrandIcon1} alt="brand" />
-            <Image src={BrandIcon2} alt="brand" />
-            <Image src={BrandIcon3} alt="brand" />
-            <Image src={BrandIcon4} alt="brand" />
-            <Image src={BrandIcon5} alt="brand" />
-          </div>
-        </div>
-      </div>
+      {/* Page Header */}
+      <PageHeader title="Host Profiles" />
 
       <div className="dark-section pt-20 bg-black/98 text-white">
         <div className="mt-0 md:mt-10 px-[8%] lg:px-[16%] lg:pb-30 pb-10">
           <div>
             <div>
-              <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6">
-                {HostProfilesData.map((host, index) => (
-                  <div key={index.toString()} className={`host-card relative`}>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {HostProfileData.map((host) => (
+                  <div key={host.id} className={`host-card relative`}>
                     <div className="host-img-wrap">
                       <div className="host-img overflow-auto rounded-2xl">
                         <Image
-                          src={host.img}
+                          src={host.image}
                           alt={host.name}
                           width={1000}
                           height={1000}
