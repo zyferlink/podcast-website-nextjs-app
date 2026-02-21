@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import CustomPageBanner from "@/components/custom-page-banner";
 import PageHeader from "@/components/page-header/page-header";
-import BlogsData from "../../../data/BlogsData.json";
+import { BlogPosts } from "@/data/blog";
 
 const Blog = () => {
   return (
@@ -12,18 +12,18 @@ const Blog = () => {
       {/* Page Header */}
       <PageHeader title="Our Recent Articles" />
 
-      <div className="px-[8%] lg:px-[16%] py-30 pb-20 bg-black/98 text-white">
+      <div className="px-[8%] lg:px-[16%] py-20 pb-20 dark-section">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-          {BlogsData.map((blog, index) => (
+          {BlogPosts.map((blog) => (
             <Link
               href={`/pages/blogs/${blog.id}`}
-              key={index.toString()}
+              key={blog.id}
               className="flex flex-col md:flex-row items-center gap-10"
             >
               <div className="bg-gray-light w-full p-5 rounded-2xl">
                 <div className="blog-img">
                   <Image
-                    src={`/images${blog.image}`}
+                    src={blog.image}
                     alt={blog.title}
                     width={500}
                     height={500}
