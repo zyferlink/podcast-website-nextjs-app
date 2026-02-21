@@ -63,194 +63,7 @@ body {
   font-family: var(--font-zain);
 }
 
-/* Nav bar*/
-.btn {
-  border: 2px solid var(--color-primary-light);
-  padding: 5px 25px;
-  padding-bottom: 6px;
-  border-radius: 50px;
-  font-size: 20px;
-  font-weight: 600;
-  display: flex;
-  align-items: center;
-  overflow: hidden;
-  gap: 15px;
-  position: relative;
-  z-index: 1;
-  transition: var(--transition-slow);
-  cursor: pointer;
-}
-
-.btn:hover {
-  color: var(--color-white);
-  border-color: var(--color-white);
-}
-
-.btn:hover i {
-  transform: rotate(-180deg) !important;
-}
-
-.btn i {
-  background-color: var(--color-primary-light);
-  color: var(--color-black);
-  border-radius: 100%;
-  width: 30px;
-  height: 30px;
-  font-weight: bold;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: var(--transition-slow);
-}
-
-.btn1 {
-  color: var(--color-white);
-  text-shadow: #000000;
-}
-
-.btn1:after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  border-radius: 50px;
-  width: 0;
-  height: 0;
-  background: var(--color-secondary);
-  transition: var(--transition-slow);
-  z-index: -1;
-}
-
-.btn1:hover:after {
-  width: 100%;
-  height: 100%;
-  right: auto;
-  left: 0;
-  bottom: auto;
-  top: 0;
-}
-
-.btn2 {
-  background-color: var(--color-primary);
-  color: var(--color-black);
-}
-
-.btn2 i {
-  background-color: var(--color-black);
-  color: var(--color-primary);
-}
-
-.btn2:after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  border-radius: 50px;
-  width: 0;
-  height: 0;
-  background: var(--color-secondary);
-  transition: var(--transition-slow);
-  z-index: -1;
-}
-
-.btn2:hover:after {
-  width: 100%;
-  height: 100%;
-  top: auto;
-  bottom: 0;
-  right: 0;
-  left: auto;
-}
-
-/* Nav MQ Section */
-
-@media (max-width: 991px) {
-  .hero {
-    height: 100%;
-    padding-bottom: 0;
-  }
-
-  .hero-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding-bottom: 5%;
-  }
-
-  .hero-img {
-    position: relative;
-    top: 0;
-    left: 20%;
-  }
-
-  .rounded-text {
-    left: 28%;
-  }
-
-  .sun-shape img:nth-child(2) {
-    top: 14%;
-    left: 82%;
-  }
-
-  .sun-shape img:nth-child(3) {
-    top: 70%;
-    left: 82%;
-  }
-}
-
-@media (max-width: 600px) {
-  .hero-img {
-    left: 5%;
-  }
-
-  .rounded-text {
-    left: 50%;
-  }
-}
-
-@media (max-width: 575px) {
-}
-
-/* Hero Header */
-
-.hero {
-  width: 100%;
-  height: 90vh;
-  background: url(../../public/images/texture-bg-1.png), rgb(38, 38, 41);
-  background-repeat: no-repeat;
-  position: relative;
-  display: flex;
-  align-items: center;
-  padding-bottom: 3%;
-  overflow: hidden !important;
-  z-index: 1;
-}
-
-.hero:after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url(../../public/images/vector-line.png);
-  background-repeat: no-repeat;
-  z-index: -1;
-}
-
-.hero-btn button {
-  font-weight: 400;
-}
-
-.hero-img {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  z-index: 0;
-  animation: anim-small-translate 5s infinite ease-in-out;
-}
+/* Custom animations - START */
 
 @keyframes anim-small-translate {
   0% {
@@ -269,6 +82,49 @@ body {
     transform: translate(0px, 0px);
   }
 }
+
+@keyframes anim-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+@keyframes anim-wave-scroll {
+  from {
+    background-position: 0 0;
+  }
+
+  to {
+    background-position: -1000px 0;
+  }
+}
+
+@keyframes fade-right {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes fade-left {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+/* Custom animations - END */
 
 /* Rotating sparkling elements */
 
@@ -295,54 +151,8 @@ body {
   left: 90%;
 }
 
-@keyframes anim-spin {
-  to {
-    transform: rotate(360deg);
-  }
-}
 
-.rounded-text {
-  position: absolute;
-  top: 48%;
-  left: 12%;
-  transform: translate(-50%, -50%);
-  width: 200px;
-  height: 200px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.rounded-text img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  animation: Anim-rotate 5s infinite forwards linear;
-}
-
-.rounded-text i {
-  background-color: var(--color-primary);
-  color: var(--color-black);
-  width: 60px;
-  height: 60px;
-  border-radius: 100%;
-  font-size: 2.5rem;
-  position: absolute;
-  top: 75%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: var(--transition-regular);
-}
-
-.rounded-text i:hover {
-  transform: translate(-50%, -50%) scale(1.2);
-  cursor: pointer;
-}
-
-/* Featured Shows Section */
+/* Sections */
 
 .dark-section,
 .light-section {
@@ -351,62 +161,12 @@ body {
 }
 
 .dark-section {
-  background: var(--color-dark) url(../../public/images/texture-bg-1.png) no-repeat center/cover;
+  background: var(--color-dark) url(../../public/assets/images/texture-bg-1.png) no-repeat center/cover;
 }
 
 .light-section {
-  background: var(--color-matte-black) url(../../public/images/texture-bg-1.png) no-repeat center/cover;
+  background: var(--color-matte-black) url(../../public/assets/images/texture-bg-1.png) no-repeat center/cover;
 }
-
-
-
-/* Episode Banner */
-
-.music-waves {
-  width: 260px;
-  height: 30px;
-  background-image: url(../../public/images/music-waves.png);
-  background-repeat: repeat-x;
-  background-size: auto 100%;
-  animation: anim-wave-scroll 50s linear infinite;
-}
-
-@keyframes anim-wave-scroll {
-  from {
-    background-position: 0 0;
-  }
-
-  to {
-    background-position: -1000px 0;
-  }
-}
-
-.music-waves2 {
-  width: 180px;
-  height: 30px;
-  background-image: url(../../public/images/music-waves2.png);
-  background-repeat: repeat-x;
-  background-size: auto 100%;
-  animation: anim-wave-scroll 50s linear infinite;
-}
-
-/* Recent Episode MQ Section */
-
-@media (max-width: 991px) {
-  .music-waves,
-  .music-waves2 {
-    width: 450px;
-  }
-}
-
-@media (max-width: 600px) {
-  .music-waves,
-  .music-waves2 {
-    width: 150px;
-  }
-}
-
-/* Host Profiles Section */
 
 .wave-wrapper-section,
 .wave-wrapper-section2 {
@@ -421,7 +181,7 @@ body {
   left: 0;
   width: 100%;
   height: 130px;
-  background: url(../../public/images/Wave-pattern.png);
+  background: url(../../public/assets/images/wave-pattern.png);
   background-repeat: no-repeat;
 }
 
@@ -431,36 +191,18 @@ body {
   height: 150px;
 }
 
-.host-wrapper-swiper {
-  padding: 55px 0 !important;
-}
-
-.offset-card {
-  transform: translateY(-50px);
-}
-
-.host-info {
-  position: relative;
-}
-
-.host-info:after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 0;
-  transform: translate(-50%, -50%);
-  width: 2px;
-  height: 70%;
-  background-color: var(--color-primary);
-}
-
-/* Host Profiles MQ Section */
-
-@media (max-width: 600px) {
-  .offset-card {
-    transform: translateY(0px);
+@media (max-width: 991px) {
+  .wave-wrapper-section2:after {
+    top: -16% !important;
   }
 }
+
+@media (max-width: 600px) {
+  .wave-wrapper-section2:after {
+    top: -10% !important;
+  }
+}
+
 
 /* Testimonials Section*/
 
@@ -494,121 +236,13 @@ body {
   animation: fade-right 1s 1.5s forwards linear;
 }
 
-@keyframes fade-right {
-  0% {
-    transform: translateX(100%);
-    opacity: 0;
-  }
 
-  100% {
-    transform: translateX(0%);
-    opacity: 1;
-  }
-}
-
-@keyframes fade-left {
-  0% {
-    transform: translateX(-100%);
-    opacity: 0;
-  }
-
-  100% {
-    transform: translateX(0%);
-    opacity: 1;
-  }
-}
-
-/* Testimonial MQ Section */
-
-@media (max-width: 991px) {
-  .wave-wrapper-section2:after {
-    top: -16% !important;
-  }
-}
-
-@media (max-width: 600px) {
-  .wave-wrapper-section2:after {
-    top: -10% !important;
-  }
-}
-
-/* Banner Section */
-
-.banner-img {
-  position: relative;
-}
-
-.banner-img:after {
-  content: "";
-  position: absolute;
-  top: 5%;
-  right: -10%;
-  width: 550px;
-  height: 60px;
-  background-image: url(../../public/images/music-waves.png);
-  background-repeat: repeat-x;
-  background-size: auto 100%;
-  animation: anim-wave-scroll 50s linear infinite;
-}
-
-.banner-img:before {
-  content: "";
-  position: absolute;
-  bottom: 5%;
-  left: 0;
-  width: 350px;
-  height: 60px;
-  background-image: url(../../public/images/music-waves.png);
-  background-repeat: repeat-x;
-  background-size: auto 100%;
-  animation: anim-wave-scroll 50s linear infinite;
-}
-
-/* Footer Section */
-
-.footer-waves .music-waves2 {
-  width: 350px;
-  height: 40px;
-}
-
-.footer-col {
-  position: relative;
-}
-
-.footer-col:after {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 25%;
-  width: 1px;
-  height: 100%;
-  background-color: rgba(255, 179, 64, 0.3);
-}
-
-/* Footer MQ Section */
-
-@media (max-width: 600px) {
-  .footer-waves .music-waves2 {
-    width: 500px;
-  }
-
-  .footer-col::after {
-    right: 0;
-  }
-}
-
-@media (max-width: 575px) {
-  .footer-waves .music-waves2 {
-    width: 80vw;
-  }
-}
-
-/* Episode Listing Section */
+/* Banner Page Section */
 
 .page-section {
   width: 100%;
   height: 60vh;
-  background: url(../../public/images/texture-bg-1.png), rgb(38, 38, 41);
+  background: url(../../public/assets/images/texture-bg-1.png), rgb(23, 23, 23);
   background-repeat: no-repeat;
   position: relative;
   display: flex;
@@ -627,97 +261,19 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url(../../public/images/vector-line.png);
+  background-image: url(../../public/assets/images/vector-line.png);
   background-position: 85% center;
   background-repeat: no-repeat;
   z-index: -1;
 }
 
-.elemet {
-  position: absolute;
-  top: 0;
-  left: 0;
-  animation: anim-spin 5s infinite forwards linear;
-}
-
-.elm2 {
-  top: 10%;
-  left: 5%;
-  animation-delay: 0.3s;
-}
-
-.elm3 {
-  top: 65%;
-  left: 85%;
-  animation-delay: 0.5s;
-}
-
-.elm4 {
-  top: 50%;
-  left: 10%;
-  animation-delay: 0.7s;
-}
-
-.episode-search {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 5;
-  width: 70%;
-}
-
 .page-banner {
-  background: url(../../public/images/Page-banner-bg.png), var(--color-primary);
+  background: url(../../public/assets/images/page-banner-bg.png), var(--color-primary);
   background-repeat: no-repeat;
   background-position: bottom center;
   overflow: hidden;
 }
 
-.page-banner .music-waves {
-  width: 500px;
-  height: 80px;
-}
-
-.page-banner .btn2 {
-  background-color: var(--color-text);
-  color: var(--color-white);
-}
-
-.page-banner .btn2 i {
-  background-color: var(--color-primary);
-  color: var(--color-white);
-}
-
-/* Episode Listing MQ Section */
-
-@media (max-width: 991px) {
-  .elm2 {
-    top: 15%;
-  }
-
-  .episode-search {
-    width: 85%;
-  }
-}
-
-@media (max-width: 600px) {
-  .elm2 {
-    width: 100px;
-    height: 100px;
-  }
-  .elm3 {
-    left: 80%;
-    width: 100px;
-    height: 100px;
-  }
-  .episode-search {
-    width: 90%;
-  }
-  .episode-search input {
-    width: 70%;
-  }
-}
 
 /* About Page Section */
 

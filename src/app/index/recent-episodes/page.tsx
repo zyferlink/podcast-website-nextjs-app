@@ -123,7 +123,7 @@ const RecentEpisodes = () => {
                     <i className="bi bi-balloon-heart me-3 text-gray-300 text-xl"></i>
                     <div
                       className="w-20 md:w-30 h-7.5 bg-[url('/assets/images/music-waves-2.png')] 
-                  bg-repeat-x bg-size-[auto_100%] animate-[anim-wave-scroll_50s_linear_infinite]"
+                      bg-repeat-x bg-size-[auto_100%] animate-[anim-wave-scroll_50s_linear_infinite]"
                     />
                   </div>
                 </div>

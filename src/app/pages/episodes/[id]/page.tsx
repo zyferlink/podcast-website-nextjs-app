@@ -18,6 +18,17 @@ import PlatformIcon4 from "../../../../../public/assets/images/platform-icon-you
 const EpisodeDetails = () => {
   const { id } = useParams();
 
+  const randomEpisodes = [...EpisodeData]
+    .sort(() => Math.random() - 0.5)
+    .slice(0, 2);
+
+  // Faq's
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
+
+  const toggleFaq = (index: number) => {
+    setOpenIndex(openIndex === index ? null : index);
+  };
+
   const episode = EpisodeData.find((ep) => ep.id === Number(id)) as
     | Episode
     | undefined;
@@ -36,17 +47,6 @@ const EpisodeDetails = () => {
       </div>
     );
   }
-
-  const randomEpisodes = [...EpisodeData]
-    .sort(() => Math.random() - 0.5)
-    .slice(0, 2);
-
-  // Faq's
-  const [openIndex, setOpenIndex] = useState<number | null>(null);
-
-  const toggleFaq = (index: number) => {
-    setOpenIndex(openIndex === index ? null : index);
-  };
 
   return (
     <>
@@ -240,18 +240,11 @@ const EpisodeDetails = () => {
                         ${isOpen ? "bg-primary text-black" : "bg-gray-light"}`}
                     >
                       {/* Question */}
-                      <div
-                        role="group"
-                        className={`flex justify-between items-center cursor-pointer 
-                          pb-3 transition-all duration-300 
-                          ${isOpen ? "border-b border-dashed border-black/40" : ""}`}
+                      <button
+                        type="button"
                         onClick={() => toggleFaq(faq.id)}
-                        onKeyDown={(e) => {
-                          if (e.key === "Enter" || e.key === " ") {
-                            e.preventDefault();
-                            toggleFaq(faq.id);
-                          }
-                        }}
+                        className={`flex w-full justify-between items-center cursor-pointer pb-2 transition-all duration-300 
+                          ${isOpen ? "border-b border-dashed border-black/40" : ""}`}
                       >
                         <h3
                           className={`text-xl font-medium  ${isOpen ? "text-black" : "text-white"}`}
@@ -269,7 +262,7 @@ const EpisodeDetails = () => {
                             className={`bi ${isOpen ? "bi-dash-lg" : "bi-plus-lg"} pt-1 text-xl`}
                           />
                         </span>
-                      </div>
+                      </button>
 
                       {/* Answer */}
                       <div

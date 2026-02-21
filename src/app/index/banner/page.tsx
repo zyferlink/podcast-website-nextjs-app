@@ -1,8 +1,10 @@
 "use client";
 
+import clsx from "clsx";
 import Image from "next/image";
 import { FaArrowRight } from "react-icons/fa6";
 import { StyledButtonPrimary } from "@/components/buttons/styled-button-primary";
+import { cn } from "@/lib/utils";
 import BannerMicImage from "../../../../public/assets/images/banner-mic.png";
 
 const Banner = () => {
@@ -26,20 +28,28 @@ const Banner = () => {
                     className="text-white placeholder:text-gray-300 px-3 py-2 outline-none"
                   />
                 </div>
-                <div className="sub-btn">
-                  <StyledButtonPrimary
-                    onClick={() => {}}
-                    className="tracking-wide"
-                    icon={<FaArrowRight size={12} />}
-                  >
-                    Subscribe
-                  </StyledButtonPrimary>
-                </div>
+                <StyledButtonPrimary
+                  onClick={() => {}}
+                  className="tracking-wide"
+                  icon={<FaArrowRight size={12} />}
+                >
+                  Subscribe
+                </StyledButtonPrimary>
               </div>
             </div>
 
             <div className="w-full lg:w-1/2">
-              <div className="banner-img">
+              <div
+                className={cn(
+                  "relative",
+                  `after:content-[''] after:absolute after:top-[5%] after:-right-[10%] 
+                  after:w-137 after:h-15 after:bg-[url('../../public/assets/images/music-waves-1.png')] 
+                  after:bg-repeat-x after:bg-size-[auto_100%] after:animate-[anim-wave-scroll_50s_linear_infinite]`,
+                  `before:content-[''] before:absolute before:bottom-[5%] before:left-0 before:w-87 before:h-15 
+                  before:bg-[url('../../public/assets/images/music-waves-1.png')] before:bg-repeat-x 
+                  before:bg-size-[auto_100%] before:animate-[anim-wave-scroll_50s_linear_infinite]`,
+                )}
+              >
                 <Image
                   src={BannerMicImage}
                   alt="bannerImg"
