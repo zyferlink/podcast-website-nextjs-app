@@ -3,7 +3,6 @@ import { FaArrowRight } from "react-icons/fa6";
 import PageBanner1 from "../../public/assets/images/page-banner-1.png";
 import PageBanner2 from "../../public/assets/images/page-banner-2.png";
 import { StyledButtonPrimary } from "./buttons/styled-button-primary";
-import { StyledButtonSecondary } from "./buttons/styled-button-secondary";
 
 const PageBannerCustom = () => {
   return (
