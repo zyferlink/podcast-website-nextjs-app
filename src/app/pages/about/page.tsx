@@ -25,7 +25,7 @@ const About = () => {
       <PageHeader title="About VoiceFlow" />
 
       {/* Experience */}
-      <div className="dark-section pb-20">
+      <div className="dark-section pb-14">
         <div className="px-[8%] lg:px-[16%] py-20">
           <div className="flex flex-col lg:flex-row justify-between items-center gap-20">
             <div className="w-full lg:w-1/2">
@@ -97,17 +97,21 @@ const About = () => {
                   alt="Experience1"
                   className="exp-img hidden md:block rounded-2xl"
                 />
-
                 <Image
                   src={ExperienceBannerArrow1}
                   alt="arrow1"
                   className="exp-arrow1"
                 />
+                <Image
+                  src={ExperienceBannerArrow2}
+                  alt="arrow1"
+                  className="exp-arrow2"
+                />
 
                 <div className="absolute bottom-0 right-35 lg:right-0 bg-[#0de27c] p-5 rounded-2xl">
-                  <div className="flex items-center justify-center gap-5 text-text">
+                  <div className="flex items-center justify-center gap-5 text-dark-text">
                     <h2 className="text-6xl font-semibold">
-                      <CountUp start={0} end={17} duration={5} />
+                      <CountUp start={0} end={11} duration={5} />
                     </h2>
                     <p className="text-xl w-1/2">Years of experience</p>
                   </div>
@@ -120,37 +124,38 @@ const About = () => {
 
       {/* Why Choose Us */}
       <div className="light-section">
-        <div className="px-[8%] lg:px-[16%] py-30 pb-50">
+        <div className="px-[8%] lg:px-[16%] py-24 pb-50">
           <div className="flex flex-col lg:flex-row justify-between items-center gap-20">
             <div className="w-full lg:w-1/2">
-              <div className="WhyChooseUs-img flex items-end gap-5">
+              {/* why choose us image section */}
+              <div className="relative animate-[anim-small-translate_5s_ease-in-out_infinite] flex items-end gap-5 overflow-hidden">
                 <Image
                   src={WhyChooseUsImage1}
-                  alt="WhyChooseImg"
-                  className="w-full h-fit border-t-2 border-primary pt-5"
+                  alt="WhyChooseUsImg"
+                  className="w-full h-fit border-t-2 border-purple-600 pt-3"
                 />
                 <Image
                   src={WhyChooseUsImage2}
-                  alt="WhyChooseImg"
+                  alt="WhyChooseUsImg"
                   className="w-full h-fit"
                 />
-                <Image src={WhyChooseUsImage3} alt="WhyChooseImg" />
+                <Image
+                  src={WhyChooseUsImage3}
+                  alt="WhyChooseUsImg"
+                  className="absolute bottom-0 -right-[10%] w-50 h-50 object-contain lg:right-[20%]"
+                />
               </div>
             </div>
 
             <div className="w-full lg:w-1/2 text-white">
               <div className="content">
-                <div className="title flex flex-col gap-2">
-                  <div>
-                    <h2 className="inline-block px-4 py-2 rounded-full text-primary text-2xl font-normal border border-primary">
-                      <i className="bi bi-rocket-takeoff pe-4"></i>
-                      Why Choose Us
-                    </h2>
-                  </div>
-                  <h1 className="text-5xl md:text-6xl font-semibold mt-7 mb-5">
-                    What Makes Us Different From Other
-                  </h1>
-                </div>
+                <HeaderTitle
+                  badgeText="Why Choose Us"
+                  badgeIcon="bi bi-rocket-takeoff"
+                  title="What Makes Us Different From Other"
+                  className="leading-[1.1]"
+                  titleProps="text-[3rem] md:text-[3.8rem]"
+                />
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-5 my-5 border-b border-dashed border-primary-light pb-6 pt-5">
                   <h2 className="text-lg flex items-center gap-2">
