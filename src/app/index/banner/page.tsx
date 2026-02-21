@@ -1,6 +1,5 @@
 "use client";
 
-import clsx from "clsx";
 import Image from "next/image";
 import { FaArrowRight } from "react-icons/fa6";
 import { StyledButtonPrimary } from "@/components/buttons/styled-button-primary";
