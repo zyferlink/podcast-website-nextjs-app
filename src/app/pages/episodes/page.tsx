@@ -4,8 +4,8 @@ import { useState } from "react";
 import toast from "react-hot-toast";
 import { FaArrowRight } from "react-icons/fa6";
 import { StyledButtonSecondary } from "@/components/buttons/styled-button-secondary";
+import CustomPageBanner from "@/components/custom-page-banner";
 import EpisodeCard from "@/components/episode-card";
-import PageBannerCustom from "@/components/page-banner-custom";
 import PageHeader from "@/components/page-header/page-header";
 import { type Episode, EpisodeData } from "@/data/episodes";
 
@@ -160,7 +160,8 @@ const Episodes = () => {
           )}
         </div>
 
-        <PageBannerCustom />
+        {/* Custom Page Banner */}
+        <CustomPageBanner />
       </div>
     </>
   );
