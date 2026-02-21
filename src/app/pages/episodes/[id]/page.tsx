@@ -79,12 +79,12 @@ const EpisodeDetails = () => {
       <PageHeader title="Episode Details" />
 
       {/* Episode Details Wrapper */}
-      <div className="dark-section px-[8%] lg:px-[16%] py-20 bg-black/98 text-white">
+      <div className="dark-section px-[8%] lg:px-[12%] 2xl:px-[16%] py-20 bg-black/98 text-white">
         <div className="flex flex-col lg:flex-row justify-baseline gap-5">
           <div className="w-full lg:w-1/1">
             <div className="flex flex-col">
               {/* Episode Details */}
-              <div className="bg-gray p-5 rounded-2xl">
+              <div className="bg-gray p-3 rounded-2xl">
                 {/* Episode Card */}
                 <div className="flex w-full flex-col md:flex-row justify-between bg-gray-light rounded-lg p-4 overflow-hidden">
                   <div className="w-full lg:w-1/2 flex justify-center items-center">
@@ -102,23 +102,21 @@ const EpisodeDetails = () => {
                   <div className="w-full lg:w-1/1">
                     <div className="p-5">
                       <div className="flex flex-row flex-wrap justify-between items-center">
-                        <Link href={`/pages/Episodes/${episode.id}`}>
+                        <Link href={`/pages/episodes/${episode.id}`}>
                           <p className="font-light text-gray-200 hover:text-primary tracking-wider transition-all duration-200">
-                            <i className="bi bi-mic text-primary"></i>
+                            <i className="bi bi-mic text-primary" />{" "}
                             {episode.hostName}
                           </p>
                         </Link>
+
                         <h2 className="text-gray-300">
-                          <i className="bi bi-clock pe-1 text-primary"></i>
-                          4hr 12min
+                          <i className="bi bi-clock pe-1 text-primary" />{" "}
+                          {episode.duration}
                         </h2>
 
-                        <i
-                          onClick={() => removeFavorite(episode.id)}
-                          className="bi bi-x-circle text-primary text-xl cursor-pointer 
-                        transition-all duration-200"
-                          title="Remove Ifrom Favorite"
-                        ></i>
+                        <span className="bg-gray px-4 py-2 rounded-full text-sm text-primary font-semibold tracking-wide">
+                          {episode.episode}
+                        </span>
                       </div>
 
                       <Link href={`/pages/Episodes/${episode.id}`}>
@@ -141,10 +139,6 @@ const EpisodeDetails = () => {
                             Listen Now
                           </h2>
                         </Link>
-
-                        <span className="bg-gray px-5 py-3 rounded-full text-sm text-primary font-semibold tracking-wide">
-                          {episode.episode}
-                        </span>
                       </div>
                     </div>
                   </div>
