@@ -2,6 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useParams } from "next/navigation";
+import PageHeader from "@/components/page-header/page-header";
 import BrandIcon1 from "../../../../../public/images/brand-icon-1.png";
 import BrandIcon2 from "../../../../../public/images/brand-icon-2.png";
 import BrandIcon3 from "../../../../../public/images/brand-icon-3.png";
@@ -34,27 +35,8 @@ const BlogDetails = () => {
 
   return (
     <>
-      {/* Page Section */}
-      <div className="page-section bg-black/98 text-white">
-        <Image src={PageElement2} alt="Element" className="elm2 elemet" />
-        <Image src={PageElement3} alt="Element" className="elm3 elemet" />
-        <Image src={PageElement4} alt="Element" className="elm4 elemet" />
-        <div className="page-content w-full md:w-1/2 flex justify-center flex-col pt-10">
-          <Image src={PageElement1} alt="Element" className="w-full h-full" />
-
-          <h1 className="text-6xl lg:text-8xl justify-center my-6">
-            Blog <span className="text-primary">Details</span>
-          </h1>
-
-          <div className="flex items-center justify-center gap-3 cursor-pointer mt-5">
-            <Image src={BrandIcon1} alt="brand" />
-            <Image src={BrandIcon2} alt="brand" />
-            <Image src={BrandIcon3} alt="brand" />
-            <Image src={BrandIcon4} alt="brand" />
-            <Image src={BrandIcon5} alt="brand" />
-          </div>
-        </div>
-      </div>
+      {/* Page Header */}
+      <PageHeader title="Blog Details" />
 
       {/* Blog Details Wrapper */}
       <div className="dark-section px-[8%] lg:px-[16%] py-20 bg-black/98 text-white">
