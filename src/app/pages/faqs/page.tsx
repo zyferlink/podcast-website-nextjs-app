@@ -2,6 +2,7 @@
 import Image from "next/image";
 import { useState } from "react";
 import Banner from "@/app/index/banner/page";
+import PageHeader from "@/components/page-header/page-header";
 import BrandIcon1 from "../../../../public/images/brand-icon-1.png";
 import BrandIcon2 from "../../../../public/images/brand-icon-2.png";
 import BrandIcon3 from "../../../../public/images/brand-icon-3.png";
@@ -52,29 +53,10 @@ const Faqs = () => {
 
   return (
     <>
-      {/* Page Section */}
-      <div className="page-section bg-black/98 text-white">
-        <Image src={PageElement2} alt="Element" className="elm2 elemet" />
-        <Image src={PageElement3} alt="Element" className="elm3 elemet" />
-        <Image src={PageElement4} alt="Element" className="elm4 elemet" />
-        <div className="page-content w-full md:w-1/2 flex justify-center flex-col pt-10">
-          <Image src={PageElement1} alt="Element" className="w-full h-full" />
+      {/* Page Header */}
+      <PageHeader title="FAQs" />
 
-          <h1 className="text-6xl lg:text-8xl justify-center my-6">
-            FAQ<span className="text-primary">s</span>
-          </h1>
-
-          <div className="flex items-center justify-center gap-3 cursor-pointer mt-5">
-            <Image src={BrandIcon1} alt="brand" />
-            <Image src={BrandIcon2} alt="brand" />
-            <Image src={BrandIcon3} alt="brand" />
-            <Image src={BrandIcon4} alt="brand" />
-            <Image src={BrandIcon5} alt="brand" />
-          </div>
-        </div>
-      </div>
-
-      <div className="dark-section bg-black/98 text-white">
+      <div className="dark-section">
         <div className="px-[8%] lg:px-[16%] py-40 pt-30 pb-20">
           <div className="title flex flex-col items-center justify-center">
             <div>
