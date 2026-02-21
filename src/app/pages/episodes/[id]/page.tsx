@@ -245,33 +245,7 @@ const EpisodeDetails = () => {
                   <h2 className="text-primary text-2xl">
                     Follow <i className="bi bi-chevron-double-right" />
                   </h2>
-                  <div className="flex items-center gap-2 ">
-                    <i
-                      className="bi bi-instagram w-10 h-10 text-primary rounded-full flex items-center 
-                                justify-center border border-primary hover:bg-primary hover:text-black text-xl transition-all 
-                                duration-300 cursor-pointer"
-                    ></i>
-                    <i
-                      className="bi bi-github w-10 h-10 text-primary rounded-full flex items-center 
-                                justify-center border border-primary hover:bg-primary hover:text-black text-xl transition-all 
-                                duration-300 cursor-pointer"
-                    ></i>
-                    <i
-                      className="bi bi-twitter w-10 h-10 text-primary rounded-full flex items-center 
-                                justify-center border border-primary hover:bg-primary hover:text-black text-xl transition-all 
-                                duration-300 cursor-pointer"
-                    ></i>
-                    <i
-                      className="ri-youtube-line w-10 h-10 text-primary rounded-full flex items-center 
-                                justify-center border border-primary hover:bg-primary hover:text-black text-xl transition-all 
-                                duration-300 cursor-pointer"
-                    ></i>
-                    <i
-                      className="bi bi-threads w-10 h-10 text-primary rounded-full flex items-center 
-                                justify-center border border-primary hover:bg-primary hover:text-black text-xl transition-all 
-                                duration-300 cursor-pointer"
-                    ></i>
-                  </div>
+                  <SocialMediaSet2 />
                 </div>
               </div>
             </div>
@@ -344,33 +318,7 @@ const EpisodeDetails = () => {
                   <h3 className="text-primary">Hosted by</h3>
                   <h2 className="text-2xl">{episode.hostName}</h2>
                   <h3 className="text-primary">Follow on</h3>
-                  <div className="flex items-center gap-2 mt-2">
-                    <i
-                      className="bi bi-instagram w-10 h-10 text-primary rounded-full flex items-center 
-                                justify-center border border-primary hover:bg-primary hover:text-black text-xl transition-all 
-                                duration-300 cursor-pointer"
-                    ></i>
-                    <i
-                      className="bi bi-github w-10 h-10 text-primary rounded-full flex items-center 
-                                justify-center border border-primary hover:bg-primary hover:text-black text-xl transition-all 
-                                duration-300 cursor-pointer"
-                    ></i>
-                    <i
-                      className="bi bi-twitter w-10 h-10 text-primary rounded-full flex items-center 
-                                justify-center border border-primary hover:bg-primary hover:text-black text-xl transition-all 
-                                duration-300 cursor-pointer"
-                    ></i>
-                    <i
-                      className="ri-youtube-line w-10 h-10 text-primary rounded-full flex items-center 
-                                justify-center border border-primary hover:bg-primary hover:text-black text-xl transition-all 
-                                duration-300 cursor-pointer"
-                    ></i>
-                    <i
-                      className="bi bi-threads w-10 h-10 text-primary rounded-full flex items-center 
-                                justify-center border border-primary hover:bg-primary hover:text-black text-xl transition-all 
-                                duration-300 cursor-pointer"
-                    ></i>
-                  </div>
+                  <SocialMediaSet2 mainProps="mt-2" />
                 </div>
               </div>
 
