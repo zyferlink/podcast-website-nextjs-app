@@ -25,10 +25,11 @@ const Footer = () => {
               </h1>
             </div>
 
-            <div className="footer-waves relative">
-              <div className="music-waves2" />
-              <div className="music-waves2 absolute top-0 left-0" />
-              <div className="music-waves2 absolute top-0 left-0" />
+            <div className="relative">
+              <div
+                className="w-40 md:w-104 h-8 bg-[url('/assets/images/music-waves-2.png')] 
+                      bg-repeat-x bg-size-[auto_100%] animate-[anim-wave-scroll_50s_linear_infinite]"
+              />
             </div>
 
             <div className="flex items-center gap-3">

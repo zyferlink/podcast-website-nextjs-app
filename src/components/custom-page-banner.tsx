@@ -27,7 +27,10 @@ const CustomPageBanner: React.FC<PageBannerProps> = ({ mainProps = "" }) => {
           className="hidden lg:block absolute bottom-0 right-0"
         />
 
-        <div className="music-waves" />
+        <div
+          className="w-40 md:w-80 h-14 bg-[url('/assets/images/music-waves-1.png')] 
+                  bg-repeat-x bg-size-[auto_100%] animate-[anim-wave-scroll_50s_linear_infinite]"
+        />
         <div className="my-3 ">
           <span className="flex items-center gap-2 text-black px-4 py-3 rounded-full border-[1.5px] border-black">
             <i className="bi bi-rocket-takeoff text-2xl" />

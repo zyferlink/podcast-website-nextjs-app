@@ -63,194 +63,6 @@ body {
   font-family: var(--font-zain);
 }
 
-/* Nav bar*/
-.btn {
-  border: 2px solid var(--color-primary-light);
-  padding: 5px 25px;
-  padding-bottom: 6px;
-  border-radius: 50px;
-  font-size: 20px;
-  font-weight: 600;
-  display: flex;
-  align-items: center;
-  overflow: hidden;
-  gap: 15px;
-  position: relative;
-  z-index: 1;
-  transition: var(--transition-slow);
-  cursor: pointer;
-}
-
-.btn:hover {
-  color: var(--color-white);
-  border-color: var(--color-white);
-}
-
-.btn:hover i {
-  transform: rotate(-180deg) !important;
-}
-
-.btn i {
-  background-color: var(--color-primary-light);
-  color: var(--color-black);
-  border-radius: 100%;
-  width: 30px;
-  height: 30px;
-  font-weight: bold;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: var(--transition-slow);
-}
-
-.btn1 {
-  color: var(--color-white);
-  text-shadow: #000000;
-}
-
-.btn1:after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  border-radius: 50px;
-  width: 0;
-  height: 0;
-  background: var(--color-secondary);
-  transition: var(--transition-slow);
-  z-index: -1;
-}
-
-.btn1:hover:after {
-  width: 100%;
-  height: 100%;
-  right: auto;
-  left: 0;
-  bottom: auto;
-  top: 0;
-}
-
-.btn2 {
-  background-color: var(--color-primary);
-  color: var(--color-black);
-}
-
-.btn2 i {
-  background-color: var(--color-black);
-  color: var(--color-primary);
-}
-
-.btn2:after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  border-radius: 50px;
-  width: 0;
-  height: 0;
-  background: var(--color-secondary);
-  transition: var(--transition-slow);
-  z-index: -1;
-}
-
-.btn2:hover:after {
-  width: 100%;
-  height: 100%;
-  top: auto;
-  bottom: 0;
-  right: 0;
-  left: auto;
-}
-
-/* Nav MQ Section */
-
-@media (max-width: 991px) {
-  .hero {
-    height: 100%;
-    padding-bottom: 0;
-  }
-
-  .hero-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding-bottom: 5%;
-  }
-
-  .hero-img {
-    position: relative;
-    top: 0;
-    left: 20%;
-  }
-
-  .rounded-text {
-    left: 28%;
-  }
-
-  .sun-shape img:nth-child(2) {
-    top: 14%;
-    left: 82%;
-  }
-
-  .sun-shape img:nth-child(3) {
-    top: 70%;
-    left: 82%;
-  }
-}
-
-@media (max-width: 600px) {
-  .hero-img {
-    left: 5%;
-  }
-
-  .rounded-text {
-    left: 50%;
-  }
-}
-
-@media (max-width: 575px) {
-}
-
-/* Hero Header */
-
-.hero {
-  width: 100%;
-  height: 90vh;
-  background: url(../../public/images/texture-bg-1.png), rgb(38, 38, 41);
-  background-repeat: no-repeat;
-  position: relative;
-  display: flex;
-  align-items: center;
-  padding-bottom: 3%;
-  overflow: hidden !important;
-  z-index: 1;
-}
-
-.hero:after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url(../../public/images/vector-line.png);
-  background-repeat: no-repeat;
-  z-index: -1;
-}
-
-.hero-btn button {
-  font-weight: 400;
-}
-
-.hero-img {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  z-index: 0;
-  animation: anim-small-translate 5s infinite ease-in-out;
-}
 
 @keyframes anim-small-translate {
   0% {
@@ -301,46 +113,6 @@ body {
   }
 }
 
-.rounded-text {
-  position: absolute;
-  top: 48%;
-  left: 12%;
-  transform: translate(-50%, -50%);
-  width: 200px;
-  height: 200px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.rounded-text img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  animation: Anim-rotate 5s infinite forwards linear;
-}
-
-.rounded-text i {
-  background-color: var(--color-primary);
-  color: var(--color-black);
-  width: 60px;
-  height: 60px;
-  border-radius: 100%;
-  font-size: 2.5rem;
-  position: absolute;
-  top: 75%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: var(--transition-regular);
-}
-
-.rounded-text i:hover {
-  transform: translate(-50%, -50%) scale(1.2);
-  cursor: pointer;
-}
 
 /* Featured Shows Section */
 
@@ -357,7 +129,6 @@ body {
 .light-section {
   background: var(--color-matte-black) url(../../public/images/texture-bg-1.png) no-repeat center/cover;
 }
-
 
 
 /* Episode Banner */
@@ -585,13 +356,7 @@ body {
   background-color: rgba(255, 179, 64, 0.3);
 }
 
-/* Footer MQ Section */
-
 @media (max-width: 600px) {
-  .footer-waves .music-waves2 {
-    width: 500px;
-  }
-
   .footer-col::after {
     right: 0;
   }
@@ -674,20 +439,7 @@ body {
   overflow: hidden;
 }
 
-.page-banner .music-waves {
-  width: 500px;
-  height: 80px;
-}
 
-.page-banner .btn2 {
-  background-color: var(--color-text);
-  color: var(--color-white);
-}
-
-.page-banner .btn2 i {
-  background-color: var(--color-primary);
-  color: var(--color-white);
-}
 
 /* Episode Listing MQ Section */
 
