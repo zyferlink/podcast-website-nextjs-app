@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useRef } from "react";
 import CountUp from "react-countup";
 import { FaArrowRight } from "react-icons/fa6";
 import Banner from "@/app/index/banner/page";
@@ -11,13 +10,13 @@ import Testimonial from "@/app/index/testimonial/page";
 import { StyledButtonSecondary } from "@/components/buttons/styled-button-secondary";
 import HeaderTitle from "@/components/header-title";
 import PageHeader from "@/components/page-header/page-header";
-import ExperienceBanner1 from "../../../../public/images/elevate-banner-1.png";
-import ExperienceBanner2 from "../../../../public/images/elevate-banner-2.png";
-import ExperienceBannerArrow1 from "../../../../public/images/elevate-banner-arrow1.png";
-import ExperienceBannerArrow2 from "../../../../public/images/elevate-banner-arrow2.png";
-import WhyChooseUsImage1 from "../../../../public/images/why-choose-1.png";
-import WhyChooseUsImage2 from "../../../../public/images/why-choose-2.png";
-import WhyChooseUsImage3 from "../../../../public/images/why-choose-3.png";
+import ExperienceBanner1 from "../../../../public/assets/images/elevate-banner-1.png";
+import ExperienceBanner2 from "../../../../public/assets/images/elevate-banner-2.png";
+import ExperienceBannerArrow1 from "../../../../public/assets/images/elevate-banner-arrow1.png";
+import ExperienceBannerArrow2 from "../../../../public/assets/images/elevate-banner-arrow2.png";
+import WhyChooseUsImage1 from "../../../../public/assets/images/why-choose-1.jpg";
+import WhyChooseUsImage2 from "../../../../public/assets/images/why-choose-2.jpg";
+import WhyChooseUsImage3 from "../../../../public/assets/images/why-choose-3.jpg";
 
 const About = () => {
   return (
