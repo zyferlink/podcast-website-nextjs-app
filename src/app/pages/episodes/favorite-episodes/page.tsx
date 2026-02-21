@@ -71,7 +71,7 @@ const FavoriteEpisodes = () => {
                 <div className="w-full lg:w-1/2 flex justify-center items-center">
                   <div className="w-[80%] lg:w-full">
                     <Image
-                      src={"/images" + episode.image}
+                      src={episode.image}
                       alt={episode.name}
                       width={1000}
                       height={1000}
