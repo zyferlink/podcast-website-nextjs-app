@@ -88,11 +88,11 @@ const BlogDetails = () => {
                   </div>
                 </div>
 
-                <div className="bg-gray-light rounded-lg mt-5 p-5">
-                  <h2 className="text-4xl mb-4">
+                <div className="bg-gray-light rounded-lg mt-3 p-5">
+                  <h2 className="text-4xl mb-4 text-white">
                     The Essence of Storytelling in Podcasts
                   </h2>
-                  <p className=" text-gray-200 tracking-wide">
+                  <p className=" text-gray-200 font-light text-base tracking-wide">
                     Discuss why storytelling is a powerful tool in podcasting.
                     Explore its impact on listener engagement and connection.
                     The beauty of podcasts is their variety. There's a podcast
@@ -102,27 +102,29 @@ const BlogDetails = () => {
                     specialized subject.
                   </p>
 
-                  <div className="flex flex-col my-5">
+                  <div className="flex flex-col my-5 font-light">
                     <p className="text-sm text-gray-300">
                       <span>1. </span>Immense spectrum of subjects, ranging from
                       hyper-focused niche topics .
                     </p>
-                    <p className="text-sm text-gray-300">
+                    <p className="text-sm text-gray-300 mt-1">
                       <span>2. </span>Envelopments that might be hard to find
                       elsewhere .
                     </p>
-                    <p className="text-sm text-gray-300">
-                      <span>3.</span>Resonates deeply with audiences who share
+                    <p className="text-sm text-gray-300 mt-1">
+                      <span>3. </span>Resonates deeply with audiences who share
                       similar interests .
                     </p>
-                    <p className="text-sm text-gray-300">
-                      <span>4.</span>Spaces for discussions, networking, and
+                    <p className="text-sm text-gray-300 mt-1">
+                      <span>4. </span>Spaces for discussions, networking, and
                       shared experiences.
                     </p>
                   </div>
 
-                  <h2 className="text-3xl mb-4">Learning On the Go</h2>
-                  <p className=" text-gray-200 tracking-wide">
+                  <h2 className="text-3xl mb-4 text-white">
+                    Learning On the Go
+                  </h2>
+                  <p className=" text-gray-200 tracking-wide font-light text-base">
                     Evolved linto an unorthodox yet effective platform for
                     learning. Podcasts provide an audio school that you can take
                     with you everywhere, from language instruction to business
@@ -130,29 +132,29 @@ const BlogDetails = () => {
                     into a chance for personal development and enlightenment.
                   </p>
 
-                  <div className="flex flex-col my-5">
-                    <p className="text-sm text-gray-300">
+                  <div className="flex flex-col my-5 font-light">
+                    <p className="text-sm text-gray-300 ">
                       Immense spectrum of subjects, ranging from hyper-focused
                       niche topics .
                     </p>
-                    <p className="text-sm text-gray-300">
+                    <p className="text-sm text-gray-300 mt-1">
                       Envelopments that might be hard to find elsewhere .
                     </p>
-                    <p className="text-sm text-gray-300">
+                    <p className="text-sm text-gray-300 mt-1">
                       Resonates deeply with audiences who share similar
                       interests .
                     </p>
-                    <p className="text-sm text-gray-300">
+                    <p className="text-sm text-gray-300 mt-1">
                       Spaces for discussions, networking, and shared
                       experiences.
                     </p>
                   </div>
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                    {BlogsData.slice(1, 5).map((blog, index) => (
+                    {BlogPosts.slice(1, 5).map((blog, index) => (
                       <Image
                         key={index.toString()}
-                        src={`/images${blog.image}`}
+                        src={blog.image}
                         alt="toplisting"
                         width={1000}
                         height={1000}
@@ -161,8 +163,10 @@ const BlogDetails = () => {
                     ))}
                   </div>
 
-                  <h2 className="text-3xl my-5 ">A Connection Beyond Words</h2>
-                  <p className="text-gray-300">
+                  <h2 className="text-3xl my-5 text-white">
+                    A Connection Beyond Words
+                  </h2>
+                  <p className="text-gray-300 font-light text-base">
                     Podcasting transcends the written word. Through
                     storytelling, hosts can convey emotions, nuances, and
                     authenticity that go beyond the limitations of text.
@@ -171,8 +175,10 @@ const BlogDetails = () => {
                     In the realm of audio.
                   </p>
 
-                  <h2 className="text-2xl my-5">Immersive Experiences:</h2>
-                  <p className="text-gray-300">
+                  <h2 className="text-2xl my-5 text-white">
+                    Immersive Experiences:
+                  </h2>
+                  <p className="text-gray-300 font-light text-base">
                     A well-crafted story transports listeners into different
                     worlds. Whether it's a personal anecdote, fictional tale, or
                     exploration of real-life events, storytelling allows
