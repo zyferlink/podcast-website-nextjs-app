@@ -207,7 +207,7 @@ const Contact = () => {
             </div>
 
             <div className="w-full lg:w-1/2">
-              <div className="bg-gray p-5 rounded-2xl">
+              <div className="bg-gray p-3 rounded-3xl text-white placeholder:text-gray-400">
                 <div className="bg-gray-light p-5 rounded-2xl">
                   <h2 className="text-3xl">Get In Touch</h2>
                   <div className="border-b py-2 border-dashed border-primary/30"></div>
