@@ -22,6 +22,7 @@ import Banner from "@/app/index/banner/page";
 import Testimonial from "@/app/index/testimonial/page";
 import HeaderTitle from "@/components/header-title";
 import PageHeader from "@/components/page-header/page-header";
+import PricingCard from "@/components/pricing-card";
 import BrandIcon1 from "../../../../public/images/brand-icon-1.png";
 import BrandIcon2 from "../../../../public/images/brand-icon-2.png";
 import BrandIcon3 from "../../../../public/images/brand-icon-3.png";
@@ -132,62 +133,21 @@ const Pricing = () => {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 pt-15">
-              <div className="bg-gray-light px-6 py-6 rounded-xl">
-                <div className="border-b border-dashed border-primary-light pb-8">
-                  <h4 className="font-semibold text-xl text-start mb-2">
-                    Free
-                  </h4>
-                  <div className="flex items-end justify-center gap-1 mb-5">
-                    <h1 className="text-5xl text-primary font-semibold">
-                      0.00
-                    </h1>
-                    <span className="text-xl text-primary">
-                      /{billing === "monthly" ? "Mo" : "Yr"}
-                    </span>
-                  </div>
-
-                  <p className="">
-                    Get exclusive podcasts from your favorite hosts on here for
-                    free.
-                  </p>
-                </div>
-
-                <ul className="space-y-3 list-none py-8">
-                  <li className="flex gap-3 items-center">
-                    <i className="bi bi-check-circle-fill text-primary text-xl"></i>
-                    Latest and freebies topics
-                  </li>
-
-                  <li className="flex gap-3 items-center">
-                    <i className="bi bi-check-circle-fill text-primary text-xl"></i>
-                    Curated speakers
-                  </li>
-
-                  <li className="flex gap-3 items-center">
-                    <i className="bi bi-check-circle-fill text-primary text-xl"></i>
-                    Free content only
-                  </li>
-
-                  <li className="flex gap-3 items-center">
-                    <i className="bi bi-check-circle-fill text-primary text-xl"></i>
-                    Available on all platforms
-                  </li>
-
-                  <li className="flex gap-3 items-center">
-                    <i className="bi bi-check-circle-fill text-primary text-xl"></i>
-                    upto 20 channel Subscribe
-                  </li>
-
-                  <li className="flex gap-3 items-center">
-                    <i className="bi bi-check-circle-fill text-primary text-xl"></i>
-                    Unlimited episodes
-                  </li>
-                </ul>
-
-                <button type="button" className="btn btn1">
-                  Get Started Now <i className="bi bi-arrow-right-short"></i>
-                </button>
-              </div>
+              <PricingCard
+                packageName="Free"
+                price="0.00"
+                period={billing === BillingPeriod.MONTHLY ? "Mo" : "Yr"}
+                desc="Get exclusive podcasts from your favorite hosts on here for
+                    free."
+                serviceList={[
+                  "Latest and freebies topics",
+                  "Curated speakers",
+                  "Free content only",
+                  "Available on all platforms",
+                  "Upto 20 channel Subscribe",
+                  "Unlimited episodes",
+                ]}
+              />
 
               <div className="bg-gray-light px-6 py-6 rounded-xl">
                 <div className="border-b border-dashed border-primary-light pb-8">
