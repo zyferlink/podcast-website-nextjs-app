@@ -2,10 +2,8 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import CustomPageBanner from "@/components/custom-page-banner";
 import PageHeader from "@/components/page-header/page-header";
-import PageBanner1 from "../../../../public/images/Page-banner-1.png";
-import PageBanner2 from "../../../../public/images/Page-banner-2.png";
-import RocketIcon from "../../../../public/images/rocket-icon.png";
 import BlogsData from "../../../data/BlogsData.json";
 
 const Blog = () => {
@@ -56,39 +54,8 @@ const Blog = () => {
         </div>
       </div>
 
-      <div className="px-[8%] lg:px-[10%] pt-10 md: py-20 dark-section bg-black/98 text-white">
-        <div className="page-banner p-15 flex flex-col justify-center items-center text-center rounded-2xl relative">
-          <Image
-            src={PageBanner1}
-            alt="pagebanner"
-            width={500}
-            height={500}
-            className="hidden lg:block absolute bottom-0 left-0"
-          />
-
-          <Image
-            src={PageBanner2}
-            alt="pagebanner"
-            width={500}
-            height={500}
-            className="hidden lg:block absolute bottom-0 right-0"
-          />
-          <div className="music-waves"></div>
-          <div className="my-3 mt-5">
-            <span className="flex items-center gap-2 text-black px-4 py-3 rounded-full border border-black">
-              <Image src={RocketIcon} alt="rocketIcon" width={30} height={30} />
-              <h2 className="text-xl">Call To Action</h2>
-            </span>
-          </div>
-
-          <h1 className="text-5xl lg:text-6xl mb-5 font-semibold w-full lg:w-[50%] text-text">
-            Let's Discuss For Any Episodes
-          </h1>
-          <button type="button" className="btn btn2 bg-text">
-            Get In Touch <i className="bi bi-arrow-right-short"></i>
-          </button>
-        </div>
-      </div>
+      {/* Custom Page Banner */}
+      <CustomPageBanner mainProps="dark-section" />
     </>
   );
 };
