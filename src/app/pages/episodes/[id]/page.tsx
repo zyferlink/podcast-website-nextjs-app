@@ -178,7 +178,7 @@ const EpisodeDetails = () => {
                             <p className="text-gray-200 font-light my-4">
                               {episode.desc}
                             </p>
-
+                            {/* Social Media Icon Set*/}
                             <SocialMediaSet2 mainProps="mt-2" />
                           </div>
                         </Link>
@@ -219,6 +219,7 @@ const EpisodeDetails = () => {
                   <h2 className="text-primary text-2xl">
                     Follow <i className="bi bi-chevron-double-right" />
                   </h2>
+                  {/* Social Media Icon Set*/}
                   <SocialMediaSet2 />
                 </div>
               </div>
@@ -302,6 +303,7 @@ const EpisodeDetails = () => {
                   <h3 className="text-primary">Hosted by</h3>
                   <h2 className="text-2xl text-white">{episode.hostName}</h2>
                   <h3 className="text-primary">Follow on</h3>
+                  {/* Social Media Icon Set*/}
                   <SocialMediaSet2 mainProps="mt-2" />
                 </div>
               </div>

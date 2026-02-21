@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useParams } from "next/navigation";
 import PageHeader from "@/components/page-header/page-header";
+import SocialMediaSet2 from "@/components/social-media-buttons/social-media-set-2";
 import { BlogPosts } from "@/data/blog";
 import BrandIcon1 from "../../../../../public/images/brand-icon-1.png";
 import BrandIcon2 from "../../../../../public/images/brand-icon-2.png";
@@ -187,37 +188,12 @@ const BlogDetails = () => {
                     someone else's shoes.
                   </p>
 
-                  <div className="flex items-center gap-5 mt-5">
-                    <h2 className="text-primary text-3xl">
+                  <div className="flex items-center gap-5 mt-6 mb-1">
+                    <h2 className="text-primary text-2xl">
                       Follow <i className="bi bi-chevron-double-right" />
                     </h2>
-                    <div className="flex items-center gap-2 mt-2">
-                      <i
-                        className="bi bi-instagram w-10 h-10 text-primary rounded-full flex items-center 
-                                justify-center border border-primary hover:bg-primary hover:text-black text-xl transition-all 
-                                duration-300 cursor-pointer"
-                      ></i>
-                      <i
-                        className="bi bi-github w-10 h-10 text-primary rounded-full flex items-center 
-                                justify-center border border-primary hover:bg-primary hover:text-black text-xl transition-all 
-                                duration-300 cursor-pointer"
-                      ></i>
-                      <i
-                        className="bi bi-twitter w-10 h-10 text-primary rounded-full flex items-center 
-                                justify-center border border-primary hover:bg-primary hover:text-black text-xl transition-all 
-                                duration-300 cursor-pointer"
-                      ></i>
-                      <i
-                        className="ri-youtube-line w-10 h-10 text-primary rounded-full flex items-center 
-                                justify-center border border-primary hover:bg-primary hover:text-black text-xl transition-all 
-                                duration-300 cursor-pointer"
-                      ></i>
-                      <i
-                        className="bi bi-threads w-10 h-10 text-primary rounded-full flex items-center 
-                                justify-center border border-primary hover:bg-primary hover:text-black text-xl transition-all 
-                                duration-300 cursor-pointer"
-                      ></i>
-                    </div>
+                    {/* Social Media Icon Set*/}
+                    <SocialMediaSet2 />
                   </div>
                 </div>
               </div>
