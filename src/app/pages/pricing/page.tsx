@@ -23,6 +23,7 @@ import Testimonial from "@/app/index/testimonial/page";
 import HeaderTitle from "@/components/header-title";
 import PageHeader from "@/components/page-header/page-header";
 import PricingCard from "@/components/pricing-card";
+import { FaqData } from "@/data/faq";
 import BrandIcon1 from "../../../../public/images/brand-icon-1.png";
 import BrandIcon2 from "../../../../public/images/brand-icon-2.png";
 import BrandIcon3 from "../../../../public/images/brand-icon-3.png";
@@ -41,34 +42,6 @@ enum BillingPeriod {
   MONTHLY = "monthly",
   YEARLY = "yearly",
 }
-
-const faqData = [
-  {
-    question: "How often are new episodes released?",
-    answer:
-      "If you have premium or exclusive content, provide information on how listeners can access it. Share information about any online communities or forums where listeners can connect and discuss episodes.",
-  },
-  {
-    question: "Can I suggest topics or guests for future episodes?",
-    answer:
-      "If you have premium or exclusive content, provide information on how listeners can access it. Share information about any online communities or forums where listeners can connect and discuss episodes.",
-  },
-  {
-    question: "Is there a way to get early access or exclusive content?",
-    answer:
-      "If you have premium or exclusive content, provide information on how listeners can access it. Share information about any online communities or forums where listeners can connect and discuss episodes.",
-  },
-  {
-    question: "How do I leave a review or feedback?",
-    answer:
-      "If you have premium or exclusive content, provide information on how listeners can access it. Share information about any online communities or forums where listeners can connect and discuss episodes.",
-  },
-  {
-    question: "Do you accept listener questions?",
-    answer:
-      "If you have premium or exclusive content, provide information on how listeners can access it. Share information about any online communities or forums where listeners can connect and discuss episodes.",
-  },
-];
 
 const Pricing = () => {
   const [billing, setBilling] = useState<BillingPeriod>(BillingPeriod.MONTHLY);
@@ -196,17 +169,17 @@ const Pricing = () => {
               className="items-center text-center leading-[1.1]"
               titleProps="text-[3.5rem] md:text-[4.2rem]"
             />
-            <p className="tracking-wider text-start text-white md:text-center pt-2 lg:w-[70%]">
+            <p className="tracking-wider text-start text-white md:text-center pt-8 lg:w-[70%]">
               FAQs are widely used on websites, in product manuals, and in
               various instructional documents to address frequently asked
               questions by users or customers.
             </p>
           </div>
 
-          <div className="flex flex-col lg:flex-row gap-5 pt-10">
+          <div className="flex flex-col lg:flex-row gap-5 pt-4">
             <div className="w-full lg:w-1/2">
               <div className="space-y-4 w-full py-10">
-                {faqData.map((item, index) => (
+                {FaqData.map((item, index) => (
                   <div
                     key={index.toString()}
                     className={`overflow-hidden rounded-md py-4 px-4 lg:px-6 transition-all duration-300 
@@ -241,7 +214,7 @@ const Pricing = () => {
                       className={`transition-all duration-500 ease-in-out overflow-hidden 
                     ${openLeftIndex === index ? "max-h-75 opacity-100 py-3" : "max-h-0 opacity-0 py-0"}`}
                     >
-                      <p className="text-base  text-black">{item.answer}</p>
+                      <p className="text-base text-black">{item.answer}</p>
                     </div>
                   </div>
                 ))}
@@ -249,7 +222,7 @@ const Pricing = () => {
             </div>
             <div className="w-full lg:w-1/2">
               <div className="space-y-4 w-full py-10">
-                {faqData.map((item, index) => (
+                {FaqData.map((item, index) => (
                   <div
                     key={index.toString()}
                     className={`overflow-hidden rounded-md py-4 px-4 lg:px-8 transition-all duration-300 
@@ -264,22 +237,27 @@ const Pricing = () => {
                       onClick={() => toggleRight(index)}
                       className={`w-full flex justify-between items-center cursor-pointer 
                         transition-all duration-300 border-b border-dashed 
-                        ${openRightIndex === index ? "pb-4 [border-[#222e48]" : "border-transparent"} `}
+                        ${openRightIndex === index ? "pb-4 border-[#222e48]" : "border-transparent"} `}
                     >
-                      <span className="text-xl text-left">{item.question}</span>
+                      <span
+                        className={`text-lg text-start font-bold tracking-normal  
+                          ${openRightIndex === index ? "text-black" : "text-white"}`}
+                      >
+                        {item.question}
+                      </span>
 
-                      {openRightIndex === index ? (
-                        <i className="bi bi-dash-circle-fill text-2xl text-gray"></i>
-                      ) : (
-                        <i className="bi bi-plus-circle-fill text-2xl text-primary"></i>
-                      )}
+                      {/* Icon */}
+                      <i
+                        className={`pt-1 text-3xl bi 
+                          ${openRightIndex === index ? "bi-dash-circle-fill text-black" : "bi-plus-circle-fill text-primary"}`}
+                      />
                     </button>
 
                     <div
                       className={`transition-all duration-500 ease-in-out overflow-hidden 
-                    ${openRightIndex === index ? "max-h-[300px] opacity-100 py-3" : "max-h-0 opacity-0 py-0"}`}
+                    ${openRightIndex === index ? "max-h-75 opacity-100 py-3" : "max-h-0 opacity-0 py-0"}`}
                     >
-                      <p className="text-sm">{item.answer}</p>
+                      <p className="text-base text-black">{item.answer}</p>
                     </div>
                   </div>
                 ))}
