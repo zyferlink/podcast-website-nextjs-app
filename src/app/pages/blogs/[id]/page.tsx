@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useParams } from "next/navigation";
 import PageHeader from "@/components/page-header/page-header";
+import { BlogPosts } from "@/data/blog";
 import BrandIcon1 from "../../../../../public/images/brand-icon-1.png";
 import BrandIcon2 from "../../../../../public/images/brand-icon-2.png";
 import BrandIcon3 from "../../../../../public/images/brand-icon-3.png";
@@ -18,7 +19,7 @@ import BlogsData from "../../../../data/BlogsData.json";
 const BlogDetails = () => {
   const { id } = useParams();
 
-  const blog = BlogsData.find((item) => item.id === Number(id));
+  const blog = BlogPosts.find((item) => item.id === Number(id));
   if (!blog) {
     return (
       <div className="dark-section px-[8%] lg:px-[16%] py-30 text-center bg-black/98 text-white">
@@ -39,18 +40,18 @@ const BlogDetails = () => {
       <PageHeader title="Blog Details" />
 
       {/* Blog Details Wrapper */}
-      <div className="dark-section px-[8%] lg:px-[16%] py-20 bg-black/98 text-white">
+      <div className="dark-section px-[8%] lg:px-[12%] 2xl:px-[16%] py-20">
         <div className="flex flex-col lg:flex-row justify-baseline gap-5">
           <div className="w-full lg:w-1/1">
             <div className="flex flex-col">
               {/* Blog Details */}
-              <div className="bg-gray p-5 rounded-2xl">
+              <div className="bg-gray p-3 rounded-2xl">
                 {/* Blog Card */}
                 <div className="flex w-full flex-col md:flex-row justify-between bg-gray-light rounded-lg p-4 overflow-hidden">
                   <div className="w-full lg:w-1/2 flex justify-center items-center">
                     <div className="w-[80%] lg:w-full">
                       <Image
-                        src={"/images" + blog.image}
+                        src={blog.image}
                         alt={"Blog Image"}
                         width={1000}
                         height={1000}
@@ -62,30 +63,25 @@ const BlogDetails = () => {
                   <div className="w-full lg:w-1/2">
                     <div className="p-5">
                       <div className="flex flex-row flex-wrap align-middle gap-5">
-                        <span className="px-5 py-2 text-xl rounded-full bg-secondary hover:bg-primary transition-all durhtion-200">
+                        <span className="px-4 py-1 text-xl rounded-full cursor-pointer bg-gray-500 hover:bg-primary transition-all durhtion-200">
                           {blog.type}
                         </span>
-                        <span className="px-5 py-2 text-xl rounded-full bg-secondary hover:bg-primary transition-all durhtion-200">
+                        <span className="px-4 py-1 text-xl rounded-full cursor-pointer bg-gray-500 hover:bg-primary transition-all durhtion-200">
                           {blog.date}
                         </span>
                       </div>
 
                       <Link href={`/pages/episodes/${blog.id}`}>
-                        <h2 className="mt-3 text-2xl hover:text-primary transition-all duration-200">
+                        <h2 className="mt-3 text-2xl text-white font-bold hover:text-primary transition-all duration-200">
                           {blog.title}
                         </h2>
                       </Link>
 
                       <div className="mt-4">
-                        <p className="text-sm text-gray-300">
+                        <p className="text-sm font-light text-gray-300">
                           Discover how powerful storytelling transforms simple
                           ideas into memorable experiences that captivate
                           readers and spark lasting emotional connections
-                        </p>
-                        <p className="text-sm text-gray-300">
-                          Learn the techniques writers use to build tension
-                          shape characters and deliver narratives that resonate
-                          deeply across different audiences
                         </p>
                       </div>
                     </div>

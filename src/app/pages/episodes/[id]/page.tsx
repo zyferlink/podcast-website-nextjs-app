@@ -54,7 +54,7 @@ const EpisodeDetails = () => {
       <PageHeader title="Episode Details" />
 
       {/* Episode Details Wrapper */}
-      <div className="dark-section px-[8%] lg:px-[12%] 2xl:px-[16%] py-20 bg-black/98 text-white">
+      <div className="dark-section px-[8%] lg:px-[12%] 2xl:px-[16%] py-20">
         <div className="flex flex-col lg:flex-row justify-baseline gap-5">
           <div className="w-full lg:w-1/1">
             <div className="flex flex-col">
