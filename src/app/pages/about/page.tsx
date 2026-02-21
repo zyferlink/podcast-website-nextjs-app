@@ -6,20 +6,12 @@ import CountUp from "react-countup";
 import Banner from "@/app/index/banner/page";
 import HostProfiles from "@/app/index/host-profiles/page";
 import Testimonial from "@/app/index/testimonial/page";
+import HeaderTitle from "@/components/header-title";
 import PageHeader from "@/components/page-header/page-header";
-import BrandIcon1 from "../../../../public/images/brand-icon-1.png";
-import BrandIcon2 from "../../../../public/images/brand-icon-2.png";
-import BrandIcon3 from "../../../../public/images/brand-icon-3.png";
-import BrandIcon4 from "../../../../public/images/brand-icon-4.png";
-import BrandIcon5 from "../../../../public/images/brand-icon-5.png";
 import ExperienceBanner1 from "../../../../public/images/elevate-banner-1.png";
 import ExperienceBanner2 from "../../../../public/images/elevate-banner-2.png";
 import ExperienceBannerArrow1 from "../../../../public/images/elevate-banner-arrow1.png";
 import ExperienceBannerArrow2 from "../../../../public/images/elevate-banner-arrow2.png";
-import PageElement1 from "../../../../public/images/page-elm-1.png";
-import PageElement2 from "../../../../public/images/page-elm-2.png";
-import PageElement3 from "../../../../public/images/page-elm-3.png";
-import PageElement4 from "../../../../public/images/page-elm-4.png";
 import WhyChooseUsImage1 from "../../../../public/images/why-choose-1.png";
 import WhyChooseUsImage2 from "../../../../public/images/why-choose-2.png";
 import WhyChooseUsImage3 from "../../../../public/images/why-choose-3.png";
@@ -36,20 +28,16 @@ const About = () => {
           <div className="flex flex-col lg:flex-row justify-between items-center gap-20">
             <div className="w-full lg:w-1/2">
               <div className="content">
-                <div className="title flex flex-col gap-2">
-                  <div>
-                    <h2 className="inline-block px-4 py-2 rounded-full text-primary text-2xl font-normal border border-primary">
-                      <i className="bi bi-rocket-takeoff pe-4"></i>
-                      Elevate Your Experience
-                    </h2>
-                  </div>
-                  <h1 className="text-5xl md:text-6xl font-semibold mt-7 mb-5">
-                    Explore Excellence in{" "}
-                    <span className="text-primary">Podcasting</span>
-                  </h1>
-                </div>
+                {/* header title */}
+                <HeaderTitle
+                  badgeText="Elevate Your Experience"
+                  badgeIcon="bi bi-rocket-takeoff"
+                  title="Explore Excellence in Podcasting"
+                  className="leading-[1.1]"
+                  titleProps="text-[3rem] md:text-[4.2rem]"
+                />
 
-                <p className="my-5 tracking-wider">
+                <p className="my-5 tracking-wider text-white font-light text-base">
                   Explore vibrant soundscapes where stories of every kind come
                   alive, taking you on an immersive journey and through
                   captivating narratives.
