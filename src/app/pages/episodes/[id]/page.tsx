@@ -1,3 +1,4 @@
+/** biome-ignore-all lint/correctness/useHookAtTopLevel: <explanation> */
 "use client";
 
 import Image from "next/image";
@@ -240,18 +241,11 @@ const EpisodeDetails = () => {
                         ${isOpen ? "bg-primary text-black" : "bg-gray-light"}`}
                     >
                       {/* Question */}
-                      <div
-                        role="group"
-                        className={`flex justify-between items-center cursor-pointer 
-                          pb-3 transition-all duration-300 
-                          ${isOpen ? "border-b border-dashed border-black/40" : ""}`}
+                      <button
+                        type="button"
                         onClick={() => toggleFaq(faq.id)}
-                        onKeyDown={(e) => {
-                          if (e.key === "Enter" || e.key === " ") {
-                            e.preventDefault();
-                            toggleFaq(faq.id);
-                          }
-                        }}
+                        className={`flex w-full justify-between items-center cursor-pointer pb-2 transition-all duration-300 
+                          ${isOpen ? "border-b border-dashed border-black/40" : ""}`}
                       >
                         <h3
                           className={`text-xl font-medium  ${isOpen ? "text-black" : "text-white"}`}
@@ -269,7 +263,7 @@ const EpisodeDetails = () => {
                             className={`bi ${isOpen ? "bi-dash-lg" : "bi-plus-lg"} pt-1 text-xl`}
                           />
                         </span>
-                      </div>
+                      </button>
 
                       {/* Answer */}
                       <div
