@@ -4,6 +4,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import toast from "react-hot-toast";
+import PageHeader from "@/components/page-header/page-header";
+import { type Episode, EpisodeData } from "@/data/episodes";
 import BrandIcon1 from "../../../../../public/images/brand-icon-1.png";
 import BrandIcon2 from "../../../../../public/images/brand-icon-2.png";
 import BrandIcon3 from "../../../../../public/images/brand-icon-3.png";
@@ -16,19 +18,9 @@ import PageElement2 from "../../../../../public/images/page-elm-2.png";
 import PageElement3 from "../../../../../public/images/page-elm-3.png";
 import PageElement4 from "../../../../../public/images/page-elm-4.png";
 import RocketIcon from "../../../../../public/images/rocket-icon.png";
-import EpisodesData from "../../../../data/EpisodeData.json";
-
-type Episode = {
-  id: number;
-  name: string;
-  title: string;
-  pere: string;
-  episode: string;
-  image: string;
-};
 
 const LatestEpisodes = () => {
-  const latestEpisodes: Episode[] = EpisodesData.slice(0, 10);
+  const latestEpisodes: Episode[] = EpisodeData.slice(0, 10);
 
   const [favorites, setFavorites] = useState<Episode[]>(() => {
     if (typeof window === "undefined") return [];
@@ -66,27 +58,8 @@ const LatestEpisodes = () => {
 
   return (
     <>
-      {/* Page Section */}
-      <div className="page-section bg-black/98 text-white">
-        <Image src={PageElement2} alt="Element" className="elm2 elemet" />
-        <Image src={PageElement3} alt="Element" className="elm3 elemet" />
-        <Image src={PageElement4} alt="Element" className="elm4 elemet" />
-        <div className="page-content w-full md:w-1/2 flex justify-center flex-col pt-10">
-          <Image src={PageElement1} alt="Element" className="w-full h-full" />
-
-          <h1 className="text-6xl lg:text-8x1 justify-center my-6">
-            Latest <span className="text-primary">Episodes</span>
-          </h1>
-
-          <div className="flex items-center justify-center gap-3 cursor-pointer mt-5">
-            <Image src={BrandIcon1} alt="brand" />
-            <Image src={BrandIcon2} alt="brand" />
-            <Image src={BrandIcon3} alt="brand" />
-            <Image src={BrandIcon4} alt="brand" />
-            <Image src={BrandIcon5} alt="brand" />
-          </div>
-        </div>
-      </div>
+      {/* Page Header */}
+      <PageHeader title="Latest Episodes" />
 
       {/* Latest Episodes */}
       <div className="dark-section bg-black/98 text-white px-[8%] lg:px-[16%] py-15">
@@ -100,8 +73,8 @@ const LatestEpisodes = () => {
               <div className="w-full lg:w-1/2 flex justify-center items-center">
                 <div className="w-[80%] lg:w-full">
                   <Image
-                    src={"/images" + episode.image}
-                    alt={episode.name}
+                    src={episode.image}
+                    alt={episode.title}
                     width={1000}
                     height={1000}
                     className="w-full h-full rounded-2xl object-cover"
@@ -115,7 +88,7 @@ const LatestEpisodes = () => {
                     <Link href={`/pages/Episodes/${episode.id}`}>
                       <p className="font-light text-gray-200 hover:text-primary tracking-wider transition-all duration-200">
                         <i className="bi bi-mic text-primary"></i>
-                        {episode.name}
+                        {episode.hostName}
                       </p>
                     </Link>
                     <h2 className="text-gray-300">
@@ -137,7 +110,7 @@ const LatestEpisodes = () => {
                     <h2 className="mt-3 text-2xl hover:text-primary transition-all duration-200">
                       {episode.title}
                     </h2>
-                    <p className="my-3">{episode.pere}</p>
+                    <p className="my-3">{episode.desc}</p>
                   </Link>
 
                   <div className="flex justify-between items-center gap-5">

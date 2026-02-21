@@ -75,7 +75,7 @@ const Episodes = () => {
 
   return (
     <>
-      {/* Page Section */}
+      {/* Page Header */}
       <PageHeader title="All Episodes" />
 
       {/* Episodes */}
