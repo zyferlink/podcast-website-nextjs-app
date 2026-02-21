@@ -30,16 +30,17 @@ const EpisodeCard: React.FC<EpisodeCardProps> = ({
       <div className="w-full lg:w-1/1">
         <div className="p-5">
           <div className="flex flex-row flex-wrap justify-between items-center">
-            <Link href={`/pages/Episodes/${episode.id}`}>
-              <p className="font-light text-gray-200 hover:text-primary tracking-wider transition-all duration-200">
-                <i className="bi bi-mic text-primary"></i>
-                {episode.hostName}
-              </p>
-            </Link>
-            <h2 className="text-gray-300">
-              <i className="bi bi-clock pe-1 text-primary"></i>
-              4hr 12min
-            </h2>
+            <div className="flex md:flex-col flex-row justify-between w-[80%]">
+              <Link href={`/pages/episodes/${episode.id}`}>
+                <p className="font-normal text-gray-200 hover:text-primary tracking-wider transition-all duration-200">
+                  <i className="bi bi-mic text-primary" /> {episode.hostName}
+                </p>
+              </Link>
+              <h2 className="text-gray-300 font-light">
+                <i className="bi bi-clock pe-1 text-primary" />{" "}
+                {episode.duration}
+              </h2>
+            </div>
 
             <button type="button" onClick={() => toggleFavorite(episode)}>
               <i
