@@ -152,9 +152,7 @@ body {
 }
 
 
-
-
-/* Featured Shows Section */
+/* Sections */
 
 .dark-section,
 .light-section {
@@ -169,12 +167,6 @@ body {
 .light-section {
   background: var(--color-matte-black) url(../../public/assets/images/texture-bg-1.png) no-repeat center/cover;
 }
-
-
-
-
-
-/* Host Profiles Section */
 
 .wave-wrapper-section,
 .wave-wrapper-section2 {
@@ -199,36 +191,6 @@ body {
   height: 150px;
 }
 
-.host-wrapper-swiper {
-  padding: 55px 0 !important;
-}
-
-.offset-card {
-  transform: translateY(-50px);
-}
-
-.host-info {
-  position: relative;
-}
-
-.host-info:after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 0;
-  transform: translate(-50%, -50%);
-  width: 2px;
-  height: 70%;
-  background-color: var(--color-primary);
-}
-
-/* Host Profiles MQ Section */
-
-@media (max-width: 600px) {
-  .offset-card {
-    transform: translateY(0px);
-  }
-}
 
 /* Testimonials Section*/
 

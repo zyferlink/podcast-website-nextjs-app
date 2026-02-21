@@ -29,7 +29,10 @@ const HostProfile = () => {
                       </div>
                     </div>
 
-                    <div className="host-info px-3 py-4">
+                    <div
+                      className="relative after:content-[''] after:absolute after:top-1/2 after:left-0 
+                      after:-translate-x-1/2 after:-translate-y-1/2 after:w-[1.5px] after:h-[70%] after:bg-primary px-3 py-4"
+                    >
                       <h3 className="text-xl text-white font-bold cursor-pointer">
                         {host.name}
                       </h3>

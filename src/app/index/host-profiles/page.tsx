@@ -67,12 +67,12 @@ const HostProfiles = () => {
             757: { slidesPerView: 2 },
             0: { slidesPerView: 1 },
           }}
-          className="host-wrapper-swiper"
+          className="py-14! md:py-11! sm:py-9!"
         >
           {HostProfileData.map((host, index) => (
             <SwiperSlide key={index.toString()}>
               <div
-                className={`host-card ${index % 2 === 1 ? "offset-card" : ""}`}
+                className={`host-card ${index % 2 === 1 ? "sm:-translate-y-12 translate-y-0" : ""}`}
               >
                 <div className="host-img-wrap">
                   <div className="host-img overflow-hidden rounded-2xl">
@@ -86,7 +86,10 @@ const HostProfiles = () => {
                   </div>
                 </div>
 
-                <div className="host-info px-3 py-4">
+                <div
+                  className="relative after:content-[''] after:absolute after:top-1/2 after:left-0 
+                  after:-translate-x-1/2 after:-translate-y-1/2 after:w-[1.5px] after:h-[70%] after:bg-primary px-3 py-4"
+                >
                   <h3 className="text-lg text-gray-100 font-bold">
                     {host.name}
                   </h3>
