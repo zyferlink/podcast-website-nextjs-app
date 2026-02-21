@@ -5,11 +5,12 @@ import Link from "next/link";
 import { FaArrowRight } from "react-icons/fa6";
 import { StyledButtonSecondary } from "@/components/buttons/styled-button-secondary";
 import HeaderTitle from "@/components/header-title";
-import { type RecentEpisode, RecentEpisodeData } from "@/data/recent-episodes";
+import { type Episode, EpisodeData } from "@/data/episodes";
 import EpisodeBannerImage from "../../../../public/assets/images/episode-card-banner.png";
 
 const RecentEpisodes = () => {
-  const mainBannerData: RecentEpisode = RecentEpisodeData[0];
+  const mainBannerData: Episode = EpisodeData[0];
+  const bannerList: Episode[] = [EpisodeData[1], EpisodeData[2]];
 
   return (
     <div className="dark-section">
@@ -105,7 +106,7 @@ const RecentEpisodes = () => {
         </div>
 
         <div className="flex flex-col lg:flex-row items-center gap-5 mt-10">
-          {RecentEpisodeData.slice(1, 3).map((item) => (
+          {bannerList.map((item) => (
             <div key={item.id} className="w-full lg:w-1/2">
               <div className="p-6 rounded-2xl bg-gray">
                 <div className="flex flex-wrap items-center gap-3">

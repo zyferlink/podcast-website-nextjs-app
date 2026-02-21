@@ -1,23 +1,13 @@
 "use client";
 
-import Image from "next/image";
-import Link from "next/link";
 import { useState } from "react";
 import toast from "react-hot-toast";
+import { FaArrowRight } from "react-icons/fa6";
+import { StyledButtonSecondary } from "@/components/buttons/styled-button-secondary";
+import CustomPageBanner from "@/components/custom-page-banner";
+import EpisodeCard from "@/components/episode-card";
 import PageHeader from "@/components/page-header/page-header";
-import PageBanner1 from "../../../../public/images/Page-banner-1.png";
-import PageBanner2 from "../../../../public/images/Page-banner-2.png";
-import RocketIcon from "../../../../public/images/rocket-icon.png";
-import EpisodesData from "../../../data/EpisodeData.json";
-
-type Episode = {
-  id: number;
-  name: string;
-  title: string;
-  pere: string;
-  episode: string;
-  image: string;
-};
+import { type Episode, EpisodeData } from "@/data/episodes";
 
 const Episodes = () => {
   const [showAll, setShowAll] = useState(false);
@@ -25,10 +15,10 @@ const Episodes = () => {
   // Search Episodes
   const [searchTerm, setSearchTerm] = useState("");
 
-  const filteredEpisodes = EpisodesData.filter(
+  const filteredEpisodes = EpisodeData.filter(
     (episode) =>
       episode.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      episode.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      episode.hostName.toLowerCase().includes(searchTerm.toLowerCase()) ||
       episode.episode.toLowerCase().includes(searchTerm.toLowerCase()),
   );
 
@@ -85,28 +75,37 @@ const Episodes = () => {
 
   return (
     <>
-      {/* Page Section */}
+      {/* Page Header */}
       <PageHeader title="All Episodes" />
 
       {/* Episodes */}
-      <div className="dark-section  bg-black/98 text-white">
-        <div className="px-[8%] lg:px-[16%] py-30 pb-0 md:pb-10 relative">
+      <div className="dark-section">
+        <div className="px-[8%] lg:px-[12%] py-30 pb-0 md:pb-8 relative">
           {/* Search Episodes */}
-          <div className="w-full bg-gray px-5 py-3 rounded-full flex justify-between items-center gap-5 episode-search">
+          <div
+            className="flex md:flex-row flex-col absolute -top-4 z-5 w-[85%] md:w-[75%] bg-gray px-4 py-2 
+            rounded-2xl md:rounded-full justify-between items-center gap-5 "
+          >
             <input
               type="text"
               placeholder="Search Episode ... "
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
-              className="w-[80%] py-3 outline-none ps-5 text-xl bg-transparent"
+              className="w-[80%] placeholder:text-gray-200 py-3 text-white outline-none ps-5 text-xl bg-transparent"
             />
-            <button type="button" className="btn btn2">
-              Search <i className="bi bi-arrow-right-short"></i>
-            </button>
+            <StyledButtonSecondary
+              onClick={() => {}}
+              className="px-8 text-xl tracking-normal"
+              icon={<FaArrowRight size={12} />}
+            >
+              Search
+            </StyledButtonSecondary>
           </div>
 
-          <div className="flex justify-between items-center gap-5 mt-4">
-            <h2>Total Episodes Available ( {visibleEpisodes.length} )</h2>
+          <div className="flex justify-between items-center gap-5 px-2 sm:pt-0 pt-5">
+            <h2 className="text-white text-lg font-semibold">
+              Total Episodes Available ( {visibleEpisodes.length} )
+            </h2>
 
             {/* Sorting */}
             <div className="relative">
@@ -114,7 +113,7 @@ const Episodes = () => {
                 value={sortBy}
                 onChange={(e) => setSortBy(e.target.value)}
                 className="appearance-none bg-gray text-primary px-5 py-3 pr-12 
-                rounded-full outline-none cursor-pointer font-medium hover:bg-gray-light 
+                rounded-full outline-none cursor-pointer font-sans text-base font-medium hover:bg-gray-light 
                 transition-all duration-300"
               >
                 <option value="default">Sort by</option>
@@ -123,7 +122,7 @@ const Episodes = () => {
                 <option value="title">Title: A to Z</option>
               </select>
 
-              <i className="bi bi-chevron-down absolute right-5 top-1/2 -translate-y-1/2 text-primary pointer-events-none"></i>
+              <i className="bi bi-chevron-down absolute right-4 top-[60%] -translate-y-1/2 text-primary pointer-events-none" />
             </div>
           </div>
 
@@ -138,131 +137,31 @@ const Episodes = () => {
 
           {/* Episodes List */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mt-10">
-            {sortedEpisode.map((episode, index) => (
-              <div
-                key={index.toString()}
-                className="flex w-full flex-col lg:flex-row justify-between bg-gray-light rounded-lg p-4 overflow-hidden"
-              >
-                <div className="w-full lg:w-1/2 flex justify-center items-center">
-                  <div className="w-[80%] lg:w-full">
-                    <Image
-                      src={"/images" + episode.image}
-                      alt={episode.name}
-                      width={1000}
-                      height={1000}
-                      className="w-full h-full rounded-2xl object-cover"
-                    />
-                  </div>
-                </div>
-
-                <div className="w-full lg:w-1/1">
-                  <div className="p-5">
-                    <div className="flex flex-row flex-wrap justify-between items-center">
-                      <Link href={`/pages/Episodes/${episode.id}`}>
-                        <p className="font-light text-gray-200 hover:text-primary tracking-wider transition-all duration-200">
-                          <i className="bi bi-mic text-primary"></i>
-                          {episode.name}
-                        </p>
-                      </Link>
-                      <h2 className="text-gray-300">
-                        <i className="bi bi-clock pe-1 text-primary"></i>
-                        4hr 12min
-                      </h2>
-
-                      <i
-                        onClick={() => toggleFavorite(episode)}
-                        className={`bi ${
-                          isFavorite(episode.id)
-                            ? "bi-balloon-heart-fill text-red-500"
-                            : "bi-balloon-heart text-primary"
-                        } me-3 text-xl cursor-pointer transition-all duration-200`}
-                      ></i>
-                    </div>
-
-                    <Link href={`/pages/episodes/${episode.id}`}>
-                      <h2 className="mt-3 text-2xl hover:text-primary transition-all duration-200">
-                        {episode.title}
-                      </h2>
-                      <p className="my-3">{episode.pere}</p>
-                    </Link>
-
-                    <div className="flex justify-between items-center gap-5">
-                      <Link
-                        href={`/pages/Episodes/${episode.id}`}
-                        className="flex items-center gap-2 group"
-                      >
-                        <i
-                          className="bi bi-play p-4 bg-primary rounded-full flex text-black text-2x1 group-hover:bg-secondary 
-                          group-hover:text-white items-center justify-center transition-all duration-200"
-                        ></i>
-                        <h2 className="text-lg underline text-primary group-hover:text-secondary transition-all duration-200">
-                          Listen Now
-                        </h2>
-                      </Link>
-
-                      <span className="bg-gray px-5 py-3 rounded-full text-sm text-primary font-semibold tracking-wide">
-                        {episode.episode}
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </div>
+            {sortedEpisode.map((episode) => (
+              <EpisodeCard
+                key={episode.id}
+                episode={episode}
+                isFavorite={isFavorite}
+                toggleFavorite={toggleFavorite}
+              />
             ))}
           </div>
 
-          {EpisodesData.length > 10 && (
+          {EpisodeData.length > 10 && (
             <div className="flex justify-center mt-12">
-              <button
-                type="button"
-                className="btn btn2"
+              <StyledButtonSecondary
                 onClick={() => setShowAll(!showAll)}
+                className="px-8 text-xl tracking-normal"
+                icon={<FaArrowRight size={12} />}
               >
                 {showAll ? "Show less" : "Show More"}
-                <i className="bi bi-arrow-right-short"></i>
-              </button>
+              </StyledButtonSecondary>
             </div>
           )}
         </div>
 
-        <div className="px-[8%] lg:px-[10%] py-20">
-          <div className="page-banner p-15 flex flex-col justify-center items-center text-center rounded-2xl relative">
-            <Image
-              src={PageBanner1}
-              alt="PageBanner1"
-              width={500}
-              height={550}
-              className="hidden lg:block absolute bottom-0 left-0"
-            />
-            <Image
-              src={PageBanner2}
-              alt="PageBanner2"
-              width={500}
-              height={550}
-              className="hidden lg:block absolute bottom-0 right-0"
-            />
-
-            <div className="music-waves"></div>
-            <div className="my-3 mt-5">
-              <span className="flex items-center gap-2 text-black px-4 py-3 rounded-full border border-black">
-                <Image
-                  src={RocketIcon}
-                  alt="rocketIcon"
-                  width={30}
-                  height={30}
-                />
-                <h2 className="text-xl">Call To Action</h2>
-              </span>
-            </div>
-            <h1 className="text-2xl lg:text-3xl mb-5 font-semibold w-full lg:w-[50%] text-text">
-              Let's Discuss <br />
-              For <br />
-              Any Episodes
-            </h1>
-            <button type="button" className="btn btn2 bg-text">
-              Get In Touch <i className="bi bi-arrow-right-short"></i>
-            </button>
-          </div>
-        </div>
+        {/* Custom Page Banner */}
+        <CustomPageBanner />
       </div>
     </>
   );
