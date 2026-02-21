@@ -10,13 +10,13 @@ const HostProfile = () => {
       {/* Page Header */}
       <PageHeader title="Host Profiles" />
 
-      <div className="dark-section pt-20 bg-black/98 text-white">
-        <div className="mt-0 md:mt-10 px-[8%] lg:px-[16%] lg:pb-30 pb-10">
+      <div className="dark-section pt-16">
+        <div className="mt-0 md:mt-10 px-[8%] lg:px-[16%] lg:pb-20 pb-10">
           <div>
             <div>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {HostProfileData.map((host) => (
-                  <div key={host.id} className={`host-card relative`}>
+                  <div key={host.id} className={`host-card relative mb-2`}>
                     <div className="host-img-wrap">
                       <div className="host-img overflow-auto rounded-2xl">
                         <Image
@@ -30,10 +30,10 @@ const HostProfile = () => {
                     </div>
 
                     <div className="host-info px-3 py-4">
-                      <h3 className="text-xl text-white font-bold">
+                      <h3 className="text-xl text-white font-bold cursor-pointer">
                         {host.name}
                       </h3>
-                      <p className="text-base text-gray-200 font-normal">
+                      <p className="text-base text-gray-200 font-normal cursor-pointer">
                         {host.role}
                       </p>
                     </div>
