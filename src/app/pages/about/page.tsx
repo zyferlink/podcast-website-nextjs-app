@@ -3,9 +3,11 @@
 import Image from "next/image";
 import Link from "next/link";
 import CountUp from "react-countup";
+import { FaArrowRight } from "react-icons/fa6";
 import Banner from "@/app/index/banner/page";
 import HostProfiles from "@/app/index/host-profiles/page";
 import Testimonial from "@/app/index/testimonial/page";
+import { StyledButtonSecondary } from "@/components/buttons/styled-button-secondary";
 import HeaderTitle from "@/components/header-title";
 import PageHeader from "@/components/page-header/page-header";
 import ExperienceBanner1 from "../../../../public/images/elevate-banner-1.png";
@@ -23,7 +25,7 @@ const About = () => {
       <PageHeader title="About VoiceFlow" />
 
       {/* Experience */}
-      <div className="dark-section pb-20 bg-black/98 text-white">
+      <div className="dark-section pb-20">
         <div className="px-[8%] lg:px-[16%] py-20">
           <div className="flex flex-col lg:flex-row justify-between items-center gap-20">
             <div className="w-full lg:w-1/2">
@@ -46,10 +48,12 @@ const About = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-5 my-5 border-b border-dashed border-primary-light pb-6 pt-5">
                   <div className="flex items-center gap-2">
                     <div>
-                      <i className="bi bi-volume-up border-s-2 ps-2 border-[#0de27c] text-5xl text-primary"></i>
+                      <i className="bi bi-volume-up border-s-2 ps-2 border-[#0de27c] text-5xl text-primary" />
                     </div>
                     <div className="flex flex-col">
-                      <h2 className="text-2xl">Empower Listeners</h2>
+                      <h2 className="text-2xl text-white font-bold">
+                        Empower Listeners
+                      </h2>
                       <p className="mt-3 text-gray-300">
                         Explore vibrant soundscapes where stories
                       </p>
@@ -58,10 +62,12 @@ const About = () => {
 
                   <div className="flex items-center gap-2">
                     <div>
-                      <i className="bi bi-volume-up border-s-2 ps-2 border-[#0de27c] text-5xl text-primary"></i>
+                      <i className="bi bi-volume-up border-s-2 ps-2 border-[#0de27c] text-5xl text-primary" />
                     </div>
                     <div className="flex flex-col">
-                      <h2 className="text-2xl">Build Community</h2>
+                      <h2 className="text-2xl text-white font-bold">
+                        Build Community
+                      </h2>
                       <p className="mt-3 text-gray-300">
                         Explore vibrant soundscapes where stories
                       </p>
@@ -69,15 +75,13 @@ const About = () => {
                   </div>
                 </div>
 
-                <div className="flex items-center gap-5">
-                  <button
-                    type="button"
-                    className="btn btn2"
-                    style={{ fontWeight: 500 }}
-                  >
-                    Get Started Free <i className="bi bi-arrow-right-short"></i>
-                  </button>
-                </div>
+                <StyledButtonSecondary
+                  onClick={() => {}}
+                  className="px-8 tracking-normal text-xl"
+                  icon={<FaArrowRight size={12} />}
+                >
+                  Get Started Free
+                </StyledButtonSecondary>
               </div>
             </div>
 
