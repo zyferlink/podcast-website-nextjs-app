@@ -1,24 +1,14 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
 import Banner from "@/app/index/banner/page";
 import HeaderTitle from "@/components/header-title";
 import PageHeader from "@/components/page-header/page-header";
-import BrandIcon1 from "../../../../public/images/brand-icon-1.png";
-import BrandIcon2 from "../../../../public/images/brand-icon-2.png";
-import BrandIcon3 from "../../../../public/images/brand-icon-3.png";
-import BrandIcon4 from "../../../../public/images/brand-icon-4.png";
-import BrandIcon5 from "../../../../public/images/brand-icon-5.png";
-import ContactClient1 from "../../../../public/images/contact-client-1.png";
-import ContactClient2 from "../../../../public/images/contact-client-2.png";
-import ContactClient3 from "../../../../public/images/contact-client-3.png";
-import ContactClient4 from "../../../../public/images/contact-client-4.png";
-import ContactClient5 from "../../../../public/images/contact-client-5.png";
-import PageElement1 from "../../../../public/images/page-elm-1.png";
-import PageElement2 from "../../../../public/images/page-elm-2.png";
-import PageElement3 from "../../../../public/images/page-elm-3.png";
-import PageElement4 from "../../../../public/images/page-elm-4.png";
+import ContactClient1 from "../../../../public/assets/images/contact-client-1.png";
+import ContactClient2 from "../../../../public/assets/images/contact-client-2.png";
+import ContactClient3 from "../../../../public/assets/images/contact-client-3.png";
+import ContactClient4 from "../../../../public/assets/images/contact-client-4.png";
+import ContactClient5 from "../../../../public/assets/images/contact-client-5.png";
 
 const Contact = () => {
   return (
