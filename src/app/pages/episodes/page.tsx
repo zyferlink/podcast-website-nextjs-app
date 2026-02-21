@@ -4,6 +4,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import toast from "react-hot-toast";
+import { FaArrowRight } from "react-icons/fa6";
+import { StyledButtonSecondary } from "@/components/buttons/styled-button-secondary";
 import PageHeader from "@/components/page-header/page-header";
 import PageBanner1 from "../../../../public/images/Page-banner-1.png";
 import PageBanner2 from "../../../../public/images/Page-banner-2.png";
@@ -89,20 +91,27 @@ const Episodes = () => {
       <PageHeader title="All Episodes" />
 
       {/* Episodes */}
-      <div className="dark-section  bg-black/98 text-white">
-        <div className="px-[8%] lg:px-[16%] py-30 pb-0 md:pb-10 relative">
+      <div className="dark-section">
+        <div className="px-[8%] lg:px-[12%] py-30 pb-0 md:pb-10 relative">
           {/* Search Episodes */}
-          <div className="w-full bg-gray px-5 py-3 rounded-full flex justify-between items-center gap-5 episode-search">
+          <div
+            className="flex md:flex-row flex-col absolute -top-4 z-5 w-[85%] md:w-[75%] bg-gray px-4 py-2 
+            rounded-2xl md:rounded-full justify-between items-center gap-5 "
+          >
             <input
               type="text"
               placeholder="Search Episode ... "
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
-              className="w-[80%] py-3 outline-none ps-5 text-xl bg-transparent"
+              className="w-[80%] placeholder:text-gray-200 py-3 text-white outline-none ps-5 text-xl bg-transparent"
             />
-            <button type="button" className="btn btn2">
-              Search <i className="bi bi-arrow-right-short"></i>
-            </button>
+            <StyledButtonSecondary
+              onClick={() => {}}
+              className="px-8 text-xl tracking-normal"
+              icon={<FaArrowRight size={12} />}
+            >
+              Search
+            </StyledButtonSecondary>
           </div>
 
           <div className="flex justify-between items-center gap-5 mt-4">
