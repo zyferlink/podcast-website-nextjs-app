@@ -26,17 +26,19 @@ const PageHeader: React.FC<PageHeaderProps> = ({
       <Image
         src={PageElement2}
         alt="Element"
-        className="elm2 w-30 elemet opacity-75"
+        className="absolute top-[20%] left-[8%] w-auto h-auto animate-spin opacity-60 delay-300 
+        xl:top-[15%] xl:w-25 xl:h-25"
       />
       <Image
         src={PageElement3}
         alt="Element"
-        className="elm3 elemet opacity-55"
+        className="absolute top-[75%] left-[85%] w-auto h-auto animate-spin opacity-50 delay-500 
+        xl:left-[80%] xl:w-25 xl:h-25"
       />
       <Image
         src={PageElement4}
         alt="Element"
-        className="elm4 elemet opacity-40"
+        className="absolute top-[70%] left-[15%] w-auto h-auto animate-spin opacity-40 delay-700"
       />
       <div className="page-content w-full md:w-1/2 flex justify-center flex-col pt-12">
         <Image src={PageElement1} alt="Element" className="w-full h-8" />

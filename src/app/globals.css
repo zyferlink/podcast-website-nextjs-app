@@ -237,7 +237,7 @@ body {
 }
 
 
-/* Episode Listing Section */
+/* Banner Page Section */
 
 .page-section {
   width: 100%;
@@ -267,40 +267,6 @@ body {
   z-index: -1;
 }
 
-.elemet {
-  position: absolute;
-  top: 0;
-  left: 0;
-  animation: anim-spin 5s infinite forwards linear;
-}
-
-.elm2 {
-  top: 10%;
-  left: 5%;
-  animation-delay: 0.3s;
-}
-
-.elm3 {
-  top: 65%;
-  left: 85%;
-  animation-delay: 0.5s;
-}
-
-.elm4 {
-  top: 50%;
-  left: 10%;
-  animation-delay: 0.7s;
-}
-
-.episode-search {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 5;
-  width: 70%;
-}
-
 .page-banner {
   background: url(../../public/assets/images/page-banner-bg.png), var(--color-primary);
   background-repeat: no-repeat;
@@ -308,37 +274,6 @@ body {
   overflow: hidden;
 }
 
-
-
-/* Episode Listing MQ Section */
-
-@media (max-width: 991px) {
-  .elm2 {
-    top: 15%;
-  }
-
-  .episode-search {
-    width: 85%;
-  }
-}
-
-@media (max-width: 600px) {
-  .elm2 {
-    width: 100px;
-    height: 100px;
-  }
-  .elm3 {
-    left: 80%;
-    width: 100px;
-    height: 100px;
-  }
-  .episode-search {
-    width: 90%;
-  }
-  .episode-search input {
-    width: 70%;
-  }
-}
 
 /* About Page Section */
 
