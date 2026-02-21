@@ -124,7 +124,7 @@ const About = () => {
 
       {/* Why Choose Us */}
       <div className="light-section">
-        <div className="px-[8%] lg:px-[16%] py-24 pb-50">
+        <div className="px-[8%] md:px-[12%] 2xl:px-[16%] py-24 pb-50">
           <div className="flex flex-col lg:flex-row justify-between items-center gap-20">
             <div className="w-full lg:w-1/2">
               {/* why choose us image section */}
@@ -154,47 +154,48 @@ const About = () => {
                   badgeIcon="bi bi-rocket-takeoff"
                   title="What Makes Us Different From Other"
                   className="leading-[1.1]"
-                  titleProps="text-[3rem] md:text-[3.8rem]"
+                  titleProps="text-[3rem] md:text-[4rem]"
                 />
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-5 my-5 border-b border-dashed border-primary-light pb-6 pt-5">
-                  <h2 className="text-lg flex items-center gap-2">
-                    <i className="bi bi-check2 w-8 h-8 flex justify-center items-center bg-primary rounded-full"></i>
-                    More Collection Podcast
-                  </h2>
-                  <h2 className="text-lg flex items-center gap-2">
-                    <i className="bi bi-check2 w-8 h-8 flex justify-center items-center bg-primary rounded-full"></i>
-                    Create Your Channel
-                  </h2>
-                  <h2 className="text-lg flex items-center gap-2">
-                    <i className="bi bi-check2 w-8 h-8 flex justify-center items-center bg-primary rounded-full"></i>
-                    Listen To Podcast On Offline
-                  </h2>
-                  <h2 className="text-lg flex items-center gap-2">
-                    <i className="bi bi-check2 w-8 h-8 flex justify-center items-center bg-primary rounded-full"></i>
-                    Listen In Screen Off Position
-                  </h2>
+                {/* points list */}
+                <div className="grid grid-cols-1 md:grid-cols-2 text-white gap-4 my-4 border-b border-dashed border-primary-light pb-6 pt-5">
+                  {[
+                    "Play in Background",
+                    "Create Your Channel",
+                    "Listen Offline",
+                    "Browse More Podcasts",
+                  ].map((point, index) => (
+                    <div
+                      key={index.toString()}
+                      className="text-lg flex items-center gap-2 "
+                    >
+                      <i className="bi bi-check2 w-7 h-7 flex justify-center items-center bg-primary rounded-full text-dark shrink-0"></i>
+                      <span>{point}</span>
+                    </div>
+                  ))}
                 </div>
 
-                <div className="flex items-center gap-5">
-                  <button
-                    type="button"
-                    className="btn btn2"
-                    style={{ fontWeight: 500 }}
+                {/* bottom buttons */}
+                <div className="flex md:flex-row flex-col items-center justify-between gap-5 pt-4">
+                  <StyledButtonSecondary
+                    onClick={() => {}}
+                    className="px-4 tracking-normal text-xl"
+                    icon={<FaArrowRight size={12} />}
                   >
-                    Get Started Free <i className="bi bi-arrow-right-short"></i>
-                  </button>
+                    Get Started Free
+                  </StyledButtonSecondary>
+
                   <Link
                     href="/app/pages"
-                    className="flex items-center gap-2 group"
+                    className="flex items-center gap-3 group"
                   >
                     <i
-                      className="bi bi-play p-4 bg-primary rounded-full flex items-center 
-                      justify-center text-black text-2xl group-hover:bg-secondary 
+                      className="bi bi-play p-3 bg-primary rounded-full flex items-center 
+                    justify-center text-black text-xl group-hover:bg-secondary 
                       group-hover:text-white cursor-pointer transition-all duration-200"
-                    ></i>
+                    />
                     <h2 className="text-xl underline text-primary group-hover:text-secondary transition-all duration-200">
-                      See About Us
+                      See About us
                     </h2>
                   </Link>
                 </div>
