@@ -204,7 +204,7 @@ const Contact = () => {
                   <div className="mt-5">
                     <form>
                       <div className="flex flex-col gap-1">
-                        <label>Name</label>
+                        <label htmlFor="name">Name</label>
                         <input
                           type="text"
                           placeholder="Enter Your Name"
@@ -214,7 +214,7 @@ const Contact = () => {
                       </div>
 
                       <div className="flex flex-col gap-1 mt-2">
-                        <label>E-mail</label>
+                        <label htmlFor="email">E-mail</label>
                         <input
                           type="text"
                           placeholder="Enter Your Email"
@@ -224,7 +224,7 @@ const Contact = () => {
                       </div>
 
                       <div className="flex flex-col gap-1 mt-2">
-                        <label>Phone</label>
+                        <label htmlFor="phone">Phone</label>
                         <input
                           type="text"
                           placeholder="Enter Your Phone"
@@ -234,7 +234,7 @@ const Contact = () => {
                       </div>
 
                       <div className="flex flex-col gap-1 mt-2">
-                        <label>Message</label>
+                        <label htmlFor="message">Message</label>
                         <textarea
                           rows={4}
                           placeholder="Write Your Message"

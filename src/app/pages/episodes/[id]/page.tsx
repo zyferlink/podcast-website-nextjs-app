@@ -1,4 +1,3 @@
-/** biome-ignore-all lint/correctness/useHookAtTopLevel: <explanation> */
 "use client";
 
 import Image from "next/image";
@@ -19,6 +18,17 @@ import PlatformIcon4 from "../../../../../public/assets/images/platform-icon-you
 const EpisodeDetails = () => {
   const { id } = useParams();
 
+  const randomEpisodes = [...EpisodeData]
+    .sort(() => Math.random() - 0.5)
+    .slice(0, 2);
+
+  // Faq's
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
+
+  const toggleFaq = (index: number) => {
+    setOpenIndex(openIndex === index ? null : index);
+  };
+
   const episode = EpisodeData.find((ep) => ep.id === Number(id)) as
     | Episode
     | undefined;
@@ -37,17 +47,6 @@ const EpisodeDetails = () => {
       </div>
     );
   }
-
-  const randomEpisodes = [...EpisodeData]
-    .sort(() => Math.random() - 0.5)
-    .slice(0, 2);
-
-  // Faq's
-  const [openIndex, setOpenIndex] = useState<number | null>(null);
-
-  const toggleFaq = (index: number) => {
-    setOpenIndex(openIndex === index ? null : index);
-  };
 
   return (
     <>
