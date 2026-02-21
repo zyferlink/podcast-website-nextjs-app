@@ -20,6 +20,7 @@ import { useRef, useState } from "react";
 import toast from "react-hot-toast";
 import Banner from "@/app/index/banner/page";
 import Testimonial from "@/app/index/testimonial/page";
+import HeaderTitle from "@/components/header-title";
 import PageHeader from "@/components/page-header/page-header";
 import BrandIcon1 from "../../../../public/images/brand-icon-1.png";
 import BrandIcon2 from "../../../../public/images/brand-icon-2.png";
@@ -84,19 +85,20 @@ const Pricing = () => {
 
       <div className="dark-section bg-black/98 text-white">
         <div className="px-[8%] lg:px-[16%] py-20">
-          <div className="title text-center">
-            <div>
-              <h2 className="inline-block px-4 py-2 rounded-full text-primary text-2xl font-normal border border-primary">
-                <i className="bi bi-rocket-takeoff pe-4"></i>
-                Pricing Plan
-              </h2>
-            </div>
-            <h1 className="text-5xl text-white lg:text-6xl font-semibold mt-7">
-              Flexible Pricing Options
-            </h1>
+          <div className="text-center">
+            {/* header title */}
+            <HeaderTitle
+              badgeText="Pricing Plan"
+              badgeIcon="bi bi-rocket-takeoff"
+              title="Flexible Pricing Options"
+              className="items-center text-center leading-[1.1]"
+              titleProps="text-[3.2rem] md:text-[4rem]"
+            />
 
-            <div className="flex items-center justify-center gap-4 mt-4">
-              <span className={billing === "monthly" ? "text-white" : ""}>
+            <div className="flex items-center justify-center gap-4 mt-4 font-bold text-lg">
+              <span
+                className={`cursor-pointer ${billing === "monthly" ? "text-secondary" : "text-white"}`}
+              >
                 Monthly
               </span>
 
@@ -110,11 +112,15 @@ const Pricing = () => {
                 <span
                   className={`absolute top-1 w-5 h-5 bg-primary rounded-full transition-all 
                   duration-300 ${billing === "yearly" ? "left-8" : "left-1"}`}
-                ></span>
+                />
               </button>
 
-              <span className={billing === "yearly" ? "text-white" : ""}>
-                Yearly <span className="text-primary">(Save 30%)</span>
+              <span
+                className={
+                  billing === "yearly" ? "text-secondary" : "text-white"
+                }
+              >
+                Yearly <span className="text-primary"> (Save 30%)</span>
               </span>
             </div>
 
