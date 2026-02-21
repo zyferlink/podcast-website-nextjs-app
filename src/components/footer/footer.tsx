@@ -47,7 +47,10 @@ const Footer = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 lg:gap-5 py-15 pb-15 text-white">
-            <div className="footer-col">
+            <div
+              className="relative after:content-[''] after:absolute after:top-0 after:right-[25%] after:w-px after:h-full 
+            after:bg-[rgba(255,179,64,0.3)] max-[600px]:after:right-0"
+            >
               <h2 className="text-3xl mb-5">Pages</h2>
 
               <div className="flex flex-col gap-2">
@@ -64,7 +67,10 @@ const Footer = () => {
               </div>
             </div>
 
-            <div className="footer-col">
+            <div
+              className="relative after:content-[''] after:absolute after:top-0 after:right-[25%] after:w-px after:h-full 
+            after:bg-[rgba(255,179,64,0.3)] max-[600px]:after:right-0"
+            >
               <h2 className="text-3xl mb-5">Contact</h2>
 
               <div className="flex flex-col gap-2">

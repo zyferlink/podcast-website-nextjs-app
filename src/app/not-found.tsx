@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import Page404Img from "../../public/images/Error404.png";
+import Page404Img from "../../public/assets/images/error-404.png";
 
 const NotFound = () => {
   return (
