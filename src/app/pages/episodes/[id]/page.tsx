@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useParams } from "next/navigation";
 import { useState } from "react";
 import PageHeader from "@/components/page-header/page-header";
+import SocialMediaSet2 from "@/components/social-media-buttons/social-media-set-2";
 import { type Episode, EpisodeData } from "@/data/episodes";
 import PlatformIcon5 from "../../../../../public/assets/images/platform-icon-instagram.svg";
 import PlatformIcon1 from "../../../../../public/assets/images/platform-icon-soundcloud.svg";
@@ -204,33 +205,7 @@ const EpisodeDetails = () => {
                               {episode.desc}
                             </p>
 
-                            <div className="flex items-center gap-2 mt-2">
-                              <i
-                                className="bi bi-instagram w-10 h-10 text-primary rounded-full flex items-center 
-                                justify-center border border-primary hover:bg-primary hover:text-black text-xl transition-all 
-                                duration-300 cursor-pointer"
-                              />
-                              <i
-                                className="bi bi-github w-10 h-10 text-primary rounded-full flex items-center 
-                                justify-center border border-primary hover:bg-primary hover:text-black text-xl transition-all 
-                                duration-300 cursor-pointer"
-                              />
-                              <i
-                                className="bi bi-twitter w-10 h-10 text-primary rounded-full flex items-center 
-                                justify-center border border-primary hover:bg-primary hover:text-black text-xl transition-all 
-                                duration-300 cursor-pointer"
-                              />
-                              <i
-                                className="ri-youtube-line w-10 h-10 text-primary rounded-full flex items-center 
-                                justify-center border border-primary hover:bg-primary hover:text-black text-xl transition-all 
-                                duration-300 cursor-pointer"
-                              />
-                              <i
-                                className="bi bi-threads w-10 h-10 text-primary rounded-full flex items-center 
-                                justify-center border border-primary hover:bg-primary hover:text-black text-xl transition-all 
-                                duration-300 cursor-pointer"
-                              />
-                            </div>
+                            <SocialMediaSet2 mainProps="mt-2" />
                           </div>
                         </Link>
                       </div>
@@ -238,8 +213,8 @@ const EpisodeDetails = () => {
                   </div>
                 </div>
 
-                <h2 className="text-3xl my-5 mt-8">Transcript</h2>
-                <p className="text-gray-300">
+                <h2 className="text-3xl my-5 mt-8 text-white">Transcript</h2>
+                <p className="text-gray-100 tracking-wide font-light">
                   For those who prefer reading or have accessibility needs,
                   here's the full transcript of the episode. View captivating
                   images and visuals that complement the storytelling journey
@@ -252,10 +227,10 @@ const EpisodeDetails = () => {
                   weaving narratives.
                 </p>
 
-                <h2 className="text-2xl my-5">
+                <h2 className="text-2xl my-5 text-white pt-4">
                   App Exploration: Your Current Playground?{" "}
                 </h2>
-                <p className="text-gray-300">
+                <p className="text-gray-100 tracking-wide font-light">
                   The ever-changing world of apps gives you a front-row ticket
                   to the latest technological marvels. Join us as we explore the
                   exciting world of digital innovation, with each episode
@@ -266,11 +241,11 @@ const EpisodeDetails = () => {
                   enrich and simplify our modern existence.
                 </p>
 
-                <div className="flex items-center gap-5 mt-5">
-                  <h2 className="text-primary text-3xl">
+                <div className="flex items-center gap-5 mt-5 mb-2">
+                  <h2 className="text-primary text-2xl">
                     Follow <i className="bi bi-chevron-double-right" />
                   </h2>
-                  <div className="flex items-center gap-2 mt-2">
+                  <div className="flex items-center gap-2 ">
                     <i
                       className="bi bi-instagram w-10 h-10 text-primary rounded-full flex items-center 
                                 justify-center border border-primary hover:bg-primary hover:text-black text-xl transition-all 
