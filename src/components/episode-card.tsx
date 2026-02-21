@@ -54,10 +54,10 @@ const EpisodeCard: React.FC<EpisodeCardProps> = ({
           </div>
 
           <Link href={`/pages/episodes/${episode.id}`}>
-            <h2 className="mt-3 text-2xl hover:text-primary transition-all duration-200">
+            <h2 className="mt-3 text-xl font-bold text-white hover:text-primary transition-all duration-200">
               {episode.title}
             </h2>
-            <p className="my-3">{episode.desc}</p>
+            <p className="my-3 text-gray-300 font-light">{episode.desc}</p>
           </Link>
 
           <div className="flex justify-between items-center gap-5">
@@ -66,15 +66,15 @@ const EpisodeCard: React.FC<EpisodeCardProps> = ({
               className="flex items-center gap-2 group"
             >
               <i
-                className="bi bi-play p-4 bg-primary rounded-full flex text-black text-2x1 group-hover:bg-secondary 
+                className="bi bi-play p-4 bg-primary rounded-full flex text-black text-lg group-hover:bg-secondary 
                           group-hover:text-white items-center justify-center transition-all duration-200"
-              ></i>
+              />
               <h2 className="text-lg underline text-primary group-hover:text-secondary transition-all duration-200">
                 Listen Now
               </h2>
             </Link>
 
-            <span className="bg-gray px-5 py-3 rounded-full text-sm text-primary font-semibold tracking-wide">
+            <span className="bg-gray px-5 py-3 rounded-full text-sm text-center text-primary font-semibold tracking-wide">
               {episode.episode}
             </span>
           </div>
