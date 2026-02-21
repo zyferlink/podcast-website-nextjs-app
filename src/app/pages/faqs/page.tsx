@@ -1,50 +1,10 @@
 "use client";
-import Image from "next/image";
+
 import { useState } from "react";
 import Banner from "@/app/index/banner/page";
 import HeaderTitle from "@/components/header-title";
 import PageHeader from "@/components/page-header/page-header";
 import { FaqData } from "@/data/faq";
-import BrandIcon1 from "../../../../public/images/brand-icon-1.png";
-import BrandIcon2 from "../../../../public/images/brand-icon-2.png";
-import BrandIcon3 from "../../../../public/images/brand-icon-3.png";
-import BrandIcon4 from "../../../../public/images/brand-icon-4.png";
-import BrandIcon5 from "../../../../public/images/brand-icon-5.png";
-import PageBanner1 from "../../../../public/images/Page-banner-1.png";
-import PageBanner2 from "../../../../public/images/Page-banner-2.png";
-import PageElement1 from "../../../../public/images/page-elm-1.png";
-import PageElement2 from "../../../../public/images/page-elm-2.png";
-import PageElement3 from "../../../../public/images/page-elm-3.png";
-import PageElement4 from "../../../../public/images/page-elm-4.png";
-import RocketIcon from "../../../../public/images/rocket-icon.png";
-
-const faqs = [
-  {
-    question: "How often are new episodes released?",
-    answer:
-      "If you have premium or exclusive content, provide information on how listeners can access it. Share information about any online communities or forums where listeners can connect and discuss episodes.",
-  },
-  {
-    question: "Can I suggest topics or guests for future episodes?",
-    answer:
-      "If you have premium or exclusive content, provide information on how listeners can access it. Share information about any online communities or forums where listeners can connect and discuss episodes.",
-  },
-  {
-    question: "Is there a way to get early access or exclusive content?",
-    answer:
-      "If you have premium or exclusive content, provide information on how listeners can access it. Share information about any online communities or forums where listeners can connect and discuss episodes.",
-  },
-  {
-    question: "How do I leave a review or feedback?",
-    answer:
-      "If you have premium or exclusive content, provide information on how listeners can access it. Share information about any online communities or forums where listeners can connect and discuss episodes.",
-  },
-  {
-    question: "Do you accept listener questions?",
-    answer:
-      "If you have premium or exclusive content, provide information on how listeners can access it. Share information about any online communities or forums where listeners can connect and discuss episodes.",
-  },
-];
 
 const Faqs = () => {
   const [openIndex, setopenIndex] = useState<number | null>(null);
