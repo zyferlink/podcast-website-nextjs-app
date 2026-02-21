@@ -52,18 +52,18 @@ const Contact = () => {
                   transition-all duration-300"
                 ></i>
               </div>
-              <div>
+              <div className="flex flex-col justify-between">
                 <h2 className="text-4xl text-white cursor-pointer group-hover:text-dark-text  transition-all duration-300">
                   Main Office
                 </h2>
-                <p className="text-gray-400 my-2 group-hover:text-dark-text transition-all duration-300">
+                <p className="text-gray-300 my-3 group-hover:text-dark-text transition-all duration-300">
                   2972 Westheimer Rd. Santa Ana, Illinois 85486
                 </p>
 
                 <Link
                   href="/"
-                  className="text-primary border-b border-primary group-hover:border-dark-text 
-                font-semibold group-hover:text-dark-text transition-all duration-300"
+                  className="flex w-fit font-normal text-primary border-b border-primary group-hover:border-dark-text 
+                  group-hover:text-dark-text transition-all duration-300"
                 >
                   Find Location
                 </Link>
@@ -88,7 +88,7 @@ const Contact = () => {
                 <h2 className="text-4xl text-white cursor-pointer group-hover:text-dark-text transition-all duration-300">
                   Email Address
                 </h2>
-                <p className="text-gray-300 my-2 group-hover:text-dark-text transition-all duration-300">
+                <p className="text-gray-300 my-3 group-hover:text-dark-text transition-all duration-300">
                   info@example.com
                   <br />
                   support@example.com
@@ -118,11 +118,11 @@ const Contact = () => {
                   transition-all duration-300"
                 ></i>
               </div>
-              <div>
+              <div className="flex flex-col justify-between">
                 <h2 className="text-4xl text-white cursor-pointer group-hover:text-dark-text transition-all duration-300">
                   Phone Number
                 </h2>
-                <p className="text-gray-300 my-2 group-hover:text-dark-text transition-all duration-300">
+                <p className="text-gray-300 my-3 group-hover:text-dark-text transition-all duration-300">
                   +91 123 456 7890
                   <br />
                   +91 321 846 8975
@@ -130,8 +130,8 @@ const Contact = () => {
 
                 <Link
                   href="/"
-                  className="text-primary border-b border-primary group-hover:border-dark-text 
-                font-semibold group-hover:text-dark-text transition-all duration-300"
+                  className="flex w-fit font-normal text-primary border-b border-primary group-hover:border-dark-text 
+                 group-hover:text-dark-text transition-all duration-300"
                 >
                   Contact Us Today!
                 </Link>
@@ -146,17 +146,15 @@ const Contact = () => {
           <div className="flex flex-col lg:flex-row justify-between items-center gap-5">
             <div className="w-full lg:w-1/2">
               <div className="title">
-                <div>
-                  <h2 className="inline-block px-4 py-2 rounded-full text-primary text-2xl font-normal border border-primary">
-                    <i className="bi bi-rocket-takeoff pe-4"></i>
-                    Contact Us
-                  </h2>
-                </div>
-                <h1 className="text-5xl text-white lg:text-6xl font-semibold mt-7 mb-5">
-                  Have questions? don't hesitate to{" "}
-                  <span className="text-primary">contact us</span>
-                </h1>
-                <p>
+                {/* header title */}
+                <HeaderTitle
+                  badgeText="Contact Us"
+                  badgeIcon="bi bi-rocket-takeoff"
+                  title="Have questions? don't hesitate to contact us"
+                  className="leading-[1.1]"
+                  titleProps="text-[3.2rem] md:text-[3.9rem]"
+                />
+                <p className="text-base text-white pt-4">
                   Purpose of an introduction is to grab the audience's
                   attention, their interest, provide a preview of the value or
                   insights.
@@ -199,7 +197,10 @@ const Contact = () => {
                       <i className="bi bi-star-fill text-primary"></i>
                       <i className="bi bi-star-fill text-primary"></i>
                     </div>
-                    <h2>2.5k+ reviews (4.95 of 5)</h2>
+                    <h2 className="text-white">
+                      2.5k+ reviews <br />
+                      (4.95 of 5)
+                    </h2>
                   </div>
                 </div>
               </div>
