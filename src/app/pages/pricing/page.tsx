@@ -36,6 +36,11 @@ import PageElement3 from "../../../../public/images/page-elm-3.png";
 import PageElement4 from "../../../../public/images/page-elm-4.png";
 import RocketIcon from "../../../../public/images/rocket-icon.png";
 
+enum BillingPeriod {
+  MONTHLY = "monthly",
+  YEARLY = "yearly",
+}
+
 const faqData = [
   {
     question: "How often are new episodes released?",
@@ -65,7 +70,7 @@ const faqData = [
 ];
 
 const Pricing = () => {
-  const [billing, setBilling] = useState("monthly");
+  const [billing, setBilling] = useState<BillingPeriod>(BillingPeriod.MONTHLY);
 
   const [openLeftIndex, setopenLeftIndex] = useState<number | null>(null);
   const [openRightIndex, setopenRightIndex] = useState<number | null>(null);
@@ -97,7 +102,7 @@ const Pricing = () => {
 
             <div className="flex items-center justify-center gap-4 mt-4 font-bold text-lg">
               <span
-                className={`cursor-pointer ${billing === "monthly" ? "text-secondary" : "text-white"}`}
+                className={`cursor-pointer ${billing === BillingPeriod.MONTHLY ? "text-secondary" : "text-white"}`}
               >
                 Monthly
               </span>
@@ -105,20 +110,22 @@ const Pricing = () => {
               <button
                 type="button"
                 onClick={() =>
-                  setBilling(billing === "monthly" ? "yearly" : "monthly")
+                  setBilling(
+                    billing === BillingPeriod.MONTHLY
+                      ? BillingPeriod.YEARLY
+                      : BillingPeriod.MONTHLY,
+                  )
                 }
                 className="relative w-14 h-7 bg-gray rounded-full cursor-pointer"
               >
                 <span
                   className={`absolute top-1 w-5 h-5 bg-primary rounded-full transition-all 
-                  duration-300 ${billing === "yearly" ? "left-8" : "left-1"}`}
+                  duration-300 ${billing === BillingPeriod.YEARLY ? "left-8" : "left-1"}`}
                 />
               </button>
 
               <span
-                className={
-                  billing === "yearly" ? "text-secondary" : "text-white"
-                }
+                className={`cursor-pointer ${billing === BillingPeriod.YEARLY ? "text-secondary" : "text-white"}`}
               >
                 Yearly <span className="text-primary"> (Save 30%)</span>
               </span>
