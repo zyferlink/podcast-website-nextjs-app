@@ -5,17 +5,11 @@ import { useParams } from "next/navigation";
 import PageHeader from "@/components/page-header/page-header";
 import SocialMediaSet2 from "@/components/social-media-buttons/social-media-set-2";
 import { BlogPosts } from "@/data/blog";
-import BrandIcon1 from "../../../../../public/images/brand-icon-1.png";
-import BrandIcon2 from "../../../../../public/images/brand-icon-2.png";
-import BrandIcon3 from "../../../../../public/images/brand-icon-3.png";
-import BrandIcon4 from "../../../../../public/images/brand-icon-4.png";
-import BrandIcon5 from "../../../../../public/images/brand-icon-5.png";
-import PageElement1 from "../../../../../public/images/page-elm-1.png";
-import PageElement2 from "../../../../../public/images/page-elm-2.png";
-import PageElement3 from "../../../../../public/images/page-elm-3.png";
-import PageElement4 from "../../../../../public/images/page-elm-4.png";
-import RocketIcon from "../../../../../public/images/rocket-icon.png";
-import BlogsData from "../../../../data/BlogsData.json";
+import PlatformIcon5 from "../../../../../public/assets/images/platform-icon-instagram.svg";
+import PlatformIcon1 from "../../../../../public/assets/images/platform-icon-soundcloud.svg";
+import PlatformIcon2 from "../../../../../public/assets/images/platform-icon-spotify.svg";
+import PlatformIcon3 from "../../../../../public/assets/images/platform-icon-swarm.svg";
+import PlatformIcon4 from "../../../../../public/assets/images/platform-icon-youtube.svg";
 
 const BlogDetails = () => {
   const { id } = useParams();
@@ -239,16 +233,16 @@ const BlogDetails = () => {
               </div>
 
               <div className="bg-[#1c1d20] p-5 rounded-2xl mt-5">
-                <h2 className="text-3xl text-primary font-semibold">
+                <h2 className="text-2xl text-primary font-semibold">
                   Listen On
                 </h2>
                 <div className="border border-dashed border-primary mt-3 mb-5 opacity-30"></div>
                 <div className="flex items-center justify-center gap-3 cursor-pointer mt-5">
-                  <Image src={BrandIcon1} alt="brand" />
-                  <Image src={BrandIcon2} alt="brand" />
-                  <Image src={BrandIcon3} alt="brand" />
-                  <Image src={BrandIcon4} alt="brand" />
-                  <Image src={BrandIcon5} alt="brand" />
+                  <Image src={PlatformIcon1} alt="brand" className="w-8" />
+                  <Image src={PlatformIcon2} alt="brand" className="w-8" />
+                  <Image src={PlatformIcon3} alt="brand" className="w-8" />
+                  <Image src={PlatformIcon4} alt="brand" className="w-8" />
+                  <Image src={PlatformIcon5} alt="brand" className="w-8" />
                 </div>
               </div>
 
