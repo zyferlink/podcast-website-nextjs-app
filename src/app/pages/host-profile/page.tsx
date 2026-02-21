@@ -30,18 +30,22 @@ const HostProfile = () => {
                     </div>
 
                     <div className="host-info px-3 py-4">
-                      <h3 className="text-2xl text-gray-300">{host.name}</h3>
-                      <p className="text-lg text-gray-300">{host.role}</p>
+                      <h3 className="text-xl text-white font-bold">
+                        {host.name}
+                      </h3>
+                      <p className="text-base text-gray-200 font-normal">
+                        {host.role}
+                      </p>
                     </div>
 
                     <div className="host-icons absolute bottom-5 bg-gray rounded-full right-5 group">
                       {/* Plus Icon */}
                       <i
-                        className="bi bi-plus-lg bg-gray w-12 h-12 flex items-center 
-                        justify-center rounded-full cursor-pointer border border-transparent 
-                        group-hover:rounded-t-none group-hover:bg-gray-light 
-                        group-hover:border-gray transition-all duration-300"
-                      ></i>
+                        className="bi bi-plus-lg bg-gray w-12 h-12 flex text-primary
+                    items-center justify-center rounded-full cursor-pointer border 
+                    border-transparent group-hover:rounded-t-none group-hover:bg-gray-500 
+                    group-hover:border group-hover:border-gray transition-all duration-300"
+                      />
 
                       {/* Hidden Social Icons */}
                       <div
@@ -52,19 +56,19 @@ const HostProfile = () => {
                       >
                         <i
                           className="bi bi-facebook w-8 h-8 mb-1 flex items-center 
-                        justify-center rounded-full bg-gray-light border border-primary 
+                        justify-center rounded-full text-white bg-gray-light border border-primary 
                         hover:bg-primary transition-all duration-200 cursor-pointer"
-                        ></i>
+                        />
                         <i
                           className="bi bi-dribbble w-8 h-8 mb-1 flex items-center 
-                        justify-center rounded-full bg-gray-light border border-primary 
+                        justify-center rounded-full text-white bg-gray-light border border-primary 
                         hover:bg-primary transition-all duration-200 cursor-pointer"
-                        ></i>
+                        />
                         <i
                           className="bi bi-twitter-x w-8 h-8 mb-1 flex items-center 
-                        justify-center rounded-full bg-gray-light border border-primary 
+                        justify-center rounded-full text-white bg-gray-light border border-primary 
                         hover:bg-primary transition-all duration-200 cursor-pointer"
-                        ></i>
+                        />
                       </div>
                     </div>
                   </div>

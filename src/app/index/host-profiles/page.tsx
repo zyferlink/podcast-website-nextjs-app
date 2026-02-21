@@ -102,7 +102,7 @@ const HostProfiles = () => {
                     items-center justify-center rounded-full cursor-pointer border 
                     border-transparent group-hover:rounded-t-none group-hover:bg-gray-500 
                     group-hover:border group-hover:border-gray transition-all duration-300"
-                  ></i>
+                  />
 
                   {/* Hidden Social Icon */}
                   <div
