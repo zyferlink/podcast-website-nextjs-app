@@ -1,21 +1,31 @@
-<h1 align="center">VoiceFlow — Podcast Website Template  <br> 🎙️ [ Next.js · Frontend Template ]</h1>
+<h1 align="center">🎙️ VoiceFlow - Podcast Website Template </h1>
 
 ## Project Info
 
-**VoiceFlow** is a **frontend-only** template that replicates the UI and interactions of a modern podcast host website (inspired by the Wavecast example). Built with **Next.js** and **TailwindCSS**, the project focuses on design, responsive layout, audio UI, and client-side interactions — **no backend, CMS, or production data layer included**.
+**VoiceFlow** is a **frontend-only** template that replicates the UI and interactions of a modern podcast host website (inspired by the Wavecast example). Built with **Next.js** and **TailwindCSS**, the project focuses on design, responsive layout, audio UI, and client-side interactions - **no backend, CMS, or production data layer included**.
 Use it as a launchpad or UI prototype; integrate your own API, headless CMS, or server later.
 
+<br>
 
----
+<div align="center">
 
-## Contents
+⁃ ᴄᴏɴᴛᴇɴᴛꜱ ⁃  
+[Visual Tour](#visual-tour)
+| [Features](#features)
+| [Technologies](#technologies--libraries)
+| [Quick Start](#quick-start)
+| [Quick Start](#project-notes)
 
-* [Visual Tour](#visual-tour)
-* [Features](#features)
-* [Technologies & Libraries](#technologies--libraries)
-* [Quick Start](#quick-start)
-* [Branching](#branching)
-* [Project Notes](#project-notes)
+
+<div>
+    <img src="https://img.shields.io/badge/-Next.js-black?style=for-the-badge&logoColor=white&logo=next.js&color=black" alt="react.js" />
+    <img src="https://img.shields.io/badge/React-%2320232a.svg?style=for-the-badge&logoColor=white&logo=react&color=000000" alt="three.js" />
+    <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logoColor=white&logo=typescript&color=3178C6" alt="greensock" />
+    <img src="https://img.shields.io/badge/-Tailwind_CSS-black?style=for-the-badge&logoColor=white&logo=tailwindcss&color=06B6D4" alt="tailwindcss" />
+  </div>
+
+</div>
+
 
 ---
 
