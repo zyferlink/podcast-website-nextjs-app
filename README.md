@@ -53,7 +53,6 @@ Place screenshots in `./public/screenshots/` and reference them here:
 * Responsive design (mobile → desktop).
 * Lightweight UI animations and counters (react-countup, GSAP-like interactions where used).
 * Toast notifications for small UI events (react-hot-toast).
-* Accessible markup and SEO-ready Next.js structure (meta tags, open graph placeholders).
 * Clean, reusable component structure suitable for extension.
 
 ---
@@ -80,7 +79,6 @@ Place screenshots in `./public/screenshots/` and reference them here:
 * TypeScript
 * Biome (lint & format)
 
-*Note: This list is taken from the project's `package.json` and represents the libs bundled with the template.*
 
 ---
 
@@ -88,8 +86,10 @@ Place screenshots in `./public/screenshots/` and reference them here:
 
 ### Prerequisites
 
-* Node.js (recommended LTS)
-* npm
+Ensure you have the following installed:  
+- [Git](https://git-scm.com/)
+- [Node.js](https://nodejs.org/en) (recommended LTS)
+- [npm](https://www.npmjs.com/) (Node Package Manager)
 
 ### Clone & Install
 
@@ -127,10 +127,18 @@ npm run format
 
 ## Project Branches
 
-* **main** — Production / stable UI
-* **dev** — Active development, experimental features
+> <samp> **PRODUCTION BRANCH :**  </samp>  
+> Stable code for deployment  
+> ➲ [main][branch-main]
 
-(Adjust branch names/URLs in README to match your repo setup if different.)
+
+> <samp> **DEVELOPMENT BRANCH :**  </samp>   
+> Active codebase for ongoing development efforts  (New features, bug fixes, and improvements..)  
+> ➲ [dev][branch-development]
+
+[branch-main]:  https://github.com/zyferlink/podcast-website-nextjs-app/tree/main
+
+[branch-development]:  https://github.com/zyferlink/podcast-website-nextjs-app/tree/dev
 
 ---
 
