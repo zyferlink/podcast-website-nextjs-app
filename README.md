@@ -55,6 +55,9 @@ Place screenshots in `./public/screenshots/` and reference them here:
 * Toast notifications for small UI events (react-hot-toast).
 * Clean, reusable component structure suitable for extension.
 
+
+<br/>
+
 ---
 
 ## Technologies & Libraries
@@ -79,6 +82,8 @@ Place screenshots in `./public/screenshots/` and reference them here:
 * TypeScript
 * Biome (lint & format)
 
+
+<br/>
 
 ---
 
@@ -125,7 +130,9 @@ npm run format
 
 ---
 
-## Project Branches
+<br/>
+
+### Project Branches
 
 > <samp> **PRODUCTION BRANCH :**  </samp>  
 > Stable code for deployment  
@@ -140,19 +147,13 @@ npm run format
 
 [branch-development]:  https://github.com/zyferlink/podcast-website-nextjs-app/tree/dev
 
+<br/>
+
 ---
 
 ## Project Notes
 
 * **Frontend-only template:** No backend API or CMS included. To serve real episodes, wire a headless CMS, RSS parser, or custom API to the page components and data fetching methods.
-* **Data fetching strategy:** Uses Next.js page routes and can be adapted to SSG, SSR, or client-side fetching depending on your deployment needs.
-* **Customization tips:** Replace placeholder audio sources with your streaming URLs, add /public/assets for episode artwork, and update meta tags for SEO and social sharing.
+
 
 ---
-
-If you want, I can:
-
-* produce a trimmed `README.md` file content ready to paste into your repo, or
-* generate example `episode` frontmatter and a small `data/` JSON schema to feed the UI.
-
-Which one would you like next?
