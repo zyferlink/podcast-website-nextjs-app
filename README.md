@@ -58,13 +58,18 @@ Use it as a launchpad or UI prototype; integrate your own API, headless CMS, or 
 
 <br/>
 
-<p align="center">
+<p align="left">
   <img src="./public/screenshots/episode-screens.png" alt="VoiceFlow Episode Screens" />
 
   <img src="./public/screenshots/blog-screens.png" alt="VoiceFlow Blog Screens" />
   
+  <img src="./public/screenshots/other-screens.png" alt="VoiceFlow Other Screens" />
 </p>
 
+
+#### And beyond...
+
+<br/>
 
 ---
 
