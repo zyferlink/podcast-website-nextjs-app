@@ -56,6 +56,11 @@ Use it as a launchpad or UI prototype; integrate your own API, headless CMS, or 
 
 ## Visual Tour
 
+<br/>
+
+<p align="center">
+  <img src="./public/screenshots/episode-screens.png" alt="VoiceFlow homepage" />
+</p>
 
 
 ---
