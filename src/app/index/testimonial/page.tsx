@@ -16,7 +16,7 @@ const Testimonial = () => {
   const swiperRef = useRef<SwiperType | null>(null);
   return (
     <div className="dark-section wave-wrapper-section2">
-      <div className="px-[8%] lg:px-[16%] pt-28 pb-16">
+      <div className="px-[8%] lg:px-[16%] pt-28 pb-10">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="w-full flex justify-center items-center text-center">
             <div className="w-full lg:w-2/3 title flex flex-col gap-2">
@@ -39,7 +39,7 @@ const Testimonial = () => {
         </div>
       </div>
 
-      <div className="mt-0 md:mt-10 px-[8%] lg:px-[16%] lg:pb-30 pb-10">
+      <div className="mt-0 md:mt-10 px-[8%] lg:px-[16%] lg:pb-20 pb-10">
         <Swiper
           onSwiper={(swiper) => (swiperRef.current = swiper)}
           slidesPerView={1}

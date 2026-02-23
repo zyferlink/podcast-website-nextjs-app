@@ -27,7 +27,7 @@ const Footer = () => {
 
             <div className="relative">
               <div
-                className="w-40 md:w-104 h-8 bg-[url('/assets/images/music-waves-2.png')] 
+                className="w-40 md:w-104 2xl:w-130 h-8 bg-[url('/assets/images/music-waves-2.png')] 
                       bg-repeat-x bg-size-[auto_100%] animate-[anim-wave-scroll_50s_linear_infinite]"
               />
             </div>
