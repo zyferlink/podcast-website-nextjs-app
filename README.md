@@ -10,11 +10,12 @@ Use it as a launchpad or UI prototype; integrate your own API, headless CMS, or 
 <div align="center">
 
 ⁃ ᴄᴏɴᴛᴇɴᴛꜱ ⁃  
-[Visual Tour](#visual-tour)
-| [Features](#features)
+[Features](#features)
+| [Visual Tour](#visual-tour)
 | [Technologies](#technologies--libraries)
 | [Quick Start](#quick-start)
 | [Quick Start](#project-notes)
+
 
 
 <div>
@@ -29,10 +30,10 @@ Use it as a launchpad or UI prototype; integrate your own API, headless CMS, or 
 
 ---
 
-## Visual Tour
+
 
 <p align="center">
-  <img src="./public/screenshots/project-home-screen.png" alt="VoiceFlow homepage" />
+  <img src="./public/screenshots/home-screen.png" alt="VoiceFlow homepage" />
 </p>
 
 ---
@@ -50,6 +51,12 @@ Use it as a launchpad or UI prototype; integrate your own API, headless CMS, or 
 
 
 <br/>
+
+---
+
+## Visual Tour
+
+
 
 ---
 
