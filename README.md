@@ -31,22 +31,15 @@ Use it as a launchpad or UI prototype; integrate your own API, headless CMS, or 
 
 ## Visual Tour
 
-Place screenshots in `./public/screenshots/` and reference them here:
-
-```md
 <p align="center">
-  <img src="./public/screenshots/homepage.png" alt="VoiceFlow homepage" />
+  <img src="./public/screenshots/project-home-screen.png" alt="VoiceFlow homepage" />
 </p>
-```
-
-(Replace with actual screenshots from your project.)
 
 ---
 
 ## Features
 
-* Pixel-perfect UI inspired by a production podcast site (homepage, episodes listing, episode detail pages).
-* Built-in audio player UI with play/pause, scrub, duration and episode metadata.
+* Stunning podcast UI. Inspired by production grade sites, this design delivers a beautiful homepage, intuitive episode listings, and captivating detail pages.
 * Episode carousel / highlights (Swiper).
 * Category / tag filters and search-ready layout.
 * Host profile / about pages and social links.
